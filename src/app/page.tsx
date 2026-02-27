@@ -1,5 +1,6 @@
 import Hero from "@/components/sections/Hero";
 import BusinessFlavor from "@/components/sections/BusinessFlavor";
+import IndustryAccordion from "@/components/sections/IndustryAccordion";
 import ProductOverview from "@/components/sections/ProductOverview";
 import HowItWorks from "@/components/sections/HowItWorks";
 import FeaturesSplit from "@/components/sections/FeaturesSplit";
@@ -14,6 +15,7 @@ export default function HomePage() {
     <>
       <Hero />
       <BusinessFlavor />
+      <IndustryAccordion />
       <ProductOverview />
       <HowItWorks />
       <FeaturesSplit />
