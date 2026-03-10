@@ -1,106 +1,154 @@
 "use client";
 
+import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { HARDWARE_PRODUCTS } from "@/lib/constants";
-import { staggerContainer, staggerItem } from "@/lib/animations";
-import { ArrowRight, Star } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function HardwareShowcase() {
-  return (
-    <section className="relative py-24 lg:py-32 bg-foreground text-white overflow-hidden">
-      {/* Background accents */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-primary/10 blur-[150px]" />
-        <div className="absolute -bottom-20 -left-20 h-[300px] w-[300px] rounded-full bg-accent/10 blur-[100px]" />
-      </div>
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
-      <div className="relative mx-auto max-w-[1320px] px-6 lg:px-8">
+  const checkScroll = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+    setCanScrollLeft(el.scrollLeft > 5);
+    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 5);
+  };
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    checkScroll();
+    el.addEventListener("scroll", checkScroll, { passive: true });
+    window.addEventListener("resize", checkScroll);
+    return () => {
+      el.removeEventListener("scroll", checkScroll);
+      window.removeEventListener("resize", checkScroll);
+    };
+  }, []);
+
+  const scroll = (dir: "left" | "right") => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const cardWidth = el.querySelector<HTMLElement>(".hw-card")?.offsetWidth ?? 400;
+    el.scrollBy({ left: dir === "left" ? -cardWidth - 20 : cardWidth + 20, behavior: "smooth" });
+  };
+
+  return (
+    <section className="relative bg-white py-20 lg:py-28 overflow-hidden">
+      <div className="mx-auto max-w-[1320px] px-6 lg:px-8">
+        {/* Header row: left text + right arrows */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mx-auto max-w-2xl text-center"
+          className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14"
         >
-          <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-            Hardware
-          </span>
-          <h2 className="mt-3 text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Smooth checkout, every time
-          </h2>
-          <p className="mt-4 text-lg text-gray-400">
-            Choose from a range of sleek hardware options designed for speed and
-            reliability. All equally easy to use.
-          </p>
-        </motion.div>
+          {/* Left — copy */}
+          <div className="max-w-xl">
+            <span
+              className="text-xs font-medium uppercase tracking-[0.1em] text-gray-500"
+              style={{ fontFamily: "var(--font-mono, monospace)" }}
+            >
+              Hardware
+            </span>
+            <h2 className="mt-3 text-[clamp(2rem,4vw,3rem)] font-bold leading-[1.1] tracking-tight text-foreground">
+              Smooth checkout, every&nbsp;time
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-600 max-w-md">
+              Choose from a range of sleek options for however you do business.
+              All equally easy to use.
+            </p>
+            <Link
+              href="/hardware"
+              className="mt-6 inline-flex items-center gap-1 text-base font-semibold text-foreground underline underline-offset-4 decoration-1 hover:decoration-2 transition-all"
+            >
+              Shop deals
+            </Link>
+          </div>
 
-        <motion.div
-          variants={staggerContainer}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
-        >
-          {HARDWARE_PRODUCTS.map((product) => (
-            <motion.div key={product.name} variants={staggerItem}>
-              <div
-                className={cn(
-                  "group relative flex flex-col rounded-xl border p-6 transition-all duration-300 hover:-translate-y-1",
-                  product.highlight
-                    ? "border-primary/40 bg-primary/10 hover:border-primary/60"
-                    : "border-gray-700 bg-gray-800/50 hover:border-gray-600"
-                )}
-              >
-                {product.highlight && (
-                  <div className="absolute -top-3 left-4 flex items-center gap-1 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-white">
-                    <Star className="h-3 w-3 fill-current" />
-                    Best Seller
-                  </div>
-                )}
-
-                {/* Product image placeholder */}
-                <div className="flex h-40 items-center justify-center rounded-lg bg-gray-700/30 mb-4">
-                  <div className="h-24 w-24 rounded-lg bg-gradient-to-br from-gray-600 to-gray-700 flex items-center justify-center">
-                    <span className="text-3xl font-bold text-gray-400">
-                      {product.name.split(" ").pop()?.[0]}
-                    </span>
-                  </div>
-                </div>
-
-                <h3 className="text-lg font-semibold">{product.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-400 flex-1">
-                  {product.description}
-                </p>
-
-                <div className="mt-4 border-t border-gray-700 pt-4">
-                  <div className="text-2xl font-bold">{product.price}</div>
-                  <div className="text-xs text-gray-500">
-                    or {product.emi} for 12 months
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-12 text-center"
-        >
-          <Link href="/hardware">
-            <Button variant="white" size="lg" className="gap-2">
-              View All Hardware
-              <ArrowRight className="h-4 w-4" />
-            </Button>
-          </Link>
+          {/* Right — arrows */}
+          <div className="flex items-center gap-3">
+            <button
+              aria-label="Previous"
+              onClick={() => scroll("left")}
+              disabled={!canScrollLeft}
+              className="grid h-10 w-10 place-items-center rounded-full border border-gray-300 text-foreground transition-all hover:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+            >
+              <ArrowLeft className="h-5 w-5" />
+            </button>
+            <button
+              aria-label="Next"
+              onClick={() => scroll("right")}
+              disabled={!canScrollRight}
+              className="grid h-10 w-10 place-items-center rounded-full border border-gray-300 text-foreground transition-all hover:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+            >
+              <ArrowRight className="h-5 w-5" />
+            </button>
+          </div>
         </motion.div>
       </div>
+
+      {/* Carousel — full-bleed, edge cards peek */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, delay: 0.15 }}
+      >
+        <div
+          ref={scrollRef}
+          className="flex gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 hide-scrollbar"
+          style={{
+            paddingLeft: "max(1.5rem, calc((100vw - 1320px) / 2 + 1.5rem))",
+            paddingRight: "1.5rem",
+          }}
+        >
+          {HARDWARE_PRODUCTS.map((product, i) => (
+            <Link
+              key={product.name}
+              href="/hardware"
+              className="hw-card group relative flex-shrink-0 snap-start"
+              style={{ width: "min(85vw, 400px)" }}
+            >
+              {/* Card */}
+              <div className="relative aspect-[1.1/1] w-full overflow-hidden bg-[#f3f3f3]">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-contain p-8 transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 85vw, 400px"
+                  priority={i < 2}
+                />
+              </div>
+              {/* Label */}
+              <p className="mt-4 text-base font-semibold text-foreground group-hover:underline underline-offset-4 transition-all">
+                {product.name}
+              </p>
+              <p className="mt-1 text-sm text-gray-500">
+                Starting at {product.price}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* hide-scrollbar utility (injected once) */}
+      <style jsx global>{`
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </section>
   );
 }

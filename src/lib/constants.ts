@@ -77,6 +77,7 @@ export const HARDWARE_PRODUCTS = [
     price: "₹32,999",
     emi: "₹2,750/mo",
     highlight: true,
+    image: "/pos-terminal.png",
   },
   {
     name: "Barcode Scanner",
@@ -84,6 +85,7 @@ export const HARDWARE_PRODUCTS = [
     price: "₹3,499",
     emi: "₹292/mo",
     highlight: false,
+    image: "/barcode-scanner.png",
   },
   {
     name: "Thermal Printer",
@@ -91,6 +93,7 @@ export const HARDWARE_PRODUCTS = [
     price: "₹5,999",
     emi: "₹500/mo",
     highlight: false,
+    image: "/thermal-printer.png",
   },
   {
     name: "Cash Drawer",
@@ -98,6 +101,7 @@ export const HARDWARE_PRODUCTS = [
     price: "₹3,999",
     emi: "₹334/mo",
     highlight: false,
+    image: "/cash-drawer.png",
   },
 ];
 
