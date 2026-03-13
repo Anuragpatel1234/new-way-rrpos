@@ -32,7 +32,6 @@ export const NAV_LINKS = [
       { label: "Complete Setup", href: "/hardware#setup", description: "Ready-to-use hardware bundles" },
     ],
   },
-  { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -73,35 +72,43 @@ export const FEATURES = [
 export const HARDWARE_PRODUCTS = [
   {
     name: "RR POS Terminal",
+    subtitle: "Your all-in-one billing powerhouse",
     description: "The all-in-one billing powerhouse. 15.6\" touchscreen, built-in printer, and blazing performance.",
     price: "₹32,999",
     emi: "₹2,750/mo",
     highlight: true,
     image: "/pos-terminal.png",
+    video: "/mixkit-pharmacy-worker-accepts-payment-at-checkout-5407-hd-ready.mp4",
   },
   {
     name: "Barcode Scanner",
+    subtitle: "High-speed scanning that keeps up with you",
     description: "High-speed 1D/2D scanning. Wireless connectivity with 12-hour battery life.",
     price: "₹3,499",
     emi: "₹292/mo",
     highlight: false,
     image: "/barcode-scanner.png",
+    video: "/mixkit-pharmacy-worker-accepts-payment-at-checkout-5407-hd-ready.mp4",
   },
   {
     name: "Thermal Printer",
+    subtitle: "Fast receipts, every single time",
     description: "80mm fast thermal printing. Auto-cutter, USB + Bluetooth. Print receipts in under a second.",
     price: "₹5,999",
     emi: "₹500/mo",
     highlight: false,
     image: "/thermal-printer.png",
+    video: "/mixkit-pharmacy-worker-accepts-payment-at-checkout-5407-hd-ready.mp4",
   },
   {
     name: "Cash Drawer",
+    subtitle: "Secure cash management, built to last",
     description: "Heavy-duty metal build. 5 bill + 8 coin compartments. Auto-open on sale.",
     price: "₹3,999",
     emi: "₹334/mo",
     highlight: false,
     image: "/cash-drawer.png",
+    video: "/mixkit-pharmacy-worker-accepts-payment-at-checkout-5407-hd-ready.mp4",
   },
 ];
 
@@ -183,6 +190,49 @@ export const TESTIMONIALS = [
     role: "Owner, Style Studio Garments",
     content: "The barcode system is incredibly fast. My staff learned it in one day. Customer checkout is now under 30 seconds.",
     rating: 5,
+  },
+];
+
+export const POS_FEATURES = [
+  {
+    id: "billing",
+    title: "Instant Billing",
+    description:
+      "Generate invoices in seconds with barcode scanning, quick-add items, and smart search — making every checkout fast and accurate.",
+    link: "/features#billing",
+    image: "/pos-billing.png",
+  },
+  {
+    id: "inventory",
+    title: "Manage Your Inventory",
+    description:
+      "Track every product across all stores in real time. Get low-stock alerts, auto purchase orders, and batch management.",
+    link: "/features#inventory",
+    image: "/pos-inventory.png",
+  },
+  {
+    id: "loyalty",
+    title: "Grow Your Customer Base",
+    description:
+      "Build loyalty programs, send targeted campaigns, and track customer preferences to keep them coming back for more.",
+    link: "/features#loyalty",
+    image: "/pos-loyalty.png",
+  },
+  {
+    id: "revenue",
+    title: "Track Your Revenue",
+    description:
+      "See daily sales, profit margins, and expense breakdowns across all locations from one beautiful dashboard.",
+    link: "/features#reports",
+    image: "/pos-revenue.png",
+  },
+  {
+    id: "hardware",
+    title: "Connect Your Hardware",
+    description:
+      "POS terminals, barcode scanners, thermal printers, and cash drawers — all integrated seamlessly with RR POS.",
+    link: "/hardware",
+    image: "/pos-hardware.png",
   },
 ];
 

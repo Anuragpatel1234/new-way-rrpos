@@ -21,7 +21,6 @@ const footerLinks = {
   ],
   Company: [
     { label: "About Us", href: "/about" },
-    { label: "Pricing", href: "/pricing" },
     { label: "Contact", href: "/contact" },
     { label: "Book a Demo", href: "/contact" },
   ],
