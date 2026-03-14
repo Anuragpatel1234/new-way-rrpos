@@ -32,7 +32,7 @@ export default function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 transition-all duration-500",
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
+          ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-gray-800"
           : "bg-transparent"
       )}
       style={{ zIndex: 100 }}
@@ -69,8 +69,8 @@ export default function Navbar() {
                 className={cn(
                   "flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-200",
                   scrolled
-                    ? "text-gray-700 hover:text-foreground hover:bg-gray-50"
-                    : "text-white/95 hover:text-white hover:bg-white/10"
+                    ? "text-gray-300 hover:text-foreground hover:bg-gray-800"
+                    : "text-foreground hover:text-white hover:bg-white/10"
                 )}
               >
                 {link.label}
@@ -94,17 +94,17 @@ export default function Navbar() {
                     transition={{ duration: 0.2, ease: "easeOut" }}
                     className="absolute left-0 top-full pt-2"
                   >
-                    <div className="w-[320px] rounded-xl border border-gray-100 bg-white p-2 shadow-xl shadow-black/5">
+                    <div className="w-[320px] rounded-xl border border-gray-800 bg-background p-2 shadow-xl shadow-black/50">
                       {link.children.map((child) => (
                         <Link
                           key={child.label}
                           href={child.href}
-                          className="block rounded-lg px-4 py-3 transition-colors hover:bg-gray-50"
+                          className="block rounded-lg px-4 py-3 transition-colors hover:bg-gray-800"
                         >
                           <div className="text-sm font-medium text-foreground">
                             {child.label}
                           </div>
-                          <div className="mt-0.5 text-xs text-gray-500">
+                          <div className="mt-0.5 text-xs text-gray-400">
                             {child.description}
                           </div>
                         </Link>
@@ -135,7 +135,7 @@ export default function Navbar() {
             <Button
               size="default"
               className={cn(
-                scrolled ? "" : "bg-white text-gray-900 hover:bg-gray-50 border-0"
+                scrolled ? "bg-white text-gray-900 hover:bg-gray-100" : "bg-white text-gray-900 hover:bg-gray-100 border-0"
               )}
             >
               Book Demo
@@ -174,7 +174,7 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       onClick={() => setMobileOpen(false)}
-                      className="flex items-center justify-between rounded-lg px-4 py-3 text-lg font-medium text-foreground hover:bg-gray-50 transition-colors"
+                      className="flex items-center justify-between rounded-lg px-4 py-3 text-lg font-medium text-foreground hover:bg-gray-800 transition-colors"
                     >
                       {link.label}
                       {link.children && (
@@ -182,13 +182,13 @@ export default function Navbar() {
                       )}
                     </Link>
                     {link.children && (
-                      <div className="ml-4 border-l border-gray-100 pl-4">
+                      <div className="ml-4 border-l border-gray-800 pl-4">
                         {link.children.map((child) => (
                           <Link
                             key={child.label}
                             href={child.href}
                             onClick={() => setMobileOpen(false)}
-                            className="block rounded-lg px-3 py-2 text-sm text-gray-600 hover:text-foreground hover:bg-gray-50 transition-colors"
+                            className="block rounded-lg px-3 py-2 text-sm text-gray-400 hover:text-foreground hover:bg-gray-800 transition-colors"
                           >
                             {child.label}
                           </Link>
@@ -199,8 +199,8 @@ export default function Navbar() {
                 ))}
               </div>
 
-              <div className="mt-auto flex flex-col gap-3 border-t border-gray-100 pt-6">
-                <Link href={`tel:${SITE.phone.replace(/\s/g, "")}`} className="flex items-center gap-2 px-4 py-2 text-sm text-gray-600">
+              <div className="mt-auto flex flex-col gap-3 border-t border-gray-800 pt-6">
+                <Link href={`tel:${SITE.phone.replace(/\s/g, "")}`} className="flex items-center gap-2 px-4 py-2 text-sm text-gray-400">
                   <Phone className="h-4 w-4" />
                   {SITE.phone}
                 </Link>

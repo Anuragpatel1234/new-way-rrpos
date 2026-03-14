@@ -35,7 +35,7 @@ export default function HardwareShowcase() {
   );
 
   return (
-    <section className="relative bg-white py-20 lg:py-28 overflow-hidden">
+    <section className="relative bg-background py-20 lg:py-28 overflow-hidden">
       <div className="mx-auto max-w-[1320px] px-6 lg:px-8">
         {/* Header row */}
         <motion.div
@@ -74,7 +74,7 @@ export default function HardwareShowcase() {
               aria-label="Previous"
               onClick={() => snapScrollBy("left")}
               disabled={!canScrollLeft}
-              className="grid h-10 w-10 place-items-center text-foreground transition-all hover:bg-gray-100/50 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+              className="grid h-10 w-10 place-items-center text-foreground transition-all hover:bg-gray-800 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer rounded-full"
             >
               <ArrowLeft className="h-6 w-6" strokeWidth={1.5} />
             </button>
@@ -82,7 +82,7 @@ export default function HardwareShowcase() {
               aria-label="Next"
               onClick={() => snapScrollBy("right")}
               disabled={!canScrollRight}
-              className="grid h-10 w-10 place-items-center text-foreground transition-all hover:bg-gray-100/50 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+              className="grid h-10 w-10 place-items-center text-foreground transition-all hover:bg-gray-800 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer rounded-full"
             >
               <ArrowRight className="h-6 w-6" strokeWidth={1.5} />
             </button>
@@ -126,7 +126,7 @@ export default function HardwareShowcase() {
                 onMouseEnter={() => setHoveredIndex(i)}
               >
                 {/* Card media container — fixed height, only width changes */}
-                <div className="relative w-full overflow-hidden bg-[#EAEAEA]"
+                <div className="relative w-full overflow-hidden bg-gray-800 rounded-2xl border border-gray-700/50"
                   style={{ height: "360px" }}
                 >
                   {/* Background image — always visible */}

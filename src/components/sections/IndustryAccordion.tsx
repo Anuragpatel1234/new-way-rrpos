@@ -306,18 +306,17 @@ export default function IndustryAccordion() {
     const [activeId, setActiveId] = useState<string | null>("retail");
 
     return (
-        <section className="bg-[#0a0a0a] w-full py-16 lg:py-24">
+        <section className="bg-white w-full py-16 lg:py-24">
             <div className="mx-auto w-full max-w-screen-xl px-5 md:px-10 lg:px-14">
                 {/* Header */}
-                <div className="mb-10 lg:mb-14">
+                <div className="mb-10 lg:mb-14 text-center">
                     <p
-                        className="text-[11px] font-semibold tracking-[0.2em] uppercase mb-4"
-                        style={{ color: "rgba(255,255,255,0.35)" }}
+                        className="text-[11px] font-semibold tracking-[0.2em] uppercase mb-4 text-gray-400"
                     >
                         Built for every industry
                     </p>
                     <h2
-                        className="text-white font-normal leading-[1.15]"
+                        className="text-gray-900 font-normal leading-[1.15]"
                         style={{
                             fontFamily: "'Playfair Display', serif",
                             fontSize: "clamp(1.75rem, 3.5vw, 3rem)",

@@ -20,13 +20,13 @@ function AccordionItem({
   onToggle: () => void;
 }) {
   return (
-    <div className="border-t border-[#e5e7eb]">
+    <div className="border-t border-gray-800">
       <button
         onClick={onToggle}
         className="w-full flex items-center justify-between py-5 md:py-6 text-left group cursor-pointer"
       >
         <span
-          className="text-[#111] font-medium transition-colors duration-200"
+          className="text-foreground font-medium transition-colors duration-200"
           style={{
             fontSize: "clamp(1rem, 1.3vw, 1.2rem)",
             fontFamily: "'Inter', 'Helvetica Neue', sans-serif",
@@ -35,7 +35,7 @@ function AccordionItem({
           {item.title}
         </span>
         <span
-          className="text-[#666] text-xl leading-none transition-transform duration-300 flex-shrink-0 ml-4"
+          className="text-gray-400 text-xl leading-none transition-transform duration-300 flex-shrink-0 ml-4 group-hover:text-white"
           style={{
             transform: isActive ? "rotate(45deg)" : "rotate(0deg)",
             fontSize: "1.5rem",
@@ -66,7 +66,7 @@ function AccordionItem({
               className="pb-6"
             >
               <p
-                className="text-[#444] leading-relaxed mb-4 max-w-[400px]"
+                className="text-gray-300 leading-relaxed mb-4 max-w-[400px]"
                 style={{
                   fontSize: "clamp(0.875rem, 1.1vw, 1rem)",
                   fontFamily: "'Inter', 'Helvetica Neue', sans-serif",
@@ -76,7 +76,7 @@ function AccordionItem({
               </p>
               <Link
                 href={item.link}
-                className="inline-block text-[#111] text-sm font-medium border-b border-[#111] pb-0.5 hover:border-[#666] hover:text-[#666] transition-colors duration-200"
+                className="inline-block text-white text-sm font-medium border-b border-white/30 pb-0.5 hover:border-white hover:text-white transition-colors duration-200"
                 style={{
                   fontFamily: "'Inter', 'Helvetica Neue', sans-serif",
                 }}
@@ -102,9 +102,8 @@ export default function PointOfSale() {
 
   return (
     <section
-      className="w-full"
+      className="w-full bg-gray-900 border-t border-gray-800"
       style={{
-        backgroundColor: "#f6f6f6",
         paddingTop: "clamp(4rem, 8vw, 7rem)",
         paddingBottom: "clamp(4rem, 8vw, 7rem)",
       }}
@@ -112,7 +111,7 @@ export default function PointOfSale() {
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-14">
         {/* Section heading */}
         <h2
-          className="text-[#111] font-normal leading-[1.1] mb-10 md:mb-14"
+          className="text-foreground font-normal leading-[1.1] mb-10 md:mb-14"
           style={{
             fontFamily: "'Playfair Display', serif",
             fontSize: "clamp(2rem, 4vw, 3.5rem)",
@@ -121,7 +120,7 @@ export default function PointOfSale() {
           }}
         >
           See your whole business{" "}
-          <em style={{ fontStyle: "italic" }}>click</em> into place
+          <em className="text-white" style={{ fontStyle: "italic" }}>click</em> into place
         </h2>
 
         {/* Two-column layout */}
@@ -139,13 +138,13 @@ export default function PointOfSale() {
               />
             ))}
             {/* Bottom border for last item */}
-            <div className="border-t border-[#e5e7eb]" />
+            <div className="border-t border-gray-800" />
           </div>
 
           {/* Right: Visual */}
           <div className="w-full md:w-[58%] lg:w-[62%] relative">
             <div
-              className="relative w-full overflow-hidden rounded-2xl bg-[#eee]"
+              className="relative w-full overflow-hidden rounded-2xl bg-gray-800 border border-gray-700/50 shadow-2xl"
               style={{
                 aspectRatio: "4 / 3",
               }}

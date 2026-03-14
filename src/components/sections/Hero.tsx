@@ -180,14 +180,14 @@ export default function Hero() {
         <div className="mt-9 flex items-center gap-3 flex-wrap justify-center">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-full bg-white text-[#006aff] px-7 py-3.5 text-[0.95rem] font-semibold shadow-lg hover:bg-gray-50 transition-all duration-200 hover:shadow-xl hover:scale-[1.02]"
+            className="inline-flex items-center gap-2 rounded-full bg-white text-gray-900 px-7 py-3.5 text-[0.95rem] font-semibold shadow-lg hover:bg-gray-100 transition-all duration-200 hover:shadow-xl hover:scale-[1.02]"
           >
             Get started
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-full bg-[#006aff] text-white px-7 py-3.5 text-[0.95rem] font-semibold shadow-lg hover:bg-blue-600 transition-all duration-200 hover:shadow-xl hover:scale-[1.02]"
+            className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 text-white px-7 py-3.5 text-[0.95rem] font-semibold hover:bg-white/20 transition-all duration-200 hover:scale-[1.02]"
           >
             Contact sales
           </Link>

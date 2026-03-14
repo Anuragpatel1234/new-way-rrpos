@@ -20,7 +20,7 @@ export default function IndustryTabs() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative py-24 lg:py-32 bg-gray-50">
+    <section className="relative py-24 lg:py-32 bg-gray-900 border-t border-gray-800">
       <div className="mx-auto max-w-[1320px] px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -35,7 +35,7 @@ export default function IndustryTabs() {
           <h2 className="mt-3 text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
             Keep your business growing
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-gray-400">
             Purpose-built solutions for the industries that matter most.
           </p>
         </motion.div>
@@ -59,7 +59,7 @@ export default function IndustryTabs() {
                     "flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300 cursor-pointer",
                     active === i
                       ? "bg-primary text-white shadow-lg shadow-primary/25"
-                      : "bg-white text-gray-600 hover:text-foreground border border-gray-200 hover:border-gray-300"
+                      : "bg-background text-gray-400 hover:text-foreground border border-gray-800 hover:border-gray-600"
                   )}
                 >
                   <Icon className="h-4 w-4" />
@@ -87,7 +87,7 @@ export default function IndustryTabs() {
                 <h3 className="mt-4 text-3xl font-bold text-foreground">
                   {INDUSTRIES[active].name}
                 </h3>
-                <p className="mt-4 text-lg leading-relaxed text-gray-600">
+                <p className="mt-4 text-lg leading-relaxed text-gray-400">
                   {INDUSTRIES[active].description}
                 </p>
                 <div className="mt-6 flex flex-col gap-3">
@@ -97,7 +97,7 @@ export default function IndustryTabs() {
                     "Custom reporting dashboards",
                     "Specialized compliance features",
                   ].map((item) => (
-                    <div key={item} className="flex items-center gap-3 text-gray-700">
+                    <div key={item} className="flex items-center gap-3 text-gray-300">
                       <svg className="h-5 w-5 shrink-0 text-primary" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
@@ -116,8 +116,8 @@ export default function IndustryTabs() {
               </div>
 
               {/* Right - Visual */}
-              <div className="relative rounded-2xl border border-gray-200 bg-white p-6 shadow-xl shadow-black/5">
-                <div className="rounded-lg bg-gray-50 p-5">
+              <div className="relative rounded-2xl border border-gray-700 bg-gray-800 p-6 shadow-xl shadow-black/50">
+                <div className="rounded-lg bg-background p-5">
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="text-sm font-semibold text-foreground">Quick Dashboard</h4>
                     <span className="text-xs text-gray-400">Live</span>
@@ -129,21 +129,21 @@ export default function IndustryTabs() {
                       { label: "Orders", value: "189" },
                       { label: "Revenue", value: "+18.2%" },
                     ].map((s) => (
-                      <div key={s.label} className="rounded-lg bg-white p-3 border border-gray-100">
+                      <div key={s.label} className="rounded-lg bg-gray-800 p-3 border border-gray-700">
                         <p className="text-[11px] text-gray-400">{s.label}</p>
                         <p className="mt-0.5 text-lg font-bold text-foreground">{s.value}</p>
                       </div>
                     ))}
                   </div>
-                  <div className="mt-4 rounded-lg bg-white p-3 border border-gray-100">
+                  <div className="mt-4 rounded-lg bg-gray-800 p-3 border border-gray-700">
                     <p className="text-[11px] text-gray-400 mb-2">Recent Transactions</p>
                     {[
                       { name: "Invoice #1247", amount: "₹2,340" },
                       { name: "Invoice #1246", amount: "₹890" },
                       { name: "Invoice #1245", amount: "₹5,600" },
                     ].map((t) => (
-                      <div key={t.name} className="flex items-center justify-between py-1.5 border-b border-gray-50 last:border-0">
-                        <span className="text-xs text-gray-600">{t.name}</span>
+                      <div key={t.name} className="flex items-center justify-between py-1.5 border-b border-gray-700 last:border-0">
+                        <span className="text-xs text-gray-400">{t.name}</span>
                         <span className="text-xs font-medium text-foreground">{t.amount}</span>
                       </div>
                     ))}

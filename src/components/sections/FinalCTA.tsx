@@ -8,11 +8,10 @@ import { SITE } from "@/lib/constants";
 
 export default function FinalCTA() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary-dark to-primary py-24 lg:py-32">
+    <section className="relative overflow-hidden bg-background py-24 lg:py-32">
       {/* Background effects */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-white/5 blur-[80px]" />
-        <div className="absolute -bottom-40 -left-40 h-[400px] w-[400px] rounded-full bg-accent/10 blur-[80px]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:60px_60px]" />
       </div>
 

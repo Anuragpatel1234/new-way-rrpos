@@ -34,7 +34,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-100 bg-gray-50">
+    <footer className="border-t border-gray-800 bg-background">
       <div className="mx-auto max-w-[1320px] px-6 lg:px-8">
         {/* Main Footer */}
         <div className="grid grid-cols-2 gap-8 py-16 md:grid-cols-3 lg:grid-cols-5">
@@ -46,25 +46,25 @@ export default function Footer() {
               </div>
               <span className="text-xl font-bold text-foreground">POS</span>
             </Link>
-            <p className="mt-4 text-sm leading-relaxed text-gray-500">
+            <p className="mt-4 text-sm leading-relaxed text-gray-400">
               {SITE.tagline}
             </p>
             <div className="mt-6 flex flex-col gap-3">
               <a
                 href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-                className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary transition-colors"
+                className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
               >
                 <Phone className="h-4 w-4" />
                 {SITE.phone}
               </a>
               <a
                 href={`mailto:${SITE.email}`}
-                className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary transition-colors"
+                className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
               >
                 <Mail className="h-4 w-4" />
                 {SITE.email}
               </a>
-              <div className="flex items-start gap-2 text-sm text-gray-600">
+              <div className="flex items-start gap-2 text-sm text-gray-400">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
                 <span>Chennai, Tamil Nadu, India</span>
               </div>
@@ -80,7 +80,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-gray-500 hover:text-primary transition-colors"
+                      className="text-sm text-gray-400 hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -92,7 +92,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-gray-200 py-6 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-gray-800 py-6 md:flex-row">
           <p className="text-xs text-gray-400">
             &copy; {new Date().getFullYear()} RR POS. All rights reserved.
           </p>
