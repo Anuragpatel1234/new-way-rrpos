@@ -40,11 +40,8 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-8 py-16 md:grid-cols-3 lg:grid-cols-5">
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-                <span className="text-base font-bold text-white">RR</span>
-              </div>
-              <span className="text-xl font-bold text-foreground">POS</span>
+            <Link href="/" className="flex items-center gap-2 outline-none">
+              <span className="text-2xl font-bold text-foreground tracking-tight">NewWay</span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-gray-400">
               {SITE.tagline}

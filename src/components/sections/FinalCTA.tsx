@@ -1,125 +1,168 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
+import { useState, useRef } from "react";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const CTA_LINKS = [
+/* ------------------------------------------------------------------ */
+/*  CTA items – each link triggers a different background image        */
+/* ------------------------------------------------------------------ */
+
+const CTA_ITEMS = [
   {
-    id: "hardware",
+    id: "pos-hardware",
     label: "Explore POS hardware",
     href: "/hardware",
-    image: "https://images.unsplash.com/photo-1556742049-0cfb4a40e525?w=1600&q=80&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1400&auto=format&fit=crop",
   },
   {
     id: "software",
-    label: "Discover software features",
+    label: "Discover our software",
     href: "/features",
-    image: "https://images.unsplash.com/photo-1556741533-6e4a6ebaa3b5?w=1600&q=80&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1400&auto=format&fit=crop",
   },
   {
     id: "demo",
     label: "Book a free demo",
     href: "/contact",
-    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&q=80&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1400&auto=format&fit=crop",
   },
 ];
 
+/* ------------------------------------------------------------------ */
+/*  Component                                                          */
+/* ------------------------------------------------------------------ */
+
 export default function FinalCTA() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="relative min-h-[80vh] w-full flex items-center justify-center overflow-hidden bg-background py-24 border-t border-gray-800">
-      {/* Background Images */}
-      {CTA_LINKS.map((link, index) => (
-        <Image
-          key={link.id}
-          src={link.image}
-          alt={link.label}
-          fill
-          className={cn(
-            "object-cover transition-opacity duration-700 ease-in-out",
-            hoveredIndex === index ? "opacity-30" : "opacity-0"
-          )}
-          priority={index === 0}
-          unoptimized
-        />
-      ))}
+    <section
+      ref={sectionRef}
+      className="relative w-full bg-background py-16 lg:py-24"
+    >
+      <div className="mx-auto max-w-[1320px] px-6 lg:px-8">
+        {/* ─── Large Rounded Card (Square-style) ─────────────── */}
+        <div className="relative overflow-hidden rounded-[28px] min-h-[520px] md:min-h-[600px] lg:min-h-[680px] flex flex-col items-center justify-center bg-gray-900/50">
+          {/* Background images with crossfade */}
+          {CTA_ITEMS.map((item, index) => (
+            <Image
+              key={item.id}
+              src={item.image}
+              alt={item.label}
+              fill
+              className={cn(
+                "object-cover transition-opacity duration-700 ease-in-out",
+                activeIndex === index ? "opacity-100" : "opacity-0"
+              )}
+              sizes="(max-width: 768px) 100vw, 1320px"
+              priority={index === 0}
+              unoptimized
+            />
+          ))}
 
-      {/* Default Subtle Background (shown when nothing is hovered) */}
-      <div 
-        className={cn(
-          "pointer-events-none absolute inset-0 transition-opacity duration-700",
-          hoveredIndex !== null ? "opacity-0" : "opacity-100"
-        )}
-      >
-        <div className="absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-white/5 blur-[80px]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:60px_60px]" />
-      </div>
+          {/* Dark gradient overlay for text legibility */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 z-[1]" />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1320px] px-6 lg:px-8">
-        <div className="mx-auto max-w-5xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-12 md:mb-16"
-          >
-             <p className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">
-              Next Steps
-            </p>
-            <h2 className="text-4xl font-normal text-white sm:text-5xl lg:text-6xl tracking-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Make your next move
-            </h2>
-          </motion.div>
+          {/* ─── Content ─── */}
+          <div className="relative z-10 flex flex-col items-center text-center px-6 w-full max-w-4xl">
+            {/* Heading */}
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="text-white font-normal leading-[1.05] tracking-tight"
+              style={{
+                fontFamily: "'Playfair Display', serif",
+                fontSize: "clamp(2.5rem, 6vw, 5rem)",
+              }}
+            >
+              Make your
+              <br />
+              next move
+            </motion.h2>
 
-          <div className="flex flex-col">
-            {CTA_LINKS.map((link, index) => {
-              const isHovered = hoveredIndex === index;
-              const isOtherHovered = hoveredIndex !== null && hoveredIndex !== index;
+            {/* Hoverable link list */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mt-10 flex flex-col w-full max-w-xl"
+              onMouseLeave={() => setActiveIndex(null)}
+            >
+              {CTA_ITEMS.map((item, index) => {
+                const isHovered = activeIndex === index;
+                const isOtherHovered =
+                  activeIndex !== null && activeIndex !== index;
 
-              return (
-                <Link
-                  key={link.id}
-                  href={link.href}
-                  className="group relative flex items-center justify-between border-t border-white/20 py-8 transition-colors hover:border-white/50 first:border-0"
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                >
-                  <span
-                    className={cn(
-                      "text-3xl font-medium tracking-tight text-white transition-all duration-500 sm:text-4xl md:text-5xl",
-                      HoveredClasses(isHovered, isOtherHovered)
-                    )}
+                return (
+                  <Link
+                    key={item.id}
+                    href={item.href}
+                    className="group relative flex items-center justify-between border-t border-white/20 py-4 sm:py-5 transition-colors last:border-b last:border-white/20"
+                    onMouseEnter={() => setActiveIndex(index)}
                   >
-                    {link.label}
-                  </span>
-                  
-                  <div
-                    className={cn(
-                      "flex h-12 w-12 items-center justify-center rounded-full bg-white text-gray-900 transition-all duration-500 sm:h-16 sm:w-16 overflow-hidden",
-                      isHovered ? "opacity-100 scale-100 translate-x-0" : "opacity-0 scale-75 -translate-x-4",
-                      isOtherHovered && "opacity-0"
-                    )}
-                  >
-                    <ArrowRight className="h-6 w-6 sm:h-8 sm:w-8" />
-                  </div>
-                </Link>
-              );
-            })}
+                    <span
+                      className={cn(
+                        "text-lg sm:text-xl md:text-2xl font-medium text-white transition-all duration-400",
+                        isHovered && "translate-x-2",
+                        isOtherHovered && "opacity-40"
+                      )}
+                    >
+                      {item.label}
+                    </span>
+
+                    {/* Arrow that appears on hover */}
+                    <div
+                      className={cn(
+                        "flex h-10 w-10 items-center justify-center rounded-full bg-white text-gray-900 transition-all duration-400",
+                        isHovered
+                          ? "opacity-100 scale-100"
+                          : "opacity-0 scale-75"
+                      )}
+                    >
+                      <ArrowRight className="h-5 w-5" />
+                    </div>
+                  </Link>
+                );
+              })}
+            </motion.div>
+
+            {/* CTA Buttons (Square-style) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.35 }}
+              className="mt-10 flex flex-col items-center gap-3 sm:flex-row"
+            >
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 rounded-full bg-white text-gray-900 px-7 py-3.5 text-[0.95rem] font-semibold shadow-lg hover:bg-gray-100 transition-all duration-200 hover:shadow-xl hover:scale-[1.02]"
+              >
+                Get started
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm text-white px-7 py-3.5 text-[0.95rem] font-semibold hover:bg-white/20 transition-all duration-200 hover:scale-[1.02]"
+              >
+                <Phone className="h-4 w-4" />
+                Contact sales
+              </Link>
+            </motion.div>
           </div>
         </div>
       </div>
     </section>
   );
-}
-
-function HoveredClasses(isHovered: boolean, isOtherHovered: boolean) {
-  if (isHovered) return "opacity-100 translate-x-2";
-  if (isOtherHovered) return "opacity-40";
-  return "opacity-100";
 }

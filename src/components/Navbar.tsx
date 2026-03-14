@@ -39,17 +39,14 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-between px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="relative z-50 flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-            <span className="text-base font-bold text-white">RR</span>
-          </div>
+        <Link href="/" className="relative z-50 flex items-center gap-2 outline-none">
           <span
             className={cn(
-              "text-xl font-bold transition-colors duration-300",
+              "text-2xl font-bold tracking-tight transition-colors duration-300",
               scrolled || mobileOpen ? "text-foreground" : "text-white"
             )}
           >
-            POS
+            NewWay
           </span>
         </Link>
 

@@ -19,7 +19,7 @@ export default function Testimonials() {
           <span className="text-sm font-semibold uppercase tracking-wider text-gray-400">
             Testimonials
           </span>
-          <h2 className="mt-3 text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">
             Loved by retail businesses
           </h2>
           <p className="mt-4 text-lg text-gray-600">
