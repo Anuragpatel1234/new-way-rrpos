@@ -18,7 +18,7 @@ export function useDraggableScroll({ damping = 0.95 }: useDraggableScrollProps =
   const velocity = useRef(0);
   const prevX = useRef(0);
   const lastTime = useRef(0);
-  const momentumId = useRef<number>();
+  const momentumId = useRef<number>(0);
 
   const checkScroll = () => {
     if (!ref.current) return;
