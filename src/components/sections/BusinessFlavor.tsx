@@ -26,7 +26,7 @@ type GridItem = GridImage | GridText | GridNull;
 // 3 rows of 5 = 15 items total, center (item #7 index 7) = null = headline
 const GRID_ITEMS: GridItem[] = [
   // Row 1
-  { type: "image", src: "https://images.unsplash.com/photo-1556742049-0cfb4a40e525?w=500&q=80&fit=crop", alt: "POS terminal at checkout" },
+  { type: "image", src: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=500&q=80&fit=crop", alt: "POS terminal at checkout" },
   { type: "text", label: "OPEN", style: "open" },
   { type: "image", src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=80&fit=crop", alt: "Restaurant dining" },
   { type: "image", src: "https://images.unsplash.com/photo-1490457843367-34b21b6ccd85?w=500&q=80&fit=crop", alt: "Florist with flowers" },
@@ -99,6 +99,7 @@ export default function BusinessFlavor() {
                   <h2
                     className="font-serif text-center text-foreground"
                     style={{
+                      color: "#111",
                       fontSize: "clamp(1.5rem, 2.6vw, 2.6rem)",
                       lineHeight: 1.15,
                       fontWeight: 400,
@@ -138,7 +139,7 @@ export default function BusinessFlavor() {
                       <OpenSignIcon />
                     )}
                     {item.style === "thankyou" && (
-                      <div style={{ textAlign: "center", lineHeight: 1.4 }}>
+                      <div style={{ textAlign: "center", lineHeight: 1.4, color: "#111" }}>
                         {["THANK", "YOU", "THANK", "YOU"].map((w, i) => (
                           <div
                             key={i}

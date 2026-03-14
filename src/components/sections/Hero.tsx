@@ -30,6 +30,7 @@ export default function Hero() {
     const videoWrapper = videoWrapperRef.current;
     const content = contentRef.current;
     const brands = brandsRef.current;
+
     const targetTab = document.querySelector("#card-payment-tab");
 
     if (!section || !videoWrapper || !content) return;
@@ -49,6 +50,29 @@ export default function Hero() {
     // If the target tab exists (BusinessFlavor rendered), animate toward it
     if (targetTab) {
       const progressObj = { p: 0 };
+      let currentP = 0;
+
+      const updatePos = () => {
+        const p = currentP;
+        const targetRect = targetTab.getBoundingClientRect();
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+
+        const currentW = vw + (targetRect.width - vw) * p;
+        const currentH = vh + (targetRect.height - vh) * p;
+        const currentX = (targetRect.left) * p;
+        const currentY = (targetRect.top) * p;
+
+        gsap.set(videoWrapper, {
+          width: currentW,
+          height: currentH,
+          x: currentX,
+          y: currentY,
+          borderRadius: `${p * 20}px`,
+        });
+      };
+
+      gsap.ticker.add(updatePos);
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -82,25 +106,13 @@ export default function Hero() {
         p: 1,
         ease: "power2.inOut",
         onUpdate: () => {
-          const p = progressObj.p;
-          const targetRect = targetTab.getBoundingClientRect();
-          const vw = window.innerWidth;
-          const vh = window.innerHeight;
-
-          const currentW = vw + (targetRect.width - vw) * p;
-          const currentH = vh + (targetRect.height - vh) * p;
-          const currentX = (targetRect.left) * p;
-          const currentY = (targetRect.top) * p;
-
-          gsap.set(videoWrapper, {
-            width: currentW,
-            height: currentH,
-            x: currentX,
-            y: currentY,
-            borderRadius: `${p * 28}px`,
-          });
+          currentP = progressObj.p;
         },
       }, 0);
+
+      return () => {
+        gsap.ticker.remove(updatePos);
+      };
     } else {
       // No target tab: just fade/shrink the video wrapper on scroll
       const tl = gsap.timeline({
