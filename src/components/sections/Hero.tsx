@@ -10,7 +10,7 @@ import { ArrowRight } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const HERO_VIDEO_SRC = "/mixkit-pharmacy-worker-accepts-payment-at-checkout-5407-hd-ready.mp4";
+const HERO_VIDEO_SRC = "/hero-bg-video.mp4";
 
 // Brand logos shown at the bottom of the hero (Square shows partner brands)
 const BRANDS = [
