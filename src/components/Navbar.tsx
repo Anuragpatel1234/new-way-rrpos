@@ -45,7 +45,19 @@ export default function Navbar() {
       )}
       style={{ zIndex: 100 }}
     >
-      <nav className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-center px-6 lg:px-8">
+      <nav className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-between px-6 lg:px-8">
+        {/* Logo */}
+        <Link href="/" className="relative z-50 flex items-center gap-2 outline-none">
+          <span
+            className={cn(
+              "text-2xl font-bold tracking-tight transition-colors duration-300",
+              scrolled || mobileOpen ? "text-foreground" : "text-white"
+            )}
+          >
+            NewWay
+          </span>
+        </Link>
+
         {/* Desktop Nav */}
 
         <div className="hidden items-center gap-1 lg:flex">

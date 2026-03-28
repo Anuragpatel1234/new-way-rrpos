@@ -1,0 +1,253 @@
+[
+  {
+    "name": "Touch POS",
+    "products": [
+      {
+        "name": "2302",
+        "image": "/products/touch_2302.jpg"
+      },
+      {
+        "name": "2402",
+        "image": "/products/touch_2402.jpg"
+      },
+      {
+        "name": "2406",
+        "image": "/products/touch_2406.jpg"
+      },
+      {
+        "name": "1904",
+        "image": "/products/touch_1904.jpg"
+      },
+      {
+        "name": "1903",
+        "image": "/products/touch_1903.jpg"
+      },
+      {
+        "name": "2403",
+        "image": "/products/touch_2403.jpg"
+      },
+      {
+        "name": "2301",
+        "image": "/products/touch_2301.jpg"
+      },
+      {
+        "name": "TC03",
+        "image": "/products/touch_TC03.jpg"
+      },
+      {
+        "name": "TF01",
+        "image": "/products/touch_TF01.jpg"
+      },
+      {
+        "name": "TL06",
+        "image": "/products/touch_TL06.jpg"
+      },
+      {
+        "name": "TQ02",
+        "image": "/products/touch_TQ02.jpg"
+      },
+      {
+        "name": "TQ03",
+        "image": "/products/touch_TQ03.jpg"
+      },
+      {
+        "name": "TR06",
+        "image": "/products/touch_TR06.jpg"
+      },
+      {
+        "name": "D3MINI",
+        "image": "/products/touch_D3mini.jpg"
+      },
+      {
+        "name": "TC06",
+        "image": "/products/touch_TC06.jpg"
+      },
+      {
+        "name": "TE05",
+        "image": "/products/touch_TE05.jpg"
+      },
+      {
+        "name": "1715",
+        "image": "/products/touch_1715.jpg"
+      },
+      {
+        "name": "2401",
+        "image": "/products/touch_2401.jpg"
+      },
+      {
+        "name": "2310",
+        "image": "/products/touch_2310.jpg"
+      },
+      {
+        "name": "2303",
+        "image": "/products/touch_2303.jpg"
+      },
+      {
+        "name": "TE02",
+        "image": "/products/touch_TE02.jpg"
+      },
+      {
+        "name": "A115",
+        "image": "/products/touch_A115.jpg"
+      },
+      {
+        "name": "1902",
+        "image": "/products/touch_1902.jpg"
+      },
+      {
+        "name": "1701",
+        "image": "/products/touch_1701.jpg"
+      },
+      {
+        "name": "TS02",
+        "image": "/products/touch_TS02.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Handheld POS",
+    "products": [
+      {
+        "name": "N1",
+        "image": "/products/handheld_N1.jpg"
+      },
+      {
+        "name": "Q1",
+        "image": "/products/handheld_Q1.jpg"
+      },
+      {
+        "name": "Q3",
+        "image": "/products/handheld_Q3.jpg"
+      },
+      {
+        "name": "Q6",
+        "image": "/products/handheld_Q6.jpg"
+      },
+      {
+        "name": "Z1LIST",
+        "image": "/products/handheld_Z1LIST.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Channel POS",
+    "products": [
+      {
+        "name": "1515A",
+        "image": "/products/channel_1515A.jpg"
+      },
+      {
+        "name": "1515B",
+        "image": "/products/channel_1515B.jpg"
+      },
+      {
+        "name": "1515C",
+        "image": "/products/channel_1515C.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Cash Register",
+    "products": [
+      {
+        "name": "1515F",
+        "image": "/products/cash_1515F.jpg"
+      },
+      {
+        "name": "2307",
+        "image": "/products/cash_2307.jpg"
+      },
+      {
+        "name": "1515G",
+        "image": "/products/cash_1515G.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Barcode Scanner",
+    "products": [
+      {
+        "name": "VS6760",
+        "image": "/products/scanner_VS6760.jpg"
+      },
+      {
+        "name": "710",
+        "image": "/products/scanner_710.jpg"
+      },
+      {
+        "name": "680",
+        "image": "/products/scanner_680.jpg"
+      },
+      {
+        "name": "4800",
+        "image": "/products/scanner_4800.jpg"
+      },
+      {
+        "name": "8130plus",
+        "image": "/products/scanner_8130plus.jpg"
+      },
+      {
+        "name": "8180plus",
+        "image": "/products/scanner_8180plus.jpg"
+      },
+      {
+        "name": "790A",
+        "image": "/products/scanner_790A.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Receipt Printer",
+    "products": [
+      {
+        "name": "G200",
+        "image": "/products/printer_G200.jpg"
+      },
+      {
+        "name": "GP3120TL",
+        "image": "/products/printer_GP3120TL.jpg"
+      },
+      {
+        "name": "GP1324T",
+        "image": "/products/printer_GP1324T.jpg"
+      },
+      {
+        "name": "SPRT 887",
+        "image": "/products/printer_SPRT_887.jpg"
+      },
+      {
+        "name": "SPRT 8811",
+        "image": "/products/printer_SPRT_8811.jpg"
+      },
+      {
+        "name": "SPRT S200",
+        "image": "/products/printer_SPRT_S200.jpg"
+      },
+      {
+        "name": "SPRT TL25",
+        "image": "/products/printer_SPRT_TL25.jpg"
+      },
+      {
+        "name": "XP-235B",
+        "image": "/products/printer_XP-235B.jpg"
+      },
+      {
+        "name": "XP-365B",
+        "image": "/products/printer_XP-365B.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Scale",
+    "products": [
+      {
+        "name": "DAHUA",
+        "image": "/products/scale_DAHUA.jpg"
+      },
+      {
+        "name": "RTC1",
+        "image": "/products/scale_RTC1.jpg"
+      }
+    ]
+  }
+]

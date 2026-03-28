@@ -1,0 +1,285 @@
+{
+  "images": [
+    {
+      "src": "https://www.jesenpos.com/img/logo_1920.png",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/primary.jpg",
+      "alt": "",
+      "text": "Touch POS\n\nTZ01\nTX02\nTZ06\nTN04\nTN03\nTE04\nTC01\nTC03\nTF01\nTL06\nTQ02\nTQ03\nTR06\nD3\nTC06\nTE05\nTY02\nTT03\nTW03\nTY01\nTE02\nTE01\nTN02\nTN06\n\nHandheld POS\n\nN1\nQ1\nQ3\nQ6\nZ1L\n\nChannel POS\n\nTK01\nTK02\nTK03\n\nCash register\n\nTK05\nTK06\nTK04\n\nBarcode scanner\n\nVS6760\nLD710\nLCSS680\nLCSS4800\n8130plus\n8180plus\n790A\n\nReceipt printer\n\nDEYI-G200\nGP-3120TL\nGP-1324T\nSPRT 887\nSPRT 8811\nSPRT S200\nSPRT TL25\nXP-235B\nXP-365B\n\nScale\n\nTS02\nDAHUA\nTS01"
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/2302/50k/01.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/2402/50k/30.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/2406/50k/IMG_8067.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/1904/S/50k/1908-01-.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/1903/S/50k/1903S.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/2403/50k/1.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/2301/50k/05.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/TC03/0.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/TF01/0.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/TL06/0.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/TQ02/0.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/TQ03/0.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/TR06/0.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/D3mini/50k/D3MINI-(1).jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/TC06/0.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/TE05/0.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/1715/50k/IMG_8739.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/2401/50k/214.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/2310/50k/101.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/2303/50k/2303-01.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/TE02/IMG_9142.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/A115/50k/1.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/1902/S/50k/IMG_2610.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/1701/50k/1.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/handheld/N1/50k/1.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/handheld/Q1/50k/6.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/handheld/Q3/50k/Q3-orange10.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/handheld/Q6/50k/3.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/handheld/Z1LIST/50k/1.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/channel/1515A/50k/IMG_6224.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/channel/1515B/50k/IMG_E6234.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/channel/1515C/50k/IMG_7943.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/cash/1515F/50k/1515F-01.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/cash/2307/50k/IMG_E6191.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/cash/1515G/50k/IMG_73-26.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/scanner/VS6760/50k/IMG_6383.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/scanner/710/50k/1.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/scanner/680/50k/LCSS680-01.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/scanner/4800/50k/LCSS4800-01.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/scanner/8130plus/50k/8130plus-01.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/scanner/8180plus/50k/8180plus-01.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/scanner/790A/50k/X-790A-.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/printer/G200/50k/DY-G200-1.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/printer/GP3120TL/50k/1.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/printer/GP1324T/50k/1324T-2.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/printer/SPRT_887/50k/IMG_8686.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/printer/SPRT_8811/50k/IMG_8637.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/printer/SPRT_S200/50k/IMG_8644.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/printer/SPRT_TL25/50k/_1.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/printer/XP-235B/50k/7a.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/printer/XP-365B/50k/5d7a93.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/touch/TS02/0.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/scale/DAHUA/50k/15.jpg",
+      "alt": "",
+      "text": ""
+    },
+    {
+      "src": "https://www.jesenpos.com/img/product/scale/RTC1/50k/IMG_8037.jpg",
+      "alt": "",
+      "text": ""
+    }
+  ],
+  "backgrounds": []
+}
