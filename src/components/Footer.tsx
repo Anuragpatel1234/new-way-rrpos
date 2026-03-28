@@ -6,11 +6,13 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 const footerLinks = {
   Products: [
-    { label: "Billing Management", href: "/features#billing" },
-    { label: "Inventory Management", href: "/features#inventory" },
-    { label: "Reports & Analytics", href: "/features#reports" },
-    { label: "Multi-Store Management", href: "/features#multistore" },
-    { label: "GST & Compliance", href: "/features#gst" },
+    { label: "Touch POS", href: "/product#touch-pos" },
+    { label: "Handheld POS", href: "/product#handheld-pos" },
+    { label: "Channel POS", href: "/product#channel-pos" },
+    { label: "Cash Register", href: "/product#cash-register" },
+    { label: "Barcode Scanner", href: "/product#barcode-scanner" },
+    { label: "Receipt Printer", href: "/product#receipt-printer" },
+    { label: "Scale", href: "/product#scale" },
   ],
   Hardware: [
     { label: "POS Terminal", href: "/hardware#terminal" },

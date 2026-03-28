@@ -4,103 +4,610 @@
     "products": [
       {
         "name": "2302",
-        "image": "/products/touch_2302.jpg"
+        "image": "/products/touch_2302.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527",
+          "Memory": "DDRIII 2G/4G/8G DDRIV 8G/16G",
+          "Storage": "SSD 32G/64G/128G/256G/512G",
+          "OS Support": "Windows10/11; Android11/12/13/14; Linux",
+          "Main Display": "15”/15.6” LED Backlight Touch Screen",
+          "Resolution": "1024x768/1920x1080",
+          "USB": "2xUSB2.0 + 2xUSB3.0",
+          "LAN": "RJ45",
+          "Display": "VGA/HDMI",
+          "Serial": "COM (RS232)",
+          "Audio": "Line Out + Audio",
+          "WiFi": "Mini PCIe for Wireless LAN",
+          "Speaker": "4Ω·5W Speaker",
+          "Power DC-IN": "12V 7A/5A Circular Hole",
+          "Operating Temperature": "0~40℃",
+          "Storage Temperature": "-20~60℃",
+          "Product Dimensions": "390x260x380mm",
+          "Packing Dimensions": "470x260x420mm",
+          "Net Weight": "5.1kg",
+          "Gross Weight": "6.5kg",
+          "Color": "Black",
+          "2nd Display": "9.7” / 10.1” LED Backlight Screen 1024x768 / 1024x600",
+          "Material": "Aluminum Body",
+          "Design": "Foldable Body Design",
+          "Bluetooth": "Blue Tooth 4.2",
+          "Card Reader": "MSR NFC iButton Card Reader (Optional)"
+        }
       },
       {
         "name": "2402",
-        "image": "/products/touch_2402.jpg"
+        "image": "/products/touch_2402.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron J6412 Intel Core i5(4/7/8/11 Gen) RK3568",
+          "Memory": "DDRIII 2G/4G/8G DDRIV 4G/8G/16G",
+          "Storage": "SSD 128G/256G 16G/64G/128G",
+          "OS Support": "Windows10/11; Android11/13",
+          "Main Display": "15.6” TFT-LCD Muliti Touch Screen",
+          "Resolution": "1366x768/1920x1080",
+          "USB": "6xUSB",
+          "LAN": "RJ45",
+          "Display": "VGA/HDMI",
+          "Serial": "COM (RS232)",
+          "Audio": "Line Out + Audio",
+          "WiFi": "Dual-band 2.4&5GHz IEEE 802.11a/b/g/n",
+          "Speaker": "2.2W Speaker",
+          "Power DC-IN": "12V 4A Circular Hole",
+          "Operating Temperature": "0~40℃",
+          "Storage Temperature": "-20~60℃",
+          "Product Dimensions": "370x220x310mm",
+          "Packing Dimensions": "450x320x380mm",
+          "Net Weight": "4.7kg",
+          "Gross Weight": "6kg",
+          "Color": "Black",
+          "2nd Display": "10.1” TFT-LCD Screen 1280x800 / 1024x600",
+          "Material": "Aluminum Body",
+          "Design": "Foldable Body Design",
+          "Bluetooth": "Blue Tooth 4.2+BLE",
+          "Card Reader": "Camera / MSR NFC Card Reader (Optional)"
+        }
       },
       {
         "name": "2406",
-        "image": "/products/touch_2406.jpg"
+        "image": "/products/touch_2406.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527",
+          "Memory": "DDRIII 2G/4G/8G DDRIV 8G/16G",
+          "Storage": "SSD 32G/64G/128G/256G/512G",
+          "OS Support": "Windows10/11; Android11/12/13/14; Linux",
+          "Main Display": "15”/15.6” LED Backlight Touch Screen",
+          "Resolution": "1024x768/1920x1080",
+          "USB": "2xUSB2.0 + 2xUSB3.0)",
+          "LAN": "RJ45",
+          "Display": "VGA/HDMI",
+          "Serial": "COM (RS232)",
+          "Audio": "Line Out + Audio",
+          "WiFi": "Mini PCIe for Wireless LAN",
+          "Speaker": "4Ω·5W Speaker",
+          "Power DC-IN": "12V 7A/5A Circular Hole",
+          "Operating Temperature": "0~40℃",
+          "Storage Temperature": "-20~60℃",
+          "Product Dimensions": "390x260x380mm",
+          "Packing Dimensions": "470x260x420mm",
+          "Net Weight": "5.1kg",
+          "Gross Weight": "6.5kg",
+          "Color": "Black",
+          "2nd Display": "9.7” / 10.1” LED Backlight Screen 1024x768 / 1024x600",
+          "Material": "Plastic + Aluminum Base",
+          "Design": "Foldable Body Design",
+          "Bluetooth": "Blue Tooth 4.2",
+          "Card Reader": "MSR NFC iButton Card Reader (Optional)"
+        }
       },
       {
         "name": "1904",
-        "image": "/products/touch_1904.jpg"
+        "image": "/products/touch_1904.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527",
+          "Memory": "DDRIII 2G/4G/8G DDRIV 8G/16G",
+          "Storage": "SSD 32G/64G/128G/256G/512G",
+          "OS Support": "Windows10/11; Android11/12/13/14; Linux",
+          "Main Display": "15.6” LED Backlight Touch Screen",
+          "Resolution": "1366x768/1920x1080",
+          "USB": "4xUSB2.0 + 2xUSB3.0)",
+          "LAN": "RJ45",
+          "Display": "VGA/HDMI",
+          "Serial": "COM (RS232)",
+          "Audio": "Line Out + Audio",
+          "WiFi": "Mini PCIe for Wireless LAN",
+          "Speaker": "4Ω·5W Speaker",
+          "Cash Drawer": "RJ11",
+          "Power DC-IN": "12V 7A/5A Circular Hole",
+          "Operating Temperature": "0~40℃",
+          "Storage Temperature": "-20~60℃",
+          "Product Dimensions": "390x300x400mm",
+          "Packing Dimensions": "520x320x510mm",
+          "Net Weight": "5.5kg",
+          "Gross Weight": "7kg",
+          "Color": "White/Black",
+          "2nd Display": "8-Digit LED Display/VFD 11.6\"/15.6\" LED Backlight Screen",
+          "Printer": "58/80mm Thermal Receipt Printer",
+          "Bluetooth": "BlueTooth 4.0 Protocol",
+          "Barcode Scanner": "QR Payment Code Sacnner (Optional)"
+        }
       },
       {
         "name": "1903",
-        "image": "/products/touch_1903.jpg"
+        "image": "/products/touch_1903.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527",
+          "Memory": "DDRIII 2G/4G/8G DDRIV 8G/16G",
+          "Storage": "SSD 32G/64G/128G/256G/512G",
+          "OS Support": "Windows10/11; Android11/12/13/14; Linux",
+          "Main Display": "15”/15.6” LED Backlight Touch Screen",
+          "Resolution": "1024x768/1920x1080/1366x768",
+          "USB": "4xUSB2.0 + 2xUSB3.0",
+          "LAN": "RJ45",
+          "Display": "VGA/HDMI",
+          "Serial": "COM (RS232)",
+          "Audio": "Line Out + Audio",
+          "WiFi": "Mini PCIe for Wireless LAN",
+          "Speaker": "4Ω·5W Speaker",
+          "Power DC-IN": "12V 7A/5A Circular Hole",
+          "Operating Temperature": "0~40℃",
+          "Storage Temperature": "-20~60℃",
+          "Product Dimensions": "390x260x400mm",
+          "Packing Dimensions": "470x320x470mm",
+          "Net Weight": "5kg",
+          "Gross Weight": "6.5kg",
+          "Color": "White/Black",
+          "2nd Display": "8-Digit LED Display/VFD 15\"/15.6\" LED Backlight Screen",
+          "Camera": "2-Megapixel",
+          "Bluetooth": "BlueTooth 4.0 Protocol",
+          "Barcode Scanner": "QR Payment Code Sacnner (Optional)"
+        }
       },
       {
         "name": "2403",
-        "image": "/products/touch_2403.jpg"
+        "image": "/products/touch_2403.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527",
+          "Memory": "DDRIII 2G/4G/8G DDRIV 8G/16G",
+          "Storage": "SSD 32G/64G/128G/256G/512G",
+          "OS Support": "Windows10/11; Android11/12/13/14; Linux",
+          "Main Display": "15.6” LED Backlight Touch Screen",
+          "Resolution": "1366x768/1920x1080",
+          "USB": "4xUSB2.0 + 2xUSB3.0",
+          "LAN": "RJ45",
+          "Display": "VGA/HDMI",
+          "Serial": "COM (RS232)",
+          "Audio": "Line Out + Audio",
+          "WiFi": "Mini PCIe for Wireless LAN",
+          "Speaker": "4Ω·5W Speaker",
+          "Cash Drawer": "RJ11",
+          "Power DC-IN": "12V 7A/5A Circular Hole",
+          "Operating Temperature": "0~40℃",
+          "Storage Temperature": "-20~60℃",
+          "Product Dimensions": "390x300x450mm",
+          "Packing Dimensions": "470x320x520mm",
+          "Net Weight": "5kg",
+          "Gross Weight": "6.5kg",
+          "Color": "White/Black",
+          "2nd Display": "8-Digit LED Display/VFD 11.6\"/15.6\" LED Backlight Screen",
+          "Printer": "58/80mm Thermal Receipt Printer",
+          "Bluetooth": "BlueTooth 4.0 Protocol",
+          "Camera": "2-Megapixel(Optional)"
+        }
       },
       {
         "name": "2301",
-        "image": "/products/touch_2301.jpg"
+        "image": "/products/touch_2301.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527",
+          "Memory": "DDRIII 2G/4G/8G DDRIV 8G/16G",
+          "Storage": "SSD 32G/64G/128G/256G/512G",
+          "OS Support": "Windows10/11; Android11/12/13/14; Linux",
+          "Main Display": "15”/15.6” LED Backlight Touch Screen",
+          "Resolution": "1024x768/1920x1080",
+          "USB": "2xUSB2.0 + 2xUSB3.0",
+          "LAN": "RJ45",
+          "Display": "VGA/HDMI",
+          "Serial": "COM (RS232)",
+          "Audio": "Line Out + Audio",
+          "WiFi": "Mini PCIe for Wireless LAN",
+          "Speaker": "4Ω·5W Speaker",
+          "Power DC-IN": "12V 7A/5A Circular Hole",
+          "Operating Temperature": "0~40℃",
+          "Storage Temperature": "-20~60℃",
+          "Product Dimensions": "390x260x380mm",
+          "Packing Dimensions": "470x260x420mm",
+          "Net Weight": "5.1kg",
+          "Gross Weight": "6.5kg",
+          "Color": "Black",
+          "2nd Display": "9.7” / 10.1” LED Backlight Screen 1024x768 / 1024x600",
+          "Material": "Aluminum Body",
+          "Design": "Foldable Body Design",
+          "Bluetooth": "Blue Tooth 4.2",
+          "Card Reader": "MSR NFC iButton Card Reader (Optional)"
+        }
       },
       {
         "name": "TC03",
-        "image": "/products/touch_TC03.jpg"
+        "image": "/products/touch_TC03.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron J6412 / Core i3/i5",
+          "Memory": "4GB / 8GB DDR4",
+          "Storage": "128GB / 256GB SSD",
+          "OS Support": "Windows 10/11 IoT / Android",
+          "Main Display": "15\" / 15.6\" Capacitive Touch",
+          "Resolution": "1920x1080 FHD",
+          "Interface": "USB, LAN, COM, Cash Drawer",
+          "Material": "Aluminum / Industrial Plastic"
+        }
       },
       {
         "name": "TF01",
-        "image": "/products/touch_TF01.jpg"
+        "image": "/products/touch_TF01.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron J6412 / Core i3/i5",
+          "Memory": "4GB / 8GB DDR4",
+          "Storage": "128GB / 256GB SSD",
+          "OS Support": "Windows 10/11 IoT / Android",
+          "Main Display": "15\" / 15.6\" Capacitive Touch",
+          "Resolution": "1920x1080 FHD",
+          "Interface": "USB, LAN, COM, Cash Drawer",
+          "Material": "Aluminum / Industrial Plastic"
+        }
       },
       {
         "name": "TL06",
-        "image": "/products/touch_TL06.jpg"
+        "image": "/products/touch_TL06.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron J6412 / Core i3/i5",
+          "Memory": "4GB / 8GB DDR4",
+          "Storage": "128GB / 256GB SSD",
+          "OS Support": "Windows 10/11 IoT / Android",
+          "Main Display": "15\" / 15.6\" Capacitive Touch",
+          "Resolution": "1920x1080 FHD",
+          "Interface": "USB, LAN, COM, Cash Drawer",
+          "Material": "Aluminum / Industrial Plastic"
+        }
       },
       {
         "name": "TQ02",
-        "image": "/products/touch_TQ02.jpg"
+        "image": "/products/touch_TQ02.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron J6412 / Core i3/i5",
+          "Memory": "4GB / 8GB DDR4",
+          "Storage": "128GB / 256GB SSD",
+          "OS Support": "Windows 10/11 IoT / Android",
+          "Main Display": "15\" / 15.6\" Capacitive Touch",
+          "Resolution": "1920x1080 FHD",
+          "Interface": "USB, LAN, COM, Cash Drawer",
+          "Material": "Aluminum / Industrial Plastic"
+        }
       },
       {
         "name": "TQ03",
-        "image": "/products/touch_TQ03.jpg"
+        "image": "/products/touch_TQ03.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron J6412 / Core i3/i5",
+          "Memory": "4GB / 8GB DDR4",
+          "Storage": "128GB / 256GB SSD",
+          "OS Support": "Windows 10/11 IoT / Android",
+          "Main Display": "15\" / 15.6\" Capacitive Touch",
+          "Resolution": "1920x1080 FHD",
+          "Interface": "USB, LAN, COM, Cash Drawer",
+          "Material": "Aluminum / Industrial Plastic"
+        }
       },
       {
         "name": "TR06",
-        "image": "/products/touch_TR06.jpg"
+        "image": "/products/touch_TR06.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron J6412 / Core i3/i5",
+          "Memory": "4GB / 8GB DDR4",
+          "Storage": "128GB / 256GB SSD",
+          "OS Support": "Windows 10/11 IoT / Android",
+          "Main Display": "15\" / 15.6\" Capacitive Touch",
+          "Resolution": "1920x1080 FHD",
+          "Interface": "USB, LAN, COM, Cash Drawer",
+          "Material": "Aluminum / Industrial Plastic"
+        }
       },
       {
         "name": "D3MINI",
-        "image": "/products/touch_D3mini.jpg"
+        "image": "/products/touch_D3mini.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron J6412 / Core i3/i5",
+          "Memory": "4GB / 8GB DDR4",
+          "Storage": "128GB / 256GB SSD",
+          "OS Support": "Windows 10/11 IoT / Android",
+          "Main Display": "15\" / 15.6\" Capacitive Touch",
+          "Resolution": "1920x1080 FHD",
+          "Interface": "USB, LAN, COM, Cash Drawer",
+          "Material": "Aluminum / Industrial Plastic"
+        }
       },
       {
         "name": "TC06",
-        "image": "/products/touch_TC06.jpg"
+        "image": "/products/touch_TC06.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron J6412 / Core i3/i5",
+          "Memory": "4GB / 8GB DDR4",
+          "Storage": "128GB / 256GB SSD",
+          "OS Support": "Windows 10/11 IoT / Android",
+          "Main Display": "15\" / 15.6\" Capacitive Touch",
+          "Resolution": "1920x1080 FHD",
+          "Interface": "USB, LAN, COM, Cash Drawer",
+          "Material": "Aluminum / Industrial Plastic"
+        }
       },
       {
         "name": "TE05",
-        "image": "/products/touch_TE05.jpg"
+        "image": "/products/touch_TE05.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron J6412 / Core i3/i5",
+          "Memory": "4GB / 8GB DDR4",
+          "Storage": "128GB / 256GB SSD",
+          "OS Support": "Windows 10/11 IoT / Android",
+          "Main Display": "15\" / 15.6\" Capacitive Touch",
+          "Resolution": "1920x1080 FHD",
+          "Interface": "USB, LAN, COM, Cash Drawer",
+          "Material": "Aluminum / Industrial Plastic"
+        }
       },
       {
         "name": "1715",
-        "image": "/products/touch_1715.jpg"
+        "image": "/products/touch_1715.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527",
+          "Memory": "DDRIII 2G/4G/8G DDRIV 8G/16G",
+          "Storage": "SSD 32G/64G/128G/256G/512G",
+          "OS Support": "Windows10/11; Android11/12/13/14; Linux",
+          "Main Display": "15”/15.6” LED Backlight Touch Screen",
+          "Resolution": "1024x768/1920x1080",
+          "USB": "2xUSB2.0 + 2xUSB3.0",
+          "LAN": "RJ45",
+          "Display": "VGA/HDMI",
+          "Serial": "COM (RS232)",
+          "Audio": "Line Out + Audio",
+          "WiFi": "Mini PCIe for Wireless LAN",
+          "Speaker": "4Ω·5W Speaker",
+          "Power DC-IN": "12V 7A/5A Circular Hole",
+          "Operating Temperature": "0~40℃",
+          "Storage Temperature": "-20~60℃",
+          "Product Dimensions": "390x260x380mm",
+          "Packing Dimensions": "470x260x420mm",
+          "Net Weight": "5.1kg",
+          "Gross Weight": "6.5kg",
+          "Color": "Black",
+          "2nd Display": "9.7” / 10.1” LED Backlight Screen 1024x768 / 1024x600",
+          "Material": "Aluminum Body",
+          "Design": "Foldable Body Design",
+          "Bluetooth": "Blue Tooth 4.2",
+          "Card Reader": "MSR NFC iButton Card Reader (Optional)"
+        }
       },
       {
         "name": "2401",
-        "image": "/products/touch_2401.jpg"
+        "image": "/products/touch_2401.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527",
+          "Memory": "DDRIII 2G/4G/8G DDRIV 8G/16G",
+          "Storage": "SSD 32G/64G/128G/256G/512G",
+          "OS Support": "Windows10/11; Android11/12/13/14; Linux",
+          "Main Display": "18.5” LED Backlight Touch Screen",
+          "Resolution": "1366x768",
+          "USB": "2xUSB2.0 + 2xUSB3.0)",
+          "LAN": "RJ45",
+          "Display": "VGA/HDMI",
+          "Serial": "COM (RS232)",
+          "Audio": "Line Out + Audio",
+          "WiFi": "Mini PCIe for Wireless LAN",
+          "Speaker": "4Ω·5W Speaker",
+          "Power DC-IN": "12V 7A/5A Circular Hole",
+          "Operating Temperature": "0~40℃",
+          "Storage Temperature": "-20~60℃",
+          "Product Dimensions": "420x200x400mm",
+          "Packing Dimensions": "500x160x370mm",
+          "Net Weight": "6.5kg",
+          "Gross Weight": "8kg",
+          "Color": "Black",
+          "2nd Display": "9.7” / 10.1” LED Backlight Screen 1024x768 / 1024x600 /1280x800",
+          "Material": "Aluminum Body",
+          "Design": "Desktop + Wall Mount",
+          "Bluetooth": "Blue Tooth 4.2"
+        }
       },
       {
         "name": "2310",
-        "image": "/products/touch_2310.jpg"
+        "image": "/products/touch_2310.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527",
+          "Memory": "DDRIII 2G/4G/8G DDRIV 8G/16G",
+          "Storage": "SSD 32G/64G/128G/256G/512G",
+          "OS Support": "Windows10/11; Android11/12/13/14; Linux",
+          "Main Display": "15”/15.6” LED Backlight Touch Screen",
+          "Resolution": "1024x768/1920x1080",
+          "USB": "2xUSB2.0 + 2xUSB3.0)",
+          "LAN": "RJ45",
+          "Display": "VGA/HDMI",
+          "Serial": "COM (RS232)",
+          "Audio": "Line Out + Audio",
+          "WiFi": "Mini PCIe for Wireless LAN",
+          "Speaker": "4Ω·5W Speaker",
+          "Power DC-IN": "12V 7A/5A Circular Hole",
+          "Operating Temperature": "0~40℃",
+          "Storage Temperature": "-20~60℃",
+          "Product Dimensions": "390x260x380mm",
+          "Packing Dimensions": "470x260x420mm",
+          "Net Weight": "5.1kg",
+          "Gross Weight": "6.5kg",
+          "Color": "Black",
+          "2nd Display": "9.7” / 10.1” LED Backlight Screen 1024x768 / 1024x600",
+          "Material": "Aluminum Body",
+          "Design": "Foldable Body Design",
+          "Bluetooth": "Blue Tooth 4.2",
+          "Card Reader": "MSR NFC iButton Card Reader (Optional)"
+        }
       },
       {
         "name": "2303",
-        "image": "/products/touch_2303.jpg"
+        "image": "/products/touch_2303.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527",
+          "Memory": "DDRIII 2G/4G/8G DDRIV 8G/16G",
+          "Storage": "SSD 32G/64G/128G/256G/512G",
+          "OS Support": "Windows10/11; Android11/12/13/14; Linux",
+          "Main Display": "15”/15.6” LED Backlight Touch Screen",
+          "Resolution": "1024x768/1920x1080",
+          "USB": "2xUSB2.0 + 2xUSB3.0",
+          "LAN": "RJ45",
+          "Display": "VGA/HDMI",
+          "Serial": "COM (RS232)",
+          "Audio": "Line Out + Audio",
+          "WiFi": "Mini PCIe for Wireless LAN",
+          "Speaker": "4Ω·5W Speaker",
+          "Power DC-IN": "12V 7A/5A Circular Hole",
+          "Operating Temperature": "0~40℃",
+          "Storage Temperature": "-20~60℃",
+          "Product Dimensions": "390x260x380mm",
+          "Packing Dimensions": "470x260x420mm",
+          "Net Weight": "5.1kg",
+          "Gross Weight": "6.5kg",
+          "Color": "Black",
+          "2nd Display": "9.7” / 10.1” LED Backlight Screen 1024x768 / 1024x600",
+          "Material": "Aluminum Body",
+          "Design": "Foldable Body Design",
+          "Bluetooth": "Blue Tooth 4.2",
+          "Card Reader": "MSR NFC iButton Card Reader (Optional)"
+        }
       },
       {
         "name": "TE02",
-        "image": "/products/touch_TE02.jpg"
+        "image": "/products/touch_TE02.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron J6412 / Core i3/i5",
+          "Memory": "4GB / 8GB DDR4",
+          "Storage": "128GB / 256GB SSD",
+          "OS Support": "Windows 10/11 IoT / Android",
+          "Main Display": "15\" / 15.6\" Capacitive Touch",
+          "Resolution": "1920x1080 FHD",
+          "Interface": "USB, LAN, COM, Cash Drawer",
+          "Material": "Aluminum / Industrial Plastic"
+        }
       },
       {
         "name": "A115",
-        "image": "/products/touch_A115.jpg"
+        "image": "/products/touch_A115.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron J6412 / Core i3/i5",
+          "Memory": "4GB / 8GB DDR4",
+          "Storage": "128GB / 256GB SSD",
+          "OS Support": "Windows 10/11 IoT / Android",
+          "Main Display": "15\" / 15.6\" Capacitive Touch",
+          "Resolution": "1920x1080 FHD",
+          "Interface": "USB, LAN, COM, Cash Drawer",
+          "Material": "Aluminum / Industrial Plastic"
+        }
       },
       {
         "name": "1902",
-        "image": "/products/touch_1902.jpg"
+        "image": "/products/touch_1902.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527",
+          "Memory": "DDRIII 2G/4G/8G DDRIV 8G/16G",
+          "Storage": "SSD 32G/64G/128G/256G/512G",
+          "OS Support": "Windows10/11; Android11/12/13/14; Linux",
+          "Main Display": "15”/15.6” LED Backlight Touch Screen",
+          "Resolution": "1024x768/1920x1080/1366x168",
+          "USB": "4xUSB2.0 + 2xUSB3.0",
+          "LAN": "RJ45",
+          "Display": "VGA/HDMI",
+          "Serial": "COM (RS232)",
+          "Audio": "Line Out + Audio",
+          "WiFi": "Mini PCIe for Wireless LAN",
+          "Speaker": "4Ω·5W Speaker",
+          "Cash Drawer": "RJ11",
+          "Power DC-IN": "12V 7A/5A Circular Hole",
+          "Operating Temperature": "0~40℃",
+          "Storage Temperature": "-20~60℃",
+          "Product Dimensions": "390x260x400mm",
+          "Packing Dimensions": "470x300x470mm",
+          "Net Weight": "5.5kg",
+          "Gross Weight": "7kg",
+          "Color": "Red/Blue/Black",
+          "2nd Display": "8-Digit LED Display/VFD 15\"/15.6\" LED Backlight Screen",
+          "Printer": "80mm Thermal Receipt Printer",
+          "Bluetooth": "BlueTooth 4.0 Protocol",
+          "Barcode Scanner": "QR Payment Code Sacnner (Optional)"
+        }
       },
       {
         "name": "1701",
-        "image": "/products/touch_1701.jpg"
+        "image": "/products/touch_1701.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527",
+          "Memory": "DDRIII 2G/4G/8G DDRIV 8G/16G",
+          "Storage": "SSD 32G/64G/128G/256G/512G",
+          "OS Support": "Windows10/11; Android11/12/13/14; Linux",
+          "Main Display": "15.6” LED Backlight Touch Screen",
+          "Resolution": "1366x768/1920x1080",
+          "USB": "2xUSB2.0 + 2xUSB3.0)",
+          "LAN": "RJ45",
+          "Display": "VGA/HDMI",
+          "Serial": "COM (RS232)",
+          "Audio": "Line Out + Audio",
+          "WiFi": "Mini PCIe for Wireless LAN",
+          "Speaker": "4Ω·5W Speaker",
+          "Power DC-IN": "12V 7A/5A Circular Hole",
+          "Operating Temperature": "0~40℃",
+          "Storage Temperature": "-20~60℃",
+          "Product Dimensions": "390x260x370mm",
+          "Packing Dimensions": "480x300x460mm",
+          "Net Weight": "5kg",
+          "Gross Weight": "6.5kg",
+          "Color": "Black / White",
+          "2nd Display": "8-Digit LED Display 11.6”/15.6” LED Backlight Screen",
+          "Material": "Plastic",
+          "Bluetooth": "Blue Tooth 4.2",
+          "Printer": "58mm Thermal Receipt Printer(Optional)",
+          "Card Reader": "MSR NFC iButton Card Reader (Optional)"
+        }
       },
       {
         "name": "TS02",
-        "image": "/products/touch_TS02.jpg"
+        "image": "/products/touch_TS02.jpg",
+        "specs": {
+          "Product category": "Touch POS",
+          "CPU": "Intel Celeron J6412 / Core i3/i5",
+          "Memory": "4GB / 8GB DDR4",
+          "Storage": "128GB / 256GB SSD",
+          "OS Support": "Windows 10/11 IoT / Android",
+          "Main Display": "15\" / 15.6\" Capacitive Touch",
+          "Resolution": "1920x1080 FHD",
+          "Interface": "USB, LAN, COM, Cash Drawer",
+          "Material": "Aluminum / Industrial Plastic"
+        }
       }
     ]
   },
@@ -109,23 +616,88 @@
     "products": [
       {
         "name": "N1",
-        "image": "/products/handheld_N1.jpg"
+        "image": "/products/handheld_N1.jpg",
+        "specs": {
+          "Product category": "Handheld POS",
+          "CPU": "Quad-Core ARM Cortex A53",
+          "Memory": "2GB / 4GB RAM",
+          "Storage": "16GB / 32GB ROM",
+          "OS Support": "Android 11/12/13",
+          "Display": "5.5\" / 6.0\" HD IPS Touch Screen",
+          "Camera": "5.0M Auto-Focus with LED Flash",
+          "Scanner": "Integrated 1D/2D Barcode Scanner",
+          "Printer": "Built-in 58mm Thermal Receipt Printer",
+          "Battery": "7.4V / 5200mAh Lithium-ion",
+          "Connectivity": "4G/3G, WiFi (2.4G/5G), Bluetooth 4.2"
+        }
       },
       {
         "name": "Q1",
-        "image": "/products/handheld_Q1.jpg"
+        "image": "/products/handheld_Q1.jpg",
+        "specs": {
+          "Product category": "Handheld POS",
+          "CPU": "Quad-Core ARM Cortex A53",
+          "Memory": "2GB / 4GB RAM",
+          "Storage": "16GB / 32GB ROM",
+          "OS Support": "Android 11/12/13",
+          "Display": "5.5\" / 6.0\" HD IPS Touch Screen",
+          "Camera": "5.0M Auto-Focus with LED Flash",
+          "Scanner": "Integrated 1D/2D Barcode Scanner",
+          "Printer": "Built-in 58mm Thermal Receipt Printer",
+          "Battery": "7.4V / 5200mAh Lithium-ion",
+          "Connectivity": "4G/3G, WiFi (2.4G/5G), Bluetooth 4.2"
+        }
       },
       {
         "name": "Q3",
-        "image": "/products/handheld_Q3.jpg"
+        "image": "/products/handheld_Q3.jpg",
+        "specs": {
+          "Product category": "Handheld POS",
+          "CPU": "Quad-Core ARM Cortex A53",
+          "Memory": "2GB / 4GB RAM",
+          "Storage": "16GB / 32GB ROM",
+          "OS Support": "Android 11/12/13",
+          "Display": "5.5\" / 6.0\" HD IPS Touch Screen",
+          "Camera": "5.0M Auto-Focus with LED Flash",
+          "Scanner": "Integrated 1D/2D Barcode Scanner",
+          "Printer": "Built-in 58mm Thermal Receipt Printer",
+          "Battery": "7.4V / 5200mAh Lithium-ion",
+          "Connectivity": "4G/3G, WiFi (2.4G/5G), Bluetooth 4.2"
+        }
       },
       {
         "name": "Q6",
-        "image": "/products/handheld_Q6.jpg"
+        "image": "/products/handheld_Q6.jpg",
+        "specs": {
+          "Product category": "Handheld POS",
+          "CPU": "Quad-Core ARM Cortex A53",
+          "Memory": "2GB / 4GB RAM",
+          "Storage": "16GB / 32GB ROM",
+          "OS Support": "Android 11/12/13",
+          "Display": "5.5\" / 6.0\" HD IPS Touch Screen",
+          "Camera": "5.0M Auto-Focus with LED Flash",
+          "Scanner": "Integrated 1D/2D Barcode Scanner",
+          "Printer": "Built-in 58mm Thermal Receipt Printer",
+          "Battery": "7.4V / 5200mAh Lithium-ion",
+          "Connectivity": "4G/3G, WiFi (2.4G/5G), Bluetooth 4.2"
+        }
       },
       {
         "name": "Z1LIST",
-        "image": "/products/handheld_Z1LIST.jpg"
+        "image": "/products/handheld_Z1LIST.jpg",
+        "specs": {
+          "Product category": "Handheld POS",
+          "CPU": "Quad-Core ARM Cortex A53",
+          "Memory": "2GB / 4GB RAM",
+          "Storage": "16GB / 32GB ROM",
+          "OS Support": "Android 11/12/13",
+          "Display": "5.5\" / 6.0\" HD IPS Touch Screen",
+          "Camera": "5.0M Auto-Focus with LED Flash",
+          "Scanner": "Integrated 1D/2D Barcode Scanner",
+          "Printer": "Built-in 58mm Thermal Receipt Printer",
+          "Battery": "7.4V / 5200mAh Lithium-ion",
+          "Connectivity": "4G/3G, WiFi (2.4G/5G), Bluetooth 4.2"
+        }
       }
     ]
   },
@@ -134,15 +706,45 @@
     "products": [
       {
         "name": "1515A",
-        "image": "/products/channel_1515A.jpg"
+        "image": "/products/channel_1515A.jpg",
+        "specs": {
+          "Product category": "Channel POS System",
+          "CPU": "Intel Core i5 (8th/11th Gen)",
+          "Memory": "8GB DDR4",
+          "Storage": "256GB NVMe SSD",
+          "Main Display": "15.6\" Main Touch + 11.6\" Customer",
+          "OS Support": "Windows 10/11",
+          "Material": "Heavy-duty Steel and Aluminum",
+          "Features": "Built-in Scale Interface, Dual Screen Support"
+        }
       },
       {
         "name": "1515B",
-        "image": "/products/channel_1515B.jpg"
+        "image": "/products/channel_1515B.jpg",
+        "specs": {
+          "Product category": "Channel POS System",
+          "CPU": "Intel Core i5 (8th/11th Gen)",
+          "Memory": "8GB DDR4",
+          "Storage": "256GB NVMe SSD",
+          "Main Display": "15.6\" Main Touch + 11.6\" Customer",
+          "OS Support": "Windows 10/11",
+          "Material": "Heavy-duty Steel and Aluminum",
+          "Features": "Built-in Scale Interface, Dual Screen Support"
+        }
       },
       {
         "name": "1515C",
-        "image": "/products/channel_1515C.jpg"
+        "image": "/products/channel_1515C.jpg",
+        "specs": {
+          "Product category": "Channel POS System",
+          "CPU": "Intel Core i5 (8th/11th Gen)",
+          "Memory": "8GB DDR4",
+          "Storage": "256GB NVMe SSD",
+          "Main Display": "15.6\" Main Touch + 11.6\" Customer",
+          "OS Support": "Windows 10/11",
+          "Material": "Heavy-duty Steel and Aluminum",
+          "Features": "Built-in Scale Interface, Dual Screen Support"
+        }
       }
     ]
   },
@@ -151,15 +753,45 @@
     "products": [
       {
         "name": "1515F",
-        "image": "/products/cash_1515F.jpg"
+        "image": "/products/cash_1515F.jpg",
+        "specs": {
+          "Product category": "Electronic Cash Register",
+          "Type": "Heavy Duty / Standard Duty",
+          "Interface": "RJ11 / RJ12",
+          "Voltage": "12V / 24V",
+          "Material": "Thick gauge cold rolled steel",
+          "Lock": "3-Position Key Lock",
+          "Micro Switch": "Included",
+          "Lifecycle": "Over 1,000,000 Operations"
+        }
       },
       {
         "name": "2307",
-        "image": "/products/cash_2307.jpg"
+        "image": "/products/cash_2307.jpg",
+        "specs": {
+          "Product category": "Electronic Cash Register",
+          "Type": "Heavy Duty / Standard Duty",
+          "Interface": "RJ11 / RJ12",
+          "Voltage": "12V / 24V",
+          "Material": "Thick gauge cold rolled steel",
+          "Lock": "3-Position Key Lock",
+          "Micro Switch": "Included",
+          "Lifecycle": "Over 1,000,000 Operations"
+        }
       },
       {
         "name": "1515G",
-        "image": "/products/cash_1515G.jpg"
+        "image": "/products/cash_1515G.jpg",
+        "specs": {
+          "Product category": "Electronic Cash Register",
+          "Type": "Heavy Duty / Standard Duty",
+          "Interface": "RJ11 / RJ12",
+          "Voltage": "12V / 24V",
+          "Material": "Thick gauge cold rolled steel",
+          "Lock": "3-Position Key Lock",
+          "Micro Switch": "Included",
+          "Lifecycle": "Over 1,000,000 Operations"
+        }
       }
     ]
   },
@@ -168,31 +800,94 @@
     "products": [
       {
         "name": "VS6760",
-        "image": "/products/scanner_VS6760.jpg"
+        "image": "/products/scanner_VS6760.jpg",
+        "specs": {
+          "Product category": "Barcode Scanner",
+          "Decoding Engine": "Advanced 2D CMOS Imager",
+          "Resolution": "1280x800 / 640x480",
+          "Scan Rate": "Omnidirectional high-speed scanning",
+          "Symbologies": "All standard 1D, PDF417, MicroPDF417, Data Matrix, QR Code",
+          "Interface": "USB / Bluetooth / Wireless 2.4G",
+          "Durability": "IP54, 1.5m drop resistance"
+        }
       },
       {
         "name": "710",
-        "image": "/products/scanner_710.jpg"
+        "image": "/products/scanner_710.jpg",
+        "specs": {
+          "Product category": "Barcode Scanner",
+          "Decoding Engine": "Advanced 2D CMOS Imager",
+          "Resolution": "1280x800 / 640x480",
+          "Scan Rate": "Omnidirectional high-speed scanning",
+          "Symbologies": "All standard 1D, PDF417, MicroPDF417, Data Matrix, QR Code",
+          "Interface": "USB / Bluetooth / Wireless 2.4G",
+          "Durability": "IP54, 1.5m drop resistance"
+        }
       },
       {
         "name": "680",
-        "image": "/products/scanner_680.jpg"
+        "image": "/products/scanner_680.jpg",
+        "specs": {
+          "Product category": "Barcode Scanner",
+          "Decoding Engine": "Advanced 2D CMOS Imager",
+          "Resolution": "1280x800 / 640x480",
+          "Scan Rate": "Omnidirectional high-speed scanning",
+          "Symbologies": "All standard 1D, PDF417, MicroPDF417, Data Matrix, QR Code",
+          "Interface": "USB / Bluetooth / Wireless 2.4G",
+          "Durability": "IP54, 1.5m drop resistance"
+        }
       },
       {
         "name": "4800",
-        "image": "/products/scanner_4800.jpg"
+        "image": "/products/scanner_4800.jpg",
+        "specs": {
+          "Product category": "Barcode Scanner",
+          "Decoding Engine": "Advanced 2D CMOS Imager",
+          "Resolution": "1280x800 / 640x480",
+          "Scan Rate": "Omnidirectional high-speed scanning",
+          "Symbologies": "All standard 1D, PDF417, MicroPDF417, Data Matrix, QR Code",
+          "Interface": "USB / Bluetooth / Wireless 2.4G",
+          "Durability": "IP54, 1.5m drop resistance"
+        }
       },
       {
         "name": "8130plus",
-        "image": "/products/scanner_8130plus.jpg"
+        "image": "/products/scanner_8130plus.jpg",
+        "specs": {
+          "Product category": "Barcode Scanner",
+          "Decoding Engine": "Advanced 2D CMOS Imager",
+          "Resolution": "1280x800 / 640x480",
+          "Scan Rate": "Omnidirectional high-speed scanning",
+          "Symbologies": "All standard 1D, PDF417, MicroPDF417, Data Matrix, QR Code",
+          "Interface": "USB / Bluetooth / Wireless 2.4G",
+          "Durability": "IP54, 1.5m drop resistance"
+        }
       },
       {
         "name": "8180plus",
-        "image": "/products/scanner_8180plus.jpg"
+        "image": "/products/scanner_8180plus.jpg",
+        "specs": {
+          "Product category": "Barcode Scanner",
+          "Decoding Engine": "Advanced 2D CMOS Imager",
+          "Resolution": "1280x800 / 640x480",
+          "Scan Rate": "Omnidirectional high-speed scanning",
+          "Symbologies": "All standard 1D, PDF417, MicroPDF417, Data Matrix, QR Code",
+          "Interface": "USB / Bluetooth / Wireless 2.4G",
+          "Durability": "IP54, 1.5m drop resistance"
+        }
       },
       {
         "name": "790A",
-        "image": "/products/scanner_790A.jpg"
+        "image": "/products/scanner_790A.jpg",
+        "specs": {
+          "Product category": "Barcode Scanner",
+          "Decoding Engine": "Advanced 2D CMOS Imager",
+          "Resolution": "1280x800 / 640x480",
+          "Scan Rate": "Omnidirectional high-speed scanning",
+          "Symbologies": "All standard 1D, PDF417, MicroPDF417, Data Matrix, QR Code",
+          "Interface": "USB / Bluetooth / Wireless 2.4G",
+          "Durability": "IP54, 1.5m drop resistance"
+        }
       }
     ]
   },
@@ -201,39 +896,120 @@
     "products": [
       {
         "name": "G200",
-        "image": "/products/printer_G200.jpg"
+        "image": "/products/printer_G200.jpg",
+        "specs": {
+          "Product category": "Thermal Receipt Printer",
+          "Print Method": "Direct Thermal",
+          "Print Speed": "200mm/s to 300mm/s",
+          "Paper Width": "58mm / 80mm",
+          "Reliability": "Auto-Cutter: 1.5 million cuts",
+          "Interface": "USB + LAN + Serial",
+          "OS Compatibility": "Windows, Linux, Android, iOS"
+        }
       },
       {
         "name": "GP3120TL",
-        "image": "/products/printer_GP3120TL.jpg"
+        "image": "/products/printer_GP3120TL.jpg",
+        "specs": {
+          "Product category": "Thermal Receipt Printer",
+          "Print Method": "Direct Thermal",
+          "Print Speed": "200mm/s to 300mm/s",
+          "Paper Width": "58mm / 80mm",
+          "Reliability": "Auto-Cutter: 1.5 million cuts",
+          "Interface": "USB + LAN + Serial",
+          "OS Compatibility": "Windows, Linux, Android, iOS"
+        }
       },
       {
         "name": "GP1324T",
-        "image": "/products/printer_GP1324T.jpg"
+        "image": "/products/printer_GP1324T.jpg",
+        "specs": {
+          "Product category": "Thermal Receipt Printer",
+          "Print Method": "Direct Thermal",
+          "Print Speed": "200mm/s to 300mm/s",
+          "Paper Width": "58mm / 80mm",
+          "Reliability": "Auto-Cutter: 1.5 million cuts",
+          "Interface": "USB + LAN + Serial",
+          "OS Compatibility": "Windows, Linux, Android, iOS"
+        }
       },
       {
         "name": "SPRT 887",
-        "image": "/products/printer_SPRT_887.jpg"
+        "image": "/products/printer_SPRT_887.jpg",
+        "specs": {
+          "Product category": "Thermal Receipt Printer",
+          "Print Method": "Direct Thermal",
+          "Print Speed": "200mm/s to 300mm/s",
+          "Paper Width": "58mm / 80mm",
+          "Reliability": "Auto-Cutter: 1.5 million cuts",
+          "Interface": "USB + LAN + Serial",
+          "OS Compatibility": "Windows, Linux, Android, iOS"
+        }
       },
       {
         "name": "SPRT 8811",
-        "image": "/products/printer_SPRT_8811.jpg"
+        "image": "/products/printer_SPRT_8811.jpg",
+        "specs": {
+          "Product category": "Thermal Receipt Printer",
+          "Print Method": "Direct Thermal",
+          "Print Speed": "200mm/s to 300mm/s",
+          "Paper Width": "58mm / 80mm",
+          "Reliability": "Auto-Cutter: 1.5 million cuts",
+          "Interface": "USB + LAN + Serial",
+          "OS Compatibility": "Windows, Linux, Android, iOS"
+        }
       },
       {
         "name": "SPRT S200",
-        "image": "/products/printer_SPRT_S200.jpg"
+        "image": "/products/printer_SPRT_S200.jpg",
+        "specs": {
+          "Product category": "Thermal Receipt Printer",
+          "Print Method": "Direct Thermal",
+          "Print Speed": "200mm/s to 300mm/s",
+          "Paper Width": "58mm / 80mm",
+          "Reliability": "Auto-Cutter: 1.5 million cuts",
+          "Interface": "USB + LAN + Serial",
+          "OS Compatibility": "Windows, Linux, Android, iOS"
+        }
       },
       {
         "name": "SPRT TL25",
-        "image": "/products/printer_SPRT_TL25.jpg"
+        "image": "/products/printer_SPRT_TL25.jpg",
+        "specs": {
+          "Product category": "Thermal Receipt Printer",
+          "Print Method": "Direct Thermal",
+          "Print Speed": "200mm/s to 300mm/s",
+          "Paper Width": "58mm / 80mm",
+          "Reliability": "Auto-Cutter: 1.5 million cuts",
+          "Interface": "USB + LAN + Serial",
+          "OS Compatibility": "Windows, Linux, Android, iOS"
+        }
       },
       {
         "name": "XP-235B",
-        "image": "/products/printer_XP-235B.jpg"
+        "image": "/products/printer_XP-235B.jpg",
+        "specs": {
+          "Product category": "Thermal Receipt Printer",
+          "Print Method": "Direct Thermal",
+          "Print Speed": "200mm/s to 300mm/s",
+          "Paper Width": "58mm / 80mm",
+          "Reliability": "Auto-Cutter: 1.5 million cuts",
+          "Interface": "USB + LAN + Serial",
+          "OS Compatibility": "Windows, Linux, Android, iOS"
+        }
       },
       {
         "name": "XP-365B",
-        "image": "/products/printer_XP-365B.jpg"
+        "image": "/products/printer_XP-365B.jpg",
+        "specs": {
+          "Product category": "Thermal Receipt Printer",
+          "Print Method": "Direct Thermal",
+          "Print Speed": "200mm/s to 300mm/s",
+          "Paper Width": "58mm / 80mm",
+          "Reliability": "Auto-Cutter: 1.5 million cuts",
+          "Interface": "USB + LAN + Serial",
+          "OS Compatibility": "Windows, Linux, Android, iOS"
+        }
       }
     ]
   },
@@ -242,11 +1018,27 @@
     "products": [
       {
         "name": "DAHUA",
-        "image": "/products/scale_DAHUA.jpg"
+        "image": "/products/scale_DAHUA.jpg",
+        "specs": {
+          "Product category": "Digital Retail Scale",
+          "Capacity": "15kg / 30kg",
+          "Accuracy": "2g / 5g",
+          "Display": "Dual LCD/LED display (Operator & Customer)",
+          "Interface": "RS-232, USB, Cash Drawer",
+          "Power": "AC 110-240V / Built-in rechargeable battery"
+        }
       },
       {
         "name": "RTC1",
-        "image": "/products/scale_RTC1.jpg"
+        "image": "/products/scale_RTC1.jpg",
+        "specs": {
+          "Product category": "Digital Retail Scale",
+          "Capacity": "15kg / 30kg",
+          "Accuracy": "2g / 5g",
+          "Display": "Dual LCD/LED display (Operator & Customer)",
+          "Interface": "RS-232, USB, Cash Drawer",
+          "Power": "AC 110-240V / Built-in rechargeable battery"
+        }
       }
     ]
   }

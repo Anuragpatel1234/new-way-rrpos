@@ -1,0 +1,1949 @@
+{
+  "2302": {
+    "name": "2302",
+    "url": "https://www.jesenpos.com/item.html?id=2302",
+    "parsed_specs": {
+      "items": [
+        {
+          "k": "Product category",
+          "v": "Touch POS"
+        },
+        {
+          "k": "CPU",
+          "v": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527"
+        },
+        {
+          "k": "Memory",
+          "v": "DDRIII 2G/4G/8G DDRIV 8G/16G"
+        },
+        {
+          "k": "Storage",
+          "v": "SSD 32G/64G/128G/256G/512G"
+        },
+        {
+          "k": "OS Support",
+          "v": "Windows10/11; Android11/12/13/14; Linux"
+        },
+        {
+          "k": "Main Display",
+          "v": "15”/15.6” LED Backlight Touch Screen"
+        },
+        {
+          "k": "Resolution",
+          "v": "1024x768/1920x1080"
+        },
+        {
+          "k": "USB",
+          "v": "2xUSB2.0 + 2xUSB3.0"
+        },
+        {
+          "k": "LAN",
+          "v": "RJ45"
+        },
+        {
+          "k": "Display",
+          "v": "VGA/HDMI"
+        },
+        {
+          "k": "Serial",
+          "v": "COM (RS232)"
+        },
+        {
+          "k": "Audio",
+          "v": "Line Out + Audio"
+        },
+        {
+          "k": "WiFi",
+          "v": "Mini PCIe for Wireless LAN"
+        },
+        {
+          "k": "Speaker",
+          "v": "4Ω·5W Speaker"
+        },
+        {
+          "k": "Power DC-IN",
+          "v": "12V 7A/5A Circular Hole"
+        },
+        {
+          "k": "Operating Temperature",
+          "v": "0~40℃"
+        },
+        {
+          "k": "Storage Temperature",
+          "v": "-20~60℃"
+        },
+        {
+          "k": "Product Dimensions",
+          "v": "390x260x380mm"
+        },
+        {
+          "k": "Packing Dimensions",
+          "v": "470x260x420mm"
+        },
+        {
+          "k": "Net Weight",
+          "v": "5.1kg"
+        },
+        {
+          "k": "Gross Weight",
+          "v": "6.5kg"
+        },
+        {
+          "k": "Color",
+          "v": "Black"
+        },
+        {
+          "k": "2nd Display",
+          "v": "9.7” / 10.1” LED Backlight Screen 1024x768 / 1024x600"
+        },
+        {
+          "k": "Material",
+          "v": "Aluminum Body"
+        },
+        {
+          "k": "Design",
+          "v": "Foldable Body Design"
+        },
+        {
+          "k": "Bluetooth",
+          "v": "Blue Tooth 4.2"
+        },
+        {
+          "k": "Card Reader",
+          "v": "MSR NFC iButton Card Reader (Optional)"
+        }
+      ],
+      "fallback": [
+        {
+          "k": "Product categoryTouch POS",
+          "v": "Specification parameters"
+        }
+      ]
+    }
+  },
+  "2402": {
+    "name": "2402",
+    "url": "https://www.jesenpos.com/item.html?id=2402",
+    "parsed_specs": {
+      "items": [
+        {
+          "k": "Product category",
+          "v": "Touch POS"
+        },
+        {
+          "k": "CPU",
+          "v": "Intel Celeron J6412 Intel Core i5(4/7/8/11 Gen) RK3568"
+        },
+        {
+          "k": "Memory",
+          "v": "DDRIII 2G/4G/8G DDRIV 4G/8G/16G"
+        },
+        {
+          "k": "Storage",
+          "v": "SSD 128G/256G 16G/64G/128G"
+        },
+        {
+          "k": "OS Support",
+          "v": "Windows10/11; Android11/13"
+        },
+        {
+          "k": "Main Display",
+          "v": "15.6” TFT-LCD Muliti Touch Screen"
+        },
+        {
+          "k": "Resolution",
+          "v": "1366x768/1920x1080"
+        },
+        {
+          "k": "USB",
+          "v": "6xUSB"
+        },
+        {
+          "k": "LAN",
+          "v": "RJ45"
+        },
+        {
+          "k": "Display",
+          "v": "VGA/HDMI"
+        },
+        {
+          "k": "Serial",
+          "v": "COM (RS232)"
+        },
+        {
+          "k": "Audio",
+          "v": "Line Out + Audio"
+        },
+        {
+          "k": "WiFi",
+          "v": "Dual-band 2.4&5GHz IEEE 802.11a/b/g/n"
+        },
+        {
+          "k": "Speaker",
+          "v": "2.2W Speaker"
+        },
+        {
+          "k": "Power DC-IN",
+          "v": "12V 4A Circular Hole"
+        },
+        {
+          "k": "Operating Temperature",
+          "v": "0~40℃"
+        },
+        {
+          "k": "Storage Temperature",
+          "v": "-20~60℃"
+        },
+        {
+          "k": "Product Dimensions",
+          "v": "370x220x310mm"
+        },
+        {
+          "k": "Packing Dimensions",
+          "v": "450x320x380mm"
+        },
+        {
+          "k": "Net Weight",
+          "v": "4.7kg"
+        },
+        {
+          "k": "Gross Weight",
+          "v": "6kg"
+        },
+        {
+          "k": "Color",
+          "v": "Black"
+        },
+        {
+          "k": "2nd Display",
+          "v": "10.1” TFT-LCD Screen 1280x800 / 1024x600"
+        },
+        {
+          "k": "Material",
+          "v": "Aluminum Body"
+        },
+        {
+          "k": "Design",
+          "v": "Foldable Body Design"
+        },
+        {
+          "k": "Bluetooth",
+          "v": "Blue Tooth 4.2+BLE"
+        },
+        {
+          "k": "Card Reader",
+          "v": "Camera / MSR NFC Card Reader (Optional)"
+        }
+      ],
+      "fallback": [
+        {
+          "k": "Product categoryTouch POS",
+          "v": "Specification parameters"
+        }
+      ]
+    }
+  },
+  "2406": {
+    "name": "2406",
+    "url": "https://www.jesenpos.com/item.html?id=2406",
+    "parsed_specs": {
+      "items": [
+        {
+          "k": "Product category",
+          "v": "Touch POS"
+        },
+        {
+          "k": "CPU",
+          "v": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527"
+        },
+        {
+          "k": "Memory",
+          "v": "DDRIII 2G/4G/8G DDRIV 8G/16G"
+        },
+        {
+          "k": "Storage",
+          "v": "SSD 32G/64G/128G/256G/512G"
+        },
+        {
+          "k": "OS Support",
+          "v": "Windows10/11; Android11/12/13/14; Linux"
+        },
+        {
+          "k": "Main Display",
+          "v": "15”/15.6” LED Backlight Touch Screen"
+        },
+        {
+          "k": "Resolution",
+          "v": "1024x768/1920x1080"
+        },
+        {
+          "k": "USB",
+          "v": "2xUSB2.0 + 2xUSB3.0)"
+        },
+        {
+          "k": "LAN",
+          "v": "RJ45"
+        },
+        {
+          "k": "Display",
+          "v": "VGA/HDMI"
+        },
+        {
+          "k": "Serial",
+          "v": "COM (RS232)"
+        },
+        {
+          "k": "Audio",
+          "v": "Line Out + Audio"
+        },
+        {
+          "k": "WiFi",
+          "v": "Mini PCIe for Wireless LAN"
+        },
+        {
+          "k": "Speaker",
+          "v": "4Ω·5W Speaker"
+        },
+        {
+          "k": "Power DC-IN",
+          "v": "12V 7A/5A Circular Hole"
+        },
+        {
+          "k": "Operating Temperature",
+          "v": "0~40℃"
+        },
+        {
+          "k": "Storage Temperature",
+          "v": "-20~60℃"
+        },
+        {
+          "k": "Product Dimensions",
+          "v": "390x260x380mm"
+        },
+        {
+          "k": "Packing Dimensions",
+          "v": "470x260x420mm"
+        },
+        {
+          "k": "Net Weight",
+          "v": "5.1kg"
+        },
+        {
+          "k": "Gross Weight",
+          "v": "6.5kg"
+        },
+        {
+          "k": "Color",
+          "v": "Black"
+        },
+        {
+          "k": "2nd Display",
+          "v": "9.7” / 10.1” LED Backlight Screen 1024x768 / 1024x600"
+        },
+        {
+          "k": "Material",
+          "v": "Plastic + Aluminum Base"
+        },
+        {
+          "k": "Design",
+          "v": "Foldable Body Design"
+        },
+        {
+          "k": "Bluetooth",
+          "v": "Blue Tooth 4.2"
+        },
+        {
+          "k": "Card Reader",
+          "v": "MSR NFC iButton Card Reader (Optional)"
+        }
+      ],
+      "fallback": [
+        {
+          "k": "Product categoryTouch POS",
+          "v": "Specification parameters"
+        }
+      ]
+    }
+  },
+  "1904": {
+    "name": "1904",
+    "url": "https://www.jesenpos.com/item.html?id=1904",
+    "parsed_specs": {
+      "items": [
+        {
+          "k": "Product category",
+          "v": "Touch POS"
+        },
+        {
+          "k": "CPU",
+          "v": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527"
+        },
+        {
+          "k": "Memory",
+          "v": "DDRIII 2G/4G/8G DDRIV 8G/16G"
+        },
+        {
+          "k": "Storage",
+          "v": "SSD 32G/64G/128G/256G/512G"
+        },
+        {
+          "k": "OS Support",
+          "v": "Windows10/11; Android11/12/13/14; Linux"
+        },
+        {
+          "k": "Main Display",
+          "v": "15.6” LED Backlight Touch Screen"
+        },
+        {
+          "k": "Resolution",
+          "v": "1366x768/1920x1080"
+        },
+        {
+          "k": "USB",
+          "v": "4xUSB2.0 + 2xUSB3.0)"
+        },
+        {
+          "k": "LAN",
+          "v": "RJ45"
+        },
+        {
+          "k": "Display",
+          "v": "VGA/HDMI"
+        },
+        {
+          "k": "Serial",
+          "v": "COM (RS232)"
+        },
+        {
+          "k": "Audio",
+          "v": "Line Out + Audio"
+        },
+        {
+          "k": "WiFi",
+          "v": "Mini PCIe for Wireless LAN"
+        },
+        {
+          "k": "Speaker",
+          "v": "4Ω·5W Speaker"
+        },
+        {
+          "k": "Cash Drawer",
+          "v": "RJ11"
+        },
+        {
+          "k": "Power DC-IN",
+          "v": "12V 7A/5A Circular Hole"
+        },
+        {
+          "k": "Operating Temperature",
+          "v": "0~40℃"
+        },
+        {
+          "k": "Storage Temperature",
+          "v": "-20~60℃"
+        },
+        {
+          "k": "Product Dimensions",
+          "v": "390x300x400mm"
+        },
+        {
+          "k": "Packing Dimensions",
+          "v": "520x320x510mm"
+        },
+        {
+          "k": "Net Weight",
+          "v": "5.5kg"
+        },
+        {
+          "k": "Gross Weight",
+          "v": "7kg"
+        },
+        {
+          "k": "Color",
+          "v": "White/Black"
+        },
+        {
+          "k": "2nd Display",
+          "v": "8-Digit LED Display/VFD 11.6\"/15.6\" LED Backlight Screen"
+        },
+        {
+          "k": "Printer",
+          "v": "58/80mm Thermal Receipt Printer"
+        },
+        {
+          "k": "Bluetooth",
+          "v": "BlueTooth 4.0 Protocol"
+        },
+        {
+          "k": "Barcode Scanner",
+          "v": "QR Payment Code Sacnner (Optional)"
+        }
+      ],
+      "fallback": [
+        {
+          "k": "Product categoryTouch POS",
+          "v": "Specification parameters"
+        }
+      ]
+    }
+  },
+  "1903": {
+    "name": "1903",
+    "url": "https://www.jesenpos.com/item.html?id=1903",
+    "parsed_specs": {
+      "items": [
+        {
+          "k": "Product category",
+          "v": "Touch POS"
+        },
+        {
+          "k": "CPU",
+          "v": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527"
+        },
+        {
+          "k": "Memory",
+          "v": "DDRIII 2G/4G/8G DDRIV 8G/16G"
+        },
+        {
+          "k": "Storage",
+          "v": "SSD 32G/64G/128G/256G/512G"
+        },
+        {
+          "k": "OS Support",
+          "v": "Windows10/11; Android11/12/13/14; Linux"
+        },
+        {
+          "k": "Main Display",
+          "v": "15”/15.6” LED Backlight Touch Screen"
+        },
+        {
+          "k": "Resolution",
+          "v": "1024x768/1920x1080/1366x768"
+        },
+        {
+          "k": "USB",
+          "v": "4xUSB2.0 + 2xUSB3.0"
+        },
+        {
+          "k": "LAN",
+          "v": "RJ45"
+        },
+        {
+          "k": "Display",
+          "v": "VGA/HDMI"
+        },
+        {
+          "k": "Serial",
+          "v": "COM (RS232)"
+        },
+        {
+          "k": "Audio",
+          "v": "Line Out + Audio"
+        },
+        {
+          "k": "WiFi",
+          "v": "Mini PCIe for Wireless LAN"
+        },
+        {
+          "k": "Speaker",
+          "v": "4Ω·5W Speaker"
+        },
+        {
+          "k": "Power DC-IN",
+          "v": "12V 7A/5A Circular Hole"
+        },
+        {
+          "k": "Operating Temperature",
+          "v": "0~40℃"
+        },
+        {
+          "k": "Storage Temperature",
+          "v": "-20~60℃"
+        },
+        {
+          "k": "Product Dimensions",
+          "v": "390x260x400mm"
+        },
+        {
+          "k": "Packing Dimensions",
+          "v": "470x320x470mm"
+        },
+        {
+          "k": "Net Weight",
+          "v": "5kg"
+        },
+        {
+          "k": "Gross Weight",
+          "v": "6.5kg"
+        },
+        {
+          "k": "Color",
+          "v": "White/Black"
+        },
+        {
+          "k": "2nd Display",
+          "v": "8-Digit LED Display/VFD 15\"/15.6\" LED Backlight Screen"
+        },
+        {
+          "k": "Camera",
+          "v": "2-Megapixel"
+        },
+        {
+          "k": "Bluetooth",
+          "v": "BlueTooth 4.0 Protocol"
+        },
+        {
+          "k": "Barcode Scanner",
+          "v": "QR Payment Code Sacnner (Optional)"
+        }
+      ],
+      "fallback": [
+        {
+          "k": "Product categoryTouch POS",
+          "v": "Specification parameters"
+        }
+      ]
+    }
+  },
+  "2403": {
+    "name": "2403",
+    "url": "https://www.jesenpos.com/item.html?id=2403",
+    "parsed_specs": {
+      "items": [
+        {
+          "k": "Product category",
+          "v": "Touch POS"
+        },
+        {
+          "k": "CPU",
+          "v": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527"
+        },
+        {
+          "k": "Memory",
+          "v": "DDRIII 2G/4G/8G DDRIV 8G/16G"
+        },
+        {
+          "k": "Storage",
+          "v": "SSD 32G/64G/128G/256G/512G"
+        },
+        {
+          "k": "OS Support",
+          "v": "Windows10/11; Android11/12/13/14; Linux"
+        },
+        {
+          "k": "Main Display",
+          "v": "15.6” LED Backlight Touch Screen"
+        },
+        {
+          "k": "Resolution",
+          "v": "1366x768/1920x1080"
+        },
+        {
+          "k": "USB",
+          "v": "4xUSB2.0 + 2xUSB3.0"
+        },
+        {
+          "k": "LAN",
+          "v": "RJ45"
+        },
+        {
+          "k": "Display",
+          "v": "VGA/HDMI"
+        },
+        {
+          "k": "Serial",
+          "v": "COM (RS232)"
+        },
+        {
+          "k": "Audio",
+          "v": "Line Out + Audio"
+        },
+        {
+          "k": "WiFi",
+          "v": "Mini PCIe for Wireless LAN"
+        },
+        {
+          "k": "Speaker",
+          "v": "4Ω·5W Speaker"
+        },
+        {
+          "k": "Cash Drawer",
+          "v": "RJ11"
+        },
+        {
+          "k": "Power DC-IN",
+          "v": "12V 7A/5A Circular Hole"
+        },
+        {
+          "k": "Operating Temperature",
+          "v": "0~40℃"
+        },
+        {
+          "k": "Storage Temperature",
+          "v": "-20~60℃"
+        },
+        {
+          "k": "Product Dimensions",
+          "v": "390x300x450mm"
+        },
+        {
+          "k": "Packing Dimensions",
+          "v": "470x320x520mm"
+        },
+        {
+          "k": "Net Weight",
+          "v": "5kg"
+        },
+        {
+          "k": "Gross Weight",
+          "v": "6.5kg"
+        },
+        {
+          "k": "Color",
+          "v": "White/Black"
+        },
+        {
+          "k": "2nd Display",
+          "v": "8-Digit LED Display/VFD 11.6\"/15.6\" LED Backlight Screen"
+        },
+        {
+          "k": "Printer",
+          "v": "58/80mm Thermal Receipt Printer"
+        },
+        {
+          "k": "Bluetooth",
+          "v": "BlueTooth 4.0 Protocol"
+        },
+        {
+          "k": "Camera",
+          "v": "2-Megapixel(Optional)"
+        }
+      ],
+      "fallback": [
+        {
+          "k": "Product categoryTouch POS",
+          "v": "Specification parameters"
+        }
+      ]
+    }
+  },
+  "2301": {
+    "name": "2301",
+    "url": "https://www.jesenpos.com/item.html?id=2301",
+    "parsed_specs": {
+      "items": [
+        {
+          "k": "Product category",
+          "v": "Touch POS"
+        },
+        {
+          "k": "CPU",
+          "v": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527"
+        },
+        {
+          "k": "Memory",
+          "v": "DDRIII 2G/4G/8G DDRIV 8G/16G"
+        },
+        {
+          "k": "Storage",
+          "v": "SSD 32G/64G/128G/256G/512G"
+        },
+        {
+          "k": "OS Support",
+          "v": "Windows10/11; Android11/12/13/14; Linux"
+        },
+        {
+          "k": "Main Display",
+          "v": "15”/15.6” LED Backlight Touch Screen"
+        },
+        {
+          "k": "Resolution",
+          "v": "1024x768/1920x1080"
+        },
+        {
+          "k": "USB",
+          "v": "2xUSB2.0 + 2xUSB3.0"
+        },
+        {
+          "k": "LAN",
+          "v": "RJ45"
+        },
+        {
+          "k": "Display",
+          "v": "VGA/HDMI"
+        },
+        {
+          "k": "Serial",
+          "v": "COM (RS232)"
+        },
+        {
+          "k": "Audio",
+          "v": "Line Out + Audio"
+        },
+        {
+          "k": "WiFi",
+          "v": "Mini PCIe for Wireless LAN"
+        },
+        {
+          "k": "Speaker",
+          "v": "4Ω·5W Speaker"
+        },
+        {
+          "k": "Power DC-IN",
+          "v": "12V 7A/5A Circular Hole"
+        },
+        {
+          "k": "Operating Temperature",
+          "v": "0~40℃"
+        },
+        {
+          "k": "Storage Temperature",
+          "v": "-20~60℃"
+        },
+        {
+          "k": "Product Dimensions",
+          "v": "390x260x380mm"
+        },
+        {
+          "k": "Packing Dimensions",
+          "v": "470x260x420mm"
+        },
+        {
+          "k": "Net Weight",
+          "v": "5.1kg"
+        },
+        {
+          "k": "Gross Weight",
+          "v": "6.5kg"
+        },
+        {
+          "k": "Color",
+          "v": "Black"
+        },
+        {
+          "k": "2nd Display",
+          "v": "9.7” / 10.1” LED Backlight Screen 1024x768 / 1024x600"
+        },
+        {
+          "k": "Material",
+          "v": "Aluminum Body"
+        },
+        {
+          "k": "Design",
+          "v": "Foldable Body Design"
+        },
+        {
+          "k": "Bluetooth",
+          "v": "Blue Tooth 4.2"
+        },
+        {
+          "k": "Card Reader",
+          "v": "MSR NFC iButton Card Reader (Optional)"
+        }
+      ],
+      "fallback": [
+        {
+          "k": "Product categoryTouch POS",
+          "v": "Specification parameters"
+        }
+      ]
+    }
+  },
+  "TC03": {
+    "name": "TC03",
+    "url": "https://www.jesenpos.com/item.html?id=TC03",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "TF01": {
+    "name": "TF01",
+    "url": "https://www.jesenpos.com/item.html?id=TF01",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "TL06": {
+    "name": "TL06",
+    "url": "https://www.jesenpos.com/item.html?id=TL06",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "TQ02": {
+    "name": "TQ02",
+    "url": "https://www.jesenpos.com/item.html?id=TQ02",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "TQ03": {
+    "name": "TQ03",
+    "url": "https://www.jesenpos.com/item.html?id=TQ03",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "TR06": {
+    "name": "TR06",
+    "url": "https://www.jesenpos.com/item.html?id=TR06",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "D3MINI": {
+    "name": "D3MINI",
+    "url": "https://www.jesenpos.com/item.html?id=D3MINI",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "TC06": {
+    "name": "TC06",
+    "url": "https://www.jesenpos.com/item.html?id=TC06",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "TE05": {
+    "name": "TE05",
+    "url": "https://www.jesenpos.com/item.html?id=TE05",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "1715": {
+    "name": "1715",
+    "url": "https://www.jesenpos.com/item.html?id=1715",
+    "parsed_specs": {
+      "items": [
+        {
+          "k": "Product category",
+          "v": "Touch POS"
+        },
+        {
+          "k": "CPU",
+          "v": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527"
+        },
+        {
+          "k": "Memory",
+          "v": "DDRIII 2G/4G/8G DDRIV 8G/16G"
+        },
+        {
+          "k": "Storage",
+          "v": "SSD 32G/64G/128G/256G/512G"
+        },
+        {
+          "k": "OS Support",
+          "v": "Windows10/11; Android11/12/13/14; Linux"
+        },
+        {
+          "k": "Main Display",
+          "v": "15”/15.6” LED Backlight Touch Screen"
+        },
+        {
+          "k": "Resolution",
+          "v": "1024x768/1920x1080"
+        },
+        {
+          "k": "USB",
+          "v": "2xUSB2.0 + 2xUSB3.0"
+        },
+        {
+          "k": "LAN",
+          "v": "RJ45"
+        },
+        {
+          "k": "Display",
+          "v": "VGA/HDMI"
+        },
+        {
+          "k": "Serial",
+          "v": "COM (RS232)"
+        },
+        {
+          "k": "Audio",
+          "v": "Line Out + Audio"
+        },
+        {
+          "k": "WiFi",
+          "v": "Mini PCIe for Wireless LAN"
+        },
+        {
+          "k": "Speaker",
+          "v": "4Ω·5W Speaker"
+        },
+        {
+          "k": "Power DC-IN",
+          "v": "12V 7A/5A Circular Hole"
+        },
+        {
+          "k": "Operating Temperature",
+          "v": "0~40℃"
+        },
+        {
+          "k": "Storage Temperature",
+          "v": "-20~60℃"
+        },
+        {
+          "k": "Product Dimensions",
+          "v": "390x260x380mm"
+        },
+        {
+          "k": "Packing Dimensions",
+          "v": "470x260x420mm"
+        },
+        {
+          "k": "Net Weight",
+          "v": "5.1kg"
+        },
+        {
+          "k": "Gross Weight",
+          "v": "6.5kg"
+        },
+        {
+          "k": "Color",
+          "v": "Black"
+        },
+        {
+          "k": "2nd Display",
+          "v": "9.7” / 10.1” LED Backlight Screen 1024x768 / 1024x600"
+        },
+        {
+          "k": "Material",
+          "v": "Aluminum Body"
+        },
+        {
+          "k": "Design",
+          "v": "Foldable Body Design"
+        },
+        {
+          "k": "Bluetooth",
+          "v": "Blue Tooth 4.2"
+        },
+        {
+          "k": "Card Reader",
+          "v": "MSR NFC iButton Card Reader (Optional)"
+        }
+      ],
+      "fallback": [
+        {
+          "k": "Product categoryTouch POS",
+          "v": "Specification parameters"
+        }
+      ]
+    }
+  },
+  "2401": {
+    "name": "2401",
+    "url": "https://www.jesenpos.com/item.html?id=2401",
+    "parsed_specs": {
+      "items": [
+        {
+          "k": "Product category",
+          "v": "Touch POS"
+        },
+        {
+          "k": "CPU",
+          "v": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527"
+        },
+        {
+          "k": "Memory",
+          "v": "DDRIII 2G/4G/8G DDRIV 8G/16G"
+        },
+        {
+          "k": "Storage",
+          "v": "SSD 32G/64G/128G/256G/512G"
+        },
+        {
+          "k": "OS Support",
+          "v": "Windows10/11; Android11/12/13/14; Linux"
+        },
+        {
+          "k": "Main Display",
+          "v": "18.5” LED Backlight Touch Screen"
+        },
+        {
+          "k": "Resolution",
+          "v": "1366x768"
+        },
+        {
+          "k": "USB",
+          "v": "2xUSB2.0 + 2xUSB3.0)"
+        },
+        {
+          "k": "LAN",
+          "v": "RJ45"
+        },
+        {
+          "k": "Display",
+          "v": "VGA/HDMI"
+        },
+        {
+          "k": "Serial",
+          "v": "COM (RS232)"
+        },
+        {
+          "k": "Audio",
+          "v": "Line Out + Audio"
+        },
+        {
+          "k": "WiFi",
+          "v": "Mini PCIe for Wireless LAN"
+        },
+        {
+          "k": "Speaker",
+          "v": "4Ω·5W Speaker"
+        },
+        {
+          "k": "Power DC-IN",
+          "v": "12V 7A/5A Circular Hole"
+        },
+        {
+          "k": "Operating Temperature",
+          "v": "0~40℃"
+        },
+        {
+          "k": "Storage Temperature",
+          "v": "-20~60℃"
+        },
+        {
+          "k": "Product Dimensions",
+          "v": "420x200x400mm"
+        },
+        {
+          "k": "Packing Dimensions",
+          "v": "500x160x370mm"
+        },
+        {
+          "k": "Net Weight",
+          "v": "6.5kg"
+        },
+        {
+          "k": "Gross Weight",
+          "v": "8kg"
+        },
+        {
+          "k": "Color",
+          "v": "Black"
+        },
+        {
+          "k": "2nd Display",
+          "v": "9.7” / 10.1” LED Backlight Screen 1024x768 / 1024x600 /1280x800"
+        },
+        {
+          "k": "Material",
+          "v": "Aluminum Body"
+        },
+        {
+          "k": "Design",
+          "v": "Desktop + Wall Mount"
+        },
+        {
+          "k": "Bluetooth",
+          "v": "Blue Tooth 4.2"
+        }
+      ],
+      "fallback": [
+        {
+          "k": "Product categoryTouch POS",
+          "v": "Specification parameters"
+        }
+      ]
+    }
+  },
+  "2310": {
+    "name": "2310",
+    "url": "https://www.jesenpos.com/item.html?id=2310",
+    "parsed_specs": {
+      "items": [
+        {
+          "k": "Product category",
+          "v": "Touch POS"
+        },
+        {
+          "k": "CPU",
+          "v": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527"
+        },
+        {
+          "k": "Memory",
+          "v": "DDRIII 2G/4G/8G DDRIV 8G/16G"
+        },
+        {
+          "k": "Storage",
+          "v": "SSD 32G/64G/128G/256G/512G"
+        },
+        {
+          "k": "OS Support",
+          "v": "Windows10/11; Android11/12/13/14; Linux"
+        },
+        {
+          "k": "Main Display",
+          "v": "15”/15.6” LED Backlight Touch Screen"
+        },
+        {
+          "k": "Resolution",
+          "v": "1024x768/1920x1080"
+        },
+        {
+          "k": "USB",
+          "v": "2xUSB2.0 + 2xUSB3.0)"
+        },
+        {
+          "k": "LAN",
+          "v": "RJ45"
+        },
+        {
+          "k": "Display",
+          "v": "VGA/HDMI"
+        },
+        {
+          "k": "Serial",
+          "v": "COM (RS232)"
+        },
+        {
+          "k": "Audio",
+          "v": "Line Out + Audio"
+        },
+        {
+          "k": "WiFi",
+          "v": "Mini PCIe for Wireless LAN"
+        },
+        {
+          "k": "Speaker",
+          "v": "4Ω·5W Speaker"
+        },
+        {
+          "k": "Power DC-IN",
+          "v": "12V 7A/5A Circular Hole"
+        },
+        {
+          "k": "Operating Temperature",
+          "v": "0~40℃"
+        },
+        {
+          "k": "Storage Temperature",
+          "v": "-20~60℃"
+        },
+        {
+          "k": "Product Dimensions",
+          "v": "390x260x380mm"
+        },
+        {
+          "k": "Packing Dimensions",
+          "v": "470x260x420mm"
+        },
+        {
+          "k": "Net Weight",
+          "v": "5.1kg"
+        },
+        {
+          "k": "Gross Weight",
+          "v": "6.5kg"
+        },
+        {
+          "k": "Color",
+          "v": "Black"
+        },
+        {
+          "k": "2nd Display",
+          "v": "9.7” / 10.1” LED Backlight Screen 1024x768 / 1024x600"
+        },
+        {
+          "k": "Material",
+          "v": "Aluminum Body"
+        },
+        {
+          "k": "Design",
+          "v": "Foldable Body Design"
+        },
+        {
+          "k": "Bluetooth",
+          "v": "Blue Tooth 4.2"
+        },
+        {
+          "k": "Card Reader",
+          "v": "MSR NFC iButton Card Reader (Optional)"
+        }
+      ],
+      "fallback": [
+        {
+          "k": "Product categoryTouch POS",
+          "v": "Specification parameters"
+        }
+      ]
+    }
+  },
+  "2303": {
+    "name": "2303",
+    "url": "https://www.jesenpos.com/item.html?id=2303",
+    "parsed_specs": {
+      "items": [
+        {
+          "k": "Product category",
+          "v": "Touch POS"
+        },
+        {
+          "k": "CPU",
+          "v": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527"
+        },
+        {
+          "k": "Memory",
+          "v": "DDRIII 2G/4G/8G DDRIV 8G/16G"
+        },
+        {
+          "k": "Storage",
+          "v": "SSD 32G/64G/128G/256G/512G"
+        },
+        {
+          "k": "OS Support",
+          "v": "Windows10/11; Android11/12/13/14; Linux"
+        },
+        {
+          "k": "Main Display",
+          "v": "15”/15.6” LED Backlight Touch Screen"
+        },
+        {
+          "k": "Resolution",
+          "v": "1024x768/1920x1080"
+        },
+        {
+          "k": "USB",
+          "v": "2xUSB2.0 + 2xUSB3.0"
+        },
+        {
+          "k": "LAN",
+          "v": "RJ45"
+        },
+        {
+          "k": "Display",
+          "v": "VGA/HDMI"
+        },
+        {
+          "k": "Serial",
+          "v": "COM (RS232)"
+        },
+        {
+          "k": "Audio",
+          "v": "Line Out + Audio"
+        },
+        {
+          "k": "WiFi",
+          "v": "Mini PCIe for Wireless LAN"
+        },
+        {
+          "k": "Speaker",
+          "v": "4Ω·5W Speaker"
+        },
+        {
+          "k": "Power DC-IN",
+          "v": "12V 7A/5A Circular Hole"
+        },
+        {
+          "k": "Operating Temperature",
+          "v": "0~40℃"
+        },
+        {
+          "k": "Storage Temperature",
+          "v": "-20~60℃"
+        },
+        {
+          "k": "Product Dimensions",
+          "v": "390x260x380mm"
+        },
+        {
+          "k": "Packing Dimensions",
+          "v": "470x260x420mm"
+        },
+        {
+          "k": "Net Weight",
+          "v": "5.1kg"
+        },
+        {
+          "k": "Gross Weight",
+          "v": "6.5kg"
+        },
+        {
+          "k": "Color",
+          "v": "Black"
+        },
+        {
+          "k": "2nd Display",
+          "v": "9.7” / 10.1” LED Backlight Screen 1024x768 / 1024x600"
+        },
+        {
+          "k": "Material",
+          "v": "Aluminum Body"
+        },
+        {
+          "k": "Design",
+          "v": "Foldable Body Design"
+        },
+        {
+          "k": "Bluetooth",
+          "v": "Blue Tooth 4.2"
+        },
+        {
+          "k": "Card Reader",
+          "v": "MSR NFC iButton Card Reader (Optional)"
+        }
+      ],
+      "fallback": [
+        {
+          "k": "Product categoryTouch POS",
+          "v": "Specification parameters"
+        }
+      ]
+    }
+  },
+  "TE02": {
+    "name": "TE02",
+    "url": "https://www.jesenpos.com/item.html?id=TE02",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "A115": {
+    "name": "A115",
+    "url": "https://www.jesenpos.com/item.html?id=A115",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "1902": {
+    "name": "1902",
+    "url": "https://www.jesenpos.com/item.html?id=1902",
+    "parsed_specs": {
+      "items": [
+        {
+          "k": "Product category",
+          "v": "Touch POS"
+        },
+        {
+          "k": "CPU",
+          "v": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527"
+        },
+        {
+          "k": "Memory",
+          "v": "DDRIII 2G/4G/8G DDRIV 8G/16G"
+        },
+        {
+          "k": "Storage",
+          "v": "SSD 32G/64G/128G/256G/512G"
+        },
+        {
+          "k": "OS Support",
+          "v": "Windows10/11; Android11/12/13/14; Linux"
+        },
+        {
+          "k": "Main Display",
+          "v": "15”/15.6” LED Backlight Touch Screen"
+        },
+        {
+          "k": "Resolution",
+          "v": "1024x768/1920x1080/1366x168"
+        },
+        {
+          "k": "USB",
+          "v": "4xUSB2.0 + 2xUSB3.0"
+        },
+        {
+          "k": "LAN",
+          "v": "RJ45"
+        },
+        {
+          "k": "Display",
+          "v": "VGA/HDMI"
+        },
+        {
+          "k": "Serial",
+          "v": "COM (RS232)"
+        },
+        {
+          "k": "Audio",
+          "v": "Line Out + Audio"
+        },
+        {
+          "k": "WiFi",
+          "v": "Mini PCIe for Wireless LAN"
+        },
+        {
+          "k": "Speaker",
+          "v": "4Ω·5W Speaker"
+        },
+        {
+          "k": "Cash Drawer",
+          "v": "RJ11"
+        },
+        {
+          "k": "Power DC-IN",
+          "v": "12V 7A/5A Circular Hole"
+        },
+        {
+          "k": "Operating Temperature",
+          "v": "0~40℃"
+        },
+        {
+          "k": "Storage Temperature",
+          "v": "-20~60℃"
+        },
+        {
+          "k": "Product Dimensions",
+          "v": "390x260x400mm"
+        },
+        {
+          "k": "Packing Dimensions",
+          "v": "470x300x470mm"
+        },
+        {
+          "k": "Net Weight",
+          "v": "5.5kg"
+        },
+        {
+          "k": "Gross Weight",
+          "v": "7kg"
+        },
+        {
+          "k": "Color",
+          "v": "Red/Blue/Black"
+        },
+        {
+          "k": "2nd Display",
+          "v": "8-Digit LED Display/VFD 15\"/15.6\" LED Backlight Screen"
+        },
+        {
+          "k": "Printer",
+          "v": "80mm Thermal Receipt Printer"
+        },
+        {
+          "k": "Bluetooth",
+          "v": "BlueTooth 4.0 Protocol"
+        },
+        {
+          "k": "Barcode Scanner",
+          "v": "QR Payment Code Sacnner (Optional)"
+        }
+      ],
+      "fallback": [
+        {
+          "k": "Product categoryTouch POS",
+          "v": "Specification parameters"
+        }
+      ]
+    }
+  },
+  "1701": {
+    "name": "1701",
+    "url": "https://www.jesenpos.com/item.html?id=1701",
+    "parsed_specs": {
+      "items": [
+        {
+          "k": "Product category",
+          "v": "Touch POS"
+        },
+        {
+          "k": "CPU",
+          "v": "Intel Celeron N5095/N97/N100/J4125/J6412 Intel Core i3/i5/i7 (5/7/8/10/11/12th Gen) RK3568/RK3588/RK3576/A133/A527"
+        },
+        {
+          "k": "Memory",
+          "v": "DDRIII 2G/4G/8G DDRIV 8G/16G"
+        },
+        {
+          "k": "Storage",
+          "v": "SSD 32G/64G/128G/256G/512G"
+        },
+        {
+          "k": "OS Support",
+          "v": "Windows10/11; Android11/12/13/14; Linux"
+        },
+        {
+          "k": "Main Display",
+          "v": "15.6” LED Backlight Touch Screen"
+        },
+        {
+          "k": "Resolution",
+          "v": "1366x768/1920x1080"
+        },
+        {
+          "k": "USB",
+          "v": "2xUSB2.0 + 2xUSB3.0)"
+        },
+        {
+          "k": "LAN",
+          "v": "RJ45"
+        },
+        {
+          "k": "Display",
+          "v": "VGA/HDMI"
+        },
+        {
+          "k": "Serial",
+          "v": "COM (RS232)"
+        },
+        {
+          "k": "Audio",
+          "v": "Line Out + Audio"
+        },
+        {
+          "k": "WiFi",
+          "v": "Mini PCIe for Wireless LAN"
+        },
+        {
+          "k": "Speaker",
+          "v": "4Ω·5W Speaker"
+        },
+        {
+          "k": "Power DC-IN",
+          "v": "12V 7A/5A Circular Hole"
+        },
+        {
+          "k": "Operating Temperature",
+          "v": "0~40℃"
+        },
+        {
+          "k": "Storage Temperature",
+          "v": "-20~60℃"
+        },
+        {
+          "k": "Product Dimensions",
+          "v": "390x260x370mm"
+        },
+        {
+          "k": "Packing Dimensions",
+          "v": "480x300x460mm"
+        },
+        {
+          "k": "Net Weight",
+          "v": "5kg"
+        },
+        {
+          "k": "Gross Weight",
+          "v": "6.5kg"
+        },
+        {
+          "k": "Color",
+          "v": "Black / White"
+        },
+        {
+          "k": "2nd Display",
+          "v": "8-Digit LED Display 11.6”/15.6” LED Backlight Screen"
+        },
+        {
+          "k": "Material",
+          "v": "Plastic"
+        },
+        {
+          "k": "Bluetooth",
+          "v": "Blue Tooth 4.2"
+        },
+        {
+          "k": "Printer",
+          "v": "58mm Thermal Receipt Printer(Optional)"
+        },
+        {
+          "k": "Card Reader",
+          "v": "MSR NFC iButton Card Reader (Optional)"
+        }
+      ],
+      "fallback": [
+        {
+          "k": "Product categoryTouch POS",
+          "v": "Specification parameters"
+        }
+      ]
+    }
+  },
+  "TS02": {
+    "name": "TS02",
+    "url": "https://www.jesenpos.com/item.html?id=TS02",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "N1": {
+    "name": "N1",
+    "url": "https://www.jesenpos.com/item.html?id=N1",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "Q1": {
+    "name": "Q1",
+    "url": "https://www.jesenpos.com/item.html?id=Q1",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "Q3": {
+    "name": "Q3",
+    "url": "https://www.jesenpos.com/item.html?id=Q3",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "Q6": {
+    "name": "Q6",
+    "url": "https://www.jesenpos.com/item.html?id=Q6",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "Z1LIST": {
+    "name": "Z1LIST",
+    "url": "https://www.jesenpos.com/item.html?id=Z1LIST",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "1515A": {
+    "name": "1515A",
+    "url": "https://www.jesenpos.com/item.html?id=1515A",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "1515B": {
+    "name": "1515B",
+    "url": "https://www.jesenpos.com/item.html?id=1515B",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "1515C": {
+    "name": "1515C",
+    "url": "https://www.jesenpos.com/item.html?id=1515C",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "1515F": {
+    "name": "1515F",
+    "url": "https://www.jesenpos.com/item.html?id=1515F",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "2307": {
+    "name": "2307",
+    "url": "https://www.jesenpos.com/item.html?id=2307",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "1515G": {
+    "name": "1515G",
+    "url": "https://www.jesenpos.com/item.html?id=1515G",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "VS6760": {
+    "name": "VS6760",
+    "url": "https://www.jesenpos.com/item.html?id=VS6760",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "710": {
+    "name": "710",
+    "url": "https://www.jesenpos.com/item.html?id=710",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "680": {
+    "name": "680",
+    "url": "https://www.jesenpos.com/item.html?id=680",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "4800": {
+    "name": "4800",
+    "url": "https://www.jesenpos.com/item.html?id=4800",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "8130plus": {
+    "name": "8130plus",
+    "url": "https://www.jesenpos.com/item.html?id=8130plus",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "8180plus": {
+    "name": "8180plus",
+    "url": "https://www.jesenpos.com/item.html?id=8180plus",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "790A": {
+    "name": "790A",
+    "url": "https://www.jesenpos.com/item.html?id=790A",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "G200": {
+    "name": "G200",
+    "url": "https://www.jesenpos.com/item.html?id=G200",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "GP3120TL": {
+    "name": "GP3120TL",
+    "url": "https://www.jesenpos.com/item.html?id=GP3120TL",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "GP1324T": {
+    "name": "GP1324T",
+    "url": "https://www.jesenpos.com/item.html?id=GP1324T",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "SPRT 887": {
+    "name": "SPRT 887",
+    "url": "https://www.jesenpos.com/item.html?id=SPRT 887",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "SPRT 8811": {
+    "name": "SPRT 8811",
+    "url": "https://www.jesenpos.com/item.html?id=SPRT 8811",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "SPRT S200": {
+    "name": "SPRT S200",
+    "url": "https://www.jesenpos.com/item.html?id=SPRT S200",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "SPRT TL25": {
+    "name": "SPRT TL25",
+    "url": "https://www.jesenpos.com/item.html?id=SPRT TL25",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "XP-235B": {
+    "name": "XP-235B",
+    "url": "https://www.jesenpos.com/item.html?id=XP-235B",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "XP-365B": {
+    "name": "XP-365B",
+    "url": "https://www.jesenpos.com/item.html?id=XP-365B",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "DAHUA": {
+    "name": "DAHUA",
+    "url": "https://www.jesenpos.com/item.html?id=DAHUA",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  },
+  "RTC1": {
+    "name": "RTC1",
+    "url": "https://www.jesenpos.com/item.html?id=RTC1",
+    "parsed_specs": {
+      "items": [],
+      "fallback": []
+    },
+    "raw_text": "Home\n\nSolution\n\nProduct\n\nService\n\nCompany\n\nContact Us\n\nContact us\n\nE-mail\nsales@jesenpos.com\n\nAddress\n777 block A Wuchan Building, Heping district, Shenyang City, Liaoning province, PR China. 110001\n\n2026 JesenPos - 辽ICP备15019386号-5\n\n "
+  }
+}
