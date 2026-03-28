@@ -10,31 +10,23 @@ export const SITE = {
 };
 
 export const NAV_LINKS = [
+  { label: "Home", href: "/" },
   {
-    label: "Products",
-    href: "/features",
+    label: "Solution",
+    href: "/solutions",
     children: [
-      { label: "Billing Management", href: "/features#billing", description: "Lightning-fast invoicing and checkout" },
-      { label: "Inventory Management", href: "/features#inventory", description: "Real-time stock tracking and alerts" },
-      { label: "Reports & Analytics", href: "/features#reports", description: "Smart dashboards and insights" },
-      { label: "Multi-Store Management", href: "/features#multistore", description: "Control all branches from one place" },
-      { label: "GST & Compliance", href: "/features#gst", description: "Automated tax calculation and filing" },
+      { label: "Retail POS", href: "/solutions#retail", description: "All-in-one solution for retail shops" },
+      { label: "Inventory Tech", href: "/solutions#inventory", description: "Smart stock management & tracking" },
+      { label: "Analytics Hub", href: "/solutions#analytics", description: "Data-driven insights for growth" },
+      { label: "Multi-Store", href: "/solutions#multistore", description: "Scale your business effortlessly" },
     ],
   },
-  {
-    label: "Hardware",
-    href: "/hardware",
-    children: [
-      { label: "POS Terminal", href: "/hardware#terminal", description: "All-in-one billing terminal" },
-      { label: "Barcode Scanner", href: "/hardware#scanner", description: "High-speed barcode scanning" },
-      { label: "Thermal Printer", href: "/hardware#printer", description: "Fast receipt printing" },
-      { label: "Cash Drawer", href: "/hardware#drawer", description: "Secure cash management" },
-      { label: "Complete Setup", href: "/hardware#setup", description: "Ready-to-use hardware bundles" },
-    ],
-  },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Product", href: "/product" },
+  { label: "Service", href: "/service" },
+  { label: "Company", href: "/about" },
+  { label: "Contact Us", href: "/contact" },
 ];
+
 
 export const FEATURES = [
   {

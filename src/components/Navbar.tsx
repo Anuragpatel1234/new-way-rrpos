@@ -2,22 +2,30 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { NAV_LINKS, SITE } from "@/lib/constants";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
+
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
+    const onScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll, { passive: true });
+    // check immediately on mount
+    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const forceSolid = pathname !== "/";
+  const scrolled = isScrolled || forceSolid;
+
 
   useEffect(() => {
     if (mobileOpen) {
@@ -37,20 +45,9 @@ export default function Navbar() {
       )}
       style={{ zIndex: 100 }}
     >
-      <nav className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-between px-6 lg:px-8">
-        {/* Logo */}
-        <Link href="/" className="relative z-50 flex items-center gap-2 outline-none">
-          <span
-            className={cn(
-              "text-2xl font-bold tracking-tight transition-colors duration-300",
-              scrolled || mobileOpen ? "text-foreground" : "text-white"
-            )}
-          >
-            NewWay
-          </span>
-        </Link>
-
+      <nav className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-center px-6 lg:px-8">
         {/* Desktop Nav */}
+
         <div className="hidden items-center gap-1 lg:flex">
           {NAV_LINKS.map((link) => (
             <div
@@ -114,31 +111,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden items-center gap-3 lg:flex">
-          <Link
-            href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-            className={cn(
-              "flex items-center gap-2 text-sm font-medium transition-colors",
-              scrolled
-                ? "text-gray-600 hover:text-foreground"
-                : "text-white/95 hover:text-white"
-            )}
-          >
-            <Phone className="h-4 w-4" />
-            {SITE.phone}
-          </Link>
-          <Link href="/contact">
-            <Button
-              size="default"
-              className={cn(
-                scrolled ? "bg-white text-gray-900 hover:bg-gray-100" : "bg-white text-gray-900 hover:bg-gray-100 border-0"
-              )}
-            >
-              Book Demo
-            </Button>
-          </Link>
-        </div>
+
 
         {/* Mobile Toggle */}
         <button
@@ -196,17 +169,7 @@ export default function Navbar() {
                 ))}
               </div>
 
-              <div className="mt-auto flex flex-col gap-3 border-t border-gray-800 pt-6">
-                <Link href={`tel:${SITE.phone.replace(/\s/g, "")}`} className="flex items-center gap-2 px-4 py-2 text-sm text-gray-400">
-                  <Phone className="h-4 w-4" />
-                  {SITE.phone}
-                </Link>
-                <Link href="/contact" onClick={() => setMobileOpen(false)}>
-                  <Button className="w-full" size="lg">
-                    Book Demo
-                  </Button>
-                </Link>
-              </div>
+
             </div>
           </motion.div>
         )}
