@@ -16,11 +16,7 @@ def remove_white_bg(input_path, output_path, threshold=240):
     img.save(output_path, "PNG")
 
 images = [
-    ('public/products/channel_1515A.jpg', 'public/products/channel_1515A.png'),
-    ('public/products/cash_2307.jpg', 'public/products/cash_2307.png'),
-    ('public/products/scanner_790A.jpg', 'public/products/scanner_790A.png'),
-    ('public/products/printer_XP-235B.jpg', 'public/products/printer_XP-235B.png'),
-    ('public/products/scale_RTC1.jpg', 'public/products/scale_RTC1.png')
+    ('public/products/scale_DAHUA.jpg', 'public/products/scale_DAHUA.png')
 ]
 
 for in_path, out_path in images:

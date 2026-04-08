@@ -13,7 +13,16 @@ const SHOWCASE_DATA = [
   {
     category: "TOUCH POS",
     desc: ["From deep roots,", "efficiency draws", "its strength"],
-    image: "/products/touch_2302.png",
+    models: [
+      { name: "2302 Core", image: "/products/touch_2302.png" },
+      { name: "1701 Slim", image: "/products/touch_1701.png" },
+      { name: "1715 Max", image: "/products/touch_1715.png" },
+      { name: "1902 Wide", image: "/products/touch_1902.png" },
+      { name: "2310 Cast", image: "/products/touch_2310.png" },
+      { name: "D3 Mini", image: "/products/touch_D3mini.png" },
+      { name: "TE02 Pro", image: "/products/touch_TE02.png" },
+      { name: "TS02 Hub", image: "/products/touch_TS02.png" }
+    ],
     box1: {
       title: "[CORE ARCHITECTURE]",
       items: [
@@ -40,7 +49,13 @@ const SHOWCASE_DATA = [
   {
     category: "HANDHELD",
     desc: ["Portability engineered,", "for infinite space", "and time"],
-    image: "/products/handheld_N1.png",
+    models: [
+      { name: "N1 Base", image: "/products/handheld_N1.png" },
+      { name: "Q1 Pro", image: "/products/handheld_Q1.png" },
+      { name: "Q3 Max", image: "/products/handheld_Q3.png" },
+      { name: "Q6 Ultra", image: "/products/handheld_Q6.png" },
+      { name: "Z1 List", image: "/products/handheld_Z1LIST.png" }
+    ],
     box1: {
       title: "[MOBILE COMPUTE]",
       items: [
@@ -67,7 +82,11 @@ const SHOWCASE_DATA = [
   {
     category: "CHANNEL POS",
     desc: ["Seamless Integration,", "Limitless Potential,", "True Scalability"],
-    image: "/products/channel_1515A.png",
+    models: [
+      { name: "Channel 1515A", image: "/products/channel_1515A.png" },
+      { name: "Channel 1515B", image: "/products/channel_1515B.png" },
+      { name: "Channel 1515C", image: "/products/channel_1515C.png" }
+    ],
     box1: {
       title: "[WORKSTATION]",
       items: [
@@ -94,7 +113,11 @@ const SHOWCASE_DATA = [
   {
     category: "REGISTER",
     desc: ["The secure vault", "for high-frequency", "transactions."],
-    image: "/products/cash_2307.png",
+    models: [
+      { name: "Cash 2307", image: "/products/cash_2307.png" },
+      { name: "Cash 1515F", image: "/products/cash_1515F.png" },
+      { name: "Cash 1515G", image: "/products/cash_1515G.png" }
+    ],
     box1: {
       title: "[SECURITY COMPUTE]",
       items: [
@@ -121,7 +144,13 @@ const SHOWCASE_DATA = [
   {
     category: "SCANNER",
     desc: ["Laser precision,", "Omnidirectional,", "Unfailing sight."],
-    image: "/products/scanner_790A.png",
+    models: [
+      { name: "Scanner 790A", image: "/products/scanner_790A.png" },
+      { name: "Scanner 4800", image: "/products/scanner_4800.png" },
+      { name: "Scanner 680", image: "/products/scanner_680.png" },
+      { name: "Scanner 710", image: "/products/scanner_710.png" },
+      { name: "Scanner VS6760", image: "/products/scanner_VS6760.png" }
+    ],
     box1: {
       title: "[OPTICS ENGINE]",
       items: [
@@ -148,7 +177,17 @@ const SHOWCASE_DATA = [
   {
     category: "PRINTER",
     desc: ["High-speed thermal,", "Clear lines,", "Zero lag."],
-    image: "/products/printer_XP-235B.png",
+    models: [
+      { name: "XP-235B", image: "/products/printer_XP-235B.png" },
+      { name: "G200", image: "/products/printer_G200.png" },
+      { name: "GP1324T", image: "/products/printer_GP1324T.png" },
+      { name: "GP3120TL", image: "/products/printer_GP3120TL.png" },
+      { name: "SPRT 8811", image: "/products/printer_SPRT_8811.png" },
+      { name: "SPRT 887", image: "/products/printer_SPRT_887.png" },
+      { name: "SPRT S200", image: "/products/printer_SPRT_S200.png" },
+      { name: "SPRT TL25", image: "/products/printer_SPRT_TL25.png" },
+      { name: "XP-365B", image: "/products/printer_XP-365B.png" }
+    ],
     box1: {
       title: "[THERMAL ENGINE]",
       items: [
@@ -175,7 +214,10 @@ const SHOWCASE_DATA = [
   {
     category: "SCALE",
     desc: ["Gram accuracy,", "Instant sync,", "Heavy duty."],
-    image: "/products/scale_RTC1.png",
+    models: [
+      { name: "NewWay RTC1", image: "/products/scale_RTC1.png" },
+      { name: "NewWay DAHUA", image: "/products/scale_DAHUA.png" }
+    ],
     box1: {
       title: "[SENSORY COMPUTE]",
       items: [
@@ -204,6 +246,23 @@ const SHOWCASE_DATA = [
 export default function SuteraShowcase() {
   const containerRef = useRef<HTMLElement>(null);
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
+  
+  // Track active sub-model index per category
+  const [activeModelIndices, setActiveModelIndices] = useState<number[]>(SHOWCASE_DATA.map(() => 0));
+
+  // Auto-rotate sub-models every 10 seconds
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveModelIndices(prev => prev.map((idx, categoryIndex) => {
+        const numModels = SHOWCASE_DATA[categoryIndex].models.length;
+        if (numModels > 1) {
+          return (idx + 1) % numModels;
+        }
+        return idx;
+      }));
+    }, 10000);
+    return () => clearInterval(interval);
+  }, []);
 
   useGSAP(() => {
     if (!containerRef.current) return;
@@ -281,24 +340,44 @@ export default function SuteraShowcase() {
         <div className="absolute top-1/2 left-[10%] text-xs text-gray-400 font-sans tracking-widest pointer-events-none z-[100]">+</div>
         <div className="absolute top-1/2 right-[10%] text-xs text-gray-400 font-sans tracking-widest pointer-events-none z-[100]">+</div>
 
-        {SHOWCASE_DATA.map((item, index) => (
-          <div key={item.category} className={`showcase-item-${index} absolute inset-0 w-full h-full flex items-center justify-center pointer-events-none`}>
-            
-            {/* Deep Parallax Echo */}
-            <img src={item.image} className="absolute z-0 w-[500px] md:w-[700px] object-contain opacity-[0.03] blur-md mix-blend-darken filter grayscale transition-transform duration-100 ease-out pointer-events-none" style={{ transform: echoTransform }} alt="" />
-            
-            {/* Header Text */}
-            <div className="absolute top-6 md:top-12 left-6 md:left-[5%] z-20 transition-transform duration-100 ease-out" style={{ transform: backgroundTransform }}>
-              <h2 className="text-5xl lg:text-[7rem] font-sans font-black tracking-tighter uppercase leading-[0.85] text-black">
-                {item.category}
-              </h2>
-              <p className="mt-8 text-[10px] md:text-xs font-bold tracking-widest max-w-[200px] leading-relaxed uppercase border-l-2 border-black pl-3">
-                {item.desc.map((line, i) => <React.Fragment key={i}>{line}<br/></React.Fragment>)}
-              </p>
-            </div>
-            
-            {/* Central Image */}
-            <img src={item.image} alt={item.category} className="relative z-20 w-[400px] h-[400px] md:w-[600px] md:h-[600px] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-transform duration-75 ease-out pointer-events-auto" style={{ transform: productTransform }} />
+        {SHOWCASE_DATA.map((item, index) => {
+          const activeModelIndex = activeModelIndices[index];
+          const activeModel = item.models[activeModelIndex];
+
+          return (
+            <div key={item.category} className={`showcase-item-${index} absolute inset-0 w-full h-full flex items-center justify-center pointer-events-none`}>
+              
+              {/* Deep Parallax Echo */}
+              <img src={activeModel.image} className="absolute z-0 w-[500px] md:w-[700px] object-contain opacity-[0.03] blur-[15px] mix-blend-darken filter grayscale transition-all duration-[1500ms] ease-out pointer-events-none" style={{ transform: echoTransform }} alt="" />
+              
+              {/* Header Text */}
+              <div className="absolute top-6 md:top-12 left-6 md:left-[5%] z-20 transition-transform duration-100 ease-out" style={{ transform: backgroundTransform }}>
+                <h2 className="text-5xl lg:text-[7rem] font-sans font-black tracking-tighter uppercase leading-[0.85] text-black">
+                  {item.category}
+                </h2>
+                <p className="mt-8 text-[10px] md:text-xs font-bold tracking-widest max-w-[200px] leading-relaxed uppercase border-l-2 border-black pl-3">
+                  {item.desc.map((line, i) => <React.Fragment key={i}>{line}<br/></React.Fragment>)}
+                </p>
+              </div>
+              
+              {/* Central Images container (for crossfade auto-rotation logic) */}
+              <div className="absolute inset-0 m-auto flex items-center justify-center w-full h-full pointer-events-auto">
+                {item.models.map((model, mIdx) => {
+                  const isActive = mIdx === activeModelIndex;
+                  const isPast = mIdx < activeModelIndex;
+
+                  // Keep 3D transform locked on container or apply individually, applying individually lets them pop properly
+                  return (
+                    <img 
+                      key={model.name}
+                      src={model.image} 
+                      alt={model.name} 
+                      className={`absolute inset-0 m-auto z-20 w-[400px] h-[400px] md:w-[600px] md:h-[600px] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-[1200ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isActive ? 'opacity-100 translate-x-0 blur-none' : 'opacity-0 blur-sm ' + (isPast ? '-translate-x-12' : 'translate-x-12')}`} 
+                      style={isActive ? { transform: productTransform } : {}} 
+                    />
+                  );
+                })}
+              </div>
 
             {/* Foreground SVG Connectors */}
             <div className="absolute inset-0 w-full h-full z-10 transition-transform duration-100 ease-out" style={{ transform: foregroundTransform }}>
@@ -356,8 +435,53 @@ export default function SuteraShowcase() {
               </div>
 
             </div>
+
+            {/* Sub-Model Hover Ribbon Navigator (only visible if there are multiple models for this sub-category) */}
+            {item.models.length > 1 && (
+              <div className="absolute bottom-8 md:bottom-12 left-0 w-full z-[200] pointer-events-auto">
+                <div className="relative w-full max-w-[100vw] overflow-hidden flex items-center h-16 md:h-20 mask-image-[linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
+                  
+                  {/* The shifting continuous ribbon track */}
+                  <div 
+                    className="flex items-center absolute transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] h-full" 
+                    style={{ transform: `translateX(calc(50vw - ${activeModelIndex * 180}px - 90px))` }}
+                  >
+                    {item.models.map((model, mIdx) => {
+                      const isActive = activeModelIndex === mIdx;
+                      return (
+                        <div 
+                          key={model.name}
+                          onMouseEnter={() => {
+                            setActiveModelIndices(prev => {
+                              const next = [...prev];
+                              next[index] = mIdx;
+                              return next;
+                            });
+                          }}
+                          className={`w-[180px] h-full flex-shrink-0 flex items-center justify-center cursor-pointer transition-all duration-300 group`}
+                        >
+                          <div className={`relative px-4 py-2 rounded-full transition-all duration-300 ${isActive ? 'bg-[#002542] text-white shadow-xl scale-110 drop-shadow-[0_8px_16px_rgba(0,37,66,0.4)]' : 'bg-transparent text-gray-400 group-hover:text-[#002542] group-hover:bg-black/5 group-hover:scale-105'}`}>
+                            {isActive && (
+                              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#00e5ff] rounded-full shadow-[0_0_8px_#00e5ff]" />
+                            )}
+                            <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase">
+                              {model.name}
+                            </span>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+                
+                {/* Center Focal Indicator Graphic */}
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#002542] shadow-[0_0_12px_rgba(0,37,66,0.6)] pointer-events-none" />
+              </div>
+            )}
+
           </div>
-        ))}
+        );
+        })}
 
       </div>
     </section>
