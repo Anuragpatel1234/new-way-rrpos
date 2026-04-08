@@ -352,10 +352,10 @@ export default function SuteraShowcase() {
               
               {/* Header Text */}
               <div className="absolute top-6 md:top-12 left-6 md:left-[5%] z-20 transition-transform duration-100 ease-out" style={{ transform: backgroundTransform }}>
-                <h2 className="text-5xl lg:text-[7rem] font-sans font-black tracking-tighter uppercase leading-[0.85] text-black">
+                <h2 className="text-5xl lg:text-[7rem] font-sans font-black tracking-tighter uppercase leading-[0.85] text-[#0F172A]">
                   {item.category}
                 </h2>
-                <p className="mt-8 text-[10px] md:text-xs font-bold tracking-widest max-w-[200px] leading-relaxed uppercase border-l-2 border-black pl-3">
+                <p className="mt-8 text-xs md:text-sm font-bold tracking-widest max-w-[280px] leading-relaxed uppercase border-l-2 border-black pl-4 text-gray-800">
                   {item.desc.map((line, i) => <React.Fragment key={i}>{line}<br/></React.Fragment>)}
                 </p>
               </div>
@@ -394,42 +394,60 @@ export default function SuteraShowcase() {
             {/* Foreground Data Boxes */}
             <div className="absolute inset-0 w-full h-full z-20 transition-transform duration-100 ease-out" style={{ transform: foregroundTransform }}>
               
-              <div className="absolute top-[45%] left-6 md:left-[12%] w-[240px] -translate-y-1/2 pointer-events-auto">
-                <div className="text-[10px] font-bold bg-black text-white px-2 py-1 mb-1 inline-block">{item.box1.title}</div>
-                <div className="border border-black bg-white/80 p-3 text-[10px] font-medium leading-relaxed shadow-sm">
-                  <div className="flex border-b border-gray-300 pb-1 mb-1"><span className="w-6">01.</span><span className="font-bold">{item.box1.items[0].label}</span></div>
-                  <div className="pl-6 pb-2 text-gray-600">{item.box1.items[0].value}</div>
-                  <div className="flex border-b border-gray-300 pb-1 mb-1"><span className="w-6">02.</span><span className="font-bold">{item.box1.items[1].label}</span></div>
-                  <div className="pl-6 text-gray-600">{item.box1.items[1].value}</div>
+              {/* Box 1: Left */}
+              <div className="absolute top-1/2 left-6 md:left-[8%] w-[240px] md:w-[280px] -translate-y-1/2 border border-black p-5 bg-white/50 backdrop-blur-md pointer-events-auto shadow-sm">
+                <div className="text-xs md:text-sm font-black uppercase bg-[#0F172A] text-white px-3 py-1.5 inline-block mb-5">
+                  {item.box1.title}
+                </div>
+                <div className="space-y-4">
+                  <div className="text-xs uppercase tracking-widest border-b border-black/20 pb-3">
+                    <div className="font-bold text-black mb-1.5">01. {item.box1.items[0].label}</div>
+                    <div className="text-gray-700 pl-4">{item.box1.items[0].value}</div>
+                  </div>
+                  <div className="text-xs uppercase tracking-widest">
+                    <div className="font-bold text-black mb-1.5">02. {item.box1.items[1].label}</div>
+                    <div className="text-gray-700 pl-4">{item.box1.items[1].value}</div>
+                  </div>
+                </div>
+                <div className="absolute top-1/2 -right-2 w-2 h-2 bg-white border border-black"></div>
+              </div>
+
+              {/* Box 2: Right Top */}
+              <div className="absolute top-[30%] right-6 md:right-[12%] w-[220px] md:w-[260px] -translate-y-1/2 border-2 border-[#0F172A] p-4 bg-white/70 backdrop-blur-md shadow-[6px_6px_0_#0F172A] pointer-events-auto">
+                <div className="text-xs font-bold uppercase tracking-widest border-b-2 border-[#0F172A] pb-2 mb-3 text-[#0F172A]">
+                  {item.box2.title}
+                </div>
+                <div className="space-y-3 text-xs uppercase font-semibold text-gray-800">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-500">{item.box2.items[0].label}</span>
+                    <span className="text-right">{item.box2.items[0].value}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-500">{item.box2.items[1].label}</span>
+                    <span className="text-right">{item.box2.items[1].value}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-500">{item.box2.items[2].label}</span>
+                    <span className="text-right">{item.box2.items[2].value}</span>
+                  </div>
                 </div>
               </div>
-              
-              <div className="absolute top-[35%] right-6 md:right-[15%] w-[240px] -translate-y-1/2 pointer-events-auto">
-                <div className="border border-black bg-white/80 p-3 shadow-[4px_4px_0_0_rgba(0,0,0,1)] text-[10px]">
-                  <div className="font-bold mb-2 uppercase tracking-wide border-b border-black pb-1">{item.box2.title}</div>
-                  {item.box2.items.map((b2) => (
-                    <div key={b2.label} className="flex justify-between mb-1">
-                      <span className="text-gray-500">{b2.label}</span>
-                      <span className="font-bold">{b2.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="absolute top-[70%] right-6 md:right-[10%] w-[220px] -translate-y-1/2 pointer-events-auto">
-                <div className="text-[10px] uppercase space-y-1">
-                  <div className="flex items-center gap-2">
-                    <span className="block w-2 h-2 bg-black"></span>
-                    <span className="font-bold">{item.box3.items[0].label}</span>
+
+              {/* Box 3: Right Bottom */}
+              <div className="absolute top-[70%] right-6 md:right-[10%] w-[260px] -translate-y-1/2 pointer-events-auto">
+                <div className="text-xs uppercase space-y-2">
+                  <div className="flex items-center gap-3">
+                    <span className="block w-2.5 h-2.5 bg-[#0F172A]"></span>
+                    <span className="font-bold text-[#0F172A]">{item.box3.items[0].label}</span>
                   </div>
-                  <div className="text-gray-500 pl-4 border-l border-black ml-1 mb-2 py-1">{item.box3.items[0].value}</div>
-                  <div className="flex items-center gap-2">
-                    <span className="block w-2 h-2 border border-black"></span>
-                    <span className="font-bold">{item.box3.items[1].label}</span>
+                  <div className="text-gray-600 font-medium pl-5 border-l-2 border-[#0F172A] ml-1 mb-3 py-1">{item.box3.items[0].value}</div>
+                  <div className="flex items-center gap-3">
+                    <span className="block w-2.5 h-2.5 border-2 border-[#0F172A]"></span>
+                    <span className="font-bold text-[#0F172A]">{item.box3.items[1].label}</span>
                   </div>
-                  <div className="text-gray-500 pl-4 border-l border-black ml-1 py-1">{item.box3.items[1].value}</div>
+                  <div className="text-gray-600 font-medium pl-5 border-l-2 border-[#0F172A] ml-1 py-1">{item.box3.items[1].value}</div>
                 </div>
-                <div className="mt-4 text-[9px] text-gray-400 uppercase tracking-widest border-t border-dashed border-gray-300 pt-2 bg-white/50">
+                <div className="mt-5 text-xs text-gray-500 font-bold uppercase tracking-wider border-t-2 border-dashed border-gray-300 pt-3">
                   {item.box3.title}
                 </div>
               </div>
@@ -464,7 +482,7 @@ export default function SuteraShowcase() {
                             {isActive && (
                               <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#00e5ff] rounded-full shadow-[0_0_8px_#00e5ff]" />
                             )}
-                            <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase">
+                            <span className="text-xs md:text-sm font-bold tracking-widest uppercase">
                               {model.name}
                             </span>
                           </div>
