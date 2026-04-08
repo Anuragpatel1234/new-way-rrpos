@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 
 import PRODUCT_CATEGORIES from "../../../updated_categories.json";
+import SuteraShowcase from "../../components/SuteraShowcase";
 
 // Map category names to icons
 const getCategoryIcon = (categoryName: string) => {
@@ -78,6 +79,8 @@ export default function ProductPage() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#1b3b5a] via-transparent to-transparent"></div>
           </div>
         </section>
+
+        <SuteraShowcase />
 
         <div className="flex max-w-[1320px] mx-auto">
           {/* SideNavBar (Category Filter) */}
