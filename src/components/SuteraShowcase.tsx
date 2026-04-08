@@ -351,11 +351,11 @@ export default function SuteraShowcase() {
               <img src={activeModel.image} className="absolute z-0 w-[500px] md:w-[700px] object-contain opacity-[0.03] blur-[15px] mix-blend-darken filter grayscale transition-all duration-[1500ms] ease-out pointer-events-none" style={{ transform: echoTransform }} alt="" />
               
               {/* Header Text */}
-              <div className="absolute top-6 md:top-12 left-6 md:left-[5%] z-20 transition-transform duration-100 ease-out" style={{ transform: backgroundTransform }}>
-                <h2 className="text-5xl lg:text-[7rem] font-sans font-black tracking-tighter uppercase leading-[0.85] text-[#0F172A]">
+              <div className="absolute top-24 md:top-12 left-6 md:left-[5%] z-20 transition-transform duration-100 ease-out" style={{ transform: backgroundTransform }}>
+                <h2 className="text-[11vw] md:text-6xl lg:text-[7rem] font-sans font-black tracking-tighter uppercase leading-[0.85] text-[#0F172A] break-words md:whitespace-nowrap max-w-[90vw]">
                   {item.category}
                 </h2>
-                <p className="mt-8 text-xs md:text-sm font-bold tracking-widest max-w-[280px] leading-relaxed uppercase border-l-2 border-black pl-4 text-gray-800">
+                <p className="mt-4 md:mt-8 text-[10px] md:text-sm font-bold tracking-widest max-w-[200px] md:max-w-[280px] leading-relaxed uppercase border-l-2 border-black pl-3 md:pl-4 text-gray-800">
                   {item.desc.map((line, i) => <React.Fragment key={i}>{line}<br/></React.Fragment>)}
                 </p>
               </div>
@@ -372,7 +372,7 @@ export default function SuteraShowcase() {
                       key={model.name}
                       src={model.image} 
                       alt={model.name} 
-                      className={`absolute inset-0 m-auto z-20 w-[400px] h-[400px] md:w-[600px] md:h-[600px] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-[1200ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isActive ? 'opacity-100 translate-x-0 blur-none' : 'opacity-0 blur-sm ' + (isPast ? '-translate-x-12' : 'translate-x-12')}`} 
+                      className={`absolute left-0 right-0 m-auto top-[25vh] md:inset-0 z-20 w-[280px] h-[280px] md:w-[600px] md:h-[600px] md:mb-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-[1200ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isActive ? 'opacity-100 translate-x-0 blur-none' : 'opacity-0 blur-sm ' + (isPast ? '-translate-x-12' : 'translate-x-12')}`} 
                       style={isActive ? { transform: productTransform } : {}} 
                     />
                   );
@@ -390,12 +390,27 @@ export default function SuteraShowcase() {
                 <rect x="80%" y="70%" width="6" height="6" fill="black" stroke="black" transform="translate(-3, -3)" />
               </svg>
             </div>
-
-            {/* Foreground Data Boxes */}
+            {/* Foreground SVG Connectors & Data Boxes */}
             <div className="absolute inset-0 w-full h-full z-20 transition-transform duration-100 ease-out" style={{ transform: foregroundTransform }}>
               
+              <svg className="hidden md:block absolute inset-0 w-full h-full pointer-events-none">
+                <polyline points="200,500 200,600 350,600" fill="none" stroke="rgba(0,0,0,0.1)" strokeWidth="1" strokeDasharray="4 4" />
+                <polyline points="800,200 900,200 900,300" fill="none" stroke="rgba(0,0,0,0.1)" strokeWidth="1" strokeDasharray="4 4" />
+                <polyline points="750,700 850,700 850,750" fill="none" stroke="rgba(0,0,0,0.1)" strokeWidth="1" />
+              </svg>
+
+              <div className="hidden md:block absolute top-1/4 left-[20%] w-4 h-4 border-t border-l border-black overflow-hidden pointer-events-none"></div>
+              <div className="hidden md:block absolute top-1/4 right-[25%] w-4 h-4 border-t border-l border-black overflow-hidden pointer-events-none"></div>
+              <div className="hidden md:block absolute bottom-1/4 left-[20%] w-4 h-4 border-t border-l border-black overflow-hidden rotate-180 pointer-events-none"></div>
+              <div className="hidden md:block absolute bottom-1/4 right-[25%] w-4 h-4 border-t border-l border-black overflow-hidden rotate-180 pointer-events-none"></div>
+              <div className="hidden md:block absolute top-[40%] right-[30%] w-1.5 h-1.5 border border-black pointer-events-none"></div>
+              <div className="hidden md:block absolute top-[50%] left-[20%] w-1.5 h-1.5 border border-black pointer-events-none z-[100]"></div>
+              
+              <div className="hidden md:block absolute top-1/2 left-[10%] text-xs text-gray-400 font-sans tracking-widest pointer-events-none z-[100]">+</div>
+              <div className="hidden md:block absolute top-1/2 right-[10%] text-xs text-gray-400 font-sans tracking-widest pointer-events-none z-[100]">+</div>
+              
               {/* Box 1: Left */}
-              <div className="absolute top-1/2 left-6 md:left-[8%] w-[240px] md:w-[280px] -translate-y-1/2 border border-black p-5 bg-white/50 backdrop-blur-md pointer-events-auto shadow-sm">
+              <div className="hidden md:block absolute top-1/2 left-6 md:left-[8%] w-[240px] md:w-[280px] -translate-y-1/2 border border-black p-5 bg-white/50 backdrop-blur-md pointer-events-auto shadow-sm">
                 <div className="text-xs md:text-sm font-black uppercase bg-[#0F172A] text-white px-3 py-1.5 inline-block mb-5">
                   {item.box1.title}
                 </div>
@@ -413,7 +428,7 @@ export default function SuteraShowcase() {
               </div>
 
               {/* Box 2: Right Top */}
-              <div className="absolute top-[30%] right-6 md:right-[12%] w-[220px] md:w-[260px] -translate-y-1/2 border-2 border-[#0F172A] p-4 bg-white/70 backdrop-blur-md shadow-[6px_6px_0_#0F172A] pointer-events-auto">
+              <div className="hidden md:block absolute top-[30%] right-6 md:right-[12%] w-[220px] md:w-[260px] -translate-y-1/2 border-2 border-[#0F172A] p-4 bg-white/70 backdrop-blur-md shadow-[6px_6px_0_#0F172A] pointer-events-auto">
                 <div className="text-xs font-bold uppercase tracking-widest border-b-2 border-[#0F172A] pb-2 mb-3 text-[#0F172A]">
                   {item.box2.title}
                 </div>
@@ -434,7 +449,7 @@ export default function SuteraShowcase() {
               </div>
 
               {/* Box 3: Right Bottom */}
-              <div className="absolute top-[70%] right-6 md:right-[10%] w-[260px] -translate-y-1/2 pointer-events-auto">
+              <div className="hidden md:block absolute top-[70%] right-6 md:right-[10%] w-[260px] -translate-y-1/2 pointer-events-auto">
                 <div className="text-xs uppercase space-y-2">
                   <div className="flex items-center gap-3">
                     <span className="block w-2.5 h-2.5 bg-[#0F172A]"></span>
@@ -449,6 +464,24 @@ export default function SuteraShowcase() {
                 </div>
                 <div className="mt-5 text-xs text-gray-500 font-bold uppercase tracking-wider border-t-2 border-dashed border-gray-300 pt-3">
                   {item.box3.title}
+                </div>
+              </div>
+
+              {/* Mobile Spec Block (Only visible on small screens) */}
+              <div className="md:hidden absolute top-[65vh] left-0 w-full px-6 flex flex-col gap-3 pointer-events-auto">
+                <div className="bg-white/80 backdrop-blur-md border border-[#0F172A]/10 p-4 rounded-xl shadow-2xl shadow-black/10">
+                  <div className="flex items-center justify-between border-b border-gray-200 pb-2.5 mb-2.5">
+                    <span className="text-[10px] font-bold text-gray-500 tracking-widest uppercase">{item.box1.items[0].label}</span>
+                    <span className="text-xs font-black text-[#0F172A]">{item.box1.items[0].value}</span>
+                  </div>
+                  <div className="flex items-center justify-between border-b border-gray-200 pb-2.5 mb-2.5">
+                    <span className="text-[10px] font-bold text-gray-500 tracking-widest uppercase">{item.box2.items[0].label}</span>
+                    <span className="text-xs font-black text-[#0F172A]">{item.box2.items[0].value}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold text-gray-500 tracking-widest uppercase">{item.box3.items[0].label}</span>
+                    <span className="text-xs font-black text-[#0F172A]">{item.box3.items[0].value}</span>
+                  </div>
                 </div>
               </div>
 
