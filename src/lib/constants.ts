@@ -8,9 +8,9 @@ export const SITE = {
   description:
     "All-in-one POS system for modern retail stores. Simplify billing, inventory, reporting, and hardware in one seamless system.",
   url: "https://rrpos.in",
-  phone: "+91 98765 43210",
-  email: "hello@rrpos.in",
-  whatsapp: "https://wa.me/919876543210",
+  phone: "9824051360",
+  email: "newwaytraders@gmail.com",
+  whatsapp: "https://wa.me/919824051360",
 };
 
 export const NAV_LINKS = [

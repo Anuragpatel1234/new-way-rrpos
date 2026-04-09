@@ -86,7 +86,7 @@ const ACCORDION_ITEMS: AccordionItem[] = [
         title: "Temples",
         displayTitle: "Temples",
         image:
-            "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=1200&q=85&fit=crop",
+            "https://commons.wikimedia.org/wiki/Special:FilePath/0081323_Arasuri_Ambaji_mandir,_Shakti_Peeth,_north_Gujarat_037.jpg",
         statHead: "Donation-ready",
         statSub: "simple counters, receipts, and reporting for daily collections",
         link: "/features#temples",
@@ -142,7 +142,7 @@ function BigDisplayTitle({
         <AnimatePresence>
             {isActive && (
                 <motion.div
-                    className="absolute inset-0 flex items-start justify-center pointer-events-none z-10 px-4 pt-[15%]"
+                    className="absolute inset-0 flex items-start justify-center pointer-events-none z-10 px-4 pt-[8%]"
                     initial={{ opacity: 0, scale: 0.85, y: 20 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.9, y: -10 }}
