@@ -16,10 +16,10 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tighter leading-tight mb-6">
-                Empowering Modern Hospitality
+                About New Way Traders
             </h1>
             <p className="text-xl text-[#87a5ca] max-w-lg mb-8 leading-relaxed">
-                We bridge the gap between architectural precision and operational excellence, providing the anchor for high-growth businesses.
+                Ahmedabad-based POS and billing hardware supplier helping retailers modernize checkout and store operations.
             </p>
             <div className="flex gap-4">
               <button className="bg-[#d8e3f4] text-[#121c28] px-8 py-3 rounded-md font-semibold hover:bg-white transition-all">
@@ -48,10 +48,10 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <span className="text-[#002542] font-bold tracking-widest text-xs uppercase mb-4 block">Our Mission</span>
           <h2 className="text-3xl md:text-5xl font-bold text-[#002542] tracking-tight mb-8">
-              Building the backbone of business growth through intentional technology.
+              Practical POS solutions for everyday business operations.
           </h2>
           <p className="text-lg text-[#43474d] leading-loose">
-              At NewWay, we believe that point-of-sale systems shouldn't just record transactions—they should be the architectural anchor of your enterprise. We combine robust engineering with an intuitive human-centric design to ensure that as your business scales, your foundations remain unshakable. Our commitment is to provide the reliability you need to focus on what matters most: your customers.
+              New Way Traders is listed in Ahmedabad, Gujarat (Ashram Road area) with a focus on point-of-sale and billing ecosystem products. The portfolio seen across public listings includes billing machines, POS hardware, and related retail equipment that support faster billing and smoother store workflows.
           </p>
         </div>
       </section>
@@ -98,7 +98,7 @@ export default function AboutPage() {
       <section className="py-24 bg-[#faf9fc]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16 text-center md:text-left">
-            <h2 className="text-4xl font-extrabold text-[#002542] tracking-tighter">Our Evolution</h2>
+            <h2 className="text-4xl font-extrabold text-[#002542] tracking-tighter">Company Snapshot</h2>
             <div className="h-1.5 w-24 bg-[#002542] mt-4 mx-auto md:mx-0"></div>
           </div>
           <div className="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-[#c3c6ce] before:to-transparent">
@@ -108,9 +108,9 @@ export default function AboutPage() {
                 <Flag className="w-5 h-5" />
               </div>
               <div className="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded-xl bg-[#f4f3f6] border border-[#c3c6ce]/10 shadow-sm relative z-10">
-                <time className="font-bold text-[#1b3b5a] text-sm">2018</time>
-                <div className="text-xl font-bold text-[#002542] mt-1">The Founding</div>
-                <p className="text-[#43474d] mt-2 text-sm leading-relaxed">NewWay was established with a vision to simplify complex retail transactions through premium hardware and software.</p>
+                <time className="font-bold text-[#1b3b5a] text-sm">Profile</time>
+                <div className="text-xl font-bold text-[#002542] mt-1">Business Type</div>
+                <p className="text-[#43474d] mt-2 text-sm leading-relaxed">Public business directories list New Way Traders as a supplier/trader serving retail and billing hardware requirements.</p>
               </div>
             </div>
             {/* Timeline Item 2 */}
@@ -119,9 +119,9 @@ export default function AboutPage() {
                 <Rocket className="w-5 h-5" />
               </div>
               <div className="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded-xl bg-[#f4f3f6] border border-[#c3c6ce]/10 shadow-sm relative z-10">
-                <time className="font-bold text-[#1b3b5a] text-sm">2020</time>
-                <div className="text-xl font-bold text-[#002542] mt-1">Global Expansion</div>
-                <p className="text-[#43474d] mt-2 text-sm leading-relaxed">We expanded our services to 12 countries, providing localized tax and compliance engines for international hospitality.</p>
+                <time className="font-bold text-[#1b3b5a] text-sm">Category</time>
+                <div className="text-xl font-bold text-[#002542] mt-1">Core Offerings</div>
+                <p className="text-[#43474d] mt-2 text-sm leading-relaxed">Frequently listed categories include billing machines, POS machines, barcode and printer-adjacent retail solutions.</p>
               </div>
             </div>
             {/* Timeline Item 3 */}
@@ -130,9 +130,9 @@ export default function AboutPage() {
                 <Sparkles className="w-5 h-5" />
               </div>
               <div className="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded-xl bg-[#f4f3f6] border border-[#c3c6ce]/10 shadow-sm relative z-10">
-                <time className="font-bold text-[#1b3b5a] text-sm">2024</time>
-                <div className="text-xl font-bold text-[#002542] mt-1">The AI Anchor</div>
-                <p className="text-[#43474d] mt-2 text-sm leading-relaxed">Integrating predictive analytics into the core POS architecture to help businesses anticipate demand before it happens.</p>
+                <time className="font-bold text-[#1b3b5a] text-sm">Location</time>
+                <div className="text-xl font-bold text-[#002542] mt-1">Ahmedabad, Gujarat</div>
+                <p className="text-[#43474d] mt-2 text-sm leading-relaxed">The company is shown under the Ashram Road area in Ahmedabad across available listings.</p>
               </div>
             </div>
           </div>
@@ -186,7 +186,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#002542] to-[#1b3b5a] opacity-90"></div>
         <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
           <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6">Ready to anchor your business?</h2>
-          <p className="text-xl text-[#87a5ca] mb-10">Join thousands of businesses that trust NewWay to power their daily operations.</p>
+          <p className="text-xl text-[#87a5ca] mb-10">Connect with New Way Traders for POS and billing hardware suited to your store operations.</p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <button className="w-full md:w-auto bg-white text-[#002542] px-10 py-4 rounded-md font-bold text-lg hover:bg-[#d8e3f4] transition-colors shadow-lg">
                 Join the Family

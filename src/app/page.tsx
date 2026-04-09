@@ -10,9 +10,9 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <BusinessFlavor />
-      <PointOfSale />
       <IndustryAccordion />
+      <PointOfSale />
+      <BusinessFlavor />
       <HardwareShowcase />
       <Testimonials />
       <FinalCTA />

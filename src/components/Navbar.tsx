@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-
+import { BrandLogo } from "@/components/BrandLogo";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,7 +25,7 @@ export default function Navbar() {
 
   const forceSolid = pathname !== "/";
   const scrolled = isScrolled || forceSolid;
-
+  const logoOnDark = (scrolled || pathname !== "/") && !mobileOpen;
 
   useEffect(() => {
     if (mobileOpen) {
@@ -47,15 +47,8 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-between px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="relative z-50 flex items-center gap-2 outline-none">
-          <span
-            className={cn(
-              "text-2xl font-bold tracking-tight transition-colors duration-300",
-              scrolled || mobileOpen ? "text-foreground" : "text-white"
-            )}
-          >
-            NewWay
-          </span>
+        <Link href="/" className="relative z-50 flex items-center outline-none" aria-label="NewWay home">
+          <BrandLogo tone={logoOnDark ? "onDark" : "onLight"} priority />
         </Link>
 
         {/* Desktop Nav */}
@@ -128,7 +121,10 @@ export default function Navbar() {
         {/* Mobile Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="relative z-50 flex h-10 w-10 items-center justify-center rounded-lg lg:hidden hover:bg-gray-100 transition-colors"
+          className={cn(
+            "relative z-50 flex h-10 w-10 items-center justify-center rounded-lg lg:hidden transition-colors",
+            scrolled || mobileOpen ? "text-foreground hover:bg-gray-100" : "text-white hover:bg-white/10"
+          )}
           aria-label="Toggle menu"
         >
           {mobileOpen ? (

@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useMotionValue, useSpring, AnimatePresence, MotionValue } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 /* ------------------------------------------------------------------ */
@@ -52,14 +52,44 @@ const ACCORDION_ITEMS: AccordionItem[] = [
         link: "/features#beauty",
     },
     {
-        id: "services",
-        title: "Services",
-        displayTitle: "Services",
+        id: "supermarket",
+        title: "Super Market",
+        displayTitle: "Super\nMarket",
         image:
-            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=85&fit=crop",
-        statHead: "$93 billion+",
-        statSub: "paid with invoices globally",
-        link: "/features#services",
+            "https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200&q=85&fit=crop",
+        statHead: "Faster checkout",
+        statSub: "barcode-first billing and real-time stock for high-volume aisles",
+        link: "/features#supermarket",
+    },
+    {
+        id: "parking",
+        title: "Parking",
+        displayTitle: "Parking",
+        image:
+            "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=1200&q=85&fit=crop",
+        statHead: "Quick tickets",
+        statSub: "simple fee rules and instant receipts for smooth entry/exit",
+        link: "/features#parking",
+    },
+    {
+        id: "fmcg",
+        title: "FMCG",
+        displayTitle: "FMCG",
+        image:
+            "https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w=1200&q=85&fit=crop",
+        statHead: "Tight control",
+        statSub: "batch pricing, fast replenishment, and multi-location visibility",
+        link: "/features#fmcg",
+    },
+    {
+        id: "temples",
+        title: "Temples",
+        displayTitle: "Temples",
+        image:
+            "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=1200&q=85&fit=crop",
+        statHead: "Donation-ready",
+        statSub: "simple counters, receipts, and reporting for daily collections",
+        link: "/features#temples",
     },
 ];
 
@@ -104,20 +134,15 @@ function SmallCardTitle({
 function BigDisplayTitle({
     text,
     isActive,
-    springX,
-    springY,
 }: {
     text: string;
     isActive: boolean;
-    springX?: MotionValue<number>;
-    springY?: MotionValue<number>;
 }) {
     return (
         <AnimatePresence>
             {isActive && (
                 <motion.div
                     className="absolute inset-0 flex items-start justify-center pointer-events-none z-10 px-4 pt-[15%]"
-                    style={{ x: springX, y: springY }}
                     initial={{ opacity: 0, scale: 0.85, y: 20 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.9, y: -10 }}
@@ -159,45 +184,8 @@ function AccordionCard({
     isAnyActive: boolean;
     onMouseEnter: () => void;
 }) {
-    const ref = useRef<HTMLDivElement>(null);
-
-    // Mouse tracking ONLY for the Services card display title
-    const mouseX = useMotionValue(0);
-    const mouseY = useMotionValue(0);
-    const springX = useSpring(mouseX, { stiffness: 150, damping: 20, mass: 0.5 });
-    const springY = useSpring(mouseY, { stiffness: 150, damping: 20, mass: 0.5 });
-
-    // Track mouse movement relative to card center ONLY if it's the services card
-    useEffect(() => {
-        const el = ref.current;
-        if (!el || item.id !== "services") return;
-
-        const onMove = (e: MouseEvent) => {
-            const rect = el.getBoundingClientRect();
-            // We want the text to shift in the direction of the mouse
-            const moveX = (e.clientX - rect.left - rect.width / 2) / 10;
-            const moveY = (e.clientY - rect.top - rect.height / 2) / 10;
-            mouseX.set(moveX);
-            mouseY.set(moveY);
-        };
-
-        const onLeave = () => {
-            mouseX.set(0);
-            mouseY.set(0);
-        };
-
-        el.addEventListener("mousemove", onMove);
-        el.addEventListener("mouseleave", onLeave);
-        return () => {
-            el.removeEventListener("mousemove", onMove);
-            el.removeEventListener("mouseleave", onLeave);
-        };
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [mouseX, mouseY]);
-
     return (
         <motion.div
-            ref={ref}
             className="relative overflow-hidden rounded-xl cursor-pointer will-change-[flex] min-w-0"
             onMouseEnter={onMouseEnter}
             animate={{
@@ -242,12 +230,10 @@ function AccordionCard({
                 isAnyActive={isAnyActive}
             />
 
-            {/* Big display title - Tracking cursor ONLY for Services card */}
+            {/* Big display title */}
             <BigDisplayTitle
                 text={item.displayTitle}
                 isActive={isActive}
-                springX={item.id === "services" ? springX : undefined}
-                springY={item.id === "services" ? springY : undefined}
             />
 
             {/* Bottom statistics + learn more - NO cursor tracking */}
