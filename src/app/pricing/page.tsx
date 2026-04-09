@@ -48,14 +48,14 @@ export default function PricingPage() {
             className="mx-auto max-w-3xl text-center"
           >
             <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-              Pricing
+              Plans
             </span>
             <h1 className="mt-3 text-4xl font-bold text-foreground sm:text-5xl lg:text-6xl">
-              Simple, transparent pricing
+              Simple plans for every stage
             </h1>
             <p className="mt-6 text-lg text-gray-600 lg:text-xl">
-              No hidden fees. No long-term contracts. Start free for 14 days,
-              then pick the plan that works for your business.
+              Choose the plan that fits your business. Contact us for a quote and
+              onboarding support.
             </p>
           </motion.div>
         </div>
@@ -90,10 +90,6 @@ export default function PricingPage() {
 
                 <div>
                   <h3 className="text-xl font-bold text-foreground">{plan.name}</h3>
-                  <div className="mt-4 flex items-baseline gap-1">
-                    <span className="text-5xl font-bold text-foreground">{plan.price}</span>
-                    <span className="text-base text-gray-500">{plan.period}</span>
-                  </div>
                   <p className="mt-3 text-sm text-gray-500">{plan.description}</p>
                 </div>
 
@@ -115,7 +111,7 @@ export default function PricingPage() {
                       className="w-full gap-2"
                       size="lg"
                     >
-                      {plan.cta}
+                      Contact for quote
                       <ArrowRight className="h-4 w-4" />
                     </Button>
                   </Link>
@@ -123,15 +119,6 @@ export default function PricingPage() {
               </motion.div>
             ))}
           </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="mt-8 text-center text-sm text-gray-400"
-          >
-            All prices in INR. GST extra. Annual billing available at 20% discount.
-          </motion.p>
         </div>
       </section>
 

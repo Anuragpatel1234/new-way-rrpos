@@ -70,8 +70,6 @@ export const HARDWARE_PRODUCTS = [
     name: "RR POS Terminal",
     subtitle: "Your all-in-one billing powerhouse",
     description: "The all-in-one billing powerhouse. 15.6\" touchscreen, built-in printer, and blazing performance.",
-    price: "₹32,999",
-    emi: "₹2,750/mo",
     highlight: true,
     image: "/pos-terminal.png",
     video: "/mixkit-pharmacy-worker-accepts-payment-at-checkout-5407-hd-ready.mp4",
@@ -80,8 +78,6 @@ export const HARDWARE_PRODUCTS = [
     name: "Barcode Scanner",
     subtitle: "High-speed scanning that keeps up with you",
     description: "High-speed 1D/2D scanning. Wireless connectivity with 12-hour battery life.",
-    price: "₹3,499",
-    emi: "₹292/mo",
     highlight: false,
     image: "/barcode-scanner.png",
     video: "/mixkit-pharmacy-worker-accepts-payment-at-checkout-5407-hd-ready.mp4",
@@ -90,8 +86,6 @@ export const HARDWARE_PRODUCTS = [
     name: "Thermal Printer",
     subtitle: "Fast receipts, every single time",
     description: "80mm fast thermal printing. Auto-cutter, USB + Bluetooth. Print receipts in under a second.",
-    price: "₹5,999",
-    emi: "₹500/mo",
     highlight: false,
     image: "/thermal-printer.png",
     video: "/mixkit-pharmacy-worker-accepts-payment-at-checkout-5407-hd-ready.mp4",
@@ -100,8 +94,6 @@ export const HARDWARE_PRODUCTS = [
     name: "Cash Drawer",
     subtitle: "Secure cash management, built to last",
     description: "Heavy-duty metal build. 5 bill + 8 coin compartments. Auto-open on sale.",
-    price: "₹3,999",
-    emi: "₹334/mo",
     highlight: false,
     image: "/cash-drawer.png",
     video: "/mixkit-pharmacy-worker-accepts-payment-at-checkout-5407-hd-ready.mp4",
@@ -111,8 +103,6 @@ export const HARDWARE_PRODUCTS = [
 export const PRICING_PLANS = [
   {
     name: "Basic",
-    price: "₹799",
-    period: "/month",
     description: "Perfect for single-store retail shops getting started.",
     features: [
       "1 store, 1 terminal",
@@ -127,8 +117,6 @@ export const PRICING_PLANS = [
   },
   {
     name: "Pro",
-    price: "₹1,999",
-    period: "/month",
     description: "For growing businesses that need advanced control.",
     features: [
       "Up to 3 stores, 5 terminals",
@@ -144,8 +132,6 @@ export const PRICING_PLANS = [
   },
   {
     name: "Enterprise",
-    price: "Custom",
-    period: "",
     description: "For large retailers and franchise businesses.",
     features: [
       "Unlimited stores & terminals",

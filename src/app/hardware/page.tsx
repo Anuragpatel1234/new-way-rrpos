@@ -28,8 +28,6 @@ const hardwareDetails = [
     tagline: "The all-in-one billing powerhouse",
     description:
       "A purpose-built POS terminal with a 15.6\" dual touchscreen, built-in thermal printer, and powerful processor. Customer-facing display for transparency. Designed for all-day retail operations.",
-    price: "₹32,999",
-    emi: "₹2,750/mo for 12 months",
     specs: [
       "15.6\" + 10.1\" dual touchscreen",
       "Built-in 80mm thermal printer",
@@ -49,8 +47,6 @@ const hardwareDetails = [
     tagline: "Scan at the speed of retail",
     description:
       "High-speed 1D/2D barcode scanner with wireless connectivity. Ergonomic design for comfortable all-day use. Reads damaged and screen barcodes.",
-    price: "₹3,499",
-    emi: "₹292/mo for 12 months",
     specs: [
       "1D and 2D barcode support",
       "2.4GHz wireless + Bluetooth",
@@ -70,8 +66,6 @@ const hardwareDetails = [
     tagline: "Fast receipts, zero ink costs",
     description:
       "80mm high-speed thermal printer with auto-cutter. USB, Bluetooth, and Wi-Fi connectivity. Print complete receipts in under a second.",
-    price: "₹5,999",
-    emi: "₹500/mo for 12 months",
     specs: [
       "80mm thermal printing",
       "250mm/s print speed",
@@ -91,8 +85,6 @@ const hardwareDetails = [
     tagline: "Secure cash management",
     description:
       "Heavy-duty metal cash drawer with 5 bill and 8 coin compartments. Auto-opens on sale completion. RJ11 and USB trigger support.",
-    price: "₹3,999",
-    emi: "₹334/mo for 12 months",
     specs: [
       "Heavy-duty steel construction",
       "5 bill + 8 coin compartments",
@@ -111,24 +103,15 @@ const bundles = [
   {
     name: "Starter Bundle",
     items: ["POS Terminal", "Barcode Scanner"],
-    originalPrice: "₹36,498",
-    bundlePrice: "₹33,999",
-    save: "Save ₹2,499",
   },
   {
     name: "Pro Bundle",
     items: ["POS Terminal", "Barcode Scanner", "Thermal Printer"],
-    originalPrice: "₹42,497",
-    bundlePrice: "₹38,999",
-    save: "Save ₹3,498",
     popular: true,
   },
   {
     name: "Complete Bundle",
     items: ["POS Terminal", "Barcode Scanner", "Thermal Printer", "Cash Drawer"],
-    originalPrice: "₹46,496",
-    bundlePrice: "₹41,999",
-    save: "Save ₹4,497",
   },
 ];
 
@@ -204,11 +187,6 @@ export default function HardwarePage() {
                   {product.description}
                 </p>
 
-                <div className="mt-6 flex items-baseline gap-3">
-                  <span className="text-3xl font-bold text-foreground">{product.price}</span>
-                  <span className="text-sm text-gray-500">or {product.emi}</span>
-                </div>
-
                 <div className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">
                   {product.specs.map((spec) => (
                     <div key={spec} className="flex items-center gap-2 text-sm text-gray-700">
@@ -249,10 +227,10 @@ export default function HardwarePage() {
               Bundles
             </span>
             <h2 className="mt-3 text-3xl font-bold text-foreground sm:text-4xl">
-              Save more with hardware bundles
+              Hardware bundles
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Get everything you need in one package at a discounted price.
+              Get everything you need in one package. Contact us for a quote and availability.
             </p>
           </motion.div>
 
@@ -289,9 +267,8 @@ export default function HardwarePage() {
                   ))}
                 </ul>
                 <div className="mt-6 border-t border-gray-100 pt-4">
-                  <div className="text-sm text-gray-400 line-through">{bundle.originalPrice}</div>
-                  <div className="text-3xl font-bold text-foreground">{bundle.bundlePrice}</div>
-                  <div className="mt-1 text-sm font-medium text-green-600">{bundle.save}</div>
+                  <div className="text-lg font-semibold text-foreground">Bundle available</div>
+                  <div className="mt-1 text-sm text-gray-600">Contact us for a quote and availability.</div>
                 </div>
                 <div className="mt-6">
                   <Link href="/contact" className="block">

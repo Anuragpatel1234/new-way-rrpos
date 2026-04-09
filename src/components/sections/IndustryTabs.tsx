@@ -124,7 +124,7 @@ export default function IndustryTabs() {
                   </div>
                   <div className="grid grid-cols-2 gap-3">
                     {[
-                      { label: "Today Sales", value: "₹87,450" },
+                      { label: "Today Sales", value: "—" },
                       { label: "Products", value: "2,340" },
                       { label: "Orders", value: "189" },
                       { label: "Revenue", value: "+18.2%" },
@@ -138,9 +138,9 @@ export default function IndustryTabs() {
                   <div className="mt-4 rounded-lg bg-gray-800 p-3 border border-gray-700">
                     <p className="text-[11px] text-gray-400 mb-2">Recent Transactions</p>
                     {[
-                      { name: "Invoice #1247", amount: "₹2,340" },
-                      { name: "Invoice #1246", amount: "₹890" },
-                      { name: "Invoice #1245", amount: "₹5,600" },
+                      { name: "Invoice #1247", amount: "—" },
+                      { name: "Invoice #1246", amount: "—" },
+                      { name: "Invoice #1245", amount: "—" },
                     ].map((t) => (
                       <div key={t.name} className="flex items-center justify-between py-1.5 border-b border-gray-700 last:border-0">
                         <span className="text-xs text-gray-400">{t.name}</span>

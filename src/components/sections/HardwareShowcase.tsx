@@ -183,15 +183,6 @@ export default function HardwareShowcase() {
                     <p className="text-white/80 text-sm mt-1.5">
                       {product.subtitle}
                     </p>
-                    <p className="text-white/70 text-sm mt-1">
-                      {product.price}
-                      {product.emi && (
-                        <span className="text-white/50">
-                          {" "}
-                          or {product.emi}
-                        </span>
-                      )}
-                    </p>
                   </div>
                 </div>
 
@@ -207,9 +198,7 @@ export default function HardwareShowcase() {
                   <p className="text-[15px] font-semibold text-foreground underline underline-offset-[6px] decoration-1 decoration-foreground/30">
                     {product.name}
                   </p>
-                  <p className="mt-2 text-[14px] text-gray-500">
-                    Starting at {product.price}
-                  </p>
+                  <p className="mt-2 text-[14px] text-gray-500">Request a quote</p>
                 </div>
               </Link>
             );

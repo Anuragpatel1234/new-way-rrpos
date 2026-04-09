@@ -37,7 +37,7 @@ export default function Testimonials() {
         >
           {[
             { value: "5,000+", label: "Stores" },
-            { value: "₹200Cr+", label: "Transactions processed" },
+            { value: "200Cr+", label: "Transactions processed" },
             { value: "99.9%", label: "Uptime" },
             { value: "4.8/5", label: "Customer rating" },
           ].map((stat) => (
