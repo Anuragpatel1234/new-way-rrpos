@@ -502,7 +502,7 @@ export default function SuteraShowcase() {
                       return (
                         <div 
                           key={model.name}
-                          onMouseEnter={() => {
+                          onClick={() => {
                             setActiveModelIndices(prev => {
                               const next = [...prev];
                               next[index] = mIdx;
