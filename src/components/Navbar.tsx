@@ -44,12 +44,11 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 transition-all duration-500",
+        "fixed top-0 left-0 right-0 z-[1000] transition-all duration-500",
         scrolled
           ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-gray-800"
           : "bg-transparent"
       )}
-      style={{ zIndex: 100 }}
     >
       <nav className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-between px-6 lg:px-8">
         {/* Logo */}
@@ -97,7 +96,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
-                    className="absolute left-0 top-full pt-2"
+                    className="absolute left-0 top-full z-50 pt-2"
                   >
                     <div className="w-[320px] rounded-xl border border-gray-800 bg-background p-2 shadow-xl shadow-black/50">
                       {link.children.map((child) => (
