@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { BrandLogo } from "@/components/BrandLogo";
+import { BrandLogo, type BrandLogoTone } from "@/components/BrandLogo";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,6 +26,12 @@ export default function Navbar() {
   const forceSolid = pathname !== "/";
   const scrolled = isScrolled || forceSolid;
   const logoOnDark = (scrolled || pathname !== "/") && !mobileOpen;
+  /** White mark on video hero & solid bar; original colors on white mobile drawer. */
+  const logoTone: BrandLogoTone = mobileOpen
+    ? "onLight"
+    : logoOnDark || pathname === "/"
+      ? "onDark"
+      : "onLight";
 
   useEffect(() => {
     if (mobileOpen) {
@@ -48,7 +54,7 @@ export default function Navbar() {
       <nav className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-between px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="relative z-50 flex items-center outline-none" aria-label="NewWay home">
-          <BrandLogo tone={logoOnDark ? "onDark" : "onLight"} priority />
+          <BrandLogo tone={logoTone} priority />
         </Link>
 
         {/* Desktop Nav */}

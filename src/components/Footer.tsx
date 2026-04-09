@@ -40,7 +40,7 @@ export default function Footer() {
     <footer className="border-t border-[#1E293B] bg-[#0F172A]">
       <div className="mx-auto max-w-[1320px] px-6 lg:px-8">
         {/* Main Footer */}
-        <div className="grid grid-cols-2 gap-8 py-16 md:grid-cols-3 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-6 py-6 md:grid-cols-3 lg:grid-cols-5 lg:py-8">
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Link href="/" className="inline-flex outline-none" aria-label="NewWay home">
@@ -49,10 +49,10 @@ export default function Footer() {
                 className="h-9 w-[min(100%,200px)] md:h-10 md:w-[min(100%,240px)]"
               />
             </Link>
-            <p className="mt-4 text-sm leading-relaxed text-[#94A3B8]">
+            <p className="mt-3 text-sm leading-relaxed text-[#94A3B8]">
               {SITE.tagline}
             </p>
-            <div className="mt-6 flex flex-col gap-3">
+            <div className="mt-3 flex flex-col gap-3">
               <a
                 href={`tel:${SITE.phone.replace(/\s/g, "")}`}
                 className="flex items-center gap-2 text-sm text-[#94A3B8] hover:text-[#F8FAFC] transition-colors"
@@ -78,7 +78,7 @@ export default function Footer() {
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
               <h3 className="text-sm font-semibold text-[#F8FAFC]">{title}</h3>
-              <ul className="mt-4 flex flex-col gap-2.5">
+              <ul className="mt-2 flex flex-col gap-2">
                 {links.map((link) => (
                   <li key={link.label}>
                     <Link
@@ -95,7 +95,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-[#1E293B] py-6 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-2 border-t border-[#1E293B] py-2 md:flex-row">
           <p className="text-xs text-[#94A3B8]">
             &copy; {new Date().getFullYear()} RR POS. All rights reserved.
           </p>

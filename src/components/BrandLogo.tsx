@@ -11,7 +11,7 @@ export type BrandLogoTone = "onDark" | "onLight";
 
 type BrandLogoProps = {
   className?: string;
-  /** `onDark`: white mark for navy footer / solid navbar. `onLight`: original colors on bright hero. */
+  /** `onDark`: white mark on photos/video/dark bars. `onLight`: original PNG on white/light UI. */
   tone?: BrandLogoTone;
   priority?: boolean;
 };

@@ -1,3 +1,7 @@
+/** Google Maps search for New Way Traders office (Ashram Road, Ahmedabad). */
+export const GOOGLE_MAPS_NWT =
+  "https://www.google.com/maps/search/?api=1&query=New+Way+Traders+Smart+billing+machines+Opposite+Kothawala+Flats+Pritmanagar+Ashram+Road+Ahmedabad";
+
 export const SITE = {
   name: "RR POS",
   tagline: "Fast Billing. Smart Control. Real Growth.",

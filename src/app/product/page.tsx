@@ -51,9 +51,9 @@ export default function ProductPage() {
 
   return (
     <div className="bg-[#faf9fc] text-[#1a1c1e] min-h-screen font-sans">
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="relative h-[450px] overflow-hidden bg-[#1b3b5a] flex items-center px-12 lg:px-24">
+      <main>
+        {/* Hero: pt matches fixed navbar (72px) so navy fills under it — no page-bg strip */}
+        <section className="relative min-h-[450px] overflow-hidden bg-[#1b3b5a] flex items-center px-12 lg:px-24 pt-[72px]">
           <div className="relative z-10 max-w-2xl">
             <h1 className="text-display-lg font-extrabold text-white tracking-tight mb-4 text-5xl lg:text-6xl">
               Elevating Transactional Intelligence

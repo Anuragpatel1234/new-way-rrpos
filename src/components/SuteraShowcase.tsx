@@ -348,7 +348,7 @@ export default function SuteraShowcase() {
             <div key={item.category} className={`showcase-item-${index} absolute inset-0 w-full h-full flex items-center justify-center pointer-events-none`}>
               
               {/* Deep Parallax Echo */}
-              <img src={activeModel.image} className="absolute z-0 w-[500px] md:w-[700px] object-contain opacity-[0.03] blur-[15px] mix-blend-darken filter grayscale transition-all duration-[1500ms] ease-out pointer-events-none" style={{ transform: echoTransform }} alt="" />
+              <img src={activeModel.image} className="absolute z-0 w-[360px] md:w-[500px] object-contain opacity-[0.03] blur-[15px] mix-blend-darken filter grayscale transition-all duration-[1500ms] ease-out pointer-events-none" style={{ transform: echoTransform }} alt="" />
               
               {/* Header Text */}
               <div className="absolute top-24 md:top-12 left-6 md:left-[5%] z-20 transition-transform duration-100 ease-out" style={{ transform: backgroundTransform }}>
@@ -372,7 +372,7 @@ export default function SuteraShowcase() {
                       key={model.name}
                       src={model.image} 
                       alt={model.name} 
-                      className={`absolute left-0 right-0 m-auto top-[25vh] md:inset-0 z-20 w-[280px] h-[280px] md:w-[600px] md:h-[600px] md:mb-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-[1200ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isActive ? 'opacity-100 translate-x-0 blur-none' : 'opacity-0 blur-sm ' + (isPast ? '-translate-x-12' : 'translate-x-12')}`} 
+                      className={`absolute left-0 right-0 m-auto top-[22vh] md:inset-0 z-20 w-[220px] h-[220px] md:w-[420px] md:h-[420px] lg:w-[480px] lg:h-[480px] md:mb-auto object-contain drop-shadow-[0_16px_32px_rgba(0,0,0,0.25)] transition-all duration-[1200ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isActive ? 'opacity-100 translate-x-0 blur-none' : 'opacity-0 blur-sm ' + (isPast ? '-translate-x-12' : 'translate-x-12')}`} 
                       style={isActive ? { transform: productTransform } : {}} 
                     />
                   );
