@@ -9,7 +9,7 @@ type StructuredDataProps = {
 
 export function StructuredData({ logoUrl }: StructuredDataProps) {
   const baseUrl = SITE.url.replace(/\/+$/, "");
-  const resolvedLogoUrl = logoUrl ?? `${baseUrl}/NWT_Logo_2.png`;
+  const resolvedLogoUrl = logoUrl ?? `${baseUrl}/icon-512.png`;
 
   const organization = {
     "@context": "https://schema.org",

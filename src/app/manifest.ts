@@ -12,11 +12,11 @@ export default function manifest(): MetadataRoute.Manifest {
     background_color: "#0F172A",
     theme_color: "#0F172A",
     icons: [
-      // Best-effort: reusing existing wide logo file. A dedicated square icon is recommended for best results.
       {
-        src: "/NWT_Logo_2.png",
+        src: "/icon-512.png",
         sizes: "512x512",
         type: "image/png",
+        purpose: "any",
       },
     ],
   };

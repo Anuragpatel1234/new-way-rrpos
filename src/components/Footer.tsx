@@ -7,13 +7,11 @@ import { BrandLogo } from "@/components/BrandLogo";
 
 const footerLinks = {
   Products: [
-    { label: "Touch POS", href: "/product#touch-pos" },
-    { label: "Handheld POS", href: "/product#handheld-pos" },
-    { label: "Channel POS", href: "/product#channel-pos" },
-    { label: "Cash Register", href: "/product#cash-register" },
-    { label: "Barcode Scanner", href: "/product#barcode-scanner" },
-    { label: "Receipt Printer", href: "/product#receipt-printer" },
-    { label: "Scale", href: "/product#scale" },
+    { label: "Touch POS", href: "/product" },
+    { label: "Handheld POS", href: "/product" },
+    { label: "Barcode Scanner", href: "/product" },
+    { label: "Receipt Printer", href: "/product" },
+    { label: "Cash Register", href: "/product" },
   ],
   Hardware: [
     { label: "POS Terminal", href: "/hardware#terminal" },
@@ -24,14 +22,16 @@ const footerLinks = {
   ],
   Company: [
     { label: "About Us", href: "/about" },
+    { label: "Features", href: "/features" },
+    { label: "Solutions", href: "/solutions" },
+    { label: "Services", href: "/service" },
     { label: "Contact", href: "/contact" },
-    { label: "Book a Demo", href: "/contact" },
   ],
-  Resources: [
-    { label: "Help Center", href: "#" },
-    { label: "API Documentation", href: "#" },
-    { label: "Partner Program", href: "#" },
-    { label: "Blog", href: "#" },
+  Support: [
+    { label: "Book a Demo", href: "/contact" },
+    { label: "Request a Quote", href: "/contact" },
+    { label: `Call: ${SITE.phone}`, href: `tel:${SITE.phone}` },
+    { label: "WhatsApp", href: SITE.whatsapp },
   ],
 };
 
@@ -100,14 +100,11 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} RR POS. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="#" className="text-xs text-[#94A3B8] hover:text-[#F8FAFC] transition-colors">
-              Privacy Policy
+            <Link href="/about" className="text-xs text-[#94A3B8] hover:text-[#F8FAFC] transition-colors">
+              About
             </Link>
-            <Link href="#" className="text-xs text-[#94A3B8] hover:text-[#F8FAFC] transition-colors">
-              Terms of Service
-            </Link>
-            <Link href="#" className="text-xs text-[#94A3B8] hover:text-[#F8FAFC] transition-colors">
-              Cookie Policy
+            <Link href="/contact" className="text-xs text-[#94A3B8] hover:text-[#F8FAFC] transition-colors">
+              Contact
             </Link>
           </div>
         </div>

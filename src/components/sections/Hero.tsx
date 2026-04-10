@@ -12,10 +12,32 @@ gsap.registerPlugin(ScrollTrigger);
 
 const HERO_VIDEO_SRC = "/hero-bg-video.mp4";
 
-// Brand logos shown at the bottom of the hero (Square shows partner brands)
 const BRANDS = [
-  "DOSA KING", "METRO MART", "StyleCraft", "FreshBakes", "TechGadgets",
-  "GoldenKitchen", "BlueBell Spa", "FarmersPick", "ZenYoga", "UrbanCafe",
+  "Pavagdh Maha Kali Temple",
+  "Bharucha Ji Temple",
+  "7Seas Mall, Vadodara",
+  "Alpha One Mall, Ahmedabad",
+  "Gokul Dairy, Ahmedabad",
+  "Honour Restaurant, Ahmedabad",
+  "Ashfrilal Icecream, Ahmedabad",
+  "INOX PVR Cinema",
+  "Mahalaxmi Swaminarayan Temple, Mumbai",
+  "Tasty Vadapav",
+  "Ambica Fireworks, Ahmedabad",
+  "Fun World, Rajkot",
+  "BAPS Swaminarayan, Sarangpur",
+  "Tirupati Rushivan, Ahmedabad",
+  "RaRaj Restaurant, Ahmedabad",
+  "Gandhi Vanmali, Ahmedabad",
+  "Rakesh Fireworks, Vadodara",
+  "The Lion Waterpark, Rajkot",
+  "Bina Icecream, Mumbai",
+  "Sundha Mata Ropeway, Rajasthan",
+  "KD Hospital, Ahmedabad",
+  "NAAZ Indian Restaurant, Leicester UK",
+  "Rainbow Fireworks, Vadodara",
+  "Reliance Guesthouse, Jamnagar",
+  "Satyanarayan Kathiyawadi, Vasad",
 ];
 
 export default function Hero() {
@@ -219,7 +241,7 @@ export default function Hero() {
           <motion.div
             className="flex gap-12 items-center"
             animate={{ x: ["0%", "-50%"] }}
-            transition={{ duration: 20, ease: "linear", repeat: Infinity }}
+            transition={{ duration: 50, ease: "linear", repeat: Infinity }}
             style={{ width: "max-content" }}
           >
             {[...BRANDS, ...BRANDS].map((brand, i) => (

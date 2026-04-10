@@ -36,10 +36,12 @@ export function BrandLogo({
         priority={priority}
         quality={100}
         unoptimized
-        className={cn(
-          "h-full w-full object-contain object-left",
-          tone === "onDark" && "brightness-0 invert"
-        )}
+        className="h-full w-full object-contain object-left"
+        style={
+          tone === "onDark"
+            ? { filter: "brightness(0) saturate(100%) invert(1)" }
+            : undefined
+        }
         sizes="(max-width: 1024px) 220px, 260px"
       />
     </span>

@@ -3,11 +3,11 @@ import React from "react";
 import { SITE } from "@/lib/constants";
 
 export default function Head() {
-  const title = "Contact";
+  const title = "Solutions";
   const description =
-    "Contact New Way Traders for RR POS demos, hardware quotes, installation, and technical support. Phone and email support available during business hours.";
+    "Explore RR POS solutions for retail billing, inventory management, analytics, and multi-store operations — purpose-built modules that work together.";
   const base = SITE.url.replace(/\/+$/, "");
-  const canonical = `${base}/contact`;
+  const canonical = `${base}/solutions`;
   const ogImage = `${base}/icon-512.png`;
 
   return (
@@ -30,4 +30,3 @@ export default function Head() {
     </>
   );
 }
-

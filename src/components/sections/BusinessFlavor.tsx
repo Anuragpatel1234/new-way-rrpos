@@ -75,13 +75,12 @@ export default function BusinessFlavor() {
       style={{ backgroundColor: "#ffffff", paddingTop: "6rem", paddingBottom: "8rem" }}
     >
       <div className="mx-auto max-w-[1380px] px-4 sm:px-8">
-        {/* 5-column grid */}
+        {/* 5-column grid — collapses to 3 on tablets and 2 on phones */}
         <div
-          className="grid items-center justify-items-center"
+          className="grid items-center justify-items-center grid-cols-2 sm:grid-cols-3 lg:grid-cols-5"
           style={{
-            gridTemplateColumns: "repeat(5, 1fr)",
             gap: "clamp(12px, 2vw, 24px)",
-            rowGap: "clamp(48px, 6vw, 80px)",
+            rowGap: "clamp(32px, 6vw, 80px)",
           }}
         >
           {GRID_ITEMS.map((item, index) => {

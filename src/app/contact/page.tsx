@@ -51,7 +51,7 @@ export default function ContactPage() {
   return (
     <div className="bg-[#faf9fc] text-[#1a1c1e] antialiased min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 md:py-28 bg-[#faf9fc] border-b border-[#e8e6ed]">
+      <section className="relative overflow-hidden py-28 md:py-40 bg-[#faf9fc] border-b border-[#e8e6ed]">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_100%_-10%,rgba(171,201,239,0.22),transparent)]" aria-hidden />
         <div className="relative max-w-7xl mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -192,6 +192,32 @@ export default function ContactPage() {
                   className="space-y-6"
                   onSubmit={(e) => {
                     e.preventDefault();
+                    const form = e.currentTarget;
+                    const data = new FormData(form);
+                    const name = (data.get("name") as string) || "";
+                    const email = (data.get("email") as string) || "";
+                    const topic = (data.get("topic") as string) || "";
+                    const message = (data.get("message") as string) || "";
+
+                    const body = [
+                      `Name: ${name}`,
+                      `Email: ${email}`,
+                      `Topic: ${topic}`,
+                      "",
+                      message,
+                    ].join("\n");
+
+                    const whatsappText = encodeURIComponent(
+                      `Hi, I'm ${name}${email ? ` (${email})` : ""}.\nTopic: ${topic}\n\n${message}`
+                    );
+                    const whatsappUrl = `https://wa.me/919824051360?text=${whatsappText}`;
+                    const mailtoUrl = `mailto:newwaytraders@gmail.com?subject=${encodeURIComponent(`${topic} inquiry from ${name}`)}&body=${encodeURIComponent(body)}`;
+
+                    const choice = window.confirm(
+                      "Send via WhatsApp? (OK = WhatsApp, Cancel = Email)"
+                    );
+                    window.open(choice ? whatsappUrl : mailtoUrl, "_blank");
+                    form.reset();
                   }}
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
@@ -357,7 +383,7 @@ export default function ContactPage() {
       </section>
 
       {/* Global presence + network map — mono / technical typography */}
-      <section className="overflow-hidden bg-[#060e20] py-8 font-mono-tech text-[#dae2fd] md:py-10 [&_h2]:font-semibold [&_h3]:font-semibold">
+      <section className="overflow-hidden bg-[#060e20] py-16 font-mono-tech text-[#dae2fd] md:py-24 [&_h2]:font-semibold [&_h3]:font-semibold">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <div className="mb-5 md:mb-6">
             <h2 className="mb-3 text-xl font-semibold tracking-[0.08em] text-[#e8ecff] md:text-2xl lg:text-3xl">

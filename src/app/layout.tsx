@@ -52,10 +52,10 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     images: [
       {
-        url: "/NWT_Logo_2.png",
-        width: 1683,
-        height: 589,
-        alt: "New Way Traders / RR POS",
+        url: "/icon-512.png",
+        width: 512,
+        height: 512,
+        alt: "New Way Traders — RR POS",
       },
     ],
   },
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE.name} — ${SITE.tagline}`,
     description: SITE.description,
-    images: ["/NWT_Logo_2.png"],
+    images: ["/icon-512.png"],
   },
   robots: {
     index: true,
@@ -77,9 +77,14 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    // Best-effort using existing logo file (a square icon is recommended).
-    icon: [{ url: "/NWT_Logo_2.png" }],
-    apple: [{ url: "/NWT_Logo_2.png" }],
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/icon-512.png", sizes: "512x512", type: "image/png" }],
   },
   manifest: "/manifest.webmanifest",
 };

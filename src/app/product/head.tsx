@@ -8,7 +8,7 @@ export default function Head() {
     "Explore RR POS product ecosystem: touch POS terminals, handheld devices, and POS peripherals designed for modern retail billing and store operations.";
   const base = SITE.url.replace(/\/+$/, "");
   const canonical = `${base}/product`;
-  const ogImage = `${base}/NWT_Logo_2.png`;
+  const ogImage = `${base}/icon-512.png`;
 
   return (
     <>

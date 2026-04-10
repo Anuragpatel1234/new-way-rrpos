@@ -37,9 +37,9 @@ const faqs = [
 
 export default function PricingPage() {
   return (
-    <>
+    <div className="font-sans text-[#1a1c1e]">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-white via-primary-light/20 to-white pt-32 pb-20 lg:pt-40 lg:pb-28">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#f8fafc] via-[#e8edf5] to-[#f8fafc] pt-32 pb-20 lg:pt-40 lg:pb-28">
         <div className="relative mx-auto max-w-[1320px] px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -47,13 +47,13 @@ export default function PricingPage() {
             transition={{ duration: 0.6 }}
             className="mx-auto max-w-3xl text-center"
           >
-            <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+            <span className="text-sm font-semibold uppercase tracking-wider text-[#3B82F6]">
               Plans
             </span>
-            <h1 className="mt-3 text-4xl font-bold text-foreground sm:text-5xl lg:text-6xl">
+            <h1 className="mt-3 text-4xl font-bold text-[#0F172A] sm:text-5xl lg:text-6xl tracking-tight">
               Simple plans for every stage
             </h1>
-            <p className="mt-6 text-lg text-gray-600 lg:text-xl">
+            <p className="mt-6 text-lg text-[#475569] lg:text-xl leading-relaxed">
               Choose the plan that fits your business. Contact us for a quote and
               onboarding support.
             </p>
@@ -78,27 +78,27 @@ export default function PricingPage() {
                 className={cn(
                   "relative flex flex-col rounded-2xl border p-8 lg:p-10 transition-all duration-300",
                   plan.popular
-                    ? "border-primary bg-primary/[0.02] shadow-2xl shadow-primary/10 scale-[1.02] z-10"
-                    : "border-gray-200 bg-white hover:border-gray-300 hover:shadow-lg"
+                    ? "border-[#3B82F6] bg-[#3B82F6]/[0.02] shadow-2xl shadow-[#3B82F6]/10 scale-[1.02] z-10"
+                    : "border-[#E2E8F0] bg-white hover:border-[#CBD5E1] hover:shadow-lg"
                 )}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary px-5 py-1.5 text-sm font-semibold text-white">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-[#3B82F6] px-5 py-1.5 text-sm font-semibold text-white">
                     Best Value
                   </div>
                 )}
 
                 <div>
-                  <h3 className="text-xl font-bold text-foreground">{plan.name}</h3>
-                  <p className="mt-3 text-sm text-gray-500">{plan.description}</p>
+                  <h3 className="text-xl font-bold text-[#0F172A]">{plan.name}</h3>
+                  <p className="mt-3 text-sm text-[#64748B]">{plan.description}</p>
                 </div>
 
-                <div className="my-8 h-px bg-gray-100" />
+                <div className="my-8 h-px bg-[#E2E8F0]" />
 
                 <ul className="flex flex-col gap-3.5 flex-1">
                   {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3 text-sm text-gray-700">
-                      <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                    <li key={feature} className="flex items-start gap-3 text-sm text-[#334155]">
+                      <Check className="mt-0.5 h-5 w-5 shrink-0 text-[#3B82F6]" />
                       {feature}
                     </li>
                   ))}
@@ -123,7 +123,7 @@ export default function PricingPage() {
       </section>
 
       {/* FAQs */}
-      <section className="bg-gray-50 py-24 lg:py-32">
+      <section className="bg-[#F8FAFC] py-24 lg:py-32">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -132,7 +132,7 @@ export default function PricingPage() {
             transition={{ duration: 0.6 }}
             className="mx-auto max-w-2xl text-center"
           >
-            <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+            <h2 className="text-3xl font-bold text-[#0F172A] sm:text-4xl tracking-tight">
               Frequently asked questions
             </h2>
           </motion.div>
@@ -148,13 +148,13 @@ export default function PricingPage() {
               <motion.div
                 key={faq.q}
                 variants={staggerItem}
-                className="rounded-xl border border-gray-200 bg-white p-6"
+                className="rounded-xl border border-[#E2E8F0] bg-white p-6"
               >
                 <div className="flex items-start gap-3">
-                  <HelpCircle className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                  <HelpCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#3B82F6]" />
                   <div>
-                    <h3 className="font-semibold text-foreground">{faq.q}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-gray-600">{faq.a}</p>
+                    <h3 className="font-semibold text-[#0F172A]">{faq.q}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-[#475569]">{faq.a}</p>
                   </div>
                 </div>
               </motion.div>
@@ -162,6 +162,6 @@ export default function PricingPage() {
           </motion.div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

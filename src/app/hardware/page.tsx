@@ -117,12 +117,12 @@ const bundles = [
 
 export default function HardwarePage() {
   return (
-    <>
+    <div className="font-sans text-[#1a1c1e]">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-foreground pt-32 pb-20 lg:pt-40 lg:pb-28 text-white">
+      <section className="relative overflow-hidden bg-[#0F172A] pt-32 pb-20 lg:pt-40 lg:pb-28 text-white">
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-primary/15 blur-[150px]" />
-          <div className="absolute -bottom-32 -left-32 h-[300px] w-[300px] rounded-full bg-accent/10 blur-[100px]" />
+          <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-[#3B82F6]/15 blur-[150px]" />
+          <div className="absolute -bottom-32 -left-32 h-[300px] w-[300px] rounded-full bg-[#3B82F6]/10 blur-[100px]" />
         </div>
         <div className="relative mx-auto max-w-[1320px] px-6 lg:px-8">
           <motion.div
@@ -131,13 +131,13 @@ export default function HardwarePage() {
             transition={{ duration: 0.6 }}
             className="mx-auto max-w-3xl text-center"
           >
-            <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+            <span className="text-sm font-semibold uppercase tracking-wider text-[#3B82F6]">
               Hardware
             </span>
-            <h1 className="mt-3 text-4xl font-bold sm:text-5xl lg:text-6xl">
+            <h1 className="mt-3 text-4xl font-bold sm:text-5xl lg:text-6xl tracking-tight">
               Built for speed. Designed for retail.
             </h1>
-            <p className="mt-6 text-lg text-gray-400 lg:text-xl">
+            <p className="mt-6 text-lg text-[#94A3B8] lg:text-xl">
               Purpose-built hardware that works seamlessly with RR POS software.
               Reliable, fast, and designed for all-day retail operations.
             </p>
@@ -150,7 +150,7 @@ export default function HardwarePage() {
         <section
           key={product.id}
           id={product.id}
-          className={idx % 2 === 0 ? "bg-white" : "bg-gray-50"}
+          className={`scroll-mt-[5.5rem] ${idx % 2 === 0 ? "bg-white" : "bg-[#F8FAFC]"}`}
         >
           <div className="mx-auto max-w-[1320px] px-6 py-24 lg:px-8 lg:py-32">
             <motion.div
@@ -162,12 +162,12 @@ export default function HardwarePage() {
             >
               {/* Visual */}
               <div className={idx % 2 === 1 ? "lg:order-2" : ""}>
-                <div className="relative flex items-center justify-center rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 p-12 lg:p-16">
-                  <div className="flex h-48 w-48 items-center justify-center rounded-2xl bg-white shadow-lg border border-gray-100">
-                    <product.icon className="h-24 w-24 text-gray-300" strokeWidth={1} />
+                <div className="relative flex items-center justify-center rounded-2xl bg-gradient-to-br from-[#F1F5F9] to-[#F8FAFC] p-12 lg:p-16">
+                  <div className="flex h-48 w-48 items-center justify-center rounded-2xl bg-white shadow-lg border border-[#E2E8F0]">
+                    <product.icon className="h-24 w-24 text-[#CBD5E1]" strokeWidth={1} />
                   </div>
                   {product.highlight && (
-                    <div className="absolute top-4 right-4 flex items-center gap-1 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-white">
+                    <div className="absolute top-4 right-4 flex items-center gap-1 rounded-full bg-[#3B82F6] px-3 py-1 text-xs font-semibold text-white">
                       <Star className="h-3 w-3 fill-current" />
                       Best Seller
                     </div>
@@ -177,20 +177,20 @@ export default function HardwarePage() {
 
               {/* Content */}
               <div className={idx % 2 === 1 ? "lg:order-1" : ""}>
-                <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+                <h2 className="text-3xl font-bold text-[#0F172A] sm:text-4xl tracking-tight">
                   {product.name}
                 </h2>
-                <p className="mt-2 text-lg font-medium text-primary">
+                <p className="mt-2 text-lg font-medium text-[#3B82F6]">
                   {product.tagline}
                 </p>
-                <p className="mt-4 text-base leading-relaxed text-gray-600 lg:text-lg">
+                <p className="mt-4 text-base leading-relaxed text-[#475569] lg:text-lg">
                   {product.description}
                 </p>
 
                 <div className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">
                   {product.specs.map((spec) => (
-                    <div key={spec} className="flex items-center gap-2 text-sm text-gray-700">
-                      <Check className="h-4 w-4 shrink-0 text-primary" />
+                    <div key={spec} className="flex items-center gap-2 text-sm text-[#334155]">
+                      <Check className="h-4 w-4 shrink-0 text-[#3B82F6]" />
                       {spec}
                     </div>
                   ))}
@@ -223,13 +223,13 @@ export default function HardwarePage() {
             transition={{ duration: 0.6 }}
             className="mx-auto max-w-2xl text-center"
           >
-            <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+            <span className="text-sm font-semibold uppercase tracking-wider text-[#3B82F6]">
               Bundles
             </span>
-            <h2 className="mt-3 text-3xl font-bold text-foreground sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-bold text-[#0F172A] sm:text-4xl tracking-tight">
               Hardware bundles
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-4 text-lg text-[#475569]">
               Get everything you need in one package. Contact us for a quote and availability.
             </p>
           </motion.div>
@@ -248,27 +248,27 @@ export default function HardwarePage() {
                 className={cn(
                   "relative flex flex-col rounded-2xl border p-8 transition-all duration-300 hover:shadow-lg",
                   bundle.popular
-                    ? "border-primary bg-primary/[0.02] shadow-xl shadow-primary/10"
-                    : "border-gray-200 bg-white"
+                    ? "border-[#3B82F6] bg-[#3B82F6]/[0.02] shadow-xl shadow-[#3B82F6]/10"
+                    : "border-[#E2E8F0] bg-white"
                 )}
               >
                 {bundle.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-semibold text-white">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#3B82F6] px-4 py-1 text-xs font-semibold text-white">
                     Most Popular
                   </div>
                 )}
-                <h3 className="text-xl font-bold text-foreground">{bundle.name}</h3>
+                <h3 className="text-xl font-bold text-[#0F172A]">{bundle.name}</h3>
                 <ul className="mt-4 flex flex-col gap-2">
                   {bundle.items.map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-gray-600">
-                      <Check className="h-4 w-4 text-primary" />
+                    <li key={item} className="flex items-center gap-2 text-sm text-[#475569]">
+                      <Check className="h-4 w-4 text-[#3B82F6]" />
                       {item}
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 border-t border-gray-100 pt-4">
-                  <div className="text-lg font-semibold text-foreground">Bundle available</div>
-                  <div className="mt-1 text-sm text-gray-600">Contact us for a quote and availability.</div>
+                <div className="mt-6 border-t border-[#E2E8F0] pt-4">
+                  <div className="text-lg font-semibold text-[#0F172A]">Bundle available</div>
+                  <div className="mt-1 text-sm text-[#475569]">Contact us for a quote and availability.</div>
                 </div>
                 <div className="mt-6">
                   <Link href="/contact" className="block">
@@ -286,6 +286,6 @@ export default function HardwarePage() {
           </motion.div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

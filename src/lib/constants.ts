@@ -7,7 +7,7 @@ export const SITE = {
   tagline: "Fast Billing. Smart Control. Real Growth.",
   description:
     "All-in-one POS system for modern retail stores. Simplify billing, inventory, reporting, and hardware in one seamless system.",
-  url: "https://rrpos.in",
+  url: "https://newwaytraders.com",
   phone: "9824051360",
   email: "newwaytraders@gmail.com",
   whatsapp: "https://wa.me/919824051360",

@@ -140,11 +140,11 @@ const features = [
 
 export default function FeaturesPage() {
   return (
-    <>
+    <div className="font-sans text-[#1a1c1e]">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-white via-primary-light/20 to-white pt-32 pb-20 lg:pt-40 lg:pb-28">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#f8fafc] via-[#e8edf5] to-[#f8fafc] pt-32 pb-20 lg:pt-40 lg:pb-28">
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-primary/5 blur-[120px]" />
+          <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-[#3B82F6]/5 blur-[120px]" />
         </div>
         <div className="relative mx-auto max-w-[1320px] px-6 lg:px-8">
           <motion.div
@@ -153,13 +153,10 @@ export default function FeaturesPage() {
             transition={{ duration: 0.6 }}
             className="mx-auto max-w-3xl text-center"
           >
-            <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-              Features
-            </span>
-            <h1 className="mt-3 text-4xl font-bold text-foreground sm:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-bold text-[#0F172A] sm:text-5xl lg:text-6xl tracking-tight">
               Everything your store needs to thrive
             </h1>
-            <p className="mt-6 text-lg text-gray-600 lg:text-xl">
+            <p className="mt-6 text-lg text-[#475569] lg:text-xl leading-relaxed">
               From lightning-fast billing to deep analytics, RR POS gives you
               every tool to run, manage, and grow your retail business.
             </p>
@@ -168,7 +165,7 @@ export default function FeaturesPage() {
                 <a
                   key={f.id}
                   href={`#${f.id}`}
-                  className="rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 hover:border-primary hover:text-primary transition-colors"
+                  className="rounded-full border border-[#E2E8F0] bg-white px-4 py-2 text-sm font-medium text-[#475569] hover:border-[#3B82F6] hover:text-[#3B82F6] transition-colors shadow-sm"
                 >
                   {f.title}
                 </a>
@@ -183,7 +180,7 @@ export default function FeaturesPage() {
         <section
           key={feature.id}
           id={feature.id}
-          className={idx % 2 === 0 ? "bg-white" : "bg-gray-50"}
+          className={`scroll-mt-[5.5rem] ${idx % 2 === 0 ? "bg-white" : "bg-[#F8FAFC]"}`}
         >
           <div className="mx-auto max-w-[1320px] px-6 py-24 lg:px-8 lg:py-32">
             <motion.div
@@ -191,20 +188,20 @@ export default function FeaturesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7 }}
-              className={`grid grid-cols-1 items-center gap-12 lg:grid-cols-2`}
+              className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2"
             >
               {/* Content */}
               <div className={idx % 2 === 1 ? "lg:order-2" : ""}>
                 <div className={`inline-flex h-14 w-14 items-center justify-center rounded-xl ${feature.color}`}>
                   <feature.icon className="h-7 w-7" />
                 </div>
-                <h2 className="mt-5 text-3xl font-bold text-foreground sm:text-4xl">
+                <h2 className="mt-5 text-3xl font-bold text-[#0F172A] sm:text-4xl tracking-tight">
                   {feature.title}
                 </h2>
-                <p className="mt-2 text-lg font-medium text-primary">
+                <p className="mt-2 text-lg font-medium text-[#3B82F6]">
                   {feature.subtitle}
                 </p>
-                <p className="mt-4 text-base leading-relaxed text-gray-600 lg:text-lg">
+                <p className="mt-4 text-base leading-relaxed text-[#475569] lg:text-lg">
                   {feature.description}
                 </p>
                 <div className="mt-8">
@@ -219,8 +216,8 @@ export default function FeaturesPage() {
 
               {/* Capabilities List */}
               <div className={idx % 2 === 1 ? "lg:order-1" : ""}>
-                <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-5">
+                <div className="rounded-2xl border border-[#E2E8F0] bg-white p-8 shadow-sm">
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-[#94A3B8] mb-5">
                     Capabilities
                   </h3>
                   <motion.div
@@ -234,10 +231,10 @@ export default function FeaturesPage() {
                       <motion.div
                         key={cap}
                         variants={staggerItem}
-                        className="flex items-start gap-3 rounded-lg p-2 transition-colors hover:bg-gray-50"
+                        className="flex items-start gap-3 rounded-lg p-2 transition-colors hover:bg-[#F1F5F9]"
                       >
-                        <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                        <span className="text-sm text-gray-700">{cap}</span>
+                        <Check className="mt-0.5 h-5 w-5 shrink-0 text-[#3B82F6]" />
+                        <span className="text-sm text-[#334155]">{cap}</span>
                       </motion.div>
                     ))}
                   </motion.div>
@@ -249,7 +246,7 @@ export default function FeaturesPage() {
       ))}
 
       {/* Bottom CTA */}
-      <section className="bg-foreground py-20">
+      <section className="bg-[#0F172A] py-20">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -257,10 +254,10 @@ export default function FeaturesPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold text-white sm:text-4xl">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl tracking-tight">
               Ready to transform your store?
             </h2>
-            <p className="mt-4 text-lg text-gray-400">
+            <p className="mt-4 text-lg text-[#94A3B8]">
               Start your 14-day free trial. No credit card required.
             </p>
             <div className="mt-8">
@@ -274,6 +271,6 @@ export default function FeaturesPage() {
           </motion.div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

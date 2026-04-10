@@ -6,7 +6,7 @@ export default function Head() {
   const title = `${SITE.name} — ${SITE.tagline}`;
   const description = SITE.description;
   const canonical = SITE.url.replace(/\/+$/, "") + "/";
-  const ogImage = SITE.url.replace(/\/+$/, "") + "/NWT_Logo_2.png";
+  const ogImage = SITE.url.replace(/\/+$/, "") + "/icon-512.png";
 
   return (
     <>

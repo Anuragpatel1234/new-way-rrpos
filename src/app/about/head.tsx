@@ -8,7 +8,7 @@ export default function Head() {
     "Learn about New Way Traders—Ahmedabad-based billing and POS specialists behind RR POS, serving retailers with hardware, setup, and long-term support.";
   const base = SITE.url.replace(/\/+$/, "");
   const canonical = `${base}/about`;
-  const ogImage = `${base}/NWT_Logo_2.png`;
+  const ogImage = `${base}/icon-512.png`;
 
   return (
     <>
