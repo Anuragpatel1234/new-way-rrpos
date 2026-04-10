@@ -134,10 +134,10 @@ export default function HardwarePage() {
             <span className="text-sm font-semibold uppercase tracking-wider text-[#3B82F6]">
               Hardware
             </span>
-            <h1 className="mt-3 text-4xl font-bold sm:text-5xl lg:text-6xl tracking-tight">
+            <h1 className="mt-3 text-[2.5rem] md:text-[3rem] font-bold tracking-tight leading-[1.15]">
               Built for speed. Designed for retail.
             </h1>
-            <p className="mt-6 text-lg text-[#94A3B8] lg:text-xl">
+            <p className="mt-6 text-base md:text-lg text-[#94A3B8] leading-relaxed">
               Purpose-built hardware that works seamlessly with RR POS software.
               Reliable, fast, and designed for all-day retail operations.
             </p>
@@ -152,7 +152,7 @@ export default function HardwarePage() {
           id={product.id}
           className={`scroll-mt-[5.5rem] ${idx % 2 === 0 ? "bg-white" : "bg-[#F8FAFC]"}`}
         >
-          <div className="mx-auto max-w-[1320px] px-6 py-24 lg:px-8 lg:py-32">
+          <div className="mx-auto max-w-[1320px] px-6 py-20 lg:px-8 lg:py-24">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -177,13 +177,13 @@ export default function HardwarePage() {
 
               {/* Content */}
               <div className={idx % 2 === 1 ? "lg:order-1" : ""}>
-                <h2 className="text-3xl font-bold text-[#0F172A] sm:text-4xl tracking-tight">
+                <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-[#0F172A] tracking-tight leading-[1.15]">
                   {product.name}
                 </h2>
                 <p className="mt-2 text-lg font-medium text-[#3B82F6]">
                   {product.tagline}
                 </p>
-                <p className="mt-4 text-base leading-relaxed text-[#475569] lg:text-lg">
+                <p className="mt-4 text-base md:text-lg leading-relaxed text-[#475569]">
                   {product.description}
                 </p>
 
@@ -214,7 +214,7 @@ export default function HardwarePage() {
       ))}
 
       {/* Hardware Bundles */}
-      <section id="setup" className="bg-white py-24 lg:py-32">
+      <section id="setup" className="bg-white py-20 lg:py-24">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -226,7 +226,7 @@ export default function HardwarePage() {
             <span className="text-sm font-semibold uppercase tracking-wider text-[#3B82F6]">
               Bundles
             </span>
-            <h2 className="mt-3 text-3xl font-bold text-[#0F172A] sm:text-4xl tracking-tight">
+            <h2 className="mt-3 text-[1.75rem] md:text-[2rem] font-bold text-[#0F172A] tracking-tight leading-[1.15]">
               Hardware bundles
             </h2>
             <p className="mt-4 text-lg text-[#475569]">
@@ -257,7 +257,7 @@ export default function HardwarePage() {
                     Most Popular
                   </div>
                 )}
-                <h3 className="text-xl font-bold text-[#0F172A]">{bundle.name}</h3>
+                <h3 className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#0F172A]">{bundle.name}</h3>
                 <ul className="mt-4 flex flex-col gap-2">
                   {bundle.items.map((item) => (
                     <li key={item} className="flex items-center gap-2 text-sm text-[#475569]">

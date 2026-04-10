@@ -154,7 +154,7 @@ function BigDisplayTitle({
                             fontFamily: "'Playfair Display', serif",
                             fontWeight: 900,
                             fontStyle: "italic",
-                            fontSize: "clamp(3rem, 6vw, 6.5rem)",
+                            fontSize: "clamp(2.5rem, 5vw, 4rem)",
                             textShadow: "0 4px 40px rgba(0,0,0,0.5)",
                             letterSpacing: "-0.02em",
                         }}
@@ -262,7 +262,7 @@ function AccordionCard({
                             style={{
                                 fontFamily: "'Playfair Display', serif",
                                 fontWeight: 700,
-                                fontSize: "clamp(1.75rem, 3vw, 2.75rem)",
+                                fontSize: "clamp(1.5rem, 2.5vw, 2rem)",
                                 letterSpacing: "-0.01em",
                             }}
                         >
@@ -297,15 +297,15 @@ export default function IndustryAccordion() {
                 {/* Header */}
                 <div className="mb-10 lg:mb-14 text-center">
                     <p
-                        className="text-[11px] font-semibold tracking-[0.2em] uppercase mb-4 text-gray-400"
+                        className="text-xs font-semibold tracking-[0.2em] uppercase mb-4 text-gray-400"
                     >
                         Built for every industry
                     </p>
                     <h2
-                        className="text-gray-900 font-normal leading-[1.15]"
+                        className="text-gray-900 font-semibold leading-[1.15]"
                         style={{
                             fontFamily: "'Playfair Display', serif",
-                            fontSize: "clamp(1.75rem, 3.5vw, 3rem)",
+                            fontSize: "clamp(1.75rem, 3.5vw, 2rem)",
                             letterSpacing: "-0.015em",
                         }}
                     >

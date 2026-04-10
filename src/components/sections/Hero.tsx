@@ -10,7 +10,7 @@ import { ArrowRight } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const HERO_VIDEO_SRC = "/hero-bg-video.mp4";
+const HERO_VIDEO_SRC = "/POS_system_components_202604101116 (1).mp4";
 
 const BRANDS = [
   "Pavagdh Maha Kali Temple",
@@ -176,12 +176,12 @@ export default function Hero() {
           <source src={HERO_VIDEO_SRC} type="video/mp4" />
         </video>
 
-        {/* Subtle dark gradient overlay — no texture/grid */}
+        {/* Dark gradient overlay — stronger at top for navbar readability */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.18) 55%, rgba(0,0,0,0.42) 100%)",
+              "linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.22) 40%, rgba(0,0,0,0.18) 60%, rgba(0,0,0,0.42) 100%)",
           }}
           aria-hidden
         />
@@ -193,38 +193,33 @@ export default function Hero() {
         className="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
         style={{ zIndex: 20 }}
       >
-        {/* Headline — large serif, white */}
-        <h1
-          className="font-serif text-white font-normal leading-[1.05] tracking-tight"
-          style={{ fontSize: "clamp(2.8rem, 6vw, 5rem)" }}
-        >
-          Fast billing that keeps<br />
-          your business moving.
-        </h1>
-
-        {/* Subtext */}
-        <p
-          className="mt-5 text-white/80 text-lg leading-relaxed max-w-xl"
-          style={{ fontFamily: "var(--font-sans)" }}
-        >
-          All-in-one POS for retail stores. Billing, inventory, GST reports — all in one place.
-        </p>
-
-        {/* CTA Buttons — pill shaped like Square */}
-        <div className="mt-9 flex items-center gap-3 flex-wrap justify-center">
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 rounded-full bg-white text-gray-900 px-7 py-3.5 text-[0.95rem] font-semibold shadow-lg hover:bg-gray-100 transition-all duration-200 hover:shadow-xl hover:scale-[1.02]"
+        <div className="rounded-2xl bg-black/10 backdrop-blur-[2px] border border-white/5 px-6 py-7 md:px-10 md:py-9 max-w-4xl">
+          <h1
+            className="font-serif text-white font-bold leading-[1.15] tracking-tight drop-shadow-lg text-[2rem] md:text-[2.5rem] lg:text-[3rem]"
           >
-            Get started
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 text-white px-7 py-3.5 text-[0.95rem] font-semibold hover:bg-white/20 transition-all duration-200 hover:scale-[1.02]"
-          >
-            Contact sales
-          </Link>
+            <span className="block">Fast billing that keeps</span>
+            <span className="block">your business running smoothly.</span>
+          </h1>
+
+          <p className="mt-4 text-white/90 text-base md:text-lg leading-relaxed max-w-lg mx-auto drop-shadow-md">
+            All-in-one POS for retail stores. Billing, inventory, GST reports — all in one place.
+          </p>
+
+          <div className="mt-8 flex items-center gap-3 flex-wrap justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-white text-[#0F172A] px-6 py-3 text-sm font-semibold shadow-lg hover:bg-[#0F172A] hover:text-white transition-all duration-200 hover:shadow-xl hover:scale-[1.02]"
+            >
+              Get started
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 text-white px-6 py-3 text-sm font-semibold hover:bg-[#0F172A] hover:border-[#0F172A] transition-all duration-200 hover:scale-[1.02]"
+            >
+              Contact sales
+            </Link>
+          </div>
         </div>
       </div>
 

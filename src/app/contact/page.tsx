@@ -56,7 +56,7 @@ export default function ContactPage() {
         <div className="relative max-w-7xl mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-6 xl:col-span-7">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[3.5rem] font-extrabold text-[#002542] tracking-tight leading-[1.08] mb-4">
+              <h1 className="text-[2.5rem] md:text-[3rem] font-bold text-[#002542] tracking-tight leading-[1.15] mb-4">
                 Get in touch
               </h1>
               <p className="mb-6 max-w-2xl border-l-[3px] border-[#abc9ef] pl-4 md:pl-5 text-base md:text-lg font-medium leading-relaxed tracking-tight text-[#002542]/88">
@@ -110,7 +110,7 @@ export default function ContactPage() {
             {/* Left: channels + map */}
             <aside className="bg-[#171f33] p-5 md:p-7 flex flex-col gap-6 md:gap-7 border-b md:border-b-0 md:border-r border-[#44474d]/15">
               <div>
-                <h2 className="text-xl md:text-2xl font-extrabold tracking-tight text-[#a4c9ff] mb-2">
+                <h2 className="text-[1.75rem] md:text-[2rem] font-bold tracking-tight leading-[1.15] text-[#a4c9ff] mb-2">
                   Connect with our experts.
                 </h2>
                 <p className="text-[#c4c6cd] leading-snug text-xs md:text-sm">
@@ -163,7 +163,7 @@ export default function ContactPage() {
                     src={MAP_IMAGE}
                   />
                   <div className="absolute bottom-2 left-2 right-2">
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-[#a4c9ff]">Visit us</p>
+                    <p className="text-xs font-bold uppercase tracking-widest text-[#a4c9ff]">Visit us</p>
                     <p className="text-xs text-[#dae2fd] leading-tight">Ashram Road, Ahmedabad, Gujarat</p>
                   </div>
                 </div>
@@ -172,19 +172,9 @@ export default function ContactPage() {
 
             {/* Right: form */}
             <section className="bg-[#0b1326] p-5 md:p-8 lg:p-10 flex flex-col">
-              <div className="flex justify-between items-center mb-5 md:mb-6 gap-3">
-                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#222a3d] border border-[#44474d]/20">
-                  <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0" aria-hidden />
-                  <span className="text-[9px] sm:text-[10px] font-medium text-[#c4c6cd] uppercase tracking-wider">
-                    Typical reply:{" "}
-                    <span className="text-[#a4c9ff]">&lt; 4 min</span>{" "}
-                    <span className="normal-case">(business hours)</span>
-                  </span>
-                </div>
-                <MoreHorizontal className="w-5 h-5 text-[#c4c6cd]/30 shrink-0 hidden sm:block" aria-hidden />
-              </div>
+              <div className="mb-5 md:mb-6" />
               <div className="max-w-lg">
-                <h2 className="text-2xl md:text-3xl font-black tracking-tight text-[#dae2fd] mb-1">Send inquiry</h2>
+                <h2 className="text-[1.75rem] md:text-[2rem] font-bold tracking-tight leading-[1.15] text-[#dae2fd] mb-1">Send inquiry</h2>
                 <p className="text-[#c4c6cd] mb-6 text-xs md:text-sm leading-snug">
                   Tell us about your store, hardware needs, or support request.
                 </p>
@@ -281,12 +271,12 @@ export default function ContactPage() {
                     />
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-1">
-                    <p className="text-[10px] sm:text-xs text-[#c4c6cd] max-w-[200px] leading-snug">
+                    <p className="text-xs text-[#c4c6cd] max-w-[200px] leading-snug">
                       By submitting, you agree we may use your details to respond to this inquiry.
                     </p>
                     <button
                       type="submit"
-                      className="inline-flex items-center justify-center gap-2 bg-gradient-to-br from-[#a4c9ff] to-[#002d56] px-6 py-2.5 rounded-lg text-[#00315d] font-black uppercase tracking-wider text-[10px] sm:text-xs hover:opacity-95 active:scale-[0.98] transition-all shrink-0"
+                      className="inline-flex items-center justify-center gap-2 bg-gradient-to-br from-[#a4c9ff] to-[#002d56] px-6 py-2.5 rounded-lg text-[#00315d] font-semibold uppercase tracking-wider text-xs hover:opacity-95 active:scale-[0.98] transition-all shrink-0"
                     >
                       Send message
                       <ArrowRight className="w-4 h-4" aria-hidden />
@@ -300,10 +290,10 @@ export default function ContactPage() {
       </section>
 
       {/* Departmental Support Section */}
-      <section className="py-24 bg-[#faf9fc]">
+      <section className="py-20 lg:py-24 bg-[#faf9fc]">
         <div className="max-w-7xl mx-auto px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#002542] tracking-tight">Specialized departments</h2>
+            <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-[#002542] tracking-tight leading-[1.15]">Specialized departments</h2>
             <p className="text-[#43474d] mt-4 max-w-2xl mx-auto leading-relaxed">
               Route your request to the right specialists—enterprise sales, technical architecture, or channel
               partnerships.
@@ -314,10 +304,10 @@ export default function ContactPage() {
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#d3deef]">
                 <Building2 className="h-6 w-6 text-[#002542]" aria-hidden />
               </div>
-              <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#43474d]/75">
+              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-[#43474d]/75">
                 Global markets
               </p>
-              <h3 className="mt-2 text-xl font-bold tracking-tight text-[#002542]">
+              <h3 className="mt-2 text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] tracking-tight text-[#002542]">
                 Strategic sales &amp; enterprise billing
               </h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-[#43474d]">
@@ -337,10 +327,10 @@ export default function ContactPage() {
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white shadow-sm ring-1 ring-[#002542]/[0.06]">
                 <Compass className="h-6 w-6 text-[#002542]" aria-hidden />
               </div>
-              <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#43474d]/75">
+              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-[#43474d]/75">
                 System integrity
               </p>
-              <h3 className="mt-2 text-xl font-bold tracking-tight text-[#002542]">
+              <h3 className="mt-2 text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] tracking-tight text-[#002542]">
                 Technical architecture &amp; support
               </h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-[#43474d]">
@@ -360,10 +350,10 @@ export default function ContactPage() {
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#d3deef]">
                 <Network className="h-6 w-6 text-[#002542]" aria-hidden />
               </div>
-              <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#43474d]/75">
+              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-[#43474d]/75">
                 Ecosystem growth
               </p>
-              <h3 className="mt-2 text-xl font-bold tracking-tight text-[#002542]">
+              <h3 className="mt-2 text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] tracking-tight text-[#002542]">
                 Strategic partnerships &amp; alliances
               </h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-[#43474d]">
@@ -386,10 +376,10 @@ export default function ContactPage() {
       <section className="overflow-hidden bg-[#060e20] py-16 font-mono-tech text-[#dae2fd] md:py-24 [&_h2]:font-semibold [&_h3]:font-semibold">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <div className="mb-5 md:mb-6">
-            <h2 className="mb-3 text-xl font-semibold tracking-[0.08em] text-[#e8ecff] md:text-2xl lg:text-3xl">
+            <h2 className="mb-3 text-[1.75rem] md:text-[2rem] font-bold tracking-tight leading-[1.15] text-[#e8ecff]">
               GLOBAL PRESENCE
             </h2>
-            <p className="max-w-2xl text-[11px] leading-relaxed text-[#a8b0c4] md:text-xs">
+            <p className="max-w-2xl text-xs leading-relaxed text-[#a8b0c4]">
               <span className="text-[#7dd3fc]/90">// </span>
               Architecting commerce across continents. Visit one of our regional hubs for a physical demo.
             </p>
@@ -401,14 +391,14 @@ export default function ContactPage() {
                 {GLOBAL_PRESENCE_HUBS.map((hub, i) => (
                   <div key={hub.name} className="relative">
                     <div className="mb-1.5 flex items-baseline gap-2">
-                      <span className="select-none text-[9px] tabular-nums text-[#5b6578] md:text-[10px]">
+                      <span className="select-none text-xs tabular-nums text-[#5b6578]">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-[#a4c9ff] md:text-sm">
                         {hub.name}
                       </h3>
                     </div>
-                    <p className="mt-0.5 pl-6 text-[11px] font-normal leading-relaxed text-[#9ca3b8] md:text-xs">
+                    <p className="mt-0.5 pl-6 text-xs font-normal leading-relaxed text-[#9ca3b8]">
                       <span className="text-[#64748b]">{">"} </span>
                       {hub.line1}
                       <br />
@@ -432,7 +422,7 @@ export default function ContactPage() {
               />
               <div className="pointer-events-none absolute inset-0 flex flex-col justify-between p-3 md:p-3.5 lg:flex-row lg:items-start">
                 <div className="max-w-[240px] rounded-md border border-white/5 bg-[#31394d]/40 p-2.5 shadow-md backdrop-blur-md sm:max-w-[260px] md:p-3">
-                  <div className="mb-0 text-[9px] font-bold uppercase tracking-[0.16em] text-[#a4c9ff] sm:text-[10px]">
+                  <div className="mb-0 text-xs font-bold uppercase tracking-[0.16em] text-[#a4c9ff]">
                     Support status
                   </div>
                   <div className="flex items-center gap-1.5">
@@ -441,19 +431,19 @@ export default function ContactPage() {
                   </div>
                   <div className="mt-2 grid grid-cols-2 gap-2 border-t border-white/10 pt-2">
                     <div>
-                      <div className="text-[9px] font-bold uppercase text-[#c4c6cd] sm:text-[10px]">Phone</div>
+                      <div className="text-xs font-bold uppercase text-[#c4c6cd]">Phone</div>
                       <a
                         href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-                        className="pointer-events-auto text-[11px] font-bold leading-tight text-white underline-offset-2 hover:underline sm:text-xs"
+                        className="pointer-events-auto text-xs font-bold leading-tight text-white underline-offset-2 hover:underline"
                       >
                         {SITE.phone}
                       </a>
                     </div>
                     <div>
-                      <div className="text-[9px] font-bold uppercase text-[#c4c6cd] sm:text-[10px]">Email</div>
+                      <div className="text-xs font-bold uppercase text-[#c4c6cd]">Email</div>
                       <a
                         href={`mailto:${SITE.email}`}
-                        className="pointer-events-auto break-all text-[11px] font-bold leading-tight text-white underline-offset-2 hover:underline sm:text-xs"
+                        className="pointer-events-auto break-all text-xs font-bold leading-tight text-white underline-offset-2 hover:underline"
                       >
                         {SITE.email}
                       </a>

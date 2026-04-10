@@ -53,17 +53,17 @@ export default function ProductPage() {
         {/* Hero: pt matches fixed navbar (72px) so navy fills under it — no page-bg strip */}
         <section className="relative min-h-[450px] overflow-hidden bg-[#1b3b5a] flex items-center px-6 sm:px-12 lg:px-24 pt-[72px]">
           <div className="relative z-10 max-w-2xl">
-            <h1 className="text-display-lg font-extrabold text-white tracking-tight mb-4 text-4xl sm:text-5xl lg:text-6xl">
+            <h1 className="text-[2.5rem] md:text-[3rem] font-bold text-white tracking-tight leading-[1.15] mb-4">
               Elevating Transactional Intelligence
             </h1>
-            <p className="text-[#87a5ca] text-lg mb-8 leading-relaxed">
+            <p className="text-[#87a5ca] text-base md:text-lg mb-8 leading-relaxed">
               Discover POS Solutions: A comprehensive ecosystem of touch terminals, handhelds, and peripherals designed for the modern enterprise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#product-showcase" className="bg-[#d8e3f4] text-[#121c28] px-8 py-3 rounded-md font-bold transition-all hover:bg-[#bcc7d8] text-center">
+              <a href="#product-showcase" className="bg-[#d8e3f4] text-[#121c28] px-8 py-3 rounded-md text-sm font-semibold transition-all hover:bg-[#bcc7d8] text-center">
                 Browse Catalog
               </a>
-              <Link href="/contact" className="border border-white/20 text-white px-8 py-3 rounded-md font-bold hover:bg-white/10 text-center">
+              <Link href="/contact" className="border border-white/20 text-white px-8 py-3 rounded-md text-sm font-semibold hover:bg-white/10 text-center">
                 Request Quote
               </Link>
             </div>

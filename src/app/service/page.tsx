@@ -196,21 +196,18 @@ export default function ServicesPage() {
           animate="visible"
           variants={staggerContainer}
         >
-          <motion.span variants={fadeUp} className="text-[#87a5ca] tracking-[0.3em] font-bold text-sm mb-6 block uppercase">
-            Enterprise Solutions
-          </motion.span>
-          <motion.h1 variants={fadeUp} className="text-5xl md:text-8xl font-black tracking-tighter leading-none mb-8 text-white">
+          <motion.h1 variants={fadeUp} className="text-[2.5rem] md:text-[3rem] font-bold tracking-tight leading-[1.15] mb-8 text-white">
             Built for Every Industry.<br/>
             Engineered for Scale.
           </motion.h1>
-          <motion.p variants={fadeUp} className="text-xl text-[#87a5ca] max-w-2xl mx-auto mb-10 leading-relaxed">
+          <motion.p variants={fadeUp} className="text-base md:text-lg text-[#87a5ca] max-w-2xl mx-auto mb-10 leading-relaxed">
             RR POS provides the architectural foundation for global enterprises to manage complex transactions, inventory, and operations in a single, unified ecosystem.
           </motion.p>
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#food-beverage" className="bg-[#d8e3f4] text-[#121c28] px-10 py-4 rounded-xl font-bold text-lg hover:bg-[#bcc7d8] transition-all active:scale-95 shadow-lg text-center">
+            <a href="#food-beverage" className="bg-[#d8e3f4] text-[#121c28] px-10 py-4 rounded-xl text-sm font-semibold hover:bg-[#bcc7d8] transition-all active:scale-95 shadow-lg text-center">
               Explore Modules
             </a>
-            <a href="/contact" className="bg-transparent border border-white/20 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all active:scale-95 text-center">
+            <a href="/contact" className="bg-transparent border border-white/20 text-white px-10 py-4 rounded-xl text-sm font-semibold hover:bg-white/10 transition-all active:scale-95 text-center">
               Book a Demo
             </a>
           </motion.div>
@@ -228,8 +225,8 @@ export default function ServicesPage() {
           <div className="mb-6 inline-flex items-center gap-2 text-[#002542]">
             <Utensils className="h-8 w-8" />
           </div>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-8 text-[#002542]">Food &amp; Beverage</h2>
-          <p className="text-xl text-[#545f6e] mb-12 leading-relaxed">
+          <h2 className="text-[1.75rem] md:text-[2rem] font-bold tracking-tight leading-[1.15] mb-8 text-[#002542]">Food &amp; Beverage</h2>
+          <p className="text-base md:text-lg text-[#545f6e] mb-12 leading-relaxed">
             High-end dining, QSRs, and cafes. From dynamic floor plans to robust kitchen display systems, our engine handles peak-hour velocity with zero latency.
           </p>
           <ul className="space-y-6 mb-12">
@@ -274,8 +271,8 @@ export default function ServicesPage() {
           <div className="mb-6 inline-flex items-center gap-2 text-[#002542]">
             <Store className="h-8 w-8" />
           </div>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-8 text-[#002542]">Retail</h2>
-          <p className="text-xl text-[#545f6e] mb-12 leading-relaxed">
+          <h2 className="text-[1.75rem] md:text-[2rem] font-bold tracking-tight leading-[1.15] mb-8 text-[#002542]">Retail</h2>
+          <p className="text-base md:text-lg text-[#545f6e] mb-12 leading-relaxed">
             From boutique apparel to multi-store chains. Manage thousands of SKUs, sizing matrices, and omnichannel loyalty with predictive restocking and deep trend analysis.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -314,8 +311,8 @@ export default function ServicesPage() {
           <div className="mb-6 inline-flex items-center gap-2 text-[#002542]">
             <Scissors className="h-8 w-8" />
           </div>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-8 text-[#002542]">Beauty</h2>
-          <p className="text-xl text-[#545f6e] mb-12 leading-relaxed">
+          <h2 className="text-[1.75rem] md:text-[2rem] font-bold tracking-tight leading-[1.15] mb-8 text-[#002542]">Beauty</h2>
+          <p className="text-base md:text-lg text-[#545f6e] mb-12 leading-relaxed">
             Salons, spas, and wellness centers. Enjoy seamless appointment scheduling, precise staff commission tracking, and specialized product retail integration within a refined, clean interface.
           </p>
           <ServiceFeatureAccordion
@@ -348,8 +345,8 @@ export default function ServicesPage() {
           <div className="mb-6 inline-flex items-center gap-2 text-[#002542]">
             <ShoppingCart className="h-8 w-8" />
           </div>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-8 text-[#002542]">Super Market</h2>
-          <p className="text-xl text-[#545f6e] mb-12 leading-relaxed">
+          <h2 className="text-[1.75rem] md:text-[2rem] font-bold tracking-tight leading-[1.15] mb-8 text-[#002542]">Super Market</h2>
+          <p className="text-base md:text-lg text-[#545f6e] mb-12 leading-relaxed">
             Bulk scanning capabilities and real-time stock orchestration. Designed for high-volume grocery environments where every second at checkout heavily impacts the bottom line.
           </p>
           <div className="bg-[#f4f3f6] p-8 rounded-2xl border border-[#c3c6ce]/30 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
@@ -386,8 +383,8 @@ export default function ServicesPage() {
           <div className="mb-6 inline-flex items-center gap-2 text-[#002542]">
             <Car className="h-8 w-8" />
           </div>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-8 text-[#002542]">Parking</h2>
-          <p className="text-xl text-[#545f6e] mb-12 leading-relaxed">
+          <h2 className="text-[1.75rem] md:text-[2rem] font-bold tracking-tight leading-[1.15] mb-8 text-[#002542]">Parking</h2>
+          <p className="text-base md:text-lg text-[#545f6e] mb-12 leading-relaxed">
             Commercial lots, gated complexes, and multi-story structures. Offering automated barrier control, multi-tier hourly pricing mechanisms, and license plate recognition integration for frictionless entry.
           </p>
           <ul className="space-y-6 mb-12">
@@ -431,8 +428,8 @@ export default function ServicesPage() {
           <div className="mb-6 inline-flex items-center gap-2 text-[#002542]">
             <Package className="h-8 w-8" />
           </div>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-8 text-[#002542]">FMCG</h2>
-          <p className="text-xl text-[#545f6e] mb-12 leading-relaxed">
+          <h2 className="text-[1.75rem] md:text-[2rem] font-bold tracking-tight leading-[1.15] mb-8 text-[#002542]">FMCG</h2>
+          <p className="text-base md:text-lg text-[#545f6e] mb-12 leading-relaxed">
             Fast-moving consumer goods tracking and supply chain orchestration. Take control of complex B2B distribution channels with integrated accounting, shelf-life forecasting, and sales route management.
           </p>
           <div className="bg-[#f4f3f6] p-8 rounded-2xl border border-[#c3c6ce]/30 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
@@ -468,7 +465,7 @@ export default function ServicesPage() {
           <div className="mb-3.5 inline-flex items-center gap-2 text-[#002542]">
             <Landmark className="h-8 w-8" />
           </div>
-          <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4 text-[#002542]">Temples</h2>
+          <h2 className="text-[1.75rem] md:text-[2rem] font-bold tracking-tight leading-[1.15] mb-4 text-[#002542]">Temples</h2>
           <p className="text-base md:text-lg text-[#545f6e] mb-8 leading-relaxed">
             Religious trusts and large-scale institutions. Ensure secure donation management, effortless ritual and pooja booking portals, and generate beautifully transparent audit-ready reports.
           </p>
@@ -495,18 +492,18 @@ export default function ServicesPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-gradient-to-br from-[#002542] to-[#1b3b5a] py-24 px-8 text-center relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#002542] to-[#1b3b5a] py-20 lg:py-24 px-8 text-center relative overflow-hidden">
         <motion.div 
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
           className="relative z-10 max-w-4xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl font-black mb-8 tracking-tighter text-white">
+          <h2 className="text-[1.75rem] md:text-[2rem] font-bold mb-8 tracking-tight leading-[1.15] text-white">
             Ready to evolve your enterprise?
           </h2>
-          <p className="text-[#87a5ca] mb-12 max-w-xl mx-auto text-lg">
+          <p className="text-[#87a5ca] mb-12 max-w-xl mx-auto text-base md:text-lg leading-relaxed">
             Our solution architects are ready to map RR POS to your specific operational workflows.
           </p>
-          <a href="/contact" className="inline-block bg-white text-[#002542] px-12 py-5 rounded-full font-bold text-xl active:scale-95 transition-all shadow-2xl hover:-translate-y-1 hover:scale-105">
+          <a href="/contact" className="inline-block bg-white text-[#002542] px-12 py-5 rounded-full text-sm font-semibold active:scale-95 transition-all shadow-2xl hover:-translate-y-1 hover:scale-105">
             Request a Custom Brief
           </a>
         </motion.div>

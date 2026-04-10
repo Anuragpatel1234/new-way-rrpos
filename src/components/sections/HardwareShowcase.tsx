@@ -53,10 +53,10 @@ export default function HardwareShowcase() {
             >
               Hardware
             </span>
-            <h2 className="mt-3 text-[clamp(2.5rem,5vw,3.5rem)] font-normal leading-[1.1] tracking-tight text-foreground font-serif">
+            <h2 className="mt-3 text-[1.75rem] md:text-[2rem] font-semibold leading-[1.15] tracking-tight text-foreground font-serif">
               Smooth checkout, every&nbsp;time
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-600 max-w-md">
+            <p className="mt-4 text-base leading-relaxed text-gray-400 max-w-md">
               Choose from a range of sleek options for however you do business.
               All equally easy to use.
             </p>
@@ -195,10 +195,10 @@ export default function HardwareShowcase() {
                     marginTop: isHovered ? "0px" : "20px",
                   }}
                 >
-                  <p className="text-[15px] font-semibold text-foreground underline underline-offset-[6px] decoration-1 decoration-foreground/30">
+                  <p className="text-sm font-semibold text-foreground underline underline-offset-[6px] decoration-1 decoration-foreground/30">
                     {product.name}
                   </p>
-                  <p className="mt-2 text-[14px] text-gray-500">Request a quote</p>
+                  <p className="mt-2 text-sm text-gray-500">Request a quote</p>
                 </div>
               </Link>
             );

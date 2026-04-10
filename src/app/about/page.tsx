@@ -19,10 +19,10 @@ export default function AboutPage() {
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tighter leading-tight mb-6">
+            <h1 className="text-[2.5rem] md:text-[3rem] font-bold text-white tracking-tight leading-[1.15] mb-6">
               About New Way Traders
             </h1>
-            <p className="text-xl text-[#87a5ca] max-w-lg mb-6 leading-relaxed">
+            <p className="text-base md:text-lg text-[#87a5ca] max-w-lg mb-6 leading-relaxed">
               The name itself stands for innovation, honesty, and professionalism.
             </p>
             <p className="text-sm text-white/70 max-w-lg mb-8 leading-relaxed">
@@ -76,15 +76,15 @@ export default function AboutPage() {
       </header>
 
       {/* Our story */}
-      <section id="our-story" className="py-24 bg-[#faf9fc] scroll-mt-24">
+      <section id="our-story" className="py-20 lg:py-24 bg-[#faf9fc] scroll-mt-24">
         <div className="max-w-3xl mx-auto px-6">
           <span className="text-[#002542] font-bold tracking-widest text-xs uppercase mb-4 block text-center">
             Our Story
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#002542] tracking-tight mb-10 text-center">
+          <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-[#002542] tracking-tight leading-[1.15] mb-10 text-center">
             From communication to smart billing
           </h2>
-          <div className="space-y-6 text-lg text-[#43474d] leading-relaxed">
+          <div className="space-y-6 text-base md:text-lg text-[#43474d] leading-relaxed">
             <p>
               The journey started in 1995 when young entrepreneur{" "}
               <strong className="text-[#1a1c1e] font-semibold">Ravi Bhatt</strong> entered the market of
@@ -128,14 +128,14 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="py-24 bg-[#f4f3f6]">
+      <section className="py-20 lg:py-24 bg-[#f4f3f6]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-[#ffffff] p-10 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <div className="w-14 h-14 bg-[#d8e3f4] flex items-center justify-center rounded-full mb-6">
                 <Lightbulb className="text-[#002542] w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-[#002542] mb-4">Innovation</h3>
+              <h3 className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#002542] mb-4">Innovation</h3>
               <p className="text-[#43474d] leading-relaxed">
                 We keep pace with technology—from communication infrastructure to smart billing and POS—so your
                 business stays ahead.
@@ -145,7 +145,7 @@ export default function AboutPage() {
               <div className="w-14 h-14 bg-[#d8e3f4] flex items-center justify-center rounded-full mb-6">
                 <BadgeCheck className="text-[#002542] w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-[#002542] mb-4">Honesty</h3>
+              <h3 className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#002542] mb-4">Honesty</h3>
               <p className="text-[#43474d] leading-relaxed">
                 Straightforward guidance, fair dealing, and long-term relationships built on trust with retailers
                 and partners.
@@ -155,7 +155,7 @@ export default function AboutPage() {
               <div className="w-14 h-14 bg-[#d8e3f4] flex items-center justify-center rounded-full mb-6">
                 <Users className="text-[#002542] w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-[#002542] mb-4">Professionalism</h3>
+              <h3 className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#002542] mb-4">Professionalism</h3>
               <p className="text-[#43474d] leading-relaxed">
                 Dependable support and quality hardware, aligned with how you run your store, language, and
                 workflow.
@@ -166,10 +166,10 @@ export default function AboutPage() {
       </section>
 
       {/* Milestones */}
-      <section className="py-24 bg-[#faf9fc]">
+      <section className="py-20 lg:py-24 bg-[#faf9fc]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16 text-center md:text-left">
-            <h2 className="text-4xl font-extrabold text-[#002542] tracking-tighter">Our journey</h2>
+            <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-[#002542] tracking-tight leading-[1.15]">Our journey</h2>
             <div className="h-1.5 w-24 bg-[#002542] mt-4 mx-auto md:mx-0"></div>
           </div>
           <div className="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-[#c3c6ce] before:to-transparent">
@@ -179,7 +179,7 @@ export default function AboutPage() {
               </div>
               <div className="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded-xl bg-[#f4f3f6] border border-[#c3c6ce]/10 shadow-sm relative z-10">
                 <time className="font-bold text-[#1b3b5a] text-sm">1995</time>
-                <div className="text-xl font-bold text-[#002542] mt-1">The beginning</div>
+                <div className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#002542] mt-1">The beginning</div>
                 <p className="text-[#43474d] mt-2 text-sm leading-relaxed">
                   Ravi Bhatt starts in communication and technology—STD, PCO, and phone booths—laying the foundation
                   for what New Way Traders would become.
@@ -192,7 +192,7 @@ export default function AboutPage() {
               </div>
               <div className="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded-xl bg-[#f4f3f6] border border-[#c3c6ce]/10 shadow-sm relative z-10">
                 <time className="font-bold text-[#1b3b5a] text-sm">Growth</time>
-                <div className="text-xl font-bold text-[#002542] mt-1">Communication &amp; management</div>
+                <div className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#002542] mt-1">Communication &amp; management</div>
                 <p className="text-[#43474d] mt-2 text-sm leading-relaxed">
                   A decade focused on communication leadership, then a shift toward business management, billing
                   machines, and POS solutions for modern retail.
@@ -205,7 +205,7 @@ export default function AboutPage() {
               </div>
               <div className="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded-xl bg-[#f4f3f6] border border-[#c3c6ce]/10 shadow-sm relative z-10">
                 <time className="font-bold text-[#1b3b5a] text-sm">Today</time>
-                <div className="text-xl font-bold text-[#002542] mt-1">Ahmedabad — Ashram Road</div>
+                <div className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#002542] mt-1">Ahmedabad — Ashram Road</div>
                 <p className="text-[#43474d] mt-2 text-sm leading-relaxed">
                   Opposite Kothawala Flats, Pritmanagar, first slope, Ashram Road. See our{" "}
                   <a
@@ -234,7 +234,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team / today */}
-      <section className="py-24 bg-[#f4f3f6]">
+      <section className="py-20 lg:py-24 bg-[#f4f3f6]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
@@ -252,8 +252,8 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="order-1 md:order-2">
-              <h2 className="text-4xl font-extrabold text-[#002542] tracking-tighter mb-6">Working with you</h2>
-              <p className="text-lg text-[#43474d] mb-6 leading-relaxed">
+              <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-[#002542] tracking-tight leading-[1.15] mb-6">Working with you</h2>
+              <p className="text-base md:text-lg text-[#43474d] mb-6 leading-relaxed">
                 We celebrate our clients and adapt to your goals—whether you need billing machines, POS hardware,
                 or guidance that fits your language and business model.
               </p>
@@ -277,11 +277,11 @@ export default function AboutPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-24 bg-[#002542] relative overflow-hidden">
+      <section className="py-20 lg:py-24 bg-[#002542] relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#002542] to-[#1b3b5a] opacity-90"></div>
         <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6">Partner with New Way Traders</h2>
-          <p className="text-xl text-[#87a5ca] mb-8">
+          <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-white tracking-tight leading-[1.15] mb-6">Partner with New Way Traders</h2>
+          <p className="text-base md:text-lg text-[#87a5ca] mb-8 leading-relaxed">
             Smart billing machines, POS, and support—so you can focus on your customers.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 mb-10">
@@ -310,7 +310,7 @@ export default function AboutPage() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <a
               href="/contact"
-              className="w-full md:w-auto inline-flex justify-center bg-white text-[#002542] px-10 py-4 rounded-md font-bold text-lg hover:bg-[#d8e3f4] transition-colors shadow-lg"
+              className="w-full md:w-auto inline-flex justify-center bg-white text-[#002542] px-10 py-4 rounded-md text-sm font-semibold hover:bg-[#d8e3f4] transition-colors shadow-lg"
             >
               Contact Us
             </a>
@@ -318,7 +318,7 @@ export default function AboutPage() {
               href={JUSTDIAL_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full md:w-auto inline-flex justify-center text-white border border-white/30 px-10 py-4 rounded-md font-bold text-lg hover:bg-white/10 transition-colors"
+              className="w-full md:w-auto inline-flex justify-center text-white border border-white/30 px-10 py-4 rounded-md text-sm font-semibold hover:bg-white/10 transition-colors"
             >
               View on Justdial
             </a>

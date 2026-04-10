@@ -50,10 +50,10 @@ export default function PricingPage() {
             <span className="text-sm font-semibold uppercase tracking-wider text-[#3B82F6]">
               Plans
             </span>
-            <h1 className="mt-3 text-4xl font-bold text-[#0F172A] sm:text-5xl lg:text-6xl tracking-tight">
+            <h1 className="mt-3 text-[2.5rem] md:text-[3rem] font-bold text-[#0F172A] tracking-tight leading-[1.15]">
               Simple plans for every stage
             </h1>
-            <p className="mt-6 text-lg text-[#475569] lg:text-xl leading-relaxed">
+            <p className="mt-6 text-base md:text-lg text-[#475569] leading-relaxed">
               Choose the plan that fits your business. Contact us for a quote and
               onboarding support.
             </p>
@@ -89,7 +89,7 @@ export default function PricingPage() {
                 )}
 
                 <div>
-                  <h3 className="text-xl font-bold text-[#0F172A]">{plan.name}</h3>
+                  <h3 className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#0F172A]">{plan.name}</h3>
                   <p className="mt-3 text-sm text-[#64748B]">{plan.description}</p>
                 </div>
 
@@ -123,7 +123,7 @@ export default function PricingPage() {
       </section>
 
       {/* FAQs */}
-      <section className="bg-[#F8FAFC] py-24 lg:py-32">
+      <section className="bg-[#F8FAFC] py-20 lg:py-24">
         <div className="mx-auto max-w-[1320px] px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -132,7 +132,7 @@ export default function PricingPage() {
             transition={{ duration: 0.6 }}
             className="mx-auto max-w-2xl text-center"
           >
-            <h2 className="text-3xl font-bold text-[#0F172A] sm:text-4xl tracking-tight">
+            <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-[#0F172A] tracking-tight leading-[1.15]">
               Frequently asked questions
             </h2>
           </motion.div>

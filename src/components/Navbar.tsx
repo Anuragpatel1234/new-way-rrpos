@@ -25,13 +25,12 @@ export default function Navbar() {
 
   const forceSolid = pathname !== "/";
   const scrolled = isScrolled || forceSolid;
-  const logoOnDark = (scrolled || pathname !== "/") && !mobileOpen;
-  /** White mark on video hero & solid bar; original colors on white mobile drawer. */
+  const isHeroVisible = pathname === "/" && !isScrolled;
   const logoTone: BrandLogoTone = mobileOpen
     ? "onLight"
-    : logoOnDark || pathname === "/"
-      ? "onDark"
-      : "onLight";
+    : isHeroVisible
+      ? "onLight"
+      : "onDark";
 
   useEffect(() => {
     if (mobileOpen) {
@@ -47,7 +46,7 @@ export default function Navbar() {
         "fixed top-0 left-0 right-0 z-[1000] transition-all duration-500",
         scrolled
           ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-gray-800"
-          : "bg-transparent"
+          : "bg-transparent border-b border-transparent"
       )}
     >
       <nav className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-between px-6 lg:px-8">
@@ -71,10 +70,10 @@ export default function Navbar() {
               <Link
                 href={link.href}
                 className={cn(
-                  "flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-200",
+                  "flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-semibold transition-colors duration-300",
                   scrolled
                     ? "text-gray-300 hover:text-foreground hover:bg-gray-800"
-                    : "text-foreground hover:text-white hover:bg-white/10"
+                    : "text-[#0a0f1a] hover:text-black hover:bg-black/10 drop-shadow-[0_1px_2px_rgba(255,255,255,0.4)]"
                 )}
               >
                 {link.label}
@@ -132,7 +131,7 @@ export default function Navbar() {
               ? "text-[#0F172A] hover:bg-[#F1F5F9]"
               : scrolled
                 ? "text-[#F8FAFC] hover:bg-[#1E293B]"
-                : "text-white hover:bg-white/10"
+                : "text-[#0F172A] hover:bg-[#0F172A]/10"
           )}
           aria-label="Toggle menu"
         >

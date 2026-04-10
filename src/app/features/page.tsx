@@ -153,10 +153,10 @@ export default function FeaturesPage() {
             transition={{ duration: 0.6 }}
             className="mx-auto max-w-3xl text-center"
           >
-            <h1 className="text-4xl font-bold text-[#0F172A] sm:text-5xl lg:text-6xl tracking-tight">
+            <h1 className="text-[2.5rem] md:text-[3rem] font-bold text-[#0F172A] tracking-tight leading-[1.15]">
               Everything your store needs to thrive
             </h1>
-            <p className="mt-6 text-lg text-[#475569] lg:text-xl leading-relaxed">
+            <p className="mt-6 text-base md:text-lg text-[#475569] leading-relaxed">
               From lightning-fast billing to deep analytics, RR POS gives you
               every tool to run, manage, and grow your retail business.
             </p>
@@ -182,7 +182,7 @@ export default function FeaturesPage() {
           id={feature.id}
           className={`scroll-mt-[5.5rem] ${idx % 2 === 0 ? "bg-white" : "bg-[#F8FAFC]"}`}
         >
-          <div className="mx-auto max-w-[1320px] px-6 py-24 lg:px-8 lg:py-32">
+          <div className="mx-auto max-w-[1320px] px-6 py-20 lg:px-8 lg:py-24">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -195,13 +195,13 @@ export default function FeaturesPage() {
                 <div className={`inline-flex h-14 w-14 items-center justify-center rounded-xl ${feature.color}`}>
                   <feature.icon className="h-7 w-7" />
                 </div>
-                <h2 className="mt-5 text-3xl font-bold text-[#0F172A] sm:text-4xl tracking-tight">
+                <h2 className="mt-5 text-[1.75rem] md:text-[2rem] font-bold text-[#0F172A] tracking-tight leading-[1.15]">
                   {feature.title}
                 </h2>
                 <p className="mt-2 text-lg font-medium text-[#3B82F6]">
                   {feature.subtitle}
                 </p>
-                <p className="mt-4 text-base leading-relaxed text-[#475569] lg:text-lg">
+                <p className="mt-4 text-base md:text-lg leading-relaxed text-[#475569]">
                   {feature.description}
                 </p>
                 <div className="mt-8">
@@ -254,10 +254,10 @@ export default function FeaturesPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold text-white sm:text-4xl tracking-tight">
+            <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-white tracking-tight leading-[1.15]">
               Ready to transform your store?
             </h2>
-            <p className="mt-4 text-lg text-[#94A3B8]">
+            <p className="mt-4 text-base md:text-lg text-[#94A3B8] leading-relaxed">
               Start your 14-day free trial. No credit card required.
             </p>
             <div className="mt-8">

@@ -34,7 +34,7 @@ const GRID_ITEMS: GridItem[] = [
 
   // Row 2
   { type: "image", src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=500&q=80&fit=crop", alt: "Hair salon styling" },
-  { type: "image", src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80&fit=crop", alt: "Craftsman portrait" },
+  { type: "image", src: "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=500&q=80&fit=crop", alt: "Parking lot" },
 
   // CENTER — null = rendered as the serif headline
   null,
@@ -96,12 +96,12 @@ export default function BusinessFlavor() {
                   className="flex items-center justify-center col-span-1"
                 >
                   <h2
-                    className="font-serif text-center text-foreground"
+                    className="font-serif text-center"
                     style={{
                       color: "#111",
-                      fontSize: "clamp(1.5rem, 2.6vw, 2.6rem)",
-                      lineHeight: 1.15,
-                      fontWeight: 400,
+                      fontSize: "clamp(1.5rem, 2.6vw, 2rem)",
+                      lineHeight: 1.2,
+                      fontWeight: 600,
                       maxWidth: "300px",
                     }}
                   >

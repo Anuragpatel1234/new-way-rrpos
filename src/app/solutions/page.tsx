@@ -135,10 +135,10 @@ export default function SolutionsPage() {
             transition={{ duration: 0.6 }}
             className="mx-auto max-w-3xl text-center"
           >
-            <h1 className="text-4xl font-bold text-[#0F172A] sm:text-5xl lg:text-6xl tracking-tight">
+            <h1 className="text-[2.5rem] md:text-[3rem] font-bold text-[#0F172A] tracking-tight leading-[1.15]">
               Built for how you sell&nbsp;and&nbsp;scale
             </h1>
-            <p className="mt-6 text-lg text-[#475569] lg:text-xl leading-relaxed">
+            <p className="mt-6 text-base md:text-lg text-[#475569] leading-relaxed">
               Purpose-built modules that work together so you can run, manage,
               and grow your retail business from a single platform.
             </p>
@@ -181,7 +181,7 @@ export default function SolutionsPage() {
           id={pillar.id}
           className={`scroll-mt-[5.5rem] ${idx % 2 === 0 ? "bg-white" : "bg-[#F8FAFC]"}`}
         >
-          <div className="mx-auto max-w-[1320px] px-6 py-24 lg:px-8 lg:py-32">
+          <div className="mx-auto max-w-[1320px] px-6 py-20 lg:px-8 lg:py-24">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -199,13 +199,13 @@ export default function SolutionsPage() {
                 <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#3B82F6]">
                   {pillar.eyebrow}
                 </p>
-                <h2 className="mt-2 text-3xl font-bold text-[#0F172A] sm:text-4xl tracking-tight">
+                <h2 className="mt-2 text-[1.75rem] md:text-[2rem] font-bold text-[#0F172A] tracking-tight leading-[1.15]">
                   {pillar.title}
                 </h2>
                 <p className="mt-2 text-lg font-medium text-[#3B82F6]/80">
                   {pillar.subtitle}
                 </p>
-                <p className="mt-4 text-base leading-relaxed text-[#475569] lg:text-lg">
+                <p className="mt-4 text-base md:text-lg leading-relaxed text-[#475569]">
                   {pillar.description}
                 </p>
 

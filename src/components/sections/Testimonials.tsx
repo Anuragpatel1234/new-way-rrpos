@@ -19,10 +19,10 @@ export default function Testimonials() {
           <span className="text-sm font-semibold uppercase tracking-wider text-gray-400">
             Testimonials
           </span>
-          <h2 className="mt-3 text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 text-[1.75rem] md:text-[2rem] font-bold text-gray-900 leading-[1.15]">
             Loved by retail businesses
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-base md:text-lg leading-relaxed text-gray-600">
             See what store owners across India have to say about RR POS.
           </p>
         </motion.div>

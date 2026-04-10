@@ -26,11 +26,7 @@ function AccordionItem({
         className="w-full flex items-center justify-between py-5 md:py-6 text-left group cursor-pointer"
       >
         <span
-          className="text-foreground font-medium transition-colors duration-200"
-          style={{
-            fontSize: "clamp(1rem, 1.3vw, 1.2rem)",
-            fontFamily: "'Inter', 'Helvetica Neue', sans-serif",
-          }}
+          className="text-foreground font-semibold transition-colors duration-200 text-base"
         >
           {item.title}
         </span>
@@ -66,20 +62,13 @@ function AccordionItem({
               className="pb-6"
             >
               <p
-                className="text-gray-300 leading-relaxed mb-4 max-w-[400px]"
-                style={{
-                  fontSize: "clamp(0.875rem, 1.1vw, 1rem)",
-                  fontFamily: "'Inter', 'Helvetica Neue', sans-serif",
-                }}
+                className="text-gray-300 leading-relaxed mb-4 max-w-[400px] text-sm md:text-base"
               >
                 {item.description}
               </p>
               <Link
                 href={item.link}
                 className="inline-block text-white text-sm font-medium border-b border-white/30 pb-0.5 hover:border-white hover:text-white transition-colors duration-200"
-                style={{
-                  fontFamily: "'Inter', 'Helvetica Neue', sans-serif",
-                }}
               >
                 Learn more
               </Link>
@@ -96,9 +85,9 @@ function AccordionItem({
 /* ------------------------------------------------------------------ */
 
 export default function PointOfSale() {
-  const [activeId, setActiveId] = useState<string>(POS_FEATURES[0].id);
+  const [activeId, setActiveId] = useState<string | null>(null);
 
-  const activeItem = POS_FEATURES.find((f) => f.id === activeId) ?? POS_FEATURES[0];
+  const activeItem = POS_FEATURES.find((f) => f.id === activeId) ?? null;
 
   return (
     <section
@@ -111,10 +100,10 @@ export default function PointOfSale() {
       <div className="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-14">
         {/* Section heading */}
         <h2
-          className="text-foreground font-normal leading-[1.1] mb-10 md:mb-14"
+          className="text-foreground font-semibold leading-[1.15] mb-10 md:mb-14"
           style={{
             fontFamily: "'Playfair Display', serif",
-            fontSize: "clamp(2rem, 4vw, 3.5rem)",
+            fontSize: "clamp(1.75rem, 3.5vw, 2rem)",
             letterSpacing: "-0.02em",
             maxWidth: "520px",
           }}
@@ -133,7 +122,7 @@ export default function PointOfSale() {
                 item={item}
                 isActive={activeId === item.id}
                 onToggle={() =>
-                  setActiveId(activeId === item.id ? POS_FEATURES[0].id : item.id)
+                  setActiveId(activeId === item.id ? null : item.id)
                 }
               />
             ))}
@@ -149,27 +138,36 @@ export default function PointOfSale() {
                 aspectRatio: "4 / 3",
               }}
             >
+              <Image
+                src="/IMG-20260409-WA0003.jpg.jpeg"
+                alt="RR POS Default"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 60vw"
+                priority
+              />
               <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeItem.id}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -8 }}
-                  transition={{
-                    duration: 0.4,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                  className="absolute inset-0"
-                >
-                  <Image
-                    src={activeItem.image}
-                    alt={activeItem.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 60vw"
-                    priority
-                  />
-                </motion.div>
+                {activeItem && (
+                  <motion.div
+                    key={activeItem.id}
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{
+                      duration: 0.4,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    className="absolute inset-0"
+                  >
+                    <Image
+                      src={activeItem.image}
+                      alt={activeItem.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 60vw"
+                    />
+                  </motion.div>
+                )}
               </AnimatePresence>
             </div>
           </div>

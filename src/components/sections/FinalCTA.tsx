@@ -79,10 +79,10 @@ export default function FinalCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="text-white font-normal leading-[1.05] tracking-tight"
+              className="text-white font-bold leading-[1.15] tracking-tight"
               style={{
                 fontFamily: "'Playfair Display', serif",
-                fontSize: "clamp(2.5rem, 6vw, 5rem)",
+                fontSize: "clamp(2rem, 4vw, 3rem)",
               }}
             >
               Make your
@@ -113,7 +113,7 @@ export default function FinalCTA() {
                   >
                     <span
                       className={cn(
-                        "text-lg sm:text-xl md:text-2xl font-medium text-white transition-all duration-400",
+                        "text-base sm:text-lg md:text-xl font-medium text-white transition-all duration-400",
                         isHovered && "translate-x-2",
                         isOtherHovered && "opacity-40"
                       )}
@@ -147,14 +147,14 @@ export default function FinalCTA() {
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-white text-gray-900 px-7 py-3.5 text-[0.95rem] font-semibold shadow-lg hover:bg-gray-100 transition-all duration-200 hover:shadow-xl hover:scale-[1.02]"
+                className="inline-flex items-center gap-2 rounded-full bg-white text-gray-900 px-6 py-3 text-sm font-semibold shadow-lg hover:bg-gray-100 transition-all duration-200 hover:shadow-xl hover:scale-[1.02]"
               >
                 Get started
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm text-white px-7 py-3.5 text-[0.95rem] font-semibold hover:bg-white/20 transition-all duration-200 hover:scale-[1.02]"
+                className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm text-white px-6 py-3 text-sm font-semibold hover:bg-white/20 transition-all duration-200 hover:scale-[1.02]"
               >
                 <Phone className="h-4 w-4" />
                 Contact sales

@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import { SITE } from "@/lib/constants";
 import { StructuredData } from "@/components/Seo/StructuredData";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -106,6 +107,7 @@ export default function RootLayout({
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <WhatsAppButton />
         </SmoothScroll>
       </body>
     </html>
