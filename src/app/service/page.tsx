@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type Dispatch, type SetStateAction } from "react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { 
   Utensils, CheckCircle, Store, ShoppingCart, Zap, 
   ChevronRight, Landmark, Car, Scissors, Package,
@@ -143,22 +143,22 @@ function ServiceFeatureAccordion({
   );
 }
 
-// Reusable animation variants
-const fadeUp = {
+// Reusable animation variants (explicit Variants — avoids ease: string inference on CI)
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
+    transition: { duration: 0.6 },
   },
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.2 }
-  }
+    transition: { staggerChildren: 0.2 },
+  },
 };
 
 /** Same vertical band as Temples: viewport-relative min height + aligned image stack. */
