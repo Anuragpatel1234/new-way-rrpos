@@ -151,7 +151,7 @@ export default function HardwareShowcase() {
                       muted
                       loop
                       playsInline
-                      preload="metadata"
+                      preload="none"
                       className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
                       style={{ opacity: isHovered ? 1 : 0 }}
                     />

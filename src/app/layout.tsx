@@ -101,6 +101,11 @@ export default function RootLayout({
       className={`${inter.variable} ${playfair.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="" />
+        <link rel="preconnect" href="https://images.pexels.com" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://commons.wikimedia.org" />
+      </head>
       <body className="font-sans antialiased" suppressHydrationWarning>
         <StructuredData />
         <SmoothScroll>

@@ -85,8 +85,7 @@ const ACCORDION_ITEMS: AccordionItem[] = [
         id: "temples",
         title: "Temples",
         displayTitle: "Temples",
-        image:
-            "https://commons.wikimedia.org/wiki/Special:FilePath/0081323_Arasuri_Ambaji_mandir,_Shakti_Peeth,_north_Gujarat_037.jpg",
+        image: "/services/temples.jpg",
         statHead: "Donation-ready",
         statSub: "simple counters, receipts, and reporting for daily collections",
         link: "/service",
@@ -149,14 +148,10 @@ function BigDisplayTitle({
                     transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                 >
                     <span
-                        className="text-white text-center leading-[0.9] whitespace-pre-line select-none"
+                        className="font-serif font-bold tracking-tight text-white text-center leading-[0.9] whitespace-pre-line select-none"
                         style={{
-                            fontFamily: "'Playfair Display', serif",
-                            fontWeight: 900,
-                            fontStyle: "italic",
                             fontSize: "clamp(2.5rem, 5vw, 4rem)",
                             textShadow: "0 4px 40px rgba(0,0,0,0.5)",
-                            letterSpacing: "-0.02em",
                         }}
                     >
                         {text}
@@ -206,10 +201,12 @@ function AccordionCard({
                 fill
                 className={cn(
                     "object-cover transition-transform duration-[1200ms] ease-out",
+                    item.id === "temples" && "object-[center_25%]",
                     isActive ? "scale-[1.08]" : "scale-100"
                 )}
                 sizes="(max-width: 640px) 100vw, 40vw"
-                unoptimized
+                priority={item.id === "retail"}
+                unoptimized={item.image.includes("wikimedia.org")}
             />
 
             {/* Gradient overlays */}
@@ -258,12 +255,9 @@ function AccordionCard({
                 <div className="px-5 md:px-7 pt-4 pb-5 md:pb-7 flex items-end justify-between gap-4">
                     <div>
                         <p
-                            className="text-white leading-none mb-1.5"
+                            className="text-white font-sans font-bold tracking-tight leading-none mb-1.5"
                             style={{
-                                fontFamily: "'Playfair Display', serif",
-                                fontWeight: 700,
                                 fontSize: "clamp(1.5rem, 2.5vw, 2rem)",
-                                letterSpacing: "-0.01em",
                             }}
                         >
                             {item.statHead}
@@ -302,11 +296,9 @@ export default function IndustryAccordion() {
                         Built for every industry
                     </p>
                     <h2
-                        className="text-gray-900 font-semibold leading-[1.15]"
+                        className="text-gray-900 font-serif font-semibold leading-[1.15] tracking-tight"
                         style={{
-                            fontFamily: "'Playfair Display', serif",
                             fontSize: "clamp(1.75rem, 3.5vw, 2rem)",
-                            letterSpacing: "-0.015em",
                         }}
                     >
                         Keep your business growing
@@ -352,26 +344,41 @@ export default function IndustryAccordion() {
 /* ------------------------------------------------------------------ */
 
 function MobileCard({ item }: { item: AccordionItem }) {
+    const isTemples = item.id === "temples";
+
     return (
-        <div className="relative overflow-hidden rounded-xl" style={{ height: 220 }}>
+        <div
+            className="relative overflow-hidden rounded-xl w-full"
+            style={{
+                height: isTemples ? "clamp(268px, 58vmin, 320px)" : 220,
+            }}
+        >
             <Image
                 src={item.image}
                 alt={item.title}
                 fill
-                className="object-cover"
+                className={cn(
+                    "object-cover",
+                    isTemples && "object-[center_22%] sm:object-center"
+                )}
                 sizes="100vw"
-                unoptimized
+                unoptimized={item.image.includes("wikimedia.org")}
+                priority={isTemples}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+            <div
+                className={cn(
+                    "absolute inset-0 pointer-events-none bg-gradient-to-t to-transparent",
+                    isTemples
+                        ? "from-black/70 via-black/25 via-45%"
+                        : "from-black/85 via-black/30"
+                )}
+            />
 
             {/* Title */}
             <div className="absolute inset-0 flex items-center justify-center z-10">
                 <span
-                    className="text-white text-center leading-[0.9] select-none"
+                    className="font-serif font-bold tracking-tight text-white text-center leading-[0.9] select-none"
                     style={{
-                        fontFamily: "'Playfair Display', serif",
-                        fontWeight: 900,
-                        fontStyle: "italic",
                         fontSize: "2.5rem",
                         textShadow: "0 4px 30px rgba(0,0,0,0.5)",
                     }}
@@ -385,23 +392,16 @@ function MobileCard({ item }: { item: AccordionItem }) {
                 <div className="h-px bg-white/25 mb-3" />
                 <div className="flex items-end justify-between gap-3">
                     <div>
-                        <p
-                            className="text-white leading-none mb-1"
-                            style={{
-                                fontFamily: "'Playfair Display', serif",
-                                fontWeight: 700,
-                                fontSize: "1.5rem",
-                            }}
-                        >
+                        <p className="text-white font-sans font-bold tracking-tight leading-none mb-1 text-[1.5rem]">
                             {item.statHead}
                         </p>
-                        <p className="text-white/65 text-xs leading-snug max-w-[200px]">
+                        <p className="text-white/65 text-xs leading-snug max-w-[200px] font-sans">
                             {item.statSub}
                         </p>
                     </div>
                     <Link
                         href={item.link}
-                        className="text-white text-xs font-medium border-b border-white/80 pb-0.5 italic whitespace-nowrap"
+                        className="text-white text-xs font-sans font-medium border-b border-white/80 pb-0.5 italic whitespace-nowrap"
                     >
                         Learn more
                     </Link>

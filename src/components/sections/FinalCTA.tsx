@@ -64,7 +64,6 @@ export default function FinalCTA() {
               )}
               sizes="(max-width: 768px) 100vw, 1320px"
               priority={index === 0}
-              unoptimized
             />
           ))}
 

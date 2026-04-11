@@ -1,13 +1,67 @@
 "use client";
 
+import { useEffect, useRef, type RefObject } from "react";
 import { motion } from "framer-motion";
-import { TESTIMONIALS } from "@/lib/constants";
-import { staggerContainer, staggerItem } from "@/lib/animations";
-import { Star, Quote } from "lucide-react";
+
+const TRUSTINDEX_LOADER =
+  "https://cdn.trustindex.io/loader.js?69ac050695a1395ded663419ba0";
+
+const LOADER_SELECTOR =
+  'script[src*="cdn.trustindex.io/loader.js"][src*="69ac050695a1395ded663419ba0"]';
+
+/**
+ * TrustIndex floating layouts append `.ti-widget` to `document.body`, which places
+ * the widget after <Footer>. We re-parent those nodes into this section's mount.
+ * Script is injected next to the mount so `document.currentScript` works like a normal embed.
+ */
+function useTrustIndexMount(mountRef: RefObject<HTMLDivElement | null>) {
+  useEffect(() => {
+    const mount = mountRef.current;
+    if (!mount) return;
+
+    const moveWidgetIntoMount = () => {
+      if (!mount.isConnected) return;
+      document.querySelectorAll("body > .ti-widget").forEach((node) => {
+        if (!mount.contains(node)) {
+          mount.appendChild(node);
+        }
+      });
+    };
+
+    let script = document.querySelector(LOADER_SELECTOR);
+    if (!script) {
+      script = document.createElement("script");
+      script.id = "trustindex-loader-rrpos";
+      (script as HTMLScriptElement).src = TRUSTINDEX_LOADER;
+      (script as HTMLScriptElement).defer = true;
+      (script as HTMLScriptElement).async = true;
+      mount.appendChild(script);
+    }
+
+    const observer = new MutationObserver(moveWidgetIntoMount);
+    observer.observe(document.body, { childList: true, subtree: false });
+
+    window.addEventListener("widget-ready", moveWidgetIntoMount);
+    const t = window.setTimeout(moveWidgetIntoMount, 50);
+    const t2 = window.setTimeout(moveWidgetIntoMount, 500);
+
+    moveWidgetIntoMount();
+
+    return () => {
+      window.clearTimeout(t);
+      window.clearTimeout(t2);
+      observer.disconnect();
+      window.removeEventListener("widget-ready", moveWidgetIntoMount);
+    };
+  }, [mountRef]);
+}
 
 export default function Testimonials() {
+  const trustIndexMountRef = useRef<HTMLDivElement>(null);
+  useTrustIndexMount(trustIndexMountRef);
+
   return (
-    <section className="relative py-24 lg:py-32 bg-white">
+    <section className="relative bg-white py-24 lg:py-32">
       <div className="mx-auto max-w-[1320px] px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -16,75 +70,20 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-2xl text-center"
         >
-          <span className="text-sm font-semibold uppercase tracking-wider text-gray-400">
-            Testimonials
-          </span>
-          <h2 className="mt-3 text-[1.75rem] md:text-[2rem] font-bold text-gray-900 leading-[1.15]">
+          <h2 className="text-[1.75rem] font-bold leading-[1.15] text-gray-900 md:text-[2rem]">
             Loved by retail businesses
           </h2>
-          <p className="mt-4 text-base md:text-lg leading-relaxed text-gray-600">
+          <p className="mt-4 text-base leading-relaxed text-gray-600 md:text-lg">
             See what store owners across India have to say about RR POS.
           </p>
         </motion.div>
 
-        {/* Stats row */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4"
-        >
-          {[
-            { value: "5,000+", label: "Stores" },
-            { value: "200Cr+", label: "Transactions processed" },
-            { value: "99.9%", label: "Uptime" },
-            { value: "4.8/5", label: "Customer rating" },
-          ].map((stat) => (
-            <div key={stat.label} className="rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm">
-              <div className="text-2xl font-bold text-gray-900 lg:text-3xl">{stat.value}</div>
-              <div className="mt-1 text-sm text-gray-500">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div>
-
-        {/* Testimonial Cards */}
-        <motion.div
-          variants={staggerContainer}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
-        >
-          {TESTIMONIALS.map((t) => (
-            <motion.div
-              key={t.name}
-              variants={staggerItem}
-              className="group flex flex-col rounded-xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:shadow-lg hover:shadow-black/5 hover:-translate-y-1"
-            >
-              <Quote className="h-8 w-8 text-gray-200" />
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-gray-600">
-                &ldquo;{t.content}&rdquo;
-              </p>
-              <div className="mt-4 flex gap-0.5">
-                {Array.from({ length: t.rating }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <div className="mt-3 border-t border-gray-100 pt-3">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 text-sm font-bold text-gray-900">
-                    {t.name.charAt(0)}
-                  </div>
-                  <div>
-                    <div className="text-sm font-semibold text-gray-900">{t.name}</div>
-                    <div className="text-xs text-gray-500">{t.role}</div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+        <div
+          id="trustindex-mount"
+          ref={trustIndexMountRef}
+          className="relative z-[1] mt-12 min-h-[280px] w-full overflow-x-auto"
+          aria-label="Customer reviews"
+        />
       </div>
     </section>
   );

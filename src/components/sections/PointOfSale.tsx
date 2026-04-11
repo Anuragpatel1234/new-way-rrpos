@@ -165,6 +165,7 @@ export default function PointOfSale() {
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, 60vw"
+                      loading="eager"
                     />
                   </motion.div>
                 )}
