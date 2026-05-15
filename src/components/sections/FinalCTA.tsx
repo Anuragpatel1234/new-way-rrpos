@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -40,17 +40,17 @@ const CTA_ITEMS = [
 /* ------------------------------------------------------------------ */
 
 export default function FinalCTA() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-background py-16 lg:py-24"
+      className="relative z-10 w-full bg-background -mt-16 sm:-mt-20 lg:-mt-24 sm:py-16 lg:py-24"
     >
-      <div className="mx-auto max-w-[1320px] px-6 lg:px-8">
+      <div className="mx-auto max-w-[1320px] px-0 sm:px-6 lg:px-8">
         {/* ─── Large Rounded Card (Square-style) ─────────────── */}
-        <div className="relative overflow-hidden rounded-[28px] min-h-[520px] md:min-h-[600px] lg:min-h-[680px] flex flex-col items-center justify-center bg-gray-900/50">
+        <div className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden rounded-none bg-gray-900/50 sm:min-h-[520px] sm:rounded-[28px] md:min-h-[600px] lg:min-h-[680px]">
           {/* Background images with crossfade */}
           {CTA_ITEMS.map((item, index) => (
             <Image
@@ -71,18 +71,14 @@ export default function FinalCTA() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 z-[1]" />
 
           {/* ─── Content ─── */}
-          <div className="relative z-10 flex flex-col items-center text-center px-6 w-full max-w-4xl">
+          <motion.div className="relative z-10 mx-auto flex w-full max-w-xl flex-col items-center justify-center px-6 py-16 text-center sm:max-w-2xl sm:py-20">
             {/* Heading */}
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="text-white font-bold leading-[1.15] tracking-tight"
-              style={{
-                fontFamily: "'Playfair Display', serif",
-                fontSize: "clamp(2rem, 4vw, 3rem)",
-              }}
+              className="font-serif text-[clamp(2rem,6vw,3rem)] font-bold leading-[1.12] tracking-tight text-white"
             >
               Make your
               <br />
@@ -95,20 +91,23 @@ export default function FinalCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-10 flex flex-col w-full max-w-xl"
-              onMouseLeave={() => setActiveIndex(null)}
+              className="mt-8 flex w-full flex-col sm:mt-10"
+              onMouseLeave={() => setActiveIndex(0)}
             >
               {CTA_ITEMS.map((item, index) => {
                 const isHovered = activeIndex === index;
-                const isOtherHovered =
-                  activeIndex !== null && activeIndex !== index;
+                const isOtherHovered = activeIndex !== index;
 
                 return (
                   <Link
                     key={item.id}
                     href={item.href}
-                    className="group relative flex items-center justify-between border-t border-white/20 py-4 sm:py-5 transition-colors last:border-b last:border-white/20"
+                    className={cn(
+                      "group relative flex items-center justify-between border-t border-white/20 py-4 transition-colors last:border-b last:border-white/20 sm:py-5",
+                      isHovered && "bg-white/5"
+                    )}
                     onMouseEnter={() => setActiveIndex(index)}
+                    aria-current={isHovered ? "true" : undefined}
                   >
                     <span
                       className={cn(
@@ -142,7 +141,7 @@ export default function FinalCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.35 }}
-              className="mt-10 flex flex-col items-center gap-3 sm:flex-row"
+              className="mt-8 flex flex-row flex-wrap items-center justify-center gap-3 sm:mt-10"
             >
               <Link
                 href="/contact"
@@ -159,7 +158,7 @@ export default function FinalCTA() {
                 Contact sales
               </Link>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

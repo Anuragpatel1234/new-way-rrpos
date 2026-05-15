@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { cn } from "@/lib/utils";
 
-// Product PNGs from /public/products plus local lifestyle JPGs in /public/business-flavor/
-// (customers & checkout contexts — served from the repo to avoid remote image loading).
+// Product PNGs from /public/products — one image per grid tile.
 // Each entry maps to a tile in the 5-column grid.
 // null = the center headline slot
 // One image keeps alt "Card payment tap" + id card-payment-tab (anchor for deep links / tests).
@@ -21,22 +21,15 @@ type GridNull = null;
 
 type GridItem = GridImage | GridNull;
 
-/** Scenic / aisle photos: full-bleed cover. Product PNGs & POS UI screenshot: contain. */
+/** Product PNGs use contain so hardware stays fully visible in the tile. */
 function useCoverObjectFit(src: string) {
-  if (src.includes("/products/")) return false;
-  if (src.includes("pos-software-in-use")) return false;
-  if (src.startsWith("/business-flavor/")) return true;
-  return src.includes("images.unsplash.com") || src.includes("images.pexels.com");
+  return !src.includes("/products/");
 }
 
 // 3 rows of 5 = 15 items total, center (item #7 index 7) = null = headline
 const GRID_ITEMS: GridItem[] = [
   { type: "image", src: "/products/touch_1902.png", alt: "All-in-one touchscreen POS at counter" },
-  {
-    type: "image",
-    src: "/business-flavor/retail-shoppers-at-checkout.jpg",
-    alt: "Customers shopping at a retail checkout",
-  },
+  { type: "image", src: "/products/touch_2402.png", alt: "Countertop touchscreen POS terminal" },
   { type: "image", src: "/products/scanner_8180plus.png", alt: "Handheld barcode scanner at checkout" },
   { type: "image", src: "/products/printer_GP1324T.png", alt: "Thermal receipt printer at counter" },
   { type: "image", src: "/products/cash_2307.png", alt: "Cash drawer at POS counter" },
@@ -44,42 +37,31 @@ const GRID_ITEMS: GridItem[] = [
   { type: "image", src: "/products/handheld_Q3.png", alt: "Mobile handheld POS for line busting" },
   null,
   { type: "image", src: "/products/touch_TR06.png", alt: "POS terminal with customer-facing display" },
-  {
-    type: "image",
-    src: "/business-flavor/supermarket-checkout-busy.jpg",
-    alt: "Busy supermarket checkout with shoppers",
-  },
+  { type: "image", src: "/products/touch_TE05.png", alt: "Enterprise touchscreen POS for high-volume checkout" },
   { type: "image", src: "/products/scale_RTC1.png", alt: "Retail scale integrated with checkout" },
-  {
-    type: "image",
-    src: "/business-flavor/pos-software-in-use.jpg",
-    alt: "RR POS billing software in use at the counter",
-  },
+  { type: "image", src: "/products/touch_D3mini.png", alt: "Compact POS with RR billing software on screen" },
   { type: "image", src: "/products/touch_TC06.png", alt: "Card payment tap" },
   { type: "image", src: "/products/scanner_4800.png", alt: "Hands-free barcode scanner at counter" },
   { type: "image", src: "/products/touch_2406.png", alt: "Compact countertop POS system" },
 ];
 
 const CAROUSEL_INTERVAL_MS = 3200;
+const CAROUSEL_RESUME_AFTER_MS = 8000;
 
 // Five distinct parallax speeds — one per column (desktop)
 const COL_SPEEDS = [30, -50, 20, -35, 60];
 
-function FlavorHeadline() {
+function FlavorHeadline({ variant = "desktop" }: { variant?: "mobile" | "desktop" }) {
   return (
     <h2
-      className="font-serif text-center px-2"
-      style={{
-        color: "#111",
-        fontSize: "clamp(1.35rem, 2.2vw, 1.75rem)",
-        lineHeight: 1.25,
-        fontWeight: 600,
-        maxWidth: "280px",
-        marginLeft: "auto",
-        marginRight: "auto",
-      }}
+      className={cn(
+        "font-serif text-center font-semibold text-[#111] mx-auto",
+        variant === "mobile"
+          ? "w-full max-w-[min(100%,24rem)] px-4 text-[clamp(1.75rem,7.5vw,2.5rem)] leading-[1.2] tracking-tight"
+          : "max-w-[280px] px-2 text-[clamp(1.35rem,2.2vw,1.75rem)] leading-tight"
+      )}
     >
-      Whatever your <em style={{ fontStyle: "italic" }}>flavor</em> of business, build and grow on your terms.
+      Whatever your <em className="italic">flavor</em> of business, build and grow on your terms.
     </h2>
   );
 }
@@ -97,8 +79,7 @@ function ImageTileBox({
   return (
     <div
       id={id}
-      className="relative aspect-square w-full overflow-hidden rounded-[16px] bg-gray-100 mx-auto"
-      style={{ maxWidth: "clamp(84px, 11vw, 140px)" }}
+      className="relative mx-auto aspect-[4/5] w-full max-w-[clamp(96px,13vw,168px)] overflow-hidden rounded-[16px] bg-gray-100 sm:max-w-[clamp(88px,11vw,148px)]"
     >
       <Image
         src={item.src}
@@ -125,14 +106,13 @@ function CarouselImageTile({
   return (
     <div
       id={id}
-      className="relative aspect-square w-full overflow-hidden rounded-[16px] bg-gray-100"
-      style={{ width: "min(72vw, 240px)", maxWidth: 240 }}
+      className="relative aspect-[4/5] w-[min(70vw,248px)] max-w-[248px] min-h-[min(32dvh,300px)] overflow-hidden rounded-[16px] bg-gray-100"
     >
       <Image
         src={item.src}
         alt={item.alt}
         fill
-        sizes="(max-width: 640px) 72vw, 240px"
+        sizes="(max-width: 640px) 70vw, 248px"
         className={cn(cover ? "object-cover" : "object-contain p-3")}
         priority={item.alt === "Card payment tap"}
       />
@@ -155,64 +135,177 @@ function MobileFlavorCarousel({
   const activeRef = useRef(0);
   activeRef.current = active;
 
+  const autoplayPausedRef = useRef(false);
+  const programmaticScrollRef = useRef(false);
+  const resumeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const scheduleAutoplayResume = useCallback(() => {
+    if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
+    resumeTimerRef.current = setTimeout(() => {
+      autoplayPausedRef.current = false;
+    }, CAROUSEL_RESUME_AFTER_MS);
+  }, []);
+
+  const pauseAutoplay = useCallback(() => {
+    autoplayPausedRef.current = true;
+    scheduleAutoplayResume();
+  }, [scheduleAutoplayResume]);
+
   /** Scroll the horizontal track only — `scrollIntoView` also scrolls the window and yanks the page back from the footer. */
-  const scrollToIndex = useCallback((i: number) => {
+  const scrollToIndex = useCallback((i: number, fromUser = false) => {
     const container = scrollContainerRef.current;
     const slide = slideRefs.current[i];
     if (!container || !slide) return;
+    if (fromUser) pauseAutoplay();
     const maxLeft = Math.max(0, container.scrollWidth - container.clientWidth);
     const target = Math.min(
       maxLeft,
       Math.max(0, slide.offsetLeft - (container.clientWidth - slide.offsetWidth) / 2)
     );
-    container.scrollTo({ left: target, behavior: "smooth" });
+    programmaticScrollRef.current = true;
+    container.scrollTo({
+      left: target,
+      behavior: fromUser ? "smooth" : "instant",
+    });
     setActive(i);
-  }, []);
+    window.setTimeout(() => {
+      programmaticScrollRef.current = false;
+    }, fromUser ? 700 : 50);
+  }, [pauseAutoplay]);
+
+  const goPrev = useCallback(
+    (fromUser = false) => {
+      const next = (activeRef.current - 1 + slides.length) % slides.length;
+      scrollToIndex(next, fromUser);
+    },
+    [slides.length, scrollToIndex]
+  );
+
+  const goNext = useCallback(
+    (fromUser = false) => {
+      const next = (activeRef.current + 1) % slides.length;
+      scrollToIndex(next, fromUser);
+    },
+    [slides.length, scrollToIndex]
+  );
 
   useEffect(() => {
     if (slides.length <= 1) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
     const id = window.setInterval(() => {
+      if (autoplayPausedRef.current) return;
       const next = (activeRef.current + 1) % slides.length;
-      scrollToIndex(next);
+      scrollToIndex(next, false);
     }, CAROUSEL_INTERVAL_MS);
+
     return () => window.clearInterval(id);
   }, [slides.length, scrollToIndex]);
 
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container || slides.length === 0) return;
+
+    const syncActiveFromScroll = () => {
+      if (!programmaticScrollRef.current) pauseAutoplay();
+
+      const center = container.scrollLeft + container.clientWidth / 2;
+      let closest = 0;
+      let minDist = Infinity;
+      slideRefs.current.forEach((slide, i) => {
+        if (!slide) return;
+        const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+        const dist = Math.abs(slideCenter - center);
+        if (dist < minDist) {
+          minDist = dist;
+          closest = i;
+        }
+      });
+      if (closest !== activeRef.current) setActive(closest);
+    };
+
+    const onTouchStart = () => pauseAutoplay();
+
+    container.addEventListener("scroll", syncActiveFromScroll, { passive: true });
+    container.addEventListener("touchstart", onTouchStart, { passive: true });
+    container.addEventListener("pointerdown", onTouchStart, { passive: true });
+
+    return () => {
+      container.removeEventListener("scroll", syncActiveFromScroll);
+      container.removeEventListener("touchstart", onTouchStart);
+      container.removeEventListener("pointerdown", onTouchStart);
+      if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
+    };
+  }, [slides.length, pauseAutoplay]);
+
   return (
     <div className="w-full">
-      <div
-        ref={scrollContainerRef}
-        className="flex w-full gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 pl-4 pr-4 -mx-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-        aria-roledescription="carousel"
-        aria-label="POS hardware and checkout examples"
-      >
-        {slides.map(({ item, index }, slideIndex) => (
-          <div
-            key={`m-${index}`}
-            ref={(el) => {
-              slideRefs.current[slideIndex] = el;
-            }}
-            className="flex w-[min(72vw,240px)] shrink-0 snap-center flex-col items-center justify-center first:pl-0 last:pr-0"
-          >
-            <CarouselImageTile
-              item={item}
-              id={
-                item.alt === "Card payment tap" && paymentTabId
-                  ? "card-payment-tab"
-                  : undefined
-              }
-            />
-          </div>
-        ))}
+      <div className="relative">
+        <div
+          ref={scrollContainerRef}
+          className="flex w-full touch-pan-x gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 pl-4 pr-4 -mx-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          aria-roledescription="carousel"
+          aria-label="POS hardware and checkout examples"
+        >
+          {slides.map(({ item, index }, slideIndex) => (
+            <div
+              key={`m-${index}`}
+              ref={(el) => {
+                slideRefs.current[slideIndex] = el;
+              }}
+              className="flex w-[min(70vw,248px)] shrink-0 snap-center flex-col items-center justify-center first:pl-0 last:pr-0"
+            >
+              <CarouselImageTile
+                item={item}
+                id={
+                  item.alt === "Card payment tap" && paymentTabId
+                    ? "card-payment-tab"
+                    : undefined
+                }
+              />
+            </div>
+          ))}
+        </div>
+
+        {slides.length > 1 && (
+          <>
+            <button
+              type="button"
+              onClick={() => goPrev(true)}
+              className="absolute left-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/95 text-gray-800 shadow-md transition hover:bg-white"
+              aria-label="Previous product"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button
+              type="button"
+              onClick={() => goNext(true)}
+              className="absolute right-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/95 text-gray-800 shadow-md transition hover:bg-white"
+              aria-label="Next product"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
+          </>
+        )}
       </div>
-      <div className="mt-4 flex justify-center gap-1.5" aria-hidden>
+
+      <div
+        className="mt-5 flex flex-wrap items-center justify-center gap-1.5"
+        role="tablist"
+        aria-label="Choose product slide"
+      >
         {slides.map((_, i) => (
-          <span
+          <button
             key={i}
-            className={`h-1.5 rounded-full transition-all duration-300 ${
-              i === active ? "w-5 bg-gray-800" : "w-1.5 bg-gray-300"
-            }`}
+            type="button"
+            role="tab"
+            aria-selected={i === active}
+            aria-label={`Slide ${i + 1} of ${slides.length}`}
+            onClick={() => scrollToIndex(i, true)}
+            className={cn(
+              "h-2 rounded-full transition-all duration-300",
+              i === active ? "w-6 bg-gray-800" : "w-2 bg-gray-300 hover:bg-gray-500"
+            )}
           />
         ))}
       </div>
@@ -242,26 +335,21 @@ export default function BusinessFlavor() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden"
-      style={{ backgroundColor: "#ffffff", paddingTop: "3.5rem", paddingBottom: "4.5rem" }}
+      className="relative overflow-hidden bg-white min-h-[min(88dvh,760px)] sm:min-h-0 sm:pt-10 sm:pb-12 lg:pb-14"
     >
       <div className="mx-auto max-w-[1380px] px-4 sm:px-8">
         {/* —— Mobile: headline + horizontal auto carousel —— */}
-        <div className="sm:hidden">
-          <div className="mb-8">
-            <FlavorHeadline />
+        <div className="flex min-h-[min(88dvh,760px)] flex-col sm:hidden">
+          <div className="shrink-0 pt-[clamp(1.25rem,5vh,2.75rem)]">
+            <FlavorHeadline variant="mobile" />
           </div>
-          <MobileFlavorCarousel paymentTabId={mobilePaymentId} />
+          <div className="flex min-h-0 flex-1 flex-col justify-center gap-5 pb-6">
+            <MobileFlavorCarousel paymentTabId={mobilePaymentId} />
+          </div>
         </div>
 
         {/* —— Desktop / tablet: 5-column parallax grid —— */}
-        <div
-          className="hidden sm:grid items-center justify-items-center grid-cols-3 lg:grid-cols-5"
-          style={{
-            gap: "clamp(10px, 1.75vw, 20px)",
-            rowGap: "clamp(16px, 3vw, 40px)",
-          }}
-        >
+        <div className="hidden items-center justify-items-center gap-x-3 gap-y-4 sm:grid sm:grid-cols-3 lg:grid-cols-5 lg:gap-x-4 lg:gap-y-5">
           {GRID_ITEMS.map((item, index) => {
             const col = index % 5;
             const yMotion = colTransforms[col];
@@ -291,7 +379,7 @@ export default function BusinessFlavor() {
                       ? "card-payment-tab"
                       : undefined
                   }
-                  sizes="(max-width: 640px) 28vw, (max-width: 1024px) 15vw, 140px"
+                  sizes="(max-width: 640px) 30vw, (max-width: 1024px) 16vw, 168px"
                 />
               </motion.div>
             );

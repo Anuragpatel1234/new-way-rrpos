@@ -16,21 +16,18 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 50);
+    const onScroll = () => {
+      if (mobileOpen) return;
+      setIsScrolled(window.scrollY > 50);
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
-    // check immediately on mount
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [mobileOpen]);
 
   const forceSolid = pathname !== "/";
   const scrolled = isScrolled || forceSolid;
-  const isHeroVisible = pathname === "/" && !isScrolled;
-  const logoTone: BrandLogoTone = mobileOpen
-    ? "onLight"
-    : isHeroVisible
-      ? "onLight"
-      : "onDark";
+  const logoTone: BrandLogoTone = mobileOpen ? "onLight" : "onDark";
 
   useEffect(() => {
     if (mobileOpen) {
@@ -43,10 +40,12 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-[1000] transition-all duration-500",
-        scrolled
-          ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-gray-800"
-          : "bg-transparent border-b border-transparent"
+        "fixed top-0 left-0 right-0 z-[1000] transition-[background-color,box-shadow,border-color] duration-300",
+        mobileOpen
+          ? "border-b border-[#E2E8F0] bg-white shadow-sm"
+          : scrolled
+            ? "border-b border-gray-800 bg-background/95 shadow-sm backdrop-blur-md"
+            : "border-b border-transparent bg-transparent"
       )}
     >
       <nav className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-between px-6 lg:px-8">
@@ -72,8 +71,8 @@ export default function Navbar() {
                 className={cn(
                   "flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-semibold transition-colors duration-300",
                   scrolled
-                    ? "text-gray-300 hover:text-foreground hover:bg-gray-800"
-                    : "text-[#0a0f1a] hover:text-black hover:bg-black/10 drop-shadow-[0_1px_2px_rgba(255,255,255,0.4)]"
+                    ? "text-gray-200 hover:text-white hover:bg-white/10"
+                    : "text-white/95 hover:text-white hover:bg-white/15 drop-shadow-[0_1px_4px_rgba(0,0,0,0.65)]"
                 )}
               >
                 {link.label}
@@ -129,9 +128,7 @@ export default function Navbar() {
             "relative z-50 flex h-10 w-10 items-center justify-center rounded-lg lg:hidden transition-colors",
             mobileOpen
               ? "text-[#0F172A] hover:bg-[#F1F5F9]"
-              : scrolled
-                ? "text-[#F8FAFC] hover:bg-[#1E293B]"
-                : "text-[#0F172A] hover:bg-[#0F172A]/10"
+              : "text-white hover:bg-white/15 drop-shadow-[0_1px_4px_rgba(0,0,0,0.65)]"
           )}
           aria-label="Toggle menu"
         >

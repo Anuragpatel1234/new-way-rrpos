@@ -157,18 +157,10 @@ export default function Footer() {
           )}
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-2 border-t border-[#1E293B] py-2 md:flex-row">
+        <div className="border-t border-[#1E293B] py-2 text-left">
           <p className="text-xs text-[#94A3B8]">
             &copy; {new Date().getFullYear()} RR POS. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <Link href="/about" className="text-xs text-[#94A3B8] transition-colors hover:text-[#F8FAFC]">
-              About
-            </Link>
-            <Link href="/contact" className="text-xs text-[#94A3B8] transition-colors hover:text-[#F8FAFC]">
-              Contact
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

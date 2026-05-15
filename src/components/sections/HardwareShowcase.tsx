@@ -35,7 +35,7 @@ export default function HardwareShowcase() {
   );
 
   return (
-    <section className="relative bg-background py-20 lg:py-28 overflow-hidden">
+    <section className="relative overflow-hidden bg-background py-20 sm:py-14 lg:py-18">
       <div className="mx-auto max-w-[1320px] px-6 lg:px-8">
         {/* Header row */}
         <motion.div
@@ -43,7 +43,7 @@ export default function HardwareShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14"
+          className="mb-14 flex flex-col gap-6 sm:mb-10 lg:flex-row lg:items-end lg:justify-between"
         >
           {/* Left — copy */}
           <div className="max-w-xl">
@@ -126,9 +126,7 @@ export default function HardwareShowcase() {
                 onMouseEnter={() => setHoveredIndex(i)}
               >
                 {/* Card media container — fixed height, only width changes */}
-                <div className="relative w-full overflow-hidden bg-gray-800 rounded-2xl border border-gray-700/50"
-                  style={{ height: "360px" }}
-                >
+                <div className="relative h-[360px] w-full overflow-hidden rounded-2xl border border-gray-700/50 bg-gray-800 sm:h-[300px] lg:h-[320px]">
                   {/* Background image — always visible */}
                   <Image
                     src={product.image}
