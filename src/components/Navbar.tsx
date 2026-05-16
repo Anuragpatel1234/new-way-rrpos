@@ -50,7 +50,16 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-between px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="relative z-50 flex items-center outline-none" aria-label="NewWay home">
+        <Link 
+          href="/" 
+          className="relative z-50 flex items-center outline-none" 
+          aria-label="NewWay home"
+          onClick={() => {
+            if (pathname === "/") {
+              window.dispatchEvent(new Event("trigger-preloader"));
+            }
+          }}
+        >
           <BrandLogo tone={logoTone} priority />
         </Link>
 

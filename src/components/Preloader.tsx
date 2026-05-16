@@ -8,17 +8,23 @@ const Preloader = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    // Only show the preloader if it hasn't been shown in this session
-    const hasShown = sessionStorage.getItem("preloader-shown");
-    
-    if (!hasShown) {
+    // Show preloader on every initial load/refresh
+    setIsLoading(true);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500); // Consistent load time for every refresh
+
+    // Listen for manual triggers (e.g. from logo clicks)
+    const handleTrigger = () => {
       setIsLoading(true);
-      const timer = setTimeout(() => {
-        setIsLoading(false);
-        sessionStorage.setItem("preloader-shown", "true");
-      }, 1800); // Premium slow load for first entry
-      return () => clearTimeout(timer);
-    }
+      setTimeout(() => setIsLoading(false), 1200);
+    };
+
+    window.addEventListener("trigger-preloader", handleTrigger);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("trigger-preloader", handleTrigger);
+    };
   }, []);
 
   return (
@@ -35,27 +41,26 @@ const Preloader = () => {
             <motion.div
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{
-                scale: [0.5, 1.1, 1],
+                scale: [0.5, 1.05, 1],
                 opacity: 1
               }}
               transition={{
-                duration: 1.2,
+                duration: 0.8,
                 ease: "easeOut",
-                times: [0, 0.7, 1]
               }}
               className="flex flex-col items-center"
             >
               <img
                 src="/NWT_Logo_New.png"
                 alt="New Way Traders Logo"
-                className="h-28 md:h-36 w-auto object-contain mb-4"
+                className="h-28 md:h-36 w-auto object-contain mb-4 mix-blend-multiply"
               />
               {/* Subtle loading line */}
               <motion.div
                 className="h-0.5 bg-[#04152B] rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
-                transition={{ duration: 1, delay: 0.5 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
               />
             </motion.div>
 
