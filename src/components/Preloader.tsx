@@ -6,8 +6,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Preloader = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const pathname = usePathname();
 
-  useEffect(() => {
+  // Official Brand Navy Filter (#04152B)
+  const BRAND_FILTER = "brightness(0) saturate(100%) invert(8%) sepia(97%) saturate(1932%) hue-rotate(196deg) brightness(93%) contrast(96%)";
     // Show preloader on every initial load/refresh
     setIsLoading(true);
     const timer = setTimeout(() => {
@@ -54,6 +56,7 @@ const Preloader = () => {
                 src="/NWT_Logo_2.png"
                 alt="New Way Traders Logo"
                 className="h-28 md:h-36 w-auto object-contain mb-4"
+                style={{ filter: BRAND_FILTER }}
               />
               {/* Subtle loading line */}
               <motion.div
