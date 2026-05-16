@@ -10,6 +10,7 @@ const Preloader = () => {
 
   // Official Brand Navy Filter (#04152B)
   const BRAND_FILTER = "brightness(0) saturate(100%) invert(8%) sepia(97%) saturate(1932%) hue-rotate(196deg) brightness(93%) contrast(96%)";
+  useEffect(() => {
     // Show preloader on every initial load/refresh
     setIsLoading(true);
     const timer = setTimeout(() => {
