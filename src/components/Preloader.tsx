@@ -51,9 +51,9 @@ const Preloader = () => {
               className="flex flex-col items-center"
             >
               <img
-                src="/NWT_Logo_New.png"
+                src="/NWT_Logo_2.png"
                 alt="New Way Traders Logo"
-                className="h-28 md:h-36 w-auto object-contain mb-4 mix-blend-multiply"
+                className="h-28 md:h-36 w-auto object-contain mb-4"
               />
               {/* Subtle loading line */}
               <motion.div

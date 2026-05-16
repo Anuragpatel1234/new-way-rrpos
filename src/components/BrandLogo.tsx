@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-const LOGO_SRC = "/NWT_Logo_New.png";
+const LOGO_SRC = "/NWT_Logo_2.png";
 const LOGO_WIDTH = 1683;
 const LOGO_HEIGHT = 589;
 
