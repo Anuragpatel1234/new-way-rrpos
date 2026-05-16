@@ -38,6 +38,7 @@ const hardwareDetails = [
       "Android 12 / Windows option",
       "2-year warranty",
     ],
+    image: "/images/hardware/terminal.png",
     highlight: true,
   },
   {
@@ -57,6 +58,7 @@ const hardwareDetails = [
       "Plug-and-play USB",
       "1-year warranty",
     ],
+    image: "/images/hardware/scanner.png",
     highlight: false,
   },
   {
@@ -76,6 +78,7 @@ const hardwareDetails = [
       "Wall-mount support",
       "1-year warranty",
     ],
+    image: "/images/hardware/printer.png",
     highlight: false,
   },
   {
@@ -95,6 +98,7 @@ const hardwareDetails = [
       "Under-counter mountable",
       "2-year warranty",
     ],
+    image: "/images/hardware/drawer.png",
     highlight: false,
   },
 ];
@@ -118,29 +122,41 @@ const bundles = [
 export default function HardwarePage() {
   return (
     <div className="font-sans text-[#1a1c1e]">
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-[#0F172A] pt-32 pb-20 lg:pt-40 lg:pb-28 text-white">
+      {/* Hero Section - Full Screen Height */}
+      <section className="relative h-screen flex items-center overflow-hidden bg-[#04152B] text-white pt-24 pb-12">
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-[#3B82F6]/15 blur-[150px]" />
-          <div className="absolute -bottom-32 -left-32 h-[300px] w-[300px] rounded-full bg-[#3B82F6]/10 blur-[100px]" />
+          <div className="absolute right-0 top-0 h-[600px] w-[600px] rounded-full bg-blue-600/10 blur-[150px]" />
+          <div className="absolute -bottom-32 -left-32 h-[400px] w-[400px] rounded-full bg-blue-500/5 blur-[100px]" />
         </div>
-        <div className="relative mx-auto max-w-[1320px] px-6 lg:px-8">
+        
+        <div className="container relative z-10 mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mx-auto max-w-3xl text-center"
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl"
           >
-            <span className="text-sm font-semibold uppercase tracking-wider text-[#3B82F6]">
+            <span className="text-sm font-bold uppercase tracking-widest text-blue-400">
               Hardware
             </span>
-            <h1 className="mt-3 text-[2.5rem] md:text-[3rem] font-bold tracking-tight leading-[1.15]">
-              Built for speed. Designed for retail.
+            <h1 className="mt-6 text-[3rem] md:text-[4rem] lg:text-[5.5rem] font-bold tracking-tight leading-[1] drop-shadow-sm">
+              Built for speed. <br className="hidden md:block" /> 
+              Designed for retail.
             </h1>
-            <p className="mt-6 text-base md:text-lg text-[#94A3B8] leading-relaxed">
+            <p className="mt-8 text-lg md:text-xl text-[#94A3B8] leading-relaxed max-w-2xl opacity-90">
               Purpose-built hardware that works seamlessly with RR POS software.
               Reliable, fast, and designed for all-day retail operations.
             </p>
+            <div className="mt-12 flex flex-wrap gap-4">
+              <Button size="lg" className="h-14 px-10 text-base font-bold bg-white text-[#04152B] hover:bg-gray-100 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-xl">
+                View All Products
+              </Button>
+              <Link href="/contact">
+                <Button size="lg" variant="outline" className="h-14 px-10 text-base font-bold border-white/20 text-white hover:bg-white/10 rounded-xl transition-all backdrop-blur-sm">
+                  Talk to an Expert
+                </Button>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -162,12 +178,16 @@ export default function HardwarePage() {
             >
               {/* Visual */}
               <div className={idx % 2 === 1 ? "lg:order-2" : ""}>
-                <div className="relative flex items-center justify-center rounded-2xl bg-gradient-to-br from-[#F1F5F9] to-[#F8FAFC] p-12 lg:p-16">
-                  <div className="flex h-48 w-48 items-center justify-center rounded-2xl bg-white shadow-lg border border-[#E2E8F0]">
-                    <product.icon className="h-24 w-24 text-[#CBD5E1]" strokeWidth={1} />
+                <div className="relative flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[#F1F5F9] to-[#F8FAFC] p-4 lg:p-6 group">
+                  <div className="relative aspect-square w-full max-w-[400px] overflow-hidden rounded-xl bg-white shadow-xl border border-[#E2E8F0]">
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110"
+                    />
                   </div>
                   {product.highlight && (
-                    <div className="absolute top-4 right-4 flex items-center gap-1 rounded-full bg-[#3B82F6] px-3 py-1 text-xs font-semibold text-white">
+                    <div className="absolute top-8 right-8 flex items-center gap-1 rounded-full bg-[#3B82F6] px-3 py-1 text-xs font-semibold text-white shadow-lg z-10">
                       <Star className="h-3 w-3 fill-current" />
                       Best Seller
                     </div>
@@ -177,7 +197,7 @@ export default function HardwarePage() {
 
               {/* Content */}
               <div className={idx % 2 === 1 ? "lg:order-1" : ""}>
-                <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-[#0F172A] tracking-tight leading-[1.15]">
+                <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-[#04152B] tracking-tight leading-[1.15]">
                   {product.name}
                 </h2>
                 <p className="mt-2 text-lg font-medium text-[#3B82F6]">
@@ -226,7 +246,7 @@ export default function HardwarePage() {
             <span className="text-sm font-semibold uppercase tracking-wider text-[#3B82F6]">
               Bundles
             </span>
-            <h2 className="mt-3 text-[1.75rem] md:text-[2rem] font-bold text-[#0F172A] tracking-tight leading-[1.15]">
+            <h2 className="mt-3 text-[1.75rem] md:text-[2rem] font-bold text-[#04152B] tracking-tight leading-[1.15]">
               Hardware bundles
             </h2>
             <p className="mt-4 text-lg text-[#475569]">
@@ -257,7 +277,7 @@ export default function HardwarePage() {
                     Most Popular
                   </div>
                 )}
-                <h3 className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#0F172A]">{bundle.name}</h3>
+                <h3 className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#04152B]">{bundle.name}</h3>
                 <ul className="mt-4 flex flex-col gap-2">
                   {bundle.items.map((item) => (
                     <li key={item} className="flex items-center gap-2 text-sm text-[#475569]">
@@ -267,7 +287,7 @@ export default function HardwarePage() {
                   ))}
                 </ul>
                 <div className="mt-6 border-t border-[#E2E8F0] pt-4">
-                  <div className="text-lg font-semibold text-[#0F172A]">Bundle available</div>
+                  <div className="text-lg font-semibold text-[#04152B]">Bundle available</div>
                   <div className="mt-1 text-sm text-[#475569]">Contact us for a quote and availability.</div>
                 </div>
                 <div className="mt-6">

@@ -50,7 +50,7 @@ export default function PricingPage() {
             <span className="text-sm font-semibold uppercase tracking-wider text-[#3B82F6]">
               Plans
             </span>
-            <h1 className="mt-3 text-[2.5rem] md:text-[3rem] font-bold text-[#0F172A] tracking-tight leading-[1.15]">
+            <h1 className="mt-3 text-[2.5rem] md:text-[3rem] font-bold text-[#04152B] tracking-tight leading-[1.15]">
               Simple plans for every stage
             </h1>
             <p className="mt-6 text-base md:text-lg text-[#475569] leading-relaxed">
@@ -89,7 +89,7 @@ export default function PricingPage() {
                 )}
 
                 <div>
-                  <h3 className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#0F172A]">{plan.name}</h3>
+                  <h3 className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#04152B]">{plan.name}</h3>
                   <p className="mt-3 text-sm text-[#64748B]">{plan.description}</p>
                 </div>
 
@@ -132,7 +132,7 @@ export default function PricingPage() {
             transition={{ duration: 0.6 }}
             className="mx-auto max-w-2xl text-center"
           >
-            <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-[#0F172A] tracking-tight leading-[1.15]">
+            <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-[#04152B] tracking-tight leading-[1.15]">
               Frequently asked questions
             </h2>
           </motion.div>
@@ -153,7 +153,7 @@ export default function PricingPage() {
                 <div className="flex items-start gap-3">
                   <HelpCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#3B82F6]" />
                   <div>
-                    <h3 className="font-semibold text-[#0F172A]">{faq.q}</h3>
+                    <h3 className="font-semibold text-[#04152B]">{faq.q}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-[#475569]">{faq.a}</p>
                   </div>
                 </div>

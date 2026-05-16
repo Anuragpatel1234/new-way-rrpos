@@ -109,10 +109,10 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="relative z-[12] border-t border-[#1E293B] bg-[#0F172A]">
+    <footer className="relative z-[12] border-t border-[#1E293B] bg-[#04152B]">
       <div className="mx-auto max-w-[1320px] px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-x-8 gap-y-6 py-6 md:grid-cols-3 lg:grid-cols-6 lg:py-8">
-          <div className="col-span-2 flex flex-col items-center text-center md:col-span-3 lg:col-span-1">
+          <div className="col-span-2 flex flex-col items-center text-center md:col-span-3 lg:col-span-1 lg:items-start lg:text-left">
             <Link href="/" className="inline-flex outline-none" aria-label="NewWay home">
               <BrandLogo
                 tone="onDark"
@@ -122,22 +122,22 @@ export default function Footer() {
             <p className="mt-3 max-w-md text-sm leading-relaxed text-[#94A3B8]">
               {SITE.tagline}
             </p>
-            <div className="mt-3 flex w-full flex-col items-center gap-3">
+            <div className="mt-3 flex w-full flex-col items-center gap-3 lg:items-start">
               <a
                 href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-                className="flex items-center justify-center gap-2 text-sm text-[#94A3B8] transition-colors hover:text-[#F8FAFC]"
+                className="flex items-center justify-center gap-2 text-sm text-[#94A3B8] transition-colors hover:text-[#F8FAFC] lg:justify-start"
               >
                 <Phone className="h-4 w-4 shrink-0" />
                 {SITE.phone}
               </a>
               <a
                 href={`mailto:${SITE.email}`}
-                className="flex items-center justify-center gap-2 text-sm text-[#94A3B8] transition-colors hover:text-[#F8FAFC]"
+                className="flex items-center justify-center gap-2 text-sm text-[#94A3B8] transition-colors hover:text-[#F8FAFC] lg:justify-start"
               >
                 <Mail className="h-4 w-4 shrink-0" />
                 {SITE.email}
               </a>
-              <div className="flex max-w-sm items-start justify-center gap-2 text-sm text-[#94A3B8]">
+              <div className="flex max-w-sm items-start justify-center gap-2 text-sm text-[#94A3B8] lg:justify-start">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
                 <span className="text-left">Ashram Road, Ahmedabad, Gujarat</span>
               </div>

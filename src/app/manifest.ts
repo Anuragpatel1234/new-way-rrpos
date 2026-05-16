@@ -1,16 +1,14 @@
-import type { MetadataRoute } from "next";
-
-import { SITE } from "@/lib/constants";
+import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: SITE.name,
-    short_name: SITE.name,
-    description: SITE.description,
+    name: "RR POS",
+    short_name: "RR POS",
+    description: "Fast Billing. Smart Control. Real Growth.",
     start_url: "/",
     display: "standalone",
-    background_color: "#0F172A",
-    theme_color: "#0F172A",
+    background_color: "#04152B",
+    theme_color: "#04152B",
     icons: [
       {
         src: "/icon-512.png",
@@ -18,7 +16,12 @@ export default function manifest(): MetadataRoute.Manifest {
         type: "image/png",
         purpose: "any",
       },
+      {
+        src: "/icon-512.png",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "maskable",
+      },
     ],
   };
 }
-

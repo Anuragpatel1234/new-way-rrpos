@@ -121,35 +121,35 @@ const PILLARS: SolutionPillar[] = [
 export default function SolutionsPage() {
   return (
     <div className="font-sans text-[#1a1c1e]">
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#f8fafc] via-[#e8edf5] to-[#f8fafc] pt-32 pb-20 lg:pt-40 lg:pb-28">
+      {/* Hero: Updated to full-screen height and refined typography */}
+      <section className="relative h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#f8fafc] via-[#e8edf5] to-[#f8fafc] pt-[80px]">
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-0 bottom-0 h-[500px] w-[500px] rounded-full bg-[#3B82F6]/5 blur-[120px]" />
-          <div className="absolute right-0 top-0 h-[400px] w-[400px] rounded-full bg-[#3B82F6]/5 blur-[100px]" />
+          <div className="absolute left-0 bottom-0 h-[600px] w-[600px] rounded-full bg-[#3B82F6]/5 blur-[120px]" />
+          <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-[#3B82F6]/5 blur-[100px]" />
         </div>
 
-        <div className="relative mx-auto max-w-[1320px] px-6 lg:px-8">
+        <div className="relative mx-auto w-full max-w-[1320px] px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mx-auto max-w-3xl text-center"
+            transition={{ duration: 0.8 }}
+            className="mx-auto max-w-4xl text-center"
           >
-            <h1 className="text-[2.5rem] md:text-[3rem] font-bold text-[#0F172A] tracking-tight leading-[1.15]">
-              Built for how you sell&nbsp;and&nbsp;scale
+            <h1 className="text-[2.75rem] md:text-[3.5rem] lg:text-[4.5rem] font-semibold text-[#04152B] tracking-tight leading-[1.1]">
+              Built for how you sell <br className="hidden md:block" /> and scale
             </h1>
-            <p className="mt-6 text-base md:text-lg text-[#475569] leading-relaxed">
+            <p className="mt-8 text-lg md:text-xl text-[#475569] leading-relaxed max-w-2xl mx-auto opacity-90">
               Purpose-built modules that work together so you can run, manage,
               and grow your retail business from a single platform.
             </p>
 
             {/* Jump chips */}
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <div className="mt-10 flex flex-wrap justify-center gap-3">
               {PILLARS.map((p) => (
                 <a
                   key={p.id}
                   href={`#${p.id}`}
-                  className="rounded-full border border-[#E2E8F0] bg-white px-5 py-2.5 text-sm font-medium text-[#475569] transition-colors hover:border-[#3B82F6] hover:text-[#3B82F6] shadow-sm"
+                  className="rounded-full border border-[#E2E8F0] bg-white px-6 py-3 text-sm font-bold text-[#475569] transition-all hover:border-[#3B82F6] hover:text-[#3B82F6] hover:shadow-lg shadow-sm"
                 >
                   {p.eyebrow}
                 </a>
@@ -157,15 +157,15 @@ export default function SolutionsPage() {
             </div>
 
             {/* CTAs */}
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <div className="mt-12 flex flex-wrap justify-center gap-5">
               <Link href="/contact">
-                <Button size="lg" className="gap-2">
+                <Button size="lg" className="h-14 px-10 text-base font-bold rounded-xl shadow-xl transition-all hover:scale-105 active:scale-95">
                   Book a Demo
-                  <ArrowRight className="h-4 w-4" />
+                  <ArrowRight className="h-5 w-5" />
                 </Button>
               </Link>
               <Link href="/features">
-                <Button variant="outline" size="lg" className="gap-2">
+                <Button variant="outline" size="lg" className="h-14 px-10 text-base font-bold rounded-xl border-[#E2E8F0] text-[#04152B] hover:bg-gray-50 transition-all">
                   See All Capabilities
                 </Button>
               </Link>
@@ -181,7 +181,7 @@ export default function SolutionsPage() {
           id={pillar.id}
           className={`scroll-mt-[5.5rem] ${idx % 2 === 0 ? "bg-white" : "bg-[#F8FAFC]"}`}
         >
-          <div className="mx-auto max-w-[1320px] px-6 py-20 lg:px-8 lg:py-24">
+          <div className="mx-auto max-w-[1320px] px-6 py-24 lg:px-8 lg:py-32">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -199,7 +199,7 @@ export default function SolutionsPage() {
                 <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#3B82F6]">
                   {pillar.eyebrow}
                 </p>
-                <h2 className="mt-2 text-[1.75rem] md:text-[2rem] font-bold text-[#0F172A] tracking-tight leading-[1.15]">
+                <h2 className="mt-2 text-[1.75rem] md:text-[2rem] font-bold text-[#04152B] tracking-tight leading-[1.15]">
                   {pillar.title}
                 </h2>
                 <p className="mt-2 text-lg font-medium text-[#3B82F6]/80">

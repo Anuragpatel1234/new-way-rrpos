@@ -352,7 +352,7 @@ export default function SuteraShowcase() {
               
               {/* Header Text */}
               <div className="absolute top-24 md:top-12 left-6 md:left-[5%] z-20 transition-transform duration-100 ease-out" style={{ transform: backgroundTransform }}>
-                <h2 className="text-[11vw] md:text-6xl lg:text-[7rem] font-sans font-black tracking-tighter uppercase leading-[0.85] text-[#0F172A] break-words md:whitespace-nowrap max-w-[90vw]">
+                <h2 className="text-[11vw] md:text-6xl lg:text-[7rem] font-sans font-black tracking-tighter uppercase leading-[0.85] text-[#04152B] break-words md:whitespace-nowrap max-w-[90vw]">
                   {item.category}
                 </h2>
                 <p className="mt-4 md:mt-8 text-[10px] md:text-sm font-bold tracking-widest max-w-[200px] md:max-w-[280px] leading-relaxed uppercase border-l-2 border-black pl-3 md:pl-4 text-gray-800">
@@ -411,7 +411,7 @@ export default function SuteraShowcase() {
               
               {/* Box 1: Left */}
               <div className="hidden md:block absolute top-1/2 left-6 md:left-[8%] w-[240px] md:w-[280px] -translate-y-1/2 border border-black p-5 bg-white/50 backdrop-blur-md pointer-events-auto shadow-sm">
-                <div className="text-xs md:text-sm font-black uppercase bg-[#0F172A] text-white px-3 py-1.5 inline-block mb-5">
+                <div className="text-xs md:text-sm font-black uppercase bg-[#04152B] text-white px-3 py-1.5 inline-block mb-5">
                   {item.box1.title}
                 </div>
                 <div className="space-y-4">
@@ -428,8 +428,8 @@ export default function SuteraShowcase() {
               </div>
 
               {/* Box 2: Right Top */}
-              <div className="hidden md:block absolute top-[30%] right-6 md:right-[12%] w-[220px] md:w-[260px] -translate-y-1/2 border-2 border-[#0F172A] p-4 bg-white/70 backdrop-blur-md shadow-[6px_6px_0_#0F172A] pointer-events-auto">
-                <div className="text-xs font-bold uppercase tracking-widest border-b-2 border-[#0F172A] pb-2 mb-3 text-[#0F172A]">
+              <div className="hidden md:block absolute top-[30%] right-6 md:right-[12%] w-[220px] md:w-[260px] -translate-y-1/2 border-2 border-[#04152B] p-4 bg-white/70 backdrop-blur-md shadow-[6px_6px_0_#04152B] pointer-events-auto">
+                <div className="text-xs font-bold uppercase tracking-widest border-b-2 border-[#04152B] pb-2 mb-3 text-[#04152B]">
                   {item.box2.title}
                 </div>
                 <div className="space-y-3 text-xs uppercase font-semibold text-gray-800">
@@ -452,15 +452,15 @@ export default function SuteraShowcase() {
               <div className="hidden md:block absolute top-[70%] right-6 md:right-[10%] w-[260px] -translate-y-1/2 pointer-events-auto">
                 <div className="text-xs uppercase space-y-2">
                   <div className="flex items-center gap-3">
-                    <span className="block w-2.5 h-2.5 bg-[#0F172A]"></span>
-                    <span className="font-bold text-[#0F172A]">{item.box3.items[0].label}</span>
+                    <span className="block w-2.5 h-2.5 bg-[#04152B]"></span>
+                    <span className="font-bold text-[#04152B]">{item.box3.items[0].label}</span>
                   </div>
-                  <div className="text-gray-600 font-medium pl-5 border-l-2 border-[#0F172A] ml-1 mb-3 py-1">{item.box3.items[0].value}</div>
+                  <div className="text-gray-600 font-medium pl-5 border-l-2 border-[#04152B] ml-1 mb-3 py-1">{item.box3.items[0].value}</div>
                   <div className="flex items-center gap-3">
-                    <span className="block w-2.5 h-2.5 border-2 border-[#0F172A]"></span>
-                    <span className="font-bold text-[#0F172A]">{item.box3.items[1].label}</span>
+                    <span className="block w-2.5 h-2.5 border-2 border-[#04152B]"></span>
+                    <span className="font-bold text-[#04152B]">{item.box3.items[1].label}</span>
                   </div>
-                  <div className="text-gray-600 font-medium pl-5 border-l-2 border-[#0F172A] ml-1 py-1">{item.box3.items[1].value}</div>
+                  <div className="text-gray-600 font-medium pl-5 border-l-2 border-[#04152B] ml-1 py-1">{item.box3.items[1].value}</div>
                 </div>
                 <div className="mt-5 text-xs text-gray-500 font-bold uppercase tracking-wider border-t-2 border-dashed border-gray-300 pt-3">
                   {item.box3.title}
@@ -469,18 +469,18 @@ export default function SuteraShowcase() {
 
               {/* Mobile Spec Block (Only visible on small screens) */}
               <div className="md:hidden absolute top-[65vh] left-0 w-full px-6 flex flex-col gap-3 pointer-events-auto">
-                <div className="bg-white/80 backdrop-blur-md border border-[#0F172A]/10 p-4 rounded-xl shadow-2xl shadow-black/10">
+                <div className="bg-white/80 backdrop-blur-md border border-[#04152B]/10 p-4 rounded-xl shadow-2xl shadow-black/10">
                   <div className="flex items-center justify-between border-b border-gray-200 pb-2.5 mb-2.5">
                     <span className="text-[10px] font-bold text-gray-500 tracking-widest uppercase">{item.box1.items[0].label}</span>
-                    <span className="text-xs font-black text-[#0F172A]">{item.box1.items[0].value}</span>
+                    <span className="text-xs font-black text-[#04152B]">{item.box1.items[0].value}</span>
                   </div>
                   <div className="flex items-center justify-between border-b border-gray-200 pb-2.5 mb-2.5">
                     <span className="text-[10px] font-bold text-gray-500 tracking-widest uppercase">{item.box2.items[0].label}</span>
-                    <span className="text-xs font-black text-[#0F172A]">{item.box2.items[0].value}</span>
+                    <span className="text-xs font-black text-[#04152B]">{item.box2.items[0].value}</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-bold text-gray-500 tracking-widest uppercase">{item.box3.items[0].label}</span>
-                    <span className="text-xs font-black text-[#0F172A]">{item.box3.items[0].value}</span>
+                    <span className="text-xs font-black text-[#04152B]">{item.box3.items[0].value}</span>
                   </div>
                 </div>
               </div>
@@ -511,7 +511,7 @@ export default function SuteraShowcase() {
                           }}
                           className={`w-[180px] h-full flex-shrink-0 flex items-center justify-center cursor-pointer transition-all duration-300 group`}
                         >
-                          <div className={`relative px-4 py-2 rounded-full transition-all duration-300 ${isActive ? 'bg-[#002542] text-white shadow-xl scale-110 drop-shadow-[0_8px_16px_rgba(0,37,66,0.4)]' : 'bg-transparent text-gray-400 group-hover:text-[#002542] group-hover:bg-black/5 group-hover:scale-105'}`}>
+                          <div className={`relative px-4 py-2 rounded-full transition-all duration-300 ${isActive ? 'bg-[#04152B] text-white shadow-xl scale-110 drop-shadow-[0_8px_16px_rgba(0,37,66,0.4)]' : 'bg-transparent text-gray-400 group-hover:text-[#04152B] group-hover:bg-black/5 group-hover:scale-105'}`}>
                             {isActive && (
                               <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#00e5ff] rounded-full shadow-[0_0_8px_#00e5ff]" />
                             )}
@@ -526,7 +526,7 @@ export default function SuteraShowcase() {
                 </div>
                 
                 {/* Center Focal Indicator Graphic */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#002542] shadow-[0_0_12px_rgba(0,37,66,0.6)] pointer-events-none" />
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#04152B] shadow-[0_0_12px_rgba(0,37,66,0.6)] pointer-events-none" />
               </div>
             )}
 

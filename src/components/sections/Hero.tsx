@@ -42,7 +42,7 @@ export default function Hero() {
     if (!video) return;
     const kick = () => {
       video.muted = true;
-      void video.play().catch(() => {});
+      void video.play().catch(() => { });
     };
     kick();
     video.addEventListener("loadeddata", kick);
@@ -100,14 +100,14 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#0F172A] shadow-lg transition-all duration-200 hover:scale-[1.02] hover:bg-[#0F172A] hover:text-white hover:shadow-xl"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#04152B] shadow-lg transition-all duration-200 hover:scale-[1.02] hover:bg-[#04152B] hover:text-white hover:shadow-xl"
             >
               Get started
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:border-[#0F172A] hover:bg-[#0F172A]"
+              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:border-[#04152B] hover:bg-[#04152B]"
             >
               Contact sales
             </Link>

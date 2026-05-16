@@ -7,6 +7,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import { SITE } from "@/lib/constants";
 import { StructuredData } from "@/components/Seo/StructuredData";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Preloader from "@/components/Preloader";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -107,6 +108,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://commons.wikimedia.org" />
       </head>
       <body className="font-sans antialiased" suppressHydrationWarning>
+        <Preloader />
         <StructuredData />
         <SmoothScroll>
           <Navbar />

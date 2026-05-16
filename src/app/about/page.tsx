@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <div className="bg-[#faf9fc] text-[#1a1c1e] antialiased min-h-screen">
       {/* Hero Section */}
-      <header className="relative overflow-hidden bg-[#002542] py-24 md:py-32">
+      <header className="relative overflow-hidden bg-[#04152B] py-24 md:py-32">
         <div className="absolute inset-0 opacity-10">
           <img
             className="w-full h-full object-cover"
@@ -78,10 +78,10 @@ export default function AboutPage() {
       {/* Our story */}
       <section id="our-story" className="py-20 lg:py-24 bg-[#faf9fc] scroll-mt-24">
         <div className="max-w-3xl mx-auto px-6">
-          <span className="text-[#002542] font-bold tracking-widest text-xs uppercase mb-4 block text-center">
+          <span className="text-[#04152B] font-bold tracking-widest text-xs uppercase mb-4 block text-center">
             Our Story
           </span>
-          <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-[#002542] tracking-tight leading-[1.15] mb-10 text-center">
+          <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-[#04152B] tracking-tight leading-[1.15] mb-10 text-center">
             From communication to smart billing
           </h2>
           <div className="space-y-6 text-base md:text-lg text-[#43474d] leading-relaxed">
@@ -109,7 +109,7 @@ export default function AboutPage() {
               href={GOOGLE_MAPS_NWT}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-[#002542]/20 bg-white px-5 py-3 text-sm font-semibold text-[#002542] shadow-sm hover:bg-[#f4f3f6] transition-colors"
+              className="inline-flex items-center gap-2 rounded-lg border border-[#04152B]/20 bg-white px-5 py-3 text-sm font-semibold text-[#04152B] shadow-sm hover:bg-[#f4f3f6] transition-colors"
             >
               New Way Traders on Google
               <ExternalLink className="w-4 h-4" aria-hidden />
@@ -118,7 +118,7 @@ export default function AboutPage() {
               href={JUSTDIAL_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-[#002542]/20 bg-white px-5 py-3 text-sm font-semibold text-[#002542] shadow-sm hover:bg-[#f4f3f6] transition-colors"
+              className="inline-flex items-center gap-2 rounded-lg border border-[#04152B]/20 bg-white px-5 py-3 text-sm font-semibold text-[#04152B] shadow-sm hover:bg-[#f4f3f6] transition-colors"
             >
               Justdial — Ashram Road
               <ExternalLink className="w-4 h-4" aria-hidden />
@@ -133,9 +133,9 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-[#ffffff] p-10 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <div className="w-14 h-14 bg-[#d8e3f4] flex items-center justify-center rounded-full mb-6">
-                <Lightbulb className="text-[#002542] w-8 h-8" />
+                <Lightbulb className="text-[#04152B] w-8 h-8" />
               </div>
-              <h3 className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#002542] mb-4">Innovation</h3>
+              <h3 className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#04152B] mb-4">Innovation</h3>
               <p className="text-[#43474d] leading-relaxed">
                 We keep pace with technology—from communication infrastructure to smart billing and POS—so your
                 business stays ahead.
@@ -143,9 +143,9 @@ export default function AboutPage() {
             </div>
             <div className="bg-[#ffffff] p-10 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <div className="w-14 h-14 bg-[#d8e3f4] flex items-center justify-center rounded-full mb-6">
-                <BadgeCheck className="text-[#002542] w-8 h-8" />
+                <BadgeCheck className="text-[#04152B] w-8 h-8" />
               </div>
-              <h3 className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#002542] mb-4">Honesty</h3>
+              <h3 className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#04152B] mb-4">Honesty</h3>
               <p className="text-[#43474d] leading-relaxed">
                 Straightforward guidance, fair dealing, and long-term relationships built on trust with retailers
                 and partners.
@@ -153,9 +153,9 @@ export default function AboutPage() {
             </div>
             <div className="bg-[#ffffff] p-10 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <div className="w-14 h-14 bg-[#d8e3f4] flex items-center justify-center rounded-full mb-6">
-                <Users className="text-[#002542] w-8 h-8" />
+                <Users className="text-[#04152B] w-8 h-8" />
               </div>
-              <h3 className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#002542] mb-4">Professionalism</h3>
+              <h3 className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#04152B] mb-4">Professionalism</h3>
               <p className="text-[#43474d] leading-relaxed">
                 Dependable support and quality hardware, aligned with how you run your store, language, and
                 workflow.
@@ -169,17 +169,17 @@ export default function AboutPage() {
       <section className="py-20 lg:py-24 bg-[#faf9fc]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16 text-center md:text-left">
-            <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-[#002542] tracking-tight leading-[1.15]">Our journey</h2>
-            <div className="h-1.5 w-24 bg-[#002542] mt-4 mx-auto md:mx-0"></div>
+            <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-[#04152B] tracking-tight leading-[1.15]">Our journey</h2>
+            <div className="h-1.5 w-24 bg-[#04152B] mt-4 mx-auto md:mx-0"></div>
           </div>
           <div className="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-[#c3c6ce] before:to-transparent">
             <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#002542] text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-20">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#04152B] text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-20">
                 <Flag className="w-5 h-5" />
               </div>
               <div className="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded-xl bg-[#f4f3f6] border border-[#c3c6ce]/10 shadow-sm relative z-10">
                 <time className="font-bold text-[#1b3b5a] text-sm">1995</time>
-                <div className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#002542] mt-1">The beginning</div>
+                <div className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#04152B] mt-1">The beginning</div>
                 <p className="text-[#43474d] mt-2 text-sm leading-relaxed">
                   Ravi Bhatt starts in communication and technology—STD, PCO, and phone booths—laying the foundation
                   for what New Way Traders would become.
@@ -187,12 +187,12 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#002542] text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-20">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#04152B] text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-20">
                 <Rocket className="w-5 h-5" />
               </div>
               <div className="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded-xl bg-[#f4f3f6] border border-[#c3c6ce]/10 shadow-sm relative z-10">
                 <time className="font-bold text-[#1b3b5a] text-sm">Growth</time>
-                <div className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#002542] mt-1">Communication &amp; management</div>
+                <div className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#04152B] mt-1">Communication &amp; management</div>
                 <p className="text-[#43474d] mt-2 text-sm leading-relaxed">
                   A decade focused on communication leadership, then a shift toward business management, billing
                   machines, and POS solutions for modern retail.
@@ -200,19 +200,19 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#002542] text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-20">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-[#04152B] text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-20">
                 <Sparkles className="w-5 h-5" />
               </div>
               <div className="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded-xl bg-[#f4f3f6] border border-[#c3c6ce]/10 shadow-sm relative z-10">
                 <time className="font-bold text-[#1b3b5a] text-sm">Today</time>
-                <div className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#002542] mt-1">Ahmedabad — Ashram Road</div>
+                <div className="text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] text-[#04152B] mt-1">Ahmedabad — Ashram Road</div>
                 <p className="text-[#43474d] mt-2 text-sm leading-relaxed">
                   Opposite Kothawala Flats, Pritmanagar, first slope, Ashram Road. See our{" "}
                   <a
                     href={JUSTDIAL_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-semibold text-[#002542] underline underline-offset-2 hover:text-[#1b3b5a]"
+                    className="font-semibold text-[#04152B] underline underline-offset-2 hover:text-[#1b3b5a]"
                   >
                     Justdial listing
                   </a>{" "}
@@ -221,7 +221,7 @@ export default function AboutPage() {
                     href={GOOGLE_MAPS_NWT}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-semibold text-[#002542] underline underline-offset-2 hover:text-[#1b3b5a]"
+                    className="font-semibold text-[#04152B] underline underline-offset-2 hover:text-[#1b3b5a]"
                   >
                     New Way Traders (smart billing machines) on Google Maps
                   </a>
@@ -240,34 +240,34 @@ export default function AboutPage() {
             <div className="order-2 md:order-1">
               <div className="grid grid-cols-2 gap-4">
                 <img
-                  className="rounded-xl w-full h-64 object-cover"
-                  alt="diverse group of creative professionals"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwNxa-3pZwv7gy-X-ykoNNHV7mbFSWa8Dz11DkyQZH5MmLCFviziPoATGcyrspHhbDTBhXEUUtcvCmkASE4Wp75TwDcb-wE6D7Y4mhIb9Mb-GXWZVE6WXCyk-85ppbq3p4xOJzpLDhxoev-4V9fBj1pSwfuxDv8ounmQov_4o4Ui2xlKP_RKTBIJxx2br5TG-DcFic0LxWt3Upy-vjJdbgqm6Q-HTAkT1ze1OSOX-mCaUYDRRE_fIS-t7CK_dv_EDs2TqUnDAfVsPe"
+                  className="rounded-xl w-full h-64 object-cover shadow-lg"
+                  alt="diverse group of creative professionals collaborating"
+                  src="/about-team.png"
                 />
                 <img
-                  className="rounded-xl w-full h-64 object-cover mt-8"
-                  alt="portrait of a confident female engineer"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtAx78btue7ks7vgaWiZf2hGGzhpNwAF7uxRyfeA5FgHu5JBgD2eFR261Gf89oe2Qe6w1RZesTNGDm3_Vuoxw1M2z3Gs6n_a1tkQqczXoefdwu4fjxb_WUz4A2f-_mKZlU6JLIGGzNBgGFDADM0sLqmLvc3yrdQgnNfJCvRTEN8vidQrnqzyVh1nIlJSeclTtLcWmCOypgnGc-1PIUGgfdwP728yAnCMY8Ud6cVMKW1Zg7HNYVbiDAqRCv91oL-WrOBV4J_af3EFUk"
+                  className="rounded-xl w-full h-64 object-cover mt-8 shadow-lg"
+                  alt="portrait of a confident female professional"
+                  src="/about-portrait.png"
                 />
               </div>
             </div>
             <div className="order-1 md:order-2">
-              <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-[#002542] tracking-tight leading-[1.15] mb-6">Working with you</h2>
+              <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-[#04152B] tracking-tight leading-[1.15] mb-6">Working with you</h2>
               <p className="text-base md:text-lg text-[#43474d] mb-6 leading-relaxed">
                 We celebrate our clients and adapt to your goals—whether you need billing machines, POS hardware,
                 or guidance that fits your language and business model.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3">
-                  <CheckCircle className="text-[#002542] w-6 h-6 shrink-0" />
+                  <CheckCircle className="text-[#04152B] w-6 h-6 shrink-0" />
                   <span className="text-[#1a1c1e] font-medium">Decades of experience in communication and retail tech</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <CheckCircle className="text-[#002542] w-6 h-6 shrink-0" />
+                  <CheckCircle className="text-[#04152B] w-6 h-6 shrink-0" />
                   <span className="text-[#1a1c1e] font-medium">Solutions shaped around how you operate</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <CheckCircle className="text-[#002542] w-6 h-6 shrink-0" />
+                  <CheckCircle className="text-[#04152B] w-6 h-6 shrink-0" />
                   <span className="text-[#1a1c1e] font-medium">Visit us on Google or Justdial for hours, directions, and reviews</span>
                 </li>
               </ul>
@@ -277,8 +277,8 @@ export default function AboutPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 lg:py-24 bg-[#002542] relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#002542] to-[#1b3b5a] opacity-90"></div>
+      <section className="py-20 lg:py-24 bg-[#04152B] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#04152B] to-[#1b3b5a] opacity-90"></div>
         <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
           <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-white tracking-tight leading-[1.15] mb-6">Partner with New Way Traders</h2>
           <p className="text-base md:text-lg text-[#87a5ca] mb-8 leading-relaxed">
@@ -310,7 +310,7 @@ export default function AboutPage() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <a
               href="/contact"
-              className="w-full md:w-auto inline-flex justify-center bg-white text-[#002542] px-10 py-4 rounded-md text-sm font-semibold hover:bg-[#d8e3f4] transition-colors shadow-lg"
+              className="w-full md:w-auto inline-flex justify-center bg-white text-[#04152B] px-10 py-4 rounded-md text-sm font-semibold hover:bg-[#d8e3f4] transition-colors shadow-lg"
             >
               Contact Us
             </a>

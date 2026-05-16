@@ -56,15 +56,15 @@ export default function ContactPage() {
         <div className="relative max-w-7xl mx-auto px-6 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-6 xl:col-span-7">
-              <h1 className="text-[2.5rem] md:text-[3rem] font-bold text-[#002542] tracking-tight leading-[1.15] mb-4">
+              <h1 className="text-[2.5rem] md:text-[3rem] font-bold text-[#04152B] tracking-tight leading-[1.15] mb-4">
                 Get in touch
               </h1>
-              <p className="mb-6 max-w-2xl border-l-[3px] border-[#abc9ef] pl-4 md:pl-5 text-base md:text-lg font-medium leading-relaxed tracking-tight text-[#002542]/88">
+              <p className="mb-6 max-w-2xl border-l-[3px] border-[#abc9ef] pl-4 md:pl-5 text-base md:text-lg font-medium leading-relaxed tracking-tight text-[#04152B]/88">
                 Experience the precision of architectural commerce. Our team of specialists is ready to help you
                 curate your enterprise operations with unmatched technical clarity.
               </p>
               <p className="text-lg md:text-xl text-[#43474d] leading-relaxed max-w-xl">
-                Talk to us about <strong className="font-semibold text-[#002542]">RR POS</strong> software, checkout
+                Talk to us about <strong className="font-semibold text-[#04152B]">RR POS</strong> software, checkout
                 hardware, training, and support. We handle single-store setups and multi-branch rollouts—from demos
                 and quotes to installation and after-sales care.
               </p>
@@ -74,7 +74,7 @@ export default function ContactPage() {
                   "POS terminals, barcode scanners, thermal printers, and cash drawers",
                 ].map((line) => (
                   <li key={line} className="flex gap-2.5 text-sm md:text-[0.9375rem] text-[#43474d] leading-snug">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#d3deef]/80 text-[#002542]">
+                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#d3deef]/80 text-[#04152B]">
                       <Check className="h-3 w-3 stroke-[3]" aria-hidden />
                     </span>
                     <span>{line}</span>
@@ -89,7 +89,7 @@ export default function ContactPage() {
                   aria-hidden
                 />
                 <figure className="relative z-10">
-                  <div className="overflow-hidden rounded-2xl shadow-[0_20px_50px_-12px_rgba(0,37,66,0.18)] ring-1 ring-[#002542]/[0.06]">
+                  <div className="overflow-hidden rounded-2xl shadow-[0_20px_50px_-12px_rgba(0,37,66,0.18)] ring-1 ring-[#04152B]/[0.06]">
                     <img
                       className="aspect-[4/3] w-full object-cover"
                       alt="Reception area at our Ahmedabad office"
@@ -293,7 +293,7 @@ export default function ContactPage() {
       <section className="py-20 lg:py-24 bg-[#faf9fc]">
         <div className="max-w-7xl mx-auto px-8">
           <div className="text-center mb-16">
-            <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-[#002542] tracking-tight leading-[1.15]">Specialized departments</h2>
+            <h2 className="text-[1.75rem] md:text-[2rem] font-bold text-[#04152B] tracking-tight leading-[1.15]">Specialized departments</h2>
             <p className="text-[#43474d] mt-4 max-w-2xl mx-auto leading-relaxed">
               Route your request to the right specialists—enterprise sales, technical architecture, or channel
               partnerships.
@@ -302,12 +302,12 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             <article className="flex flex-col rounded-2xl border border-[#e8e6ed] bg-white p-8 shadow-[0_12px_40px_-12px_rgba(0,37,66,0.12)] transition-all hover:-translate-y-1 hover:shadow-[0_20px_50px_-12px_rgba(0,37,66,0.15)]">
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#d3deef]">
-                <Building2 className="h-6 w-6 text-[#002542]" aria-hidden />
+                <Building2 className="h-6 w-6 text-[#04152B]" aria-hidden />
               </div>
               <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-[#43474d]/75">
                 Global markets
               </p>
-              <h3 className="mt-2 text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] tracking-tight text-[#002542]">
+              <h3 className="mt-2 text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] tracking-tight text-[#04152B]">
                 Strategic sales &amp; enterprise billing
               </h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-[#43474d]">
@@ -316,21 +316,21 @@ export default function ContactPage() {
               </p>
               <a
                 href={`mailto:${SITE.email}?subject=Enterprise%20sales%20inquiry`}
-                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#002542] px-4 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-md shadow-[#002542]/20 transition hover:bg-[#003a5c] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#002542]"
+                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#04152B] px-4 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-md shadow-[#04152B]/20 transition hover:bg-[#003a5c] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#04152B]"
               >
                 Contact sales
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </a>
             </article>
 
-            <article className="relative flex flex-col rounded-2xl border border-[#b8c9df]/60 bg-[#e8eef6] p-8 shadow-[0_16px_48px_-12px_rgba(0,37,66,0.14)] ring-1 ring-[#002542]/[0.04] transition-all hover:-translate-y-1 md:scale-[1.02]">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white shadow-sm ring-1 ring-[#002542]/[0.06]">
-                <Compass className="h-6 w-6 text-[#002542]" aria-hidden />
+            <article className="relative flex flex-col rounded-2xl border border-[#b8c9df]/60 bg-[#e8eef6] p-8 shadow-[0_16px_48px_-12px_rgba(0,37,66,0.14)] ring-1 ring-[#04152B]/[0.04] transition-all hover:-translate-y-1 md:scale-[1.02]">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white shadow-sm ring-1 ring-[#04152B]/[0.06]">
+                <Compass className="h-6 w-6 text-[#04152B]" aria-hidden />
               </div>
               <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-[#43474d]/75">
                 System integrity
               </p>
-              <h3 className="mt-2 text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] tracking-tight text-[#002542]">
+              <h3 className="mt-2 text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] tracking-tight text-[#04152B]">
                 Technical architecture &amp; support
               </h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-[#43474d]">
@@ -339,7 +339,7 @@ export default function ContactPage() {
               </p>
               <a
                 href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-[#002542]/20 bg-white px-4 py-3.5 text-xs font-bold uppercase tracking-[0.12em] text-[#002542] shadow-sm transition hover:border-[#002542]/35 hover:bg-[#fafbfc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#002542]"
+                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-[#04152B]/20 bg-white px-4 py-3.5 text-xs font-bold uppercase tracking-[0.12em] text-[#04152B] shadow-sm transition hover:border-[#04152B]/35 hover:bg-[#fafbfc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#04152B]"
               >
                 Access support
                 <ArrowRight className="h-4 w-4" aria-hidden />
@@ -348,12 +348,12 @@ export default function ContactPage() {
 
             <article className="flex flex-col rounded-2xl border border-[#e8e6ed] bg-white p-8 shadow-[0_12px_40px_-12px_rgba(0,37,66,0.12)] transition-all hover:-translate-y-1 hover:shadow-[0_20px_50px_-12px_rgba(0,37,66,0.15)]">
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#d3deef]">
-                <Network className="h-6 w-6 text-[#002542]" aria-hidden />
+                <Network className="h-6 w-6 text-[#04152B]" aria-hidden />
               </div>
               <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-[#43474d]/75">
                 Ecosystem growth
               </p>
-              <h3 className="mt-2 text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] tracking-tight text-[#002542]">
+              <h3 className="mt-2 text-[1.375rem] md:text-[1.5rem] font-semibold leading-[1.2] tracking-tight text-[#04152B]">
                 Strategic partnerships &amp; alliances
               </h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-[#43474d]">
@@ -362,7 +362,7 @@ export default function ContactPage() {
               </p>
               <a
                 href={`mailto:${SITE.email}?subject=Partnership%20inquiry`}
-                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#d3deef] px-4 py-3.5 text-xs font-bold uppercase tracking-[0.12em] text-[#002542] transition hover:bg-[#c5d8ef] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#002542]"
+                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#d3deef] px-4 py-3.5 text-xs font-bold uppercase tracking-[0.12em] text-[#04152B] transition hover:bg-[#c5d8ef] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#04152B]"
               >
                 Partner with us
                 <ArrowRight className="h-4 w-4" aria-hidden />
