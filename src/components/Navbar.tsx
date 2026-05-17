@@ -1,19 +1,44 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Globe } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { BrandLogo, type BrandLogoTone } from "@/components/BrandLogo";
+import { useTranslation } from "react-i18next";
+
+const LANGUAGES = [
+  { code: "en", label: "English" },
+  { code: "hi", label: "हिन्दी" },
+  { code: "gu", label: "ગુજરાતી" },
+  { code: "mr", label: "मराठी" },
+  { code: "ta", label: "தமிழ்" },
+  { code: "te", label: "తెలుగు" },
+  { code: "es", label: "Español" },
+  { code: "ar", label: "العربية" }
+];
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [langOpen, setLangOpen] = useState(false);
   const pathname = usePathname();
+  const { t, i18n } = useTranslation();
+  const langDropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (langDropdownRef.current && !langDropdownRef.current.contains(event.target as Node)) {
+        setLangOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => {
@@ -66,66 +91,136 @@ export default function Navbar() {
         {/* Desktop Nav */}
 
         <div className="hidden items-center gap-1 lg:flex">
-          {NAV_LINKS.map((link) => (
-            <div
-              key={link.label}
-              className="relative"
-              onMouseEnter={() =>
-                link.children && setActiveDropdown(link.label)
-              }
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              <Link
-                href={link.href}
-                className={cn(
-                  "flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-semibold transition-colors duration-300",
-                  scrolled
-                    ? "text-gray-200 hover:text-white hover:bg-white/10"
-                    : "text-white/95 hover:text-white hover:bg-white/15 drop-shadow-[0_1px_4px_rgba(0,0,0,0.65)]"
-                )}
+          {NAV_LINKS.map((link) => {
+            const translatedLabel = link.label === "Home" ? t("nav.home") :
+                                   link.label === "Solution" ? t("nav.solutions") :
+                                   link.label === "Product" ? t("nav.product") :
+                                   link.label === "Service" ? t("nav.service") :
+                                   link.label === "Company" ? t("nav.company") :
+                                   link.label === "Contact Us" ? t("nav.contact") : link.label;
+            return (
+              <div
+                key={link.label}
+                className="relative"
+                onMouseEnter={() =>
+                  link.children && setActiveDropdown(link.label)
+                }
+                onMouseLeave={() => setActiveDropdown(null)}
               >
-                {link.label}
-                {link.children && (
-                  <ChevronDown
-                    className={cn(
-                      "h-3.5 w-3.5 transition-transform duration-200",
-                      activeDropdown === link.label && "rotate-180"
-                    )}
-                  />
-                )}
-              </Link>
+                <Link
+                  href={link.href}
+                  className={cn(
+                    "flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-semibold transition-colors duration-300",
+                    scrolled
+                      ? "text-gray-200 hover:text-white hover:bg-white/10"
+                      : "text-white/95 hover:text-white hover:bg-white/15 drop-shadow-[0_1px_4px_rgba(0,0,0,0.65)]"
+                  )}
+                >
+                  {translatedLabel}
+                  {link.children && (
+                    <ChevronDown
+                      className={cn(
+                        "h-3.5 w-3.5 transition-transform duration-200",
+                        activeDropdown === link.label && "rotate-180"
+                      )}
+                    />
+                  )}
+                </Link>
 
-              {/* Dropdown */}
-              <AnimatePresence>
-                {link.children && activeDropdown === link.label && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 8 }}
-                    transition={{ duration: 0.2, ease: "easeOut" }}
-                    className="absolute left-0 top-full z-50 pt-2"
-                  >
-                    <div className="w-[320px] rounded-xl border border-gray-800 bg-background p-2 shadow-xl shadow-black/50">
-                      {link.children.map((child) => (
-                        <Link
-                          key={child.label}
-                          href={child.href}
-                          className="block rounded-lg px-4 py-3 transition-colors hover:bg-gray-800"
-                        >
-                          <div className="text-sm font-medium text-foreground">
-                            {child.label}
-                          </div>
-                          <div className="mt-0.5 text-xs text-gray-400">
-                            {child.description}
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ))}
+                {/* Dropdown */}
+                <AnimatePresence>
+                  {link.children && activeDropdown === link.label && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 8 }}
+                      transition={{ duration: 0.2, ease: "easeOut" }}
+                      className="absolute left-0 top-full z-50 pt-2"
+                    >
+                      <div className="w-[320px] rounded-xl border border-gray-800 bg-background p-2 shadow-xl shadow-black/50">
+                        {link.children.map((child) => {
+                          const translatedChildLabel = child.label === "Retail POS" ? t("nav.retail") :
+                                                       child.label === "Inventory Tech" ? t("nav.inventory") :
+                                                       child.label === "Analytics Hub" ? t("nav.analytics") :
+                                                       child.label === "Multi-Store" ? t("nav.multistore") : child.label;
+                          return (
+                            <Link
+                              key={child.label}
+                              href={child.href}
+                              className="block rounded-lg px-4 py-3 transition-colors hover:bg-gray-800"
+                            >
+                              <div className="text-sm font-medium text-foreground">
+                                {translatedChildLabel}
+                              </div>
+                              <div className="mt-0.5 text-xs text-gray-400">
+                                {child.description}
+                              </div>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            );
+          })}
+
+          {/* Vertical Divider */}
+          <span className={cn(
+            "h-4 w-px mx-2 transition-colors duration-300",
+            scrolled ? "bg-gray-800" : "bg-white/20"
+          )} />
+
+          {/* Language Selector Dropdown */}
+          <div ref={langDropdownRef} className="relative">
+            <button
+              onClick={() => setLangOpen(!langOpen)}
+              className={cn(
+                "flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold transition-colors duration-300 cursor-pointer",
+                scrolled
+                  ? "text-gray-200 hover:text-white hover:bg-white/10"
+                  : "text-white/95 hover:text-white hover:bg-white/15 drop-shadow-[0_1px_4px_rgba(0,0,0,0.65)]"
+              )}
+            >
+              <Globe className="h-4 w-4" />
+              <span>{LANGUAGES.find(l => l.code === i18n.language)?.label || "English"}</span>
+              <ChevronDown className={cn("h-3 w-3 transition-transform duration-200", langOpen && "rotate-180")} />
+            </button>
+
+            <AnimatePresence>
+              {langOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 8 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                  className="absolute right-0 top-full z-50 pt-2"
+                >
+                  <div className="w-[180px] rounded-xl border border-gray-800 bg-background p-1.5 shadow-xl shadow-black/50">
+                    {LANGUAGES.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => {
+                          i18n.changeLanguage(lang.code);
+                          setLangOpen(false);
+                        }}
+                        className={cn(
+                          "w-full text-left rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-gray-800 cursor-pointer flex items-center justify-between",
+                          i18n.language === lang.code ? "text-primary bg-primary/10" : "text-foreground"
+                        )}
+                      >
+                        <span>{lang.label}</span>
+                        {i18n.language === lang.code && (
+                          <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
 
 
@@ -160,35 +255,76 @@ export default function Navbar() {
             className="fixed inset-0 z-40 bg-white lg:hidden"
           >
             <div className="flex h-full flex-col overflow-y-auto pt-[72px] px-6 pb-8">
-              <div className="flex flex-col gap-1 py-6">
-                {NAV_LINKS.map((link) => (
-                  <div key={link.label}>
-                    <Link
-                      href={link.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="flex items-center justify-between rounded-lg px-4 py-3 text-lg font-medium text-[#04152B] hover:bg-[#F1F5F9] transition-colors"
-                    >
-                      {link.label}
-                      {link.children && (
-                        <ChevronDown className="h-4 w-4 text-[#94A3B8]" />
+              
+              {/* Mobile Language Selector */}
+              <div className="border-b border-[#E2E8F0] pb-5 pt-3 mb-2">
+                <div className="text-xs font-semibold uppercase tracking-wider text-[#94A3B8] px-4 mb-3 flex items-center gap-1.5">
+                  <Globe className="h-3.5 w-3.5" />
+                  Select Language / भाषा चुनें
+                </div>
+                <div className="grid grid-cols-2 gap-2 px-2">
+                  {LANGUAGES.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => {
+                        i18n.changeLanguage(lang.code);
+                      }}
+                      className={cn(
+                        "rounded-lg px-3 py-2 text-sm font-semibold transition-all text-center border cursor-pointer",
+                        i18n.language === lang.code
+                          ? "bg-primary text-white border-primary shadow-sm shadow-primary/20"
+                          : "text-[#04152B] border-[#E2E8F0] hover:bg-[#F1F5F9]"
                       )}
-                    </Link>
-                    {link.children && (
-                      <div className="ml-4 border-l border-[#E2E8F0] pl-4">
-                        {link.children.map((child) => (
-                          <Link
-                            key={child.label}
-                            href={child.href}
-                            onClick={() => setMobileOpen(false)}
-                            className="block rounded-lg px-3 py-2 text-sm text-[#475569] hover:text-[#04152B] hover:bg-[#F1F5F9] transition-colors"
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
+                    >
+                      {lang.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-1 py-4">
+                {NAV_LINKS.map((link) => {
+                  const translatedLabel = link.label === "Home" ? t("nav.home") :
+                                         link.label === "Solution" ? t("nav.solutions") :
+                                         link.label === "Product" ? t("nav.product") :
+                                         link.label === "Service" ? t("nav.service") :
+                                         link.label === "Company" ? t("nav.company") :
+                                         link.label === "Contact Us" ? t("nav.contact") : link.label;
+                  return (
+                    <div key={link.label}>
+                      <Link
+                        href={link.href}
+                        onClick={() => setMobileOpen(false)}
+                        className="flex items-center justify-between rounded-lg px-4 py-3 text-lg font-medium text-[#04152B] hover:bg-[#F1F5F9] transition-colors"
+                      >
+                        {translatedLabel}
+                        {link.children && (
+                          <ChevronDown className="h-4 w-4 text-[#94A3B8]" />
+                        )}
+                      </Link>
+                      {link.children && (
+                        <div className="ml-4 border-l border-[#E2E8F0] pl-4">
+                          {link.children.map((child) => {
+                            const translatedChildLabel = child.label === "Retail POS" ? t("nav.retail") :
+                                                         child.label === "Inventory Tech" ? t("nav.inventory") :
+                                                         child.label === "Analytics Hub" ? t("nav.analytics") :
+                                                         child.label === "Multi-Store" ? t("nav.multistore") : child.label;
+                            return (
+                              <Link
+                                key={child.label}
+                                href={child.href}
+                                onClick={() => setMobileOpen(false)}
+                                className="block rounded-lg px-3 py-2 text-sm text-[#475569] hover:text-[#04152B] hover:bg-[#F1F5F9] transition-colors"
+                              >
+                                {translatedChildLabel}
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
 
               {/* Contact info in mobile menu */}

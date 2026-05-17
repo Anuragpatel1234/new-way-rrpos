@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { HERO_VIDEO_SRC } from "@/lib/critical-assets";
+import { useTranslation } from "react-i18next";
 
 const BRANDS = [
   "Pavagdh Maha Kali Temple",
@@ -35,6 +36,7 @@ const BRANDS = [
 ];
 
 export default function Hero() {
+  const { t } = useTranslation();
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -89,12 +91,12 @@ export default function Hero() {
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-6 pb-28 pt-16 text-center md:pb-32 md:pt-20">
         <div className="max-w-4xl translate-y-14 rounded-2xl border border-white/5 bg-black/10 px-6 py-7 backdrop-blur-[2px] md:translate-y-20 md:px-10 md:py-9 lg:translate-y-28">
           <h1 className="font-serif text-[2rem] font-bold leading-[1.15] tracking-tight text-white drop-shadow-lg md:text-[2.5rem] lg:text-[3rem]">
-            <span className="block">Fast billing that keeps</span>
-            <span className="block">your business running smoothly.</span>
+            <span className="block">{t("hero.title_line1")}</span>
+            <span className="block">{t("hero.title_line2")}</span>
           </h1>
 
           <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-white/90 drop-shadow-md md:text-lg">
-            All-in-one POS for retail stores. Billing, inventory, GST reports — all in one place.
+            {t("hero.subtitle")}
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -102,14 +104,14 @@ export default function Hero() {
               href="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#04152B] shadow-lg transition-all duration-200 hover:scale-[1.02] hover:bg-[#04152B] hover:text-white hover:shadow-xl"
             >
-              Get started
+              {t("hero.get_started")}
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:border-[#04152B] hover:bg-[#04152B]"
             >
-              Contact sales
+              {t("hero.contact_sales")}
             </Link>
           </div>
         </div>
