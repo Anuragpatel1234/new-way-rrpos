@@ -25,6 +25,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [langOpen, setLangOpen] = useState(false);
   const pathname = usePathname();
   const { t, i18n } = useTranslation();
@@ -290,38 +291,55 @@ export default function Navbar() {
                                          link.label === "Service" ? t("nav.service") :
                                          link.label === "Company" ? t("nav.company") :
                                          link.label === "Contact Us" ? t("nav.contact") : link.label;
+                  const isExpanded = mobileExpanded === link.label;
                   return (
                     <div key={link.label}>
-                      <Link
-                        href={link.href}
-                        onClick={() => setMobileOpen(false)}
-                        className="flex items-center justify-between rounded-lg px-4 py-3 text-lg font-medium text-[#04152B] hover:bg-[#F1F5F9] transition-colors"
-                      >
-                        {translatedLabel}
+                      <div className="flex items-center justify-between rounded-lg px-4 hover:bg-[#F1F5F9] transition-colors">
+                        <Link
+                          href={link.href}
+                          onClick={() => setMobileOpen(false)}
+                          className="flex-1 py-3 text-lg font-medium text-[#04152B]"
+                        >
+                          {translatedLabel}
+                        </Link>
                         {link.children && (
-                          <ChevronDown className="h-4 w-4 text-[#94A3B8]" />
+                          <button
+                            onClick={() => setMobileExpanded(isExpanded ? null : link.label)}
+                            className="p-3 -mr-3 flex items-center justify-center text-[#94A3B8]"
+                          >
+                            <ChevronDown className={cn("h-4 w-4 transition-transform", isExpanded && "rotate-180")} />
+                          </button>
                         )}
-                      </Link>
-                      {link.children && (
-                        <div className="ml-4 border-l border-[#E2E8F0] pl-4">
-                          {link.children.map((child) => {
-                            const translatedChildLabel = child.label === "Retail POS" ? t("nav.retail") :
-                                                         child.label === "Inventory Tech" ? t("nav.inventory") :
-                                                         child.label === "Analytics Hub" ? t("nav.analytics") :
-                                                         child.label === "Multi-Store" ? t("nav.multistore") : child.label;
-                            return (
-                              <Link
-                                key={child.label}
-                                href={child.href}
-                                onClick={() => setMobileOpen(false)}
-                                className="block rounded-lg px-3 py-2 text-sm text-[#475569] hover:text-[#04152B] hover:bg-[#F1F5F9] transition-colors"
-                              >
-                                {translatedChildLabel}
-                              </Link>
-                            );
-                          })}
-                        </div>
-                      )}
+                      </div>
+                      <AnimatePresence>
+                        {link.children && isExpanded && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="ml-4 border-l border-[#E2E8F0] pl-4 py-2">
+                              {link.children.map((child) => {
+                                const translatedChildLabel = child.label === "Retail POS" ? t("nav.retail") :
+                                                             child.label === "Inventory Tech" ? t("nav.inventory") :
+                                                             child.label === "Analytics Hub" ? t("nav.analytics") :
+                                                             child.label === "Multi-Store" ? t("nav.multistore") : child.label;
+                                return (
+                                  <Link
+                                    key={child.label}
+                                    href={child.href}
+                                    onClick={() => setMobileOpen(false)}
+                                    className="block rounded-lg px-3 py-2 text-sm text-[#475569] hover:text-[#04152B] hover:bg-[#F1F5F9] transition-colors"
+                                  >
+                                    {translatedChildLabel}
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
                   );
                 })}

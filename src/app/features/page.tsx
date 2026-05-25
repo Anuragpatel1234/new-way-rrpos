@@ -155,7 +155,7 @@ const staggerContainer = {
 
 export default function FeaturesPage() {
   return (
-    <div className="font-sans text-[#1a1c1e] relative overflow-hidden bg-[#04152B]">
+    <div className="font-sans text-[#1a1c1e] relative overflow-x-hidden bg-[#04152B]">
       {/* Redesigned Hero Section */}
       <section
         className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-[#04152B] pt-40 pb-10"

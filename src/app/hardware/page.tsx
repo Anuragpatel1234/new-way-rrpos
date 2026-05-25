@@ -152,7 +152,7 @@ export default function HardwarePage() {
                 View All Products
               </Button>
               <Link href="/contact">
-                <Button size="lg" variant="outline" className="h-14 px-10 text-base font-bold border-white/20 text-white hover:bg-white/10 rounded-xl transition-all backdrop-blur-sm">
+                <Button size="lg" variant="outline" className="h-14 px-10 text-base font-bold bg-transparent border-white/20 text-white hover:bg-white/10 rounded-xl transition-all backdrop-blur-sm">
                   Talk to an Expert
                 </Button>
               </Link>

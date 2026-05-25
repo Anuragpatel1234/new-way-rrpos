@@ -250,6 +250,38 @@ export default function SuteraShowcase() {
   // Track active sub-model index per category
   const [activeModelIndices, setActiveModelIndices] = useState<number[]>(SHOWCASE_DATA.map(() => 0));
 
+  const isScrolling = useRef(false);
+  const scrollTimeout = useRef<any>();
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>, index: number) => {
+    if (window.innerWidth >= 768) return;
+    
+    isScrolling.current = true;
+    clearTimeout(scrollTimeout.current);
+    
+    scrollTimeout.current = setTimeout(() => {
+      isScrolling.current = false;
+      const scrollLeft = (e.target as HTMLDivElement).scrollLeft;
+      const newIndex = Math.round(scrollLeft / 180);
+      setActiveModelIndices(prev => {
+        if (prev[index] === newIndex) return prev;
+        const next = [...prev];
+        next[index] = newIndex;
+        return next;
+      });
+    }, 150);
+  };
+
+  React.useEffect(() => {
+    if (isScrolling.current) return;
+    SHOWCASE_DATA.forEach((_, index) => {
+      const el = document.getElementById(`ribbon-${index}`);
+      if (el && window.innerWidth < 768) {
+        el.scrollTo({ left: activeModelIndices[index] * 180, behavior: 'smooth' });
+      }
+    });
+  }, [activeModelIndices]);
+
   // Auto-rotate sub-models every 10 seconds
   React.useEffect(() => {
     const interval = setInterval(() => {
@@ -352,7 +384,7 @@ export default function SuteraShowcase() {
               
               {/* Header Text */}
               <div className="absolute top-24 md:top-12 left-6 md:left-[5%] z-20 transition-transform duration-100 ease-out" style={{ transform: backgroundTransform }}>
-                <h2 className="text-[11vw] md:text-6xl lg:text-[7rem] font-sans font-black tracking-tighter uppercase leading-[0.85] text-[#04152B] break-words md:whitespace-nowrap max-w-[90vw]">
+                <h2 className="text-[11vw] md:text-6xl lg:text-[7rem] font-sans font-bold tracking-tighter uppercase leading-[0.85] text-[#04152B] break-words md:whitespace-nowrap max-w-[90vw]">
                   {item.category}
                 </h2>
                 <p className="mt-4 md:mt-8 text-[10px] md:text-sm font-bold tracking-widest max-w-[200px] md:max-w-[280px] leading-relaxed uppercase border-l-2 border-black pl-3 md:pl-4 text-gray-800">
@@ -494,8 +526,10 @@ export default function SuteraShowcase() {
                   
                   {/* The shifting continuous ribbon track */}
                   <div 
-                    className="flex items-center absolute transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] h-full" 
-                    style={{ transform: `translateX(calc(50vw - ${activeModelIndex * 180}px - 90px))` }}
+                    id={`ribbon-${index}`}
+                    onScroll={(e) => handleScroll(e, index)}
+                    className="flex items-center h-full transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] w-full overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] snap-x snap-mandatory px-[calc(50vw-90px)] md:absolute md:w-auto md:overflow-visible md:snap-none md:px-0 md:[transform:translateX(var(--x-pos))]" 
+                    style={{ '--x-pos': `calc(50vw - ${activeModelIndex * 180}px - 90px)` } as React.CSSProperties}
                   >
                     {item.models.map((model, mIdx) => {
                       const isActive = activeModelIndex === mIdx;
@@ -509,7 +543,7 @@ export default function SuteraShowcase() {
                               return next;
                             });
                           }}
-                          className={`w-[180px] h-full flex-shrink-0 flex items-center justify-center cursor-pointer transition-all duration-300 group`}
+                          className={`w-[180px] h-full flex-shrink-0 flex items-center justify-center cursor-pointer transition-all duration-300 group snap-center`}
                         >
                           <div className={`relative px-4 py-2 rounded-full transition-all duration-300 ${isActive ? 'bg-[#04152B] text-white shadow-xl scale-110 drop-shadow-[0_8px_16px_rgba(0,37,66,0.4)]' : 'bg-transparent text-gray-400 group-hover:text-[#04152B] group-hover:bg-black/5 group-hover:scale-105'}`}>
                             {isActive && (
