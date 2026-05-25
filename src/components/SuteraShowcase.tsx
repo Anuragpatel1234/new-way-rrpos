@@ -251,7 +251,7 @@ export default function SuteraShowcase() {
   const [activeModelIndices, setActiveModelIndices] = useState<number[]>(SHOWCASE_DATA.map(() => 0));
 
   const isScrolling = useRef(false);
-  const scrollTimeout = useRef<any>();
+  const scrollTimeout = useRef<any>(null);
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>, index: number) => {
     if (window.innerWidth >= 768) return;
