@@ -410,18 +410,21 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="relative min-h-[200px] overflow-hidden rounded-md border border-[#44474d]/20 bg-[#0b1326] shadow-lg shadow-black/30 sm:min-h-[220px] lg:col-span-8 lg:h-auto lg:min-h-[300px]">
-              <img
-                alt="Stylized global network map"
-                className="absolute inset-0 h-full w-full object-cover opacity-60 mix-blend-luminosity"
-                src={NETWORK_MAP_IMAGE}
+            <div className="relative min-h-[300px] overflow-hidden rounded-md border border-[#44474d]/20 bg-[#0b1326] shadow-lg shadow-black/30 sm:min-h-[320px] lg:col-span-8 lg:h-auto lg:min-h-[400px]">
+              <iframe
+                title="New Way Traders Office Location"
+                src="https://maps.google.com/maps?q=New%20Way%20Traders%20Opposite%20Kothawala%20Flats%20Pritmanagar%20Ashram%20Road%20Ahmedabad&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: "350px" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0 w-full h-full opacity-90 hover:opacity-100 transition-opacity duration-300"
               />
-              <div
-                className="absolute inset-0 bg-gradient-to-t from-[#060e20] via-transparent to-transparent"
-                aria-hidden
-              />
+              
               <div className="pointer-events-none absolute inset-0 flex flex-col justify-between p-3 md:p-3.5 lg:flex-row lg:items-start">
-                <div className="max-w-[240px] rounded-md border border-white/5 bg-[#31394d]/40 p-2.5 shadow-md backdrop-blur-md sm:max-w-[260px] md:p-3">
+                <div className="max-w-[240px] rounded-md border border-white/5 bg-[#31394d]/85 p-2.5 shadow-md backdrop-blur-md sm:max-w-[260px] md:p-3">
                   <div className="mb-0 text-xs font-bold uppercase tracking-[0.16em] text-[#a4c9ff]">
                     Support status
                   </div>
@@ -460,18 +463,6 @@ export default function ContactPage() {
                   >
                     <LocateFixed className="h-3.5 w-3.5" />
                   </a>
-                  <span
-                    className="flex h-8 w-8 cursor-not-allowed items-center justify-center rounded-md bg-[#171f33]/80 text-[#c4c6cd]/50 ring-1 ring-white/5"
-                    aria-hidden
-                  >
-                    <Plus className="h-3.5 w-3.5" />
-                  </span>
-                  <span
-                    className="flex h-8 w-8 cursor-not-allowed items-center justify-center rounded-md bg-[#171f33]/80 text-[#c4c6cd]/50 ring-1 ring-white/5"
-                    aria-hidden
-                  >
-                    <Minus className="h-3.5 w-3.5" />
-                  </span>
                 </div>
               </div>
             </div>

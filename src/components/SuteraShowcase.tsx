@@ -1,18 +1,57 @@
 "use client";
-import React, { useRef, useState } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import ScrollTrigger from "gsap/ScrollTrigger";
 
-// Ensure plugins are registered
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger, useGSAP);
-}
+import React, { useState, useEffect, useRef } from "react";
+import {
+  Package,
+  FileText,
+  CloudLightning,
+  Users,
+  Calendar,
+  Cpu,
+  Activity,
+  RefreshCw,
+  ShieldCheck,
+  Settings,
+  Sparkles,
+  Network,
+  Lock,
+  Layers,
+  Zap,
+  CheckCircle,
+  Truck,
+  HelpCircle,
+  Compass
+} from "lucide-react";
 
+// Tailored content for every single category, matching the tech datasheet aesthetic in the mockup image
 const SHOWCASE_DATA = [
   {
     category: "TOUCH POS",
-    desc: ["From deep roots,", "efficiency draws", "its strength"],
+    tagline: "Streamline Your Business with Our Advanced Point of Sale Software. Engineered for the precision of modern retail.",
+    leftCardTitle: "SOFTWARE FEATURES",
+    leftCardItems: [
+      "Real-Time Inventory Management",
+      "Detailed Sales Reporting",
+      "Cloud Data Sync & Backup",
+      "CRM & Loyalty Programs",
+      "Employee Scheduling"
+    ],
+    rightTopCardTitle: "SYSTEM COMPATIBILITY",
+    rightTopCardItems: [
+      "Windows & Linux OS Support",
+      "Touchscreen Optimization",
+      "Barcode Scanner Integration",
+      "Thermal Receipt Printers",
+      "Electronic Cash Drawers",
+      "Integrated Payment Terminals"
+    ],
+    rightBottomCardTitle: "LOCAL SUPPORT & INSTALLATION",
+    rightBottomCardItems: [
+      "On-Site Setup & Team Training",
+      "24/7 Priority Technical Assistance",
+      "Regular Automated Software Updates",
+      "Full Hardware Defect Warranties"
+    ],
     models: [
       { name: "2302 Core", image: "/products/touch_2302.png" },
       { name: "1701 Slim", image: "/products/touch_1701.png" },
@@ -22,161 +61,171 @@ const SHOWCASE_DATA = [
       { name: "D3 Mini", image: "/products/touch_D3mini.png" },
       { name: "TE02 Pro", image: "/products/touch_TE02.png" },
       { name: "TS02 Hub", image: "/products/touch_TS02.png" }
-    ],
-    box1: {
-      title: "[CORE ARCHITECTURE]",
-      items: [
-        { label: "PROCESSOR ///", value: "Intel Celeron J6412 / J4125" },
-        { label: "FREQUENCY ///", value: "Up to 2.60 GHz" }
-      ]
-    },
-    box2: {
-      title: "Primary Display Unit",
-      items: [
-        { label: "FORMAT", value: "15\" / 15.6\"" },
-        { label: "MATRIX", value: "LED Touch" },
-        { label: "RES", value: "1024x768 / 1920x1080" }
-      ]
-    },
-    box3: {
-      title: "Foundation designed for speed and reliability.",
-      items: [
-        { icon: true, label: "SYS.MEMORY", value: "DDRIV 8G/16G" },
-        { icon: 'border', label: "SYS.STORAGE", value: "SSD 128G/256G/512G" }
-      ]
-    }
+    ]
   },
   {
     category: "HANDHELD",
-    desc: ["Portability engineered,", "for infinite space", "and time"],
+    tagline: "Mobilize Your Sales Force. High-performance portable billing systems engineered for speed, convenience, and tableside operations.",
+    leftCardTitle: "MOBILE CAPABILITIES",
+    leftCardItems: [
+      "Instant Queue Busting Capabilities",
+      "Table-Side Order Taking & Dispatch",
+      "Digital Payment Receipt Processing",
+      "Real-Time Stock Query Engine",
+      "Fully Functional Offline Billing"
+    ],
+    rightTopCardTitle: "HARDWARE ADVANTAGES",
+    rightTopCardItems: [
+      "Android OS Native Integration",
+      "High-Capacity Battery Lifecycle",
+      "Built-in 58mm Thermal Printer",
+      "Integrated 1D/2D Barcode Scanner",
+      "Dual-Band Wi-Fi & 4G Connectivity",
+      "Ruggedized Anti-Drop Design Frame"
+    ],
+    rightBottomCardTitle: "SUPPORT & DEPLOYMENT",
+    rightBottomCardItems: [
+      "Over-The-Air Wireless App Updates",
+      "Centralized Cloud Management Portal",
+      "Remote Troubleshooting & Diagnostics",
+      "1-Year Fast Replacement Warranty"
+    ],
     models: [
       { name: "N1 Base", image: "/products/handheld_N1.png" },
       { name: "Q1 Pro", image: "/products/handheld_Q1.png" },
       { name: "Q3 Max", image: "/products/handheld_Q3.png" },
       { name: "Q6 Ultra", image: "/products/handheld_Q6.png" },
       { name: "Z1 List", image: "/products/handheld_Z1LIST.png" }
-    ],
-    box1: {
-      title: "[MOBILE COMPUTE]",
-      items: [
-        { label: "PROCESSOR ///", value: "Quad-Core ARM Cortex A53" },
-        { label: "OS ///", value: "Android 11/12/13" }
-      ]
-    },
-    box2: {
-      title: "Mobile Interface",
-      items: [
-        { label: "FORMAT", value: "6.0\" HD IPS" },
-        { label: "NETWORK", value: "4G + Dual-Band WiFi" },
-        { label: "BATTERY", value: "7.4V / 5200mAh" }
-      ]
-    },
-    box3: {
-      title: "Built-in thermal printing options",
-      items: [
-        { icon: true, label: "INTEGRATION", value: "Built-in 58mm Printer" },
-        { icon: 'border', label: "SCANNER", value: "1D/2D Barcode Engine" }
-      ]
-    }
+    ]
   },
   {
     category: "CHANNEL POS",
-    desc: ["Seamless Integration,", "Limitless Potential,", "True Scalability"],
+    tagline: "Heavy-duty billing workstations built for high-traffic supermarkets, apparel hubs, and high-frequency retail outlets.",
+    leftCardTitle: "MANAGEMENT TOOLS",
+    leftCardItems: [
+      "Multi-Lane Queue Management",
+      "Centralized Store Control Panel",
+      "Advanced Batching & Gifting Tools",
+      "Multi-Operator Login Accounts",
+      "Live Automatic Store Syncing"
+    ],
+    rightTopCardTitle: "SYSTEM SPECIFICATIONS",
+    rightTopCardItems: [
+      "High-Performance Intel Core Tech",
+      "Dual Display Panel Option Ready",
+      "Heavy-Duty Aluminum Base Stand",
+      "High-Speed SSD Storage Drive",
+      "Multiple USB / RS232 Connectors",
+      "VESA Mount Pattern Compatibility"
+    ],
+    rightBottomCardTitle: "SERVICE & WARRANTY",
+    rightBottomCardItems: [
+      "Professional In-Lane Setup",
+      "Local Field Engineering Coverage",
+      "Custom ERP System Integration",
+      "Extendable Hardware Protection Plan"
+    ],
     models: [
       { name: "Channel 1515A", image: "/products/channel_1515A.png" },
       { name: "Channel 1515B", image: "/products/channel_1515B.png" },
       { name: "Channel 1515C", image: "/products/channel_1515C.png" }
-    ],
-    box1: {
-      title: "[WORKSTATION]",
-      items: [
-        { label: "PROCESSOR ///", value: "Intel Core i3 / i5" },
-        { label: "INTERFACE ///", value: "Multi-Touch Capacitive" }
-      ]
-    },
-    box2: {
-      title: "Modular Display",
-      items: [
-        { label: "FORMAT", value: "15.6\" Widescreen" },
-        { label: "SUPPORT", value: "Dual Screen Setup" },
-        { label: "BASE", value: "Solid Aluminum Chassis" }
-      ]
-    },
-    box3: {
-      title: "Built for heavy retail traffic",
-      items: [
-        { icon: true, label: "NETWORK", value: "Gigabit Ethernet" },
-        { icon: 'border', label: "PORTS", value: "Multiple USB / RS232" }
-      ]
-    }
+    ]
   },
   {
     category: "REGISTER",
-    desc: ["The secure vault", "for high-frequency", "transactions."],
+    tagline: "Heavy-gauge steel secure vaults designed for high-frequency cash drawer operations and robust physical transaction protection.",
+    leftCardTitle: "SECURITY FEATURES",
+    leftCardItems: [
+      "Heavy-Duty Steel Body Shell",
+      "Three-Position Mechanical Key Lock",
+      "Removable Inserts & Coin Trays",
+      "Emergency Release Bottom Lever",
+      "Scratch-Resistant Textured Finish"
+    ],
+    rightTopCardTitle: "HARDWARE COMPATIBILITY",
+    rightTopCardItems: [
+      "Standard RJ11 / RJ12 Connectors",
+      "12V / 24V Printer Driven Interface",
+      "Universal POS Terminal Sync Hookups",
+      "Dual Media Slot Front Openings",
+      "Reinforced Steel Roller Bearings",
+      "Anti-Slip Heavy Rubber Feet Pads"
+    ],
+    rightBottomCardTitle: "RELIABILITY STANDARDS",
+    rightBottomCardItems: [
+      "1,000,000+ Cycles Certified Lifespan",
+      "Under-Counter Secure Mount Options",
+      "24-Month Structural Warranty Plan",
+      "Direct Original Replacement Parts"
+    ],
     models: [
       { name: "Cash 2307", image: "/products/cash_2307.png" },
       { name: "Cash 1515F", image: "/products/cash_1515F.png" },
       { name: "Cash 1515G", image: "/products/cash_1515G.png" }
-    ],
-    box1: {
-      title: "[SECURITY COMPUTE]",
-      items: [
-        { label: "PROCESSOR ///", value: "RK3568 Core" },
-        { label: "LOCK ///", value: "3-position mechanical" }
-      ]
-    },
-    box2: {
-      title: "Cash Management",
-      items: [
-        { label: "COMPONENTS", value: "Heavy-Gauge Steel" },
-        { label: "TRAYS", value: "4/5 Bill, 8 Coin" },
-        { label: "INTERFACE", value: "RJ11/RJ12 12V/24V" }
-      ]
-    },
-    box3: {
-      title: "Reliable mechanical endurance",
-      items: [
-        { icon: true, label: "LIFECYCLE", value: "1,000,000+ operations" },
-        { icon: 'border', label: "WEIGHT", value: "5.5 kg" }
-      ]
-    }
+    ]
   },
   {
     category: "SCANNER",
-    desc: ["Laser precision,", "Omnidirectional,", "Unfailing sight."],
+    tagline: "Omnidirectional barcode scan engines that deliver lightning-fast decodes under any environmental lighting condition.",
+    leftCardTitle: "SCANNING TECHNOLOGY",
+    leftCardItems: [
+      "CMOS Global Shutter Scan Sensor",
+      "Instant 1D & 2D Code Decodes",
+      "Damaged & Smudged Label Reading",
+      "Mobile Screen Barcode Optimization",
+      "Auto-Sense Trigger Smart Modes"
+    ],
+    rightTopCardTitle: "INTERFACE & SYSTEM",
+    rightTopCardItems: [
+      "Plug-and-Play USB Interface Setup",
+      "Virtual COM / RS232 Option Boards",
+      "All Major Operating Systems Support",
+      "Audible Configurable Buzzer Feedback",
+      "Vibrant LED Ring Scan Indicator",
+      "Anti-Glare Optics Lens Layering"
+    ],
+    rightBottomCardTitle: "PROTECTION & SERVICE",
+    rightBottomCardItems: [
+      "IP52 Dust & Water Resistance Rating",
+      "1.5m Concrete Drop Crash Protection",
+      "Life-Time Technical Helpline Support",
+      "2-Year Full Hardware Warranty Coverage"
+    ],
     models: [
       { name: "Scanner 790A", image: "/products/scanner_790A.png" },
       { name: "Scanner 4800", image: "/products/scanner_4800.png" },
       { name: "Scanner 680", image: "/products/scanner_680.png" },
       { name: "Scanner 710", image: "/products/scanner_710.png" },
       { name: "Scanner VS6760", image: "/products/scanner_VS6760.png" }
-    ],
-    box1: {
-      title: "[OPTICS ENGINE]",
-      items: [
-        { label: "SENSOR ///", value: "CMOS Global Shutter" },
-        { label: "ILLUMINATION ///", value: "White LED" }
-      ]
-    },
-    box2: {
-      title: "Capture Interface",
-      items: [
-        { label: "TYPE", value: "1D / 2D Codes" },
-        { label: "SPEED", value: "High-frame Decode" },
-        { label: "ACCURACY", value: "3 mil precision" }
-      ]
-    },
-    box3: {
-      title: "Maximum decoding throughput",
-      items: [
-        { icon: true, label: "INTERFACE", value: "USB/RS-232" },
-        { icon: 'border', label: "FEEDBACK", value: "Buzzer + LED Ring" }
-      ]
-    }
+    ]
   },
   {
     category: "PRINTER",
-    desc: ["High-speed thermal,", "Clear lines,", "Zero lag."],
+    tagline: "High-speed direct thermal printers engineered for silent, quick, and jam-free billing receipt generation.",
+    leftCardTitle: "PRINTING FUNCTIONS",
+    leftCardItems: [
+      "Direct Line Thermal Printing Tech",
+      "High-Speed Output (up to 250mm/s)",
+      "Automatic Embedded Receipt Cutter",
+      "Easy Paper Drop-In Loading Design",
+      "Compact & Space-Saving Footprint"
+    ],
+    rightTopCardTitle: "CONNECTIVITY OPTIONS",
+    rightTopCardItems: [
+      "Triple Interface: USB + LAN + Serial",
+      "Wireless Bluetooth / Wi-Fi Support",
+      "Windows, Linux, macOS Drivers Ready",
+      "ESC/POS Command Emulation Protocol",
+      "OPOS & JPOS Driver Compatibility",
+      "Wall Mount Design Hanging Slots"
+    ],
+    rightBottomCardTitle: "DURABILITY RATING",
+    rightBottomCardItems: [
+      "150 KM Print Head Lifespan Rating",
+      "1.5 Million Clean Cutter Cuts",
+      "Print Head Overheat Safety Protection",
+      "Standard 1-Year Full Warranty"
+    ],
     models: [
       { name: "XP-235B", image: "/products/printer_XP-235B.png" },
       { name: "G200", image: "/products/printer_G200.png" },
@@ -187,387 +236,347 @@ const SHOWCASE_DATA = [
       { name: "SPRT S200", image: "/products/printer_SPRT_S200.png" },
       { name: "SPRT TL25", image: "/products/printer_SPRT_TL25.png" },
       { name: "XP-365B", image: "/products/printer_XP-365B.png" }
-    ],
-    box1: {
-      title: "[THERMAL ENGINE]",
-      items: [
-        { label: "PRINT METHOD ///", value: "Direct Line Thermal" },
-        { label: "DENSITY ///", value: "576 dots/line" }
-      ]
-    },
-    box2: {
-      title: "Output Delivery",
-      items: [
-        { label: "SPEED", value: "80-160mm/sec" },
-        { label: "WIDTH", value: "58mm / 80mm" },
-        { label: "CUTTER", value: "Auto-Cutter Included" }
-      ]
-    },
-    box3: {
-      title: "Continuous operation guaranteed",
-      items: [
-        { icon: true, label: "INTERFACE", value: "LAN, USB, Serial" },
-        { icon: 'border', label: "LIFESPAN", value: "150km Print Head" }
-      ]
-    }
+    ]
   },
   {
     category: "SCALE",
-    desc: ["Gram accuracy,", "Instant sync,", "Heavy duty."],
+    tagline: "Trade-approved, high-precision weighing scales that interface directly with your billing terminal for instant pricing calculation.",
+    leftCardTitle: "METRIC FEATURES",
+    leftCardItems: [
+      "High-Precision Load Cell Sensor Tech",
+      "Dual-Sided LED/LCD Backlit Displays",
+      "Stainless Steel Heavy Platter Plate",
+      "Tare & Zero Weight Functions",
+      "Auto-Power Off / Battery Save Modes"
+    ],
+    rightTopCardTitle: "INTEGRATION DATA",
+    rightTopCardItems: [
+      "RS232 Direct Serial Cable Link",
+      "Seamless POS Software Data Syncing",
+      "Up to 30 KG Capacity Weight Rating",
+      "Dual Accuracy Precision Calibration",
+      "Internal Rechargeable Battery Backup",
+      "Water-Resistant Control Keypad Face"
+    ],
+    rightBottomCardTitle: "COMPLIANCE & SUPPORT",
+    rightBottomCardItems: [
+      "Government Weights & Measures Verified",
+      "Anti-Vibration Stabilization System",
+      "On-Site Verification Stamping Help",
+      "12-Month Calibration Stability Plan"
+    ],
     models: [
       { name: "NewWay RTC1", image: "/products/scale_RTC1.png" },
       { name: "NewWay DAHUA", image: "/products/scale_DAHUA.png" }
-    ],
-    box1: {
-      title: "[SENSORY COMPUTE]",
-      items: [
-        { label: "SENSOR ///", value: "High-precision Load Cell" },
-        { label: "DISPLAY ///", value: "Dual LED/LCD" }
-      ]
-    },
-    box2: {
-      title: "Weight Interface",
-      items: [
-        { label: "CAPACITY", value: "Up to 30 KG" },
-        { label: "ACCURACY", value: "2g / 5g Steps" },
-        { label: "MATERIAL", value: "Stainless Steel Platter" }
-      ]
-    },
-    box3: {
-      title: "Trade approved calibration",
-      items: [
-        { icon: true, label: "INTERFACE", value: "RS-232 to POS" },
-        { icon: 'border', label: "POWER", value: "Battery Backup" }
-      ]
-    }
+    ]
   }
 ];
 
 export default function SuteraShowcase() {
-  const containerRef = useRef<HTMLElement>(null);
-  const [rotation, setRotation] = useState({ x: 0, y: 0 });
-  
-  // Track active sub-model index per category
-  const [activeModelIndices, setActiveModelIndices] = useState<number[]>(SHOWCASE_DATA.map(() => 0));
+  // Track active sub-model index per category index
+  const [activeModelIndices, setActiveModelIndices] = useState<number[]>(
+    SHOWCASE_DATA.map(() => 0)
+  );
 
-  const isScrolling = useRef(false);
-  const scrollTimeout = useRef<any>(null);
+  // Track active category index for the sticky sub-nav highlight
+  const [activeCategory, setActiveCategory] = useState(0);
 
-  const handleScroll = (e: React.UIEvent<HTMLDivElement>, index: number) => {
-    if (window.innerWidth >= 768) return;
-    
-    isScrolling.current = true;
-    clearTimeout(scrollTimeout.current);
-    
-    scrollTimeout.current = setTimeout(() => {
-      isScrolling.current = false;
-      const scrollLeft = (e.target as HTMLDivElement).scrollLeft;
-      const newIndex = Math.round(scrollLeft / 180);
-      setActiveModelIndices(prev => {
-        if (prev[index] === newIndex) return prev;
-        const next = [...prev];
-        next[index] = newIndex;
-        return next;
+  // Hover 3D Tilt state for each category's center product box
+  const [tilts, setTilts] = useState<Array<{ x: number; y: number }>>(
+    SHOWCASE_DATA.map(() => ({ x: 0, y: 0 }))
+  );
+
+  // Smooth scroll logic for sub-nav buttons
+  const scrollToSection = (idx: number) => {
+    const el = document.getElementById(`category-section-${idx}`);
+    if (el) {
+      // 72px main navbar + 54px sub-navbar + padding offset
+      const offset = el.offsetTop - 142;
+      window.scrollTo({
+        top: offset,
+        behavior: "smooth"
       });
-    }, 150);
+    }
   };
 
-  React.useEffect(() => {
-    if (isScrolling.current) return;
-    SHOWCASE_DATA.forEach((_, index) => {
-      const el = document.getElementById(`ribbon-${index}`);
-      if (el && window.innerWidth < 768) {
-        el.scrollTo({ left: activeModelIndices[index] * 180, behavior: 'smooth' });
-      }
-    });
-  }, [activeModelIndices]);
+  // ScrollSpy to highlight category in navigation as user scrolls down
+  useEffect(() => {
+    const handleScrollSpy = () => {
+      const scrollPosition = window.scrollY + 180;
+      const elements = SHOWCASE_DATA.map((_, idx) =>
+        document.getElementById(`category-section-${idx}`)
+      );
 
-  // Auto-rotate sub-models every 10 seconds
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveModelIndices(prev => prev.map((idx, categoryIndex) => {
-        const numModels = SHOWCASE_DATA[categoryIndex].models.length;
-        if (numModels > 1) {
-          return (idx + 1) % numModels;
+      for (let i = elements.length - 1; i >= 0; i--) {
+        const el = elements[i];
+        if (el && el.offsetTop <= scrollPosition) {
+          setActiveCategory(i);
+          break;
         }
-        return idx;
-      }));
-    }, 10000);
-    return () => clearInterval(interval);
+      }
+    };
+
+    window.addEventListener("scroll", handleScrollSpy, { passive: true });
+    // Run once initially to capture load state
+    handleScrollSpy();
+
+    return () => window.removeEventListener("scroll", handleScrollSpy);
   }, []);
 
-  useGSAP(() => {
-    if (!containerRef.current) return;
-
-    // Set initial states
-    SHOWCASE_DATA.forEach((_, index) => {
-      gsap.set(`.showcase-item-${index}`, {
-        y: index === 0 ? "0vh" : "100vh",
-        opacity: index === 0 ? 1 : 0
-      });
-    });
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top top",
-        end: `+=${SHOWCASE_DATA.length * 100}%`, // e.g. 700vh duration
-        pin: true,
-        scrub: 1,
-      }
-    });
-
-    // Staggered sequence
-    for (let i = 0; i < SHOWCASE_DATA.length - 1; i++) {
-      // Outgoing item
-      tl.to(`.showcase-item-${i}`, {
-        y: "-100vh",
-        opacity: 0,
-        duration: 1,
-        ease: "power2.inOut"
-      }, i); // Starts at time corresponding to index
-
-      // Incoming item
-      tl.to(`.showcase-item-${i + 1}`, {
-        y: "0vh",
-        opacity: 1,
-        duration: 1,
-        ease: "power2.inOut"
-      }, i + 0.2); // Overlaps transition perfectly
-    }
-  }, { scope: containerRef });
-
-  // Mouse Parallax Logic
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  // 3D image tilt interaction logic
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>, idx: number) => {
     const rect = e.currentTarget.getBoundingClientRect();
-    const x = (e.clientX - rect.left - rect.width / 2) / 45; 
-    const y = -(e.clientY - rect.top - rect.height / 2) / 45;
-    setRotation({ x, y });
+    const x = (e.clientX - rect.left - rect.width / 2) / 16;
+    const y = -(e.clientY - rect.top - rect.height / 2) / 16;
+    setTilts((prev) => {
+      const next = [...prev];
+      next[idx] = { x, y };
+      return next;
+    });
   };
-  const handleMouseLeave = () => setRotation({ x: 0, y: 0 });
 
-  // Transforms computation for 3D interactions
-  const productTransform = `perspective(1000px) rotateX(${rotation.y}deg) rotateY(${rotation.x}deg) scale3d(1.05, 1.05, 1.05)`;
-  const foregroundTransform = `translate3d(${rotation.x * -1.5}px, ${rotation.y * 1.5}px, 0)`;
-  const backgroundTransform = `translate3d(${rotation.x * 0.5}px, ${rotation.y * -0.5}px, 0)`;
-  const echoTransform = `translate3d(${rotation.x * 3}px, ${rotation.y * -3}px, 0) scale(1.4)`;
+  const handleMouseLeave = (idx: number) => {
+    setTilts((prev) => {
+      const next = [...prev];
+      next[idx] = { x: 0, y: 0 };
+      return next;
+    });
+  };
+
+  // Switch between left card dynamic icons
+  const getLeftCardIcon = (category: string, idx: number) => {
+    switch (category) {
+      case "TOUCH POS":
+        return [
+          <Package className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="0" />,
+          <FileText className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="1" />,
+          <CloudLightning className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="2" />,
+          <Users className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="3" />,
+          <Calendar className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="4" />
+        ][idx] || <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="d" />;
+      case "HANDHELD":
+        return [
+          <Zap className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="0" />,
+          <Compass className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="1" />,
+          <FileText className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="2" />,
+          <Package className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="3" />,
+          <Activity className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="4" />
+        ][idx] || <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="d" />;
+      case "CHANNEL POS":
+        return [
+          <Network className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="0" />,
+          <Settings className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="1" />,
+          <Sparkles className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="2" />,
+          <Users className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="3" />,
+          <RefreshCw className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="4" />
+        ][idx] || <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="d" />;
+      case "REGISTER":
+        return [
+          <Lock className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="0" />,
+          <ShieldCheck className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="1" />,
+          <Layers className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="2" />,
+          <Activity className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="3" />,
+          <Sparkles className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="4" />
+        ][idx] || <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="d" />;
+      default:
+        return [
+          <Cpu className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="0" />,
+          <Zap className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="1" />,
+          <Layers className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="2" />,
+          <ShieldCheck className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="3" />,
+          <Settings className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="4" />
+        ][idx] || <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="d" />;
+    }
+  };
+
+  // Switch between right bottom card dynamic icons
+  const getRightBottomCardIcon = (idx: number) => {
+    return [
+      <Truck className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="0" />,
+      <HelpCircle className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="1" />,
+      <RefreshCw className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="2" />,
+      <ShieldCheck className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="3" />
+    ][idx] || <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" key="d" />;
+  };
 
   return (
-    <section 
-      ref={containerRef}
-      className="relative w-full bg-white border-y border-[#e5e7eb] font-mono text-[#111111] overflow-hidden"
-    >
-      <div 
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        className="w-full h-screen relative flex justify-center items-center"
-        style={{ perspective: "1200px" }}
-      >
-        
-        {/* Persistent Crosshairs */}
-        <div className="absolute top-1/4 left-1/4 w-3 h-3 border-r border-b border-[#000] -translate-x-1/2 -translate-y-1/2 pointer-events-none z-[100]" />
-        <div className="absolute top-1/4 right-1/4 w-3 h-3 border-l border-b border-[#000] translate-x-1/2 -translate-y-1/2 pointer-events-none z-[100]" />
-        <div className="absolute bottom-1/4 left-1/4 w-3 h-3 border-r border-t border-[#000] -translate-x-1/2 translate-y-1/2 pointer-events-none z-[100]" />
-        <div className="absolute bottom-1/4 right-1/4 w-3 h-3 border-l border-t border-[#000] translate-x-1/2 translate-y-1/2 pointer-events-none z-[100]" />
-        <div className="absolute top-1/2 left-[10%] text-xs text-gray-400 font-sans tracking-widest pointer-events-none z-[100]">+</div>
-        <div className="absolute top-1/2 right-[10%] text-xs text-gray-400 font-sans tracking-widest pointer-events-none z-[100]">+</div>
+    <section className="bg-[#faf9fc] font-sans text-gray-900 border-t border-gray-200">
+      {/* Sticky sub-navigation bar below header */}
+      <div className="sticky top-[72px] z-40 bg-[#faf9fc]/90 backdrop-blur-md border-b border-gray-200 py-3 shadow-sm select-none">
+        <div className="mx-auto max-w-7xl px-6 flex gap-2 md:gap-4 overflow-x-auto scrollbar-none justify-start md:justify-center">
+          {SHOWCASE_DATA.map((item, idx) => {
+            const isActive = activeCategory === idx;
+            return (
+              <button
+                key={item.category}
+                onClick={() => scrollToSection(idx)}
+                className={`px-4 py-2 rounded-full text-[10px] md:text-xs font-mono font-bold tracking-widest uppercase transition-all whitespace-nowrap cursor-pointer ${
+                  isActive
+                    ? "bg-[#04152B] text-white shadow-md scale-105"
+                    : "bg-white border border-gray-200 text-gray-500 hover:text-[#04152B] hover:border-[#04152B]"
+                }`}
+              >
+                {item.category}
+              </button>
+            );
+          })}
+        </div>
+      </div>
 
+      {/* Main product showcase blocks */}
+      <div className="mx-auto max-w-7xl px-6 py-12 space-y-16 md:space-y-24">
         {SHOWCASE_DATA.map((item, index) => {
           const activeModelIndex = activeModelIndices[index];
           const activeModel = item.models[activeModelIndex];
+          const tilt = tilts[index];
 
           return (
-            <div key={item.category} className={`showcase-item-${index} absolute inset-0 w-full h-full flex items-center justify-center pointer-events-none`}>
-              
-              {/* Deep Parallax Echo */}
-              <img src={activeModel.image} className="absolute z-0 w-[360px] md:w-[500px] object-contain opacity-[0.03] blur-[15px] mix-blend-darken filter grayscale transition-all duration-[1500ms] ease-out pointer-events-none" style={{ transform: echoTransform }} alt="" />
-              
-              {/* Header Text */}
-              <div className="absolute top-24 md:top-12 left-6 md:left-[5%] z-20 transition-transform duration-100 ease-out" style={{ transform: backgroundTransform }}>
-                <h2 className="text-[11vw] md:text-6xl lg:text-[7rem] font-sans font-bold tracking-tighter uppercase leading-[0.85] text-[#04152B] break-words md:whitespace-nowrap max-w-[90vw]">
-                  {item.category}
-                </h2>
-                <p className="mt-4 md:mt-8 text-[10px] md:text-sm font-bold tracking-widest max-w-[200px] md:max-w-[280px] leading-relaxed uppercase border-l-2 border-black pl-3 md:pl-4 text-gray-800">
-                  {item.desc.map((line, i) => <React.Fragment key={i}>{line}<br/></React.Fragment>)}
-                </p>
-              </div>
-              
-              {/* Central Images container (for crossfade auto-rotation logic) */}
-              <div className="absolute inset-0 m-auto flex items-center justify-center w-full h-full pointer-events-auto">
-                {item.models.map((model, mIdx) => {
-                  const isActive = mIdx === activeModelIndex;
-                  const isPast = mIdx < activeModelIndex;
+            <div
+              key={item.category}
+              id={`category-section-${index}`}
+              className="relative py-12 md:py-16 border-b border-gray-200/60 last:border-0"
+            >
+              {/* Retro decorative layout elements */}
+              <div className="absolute top-4 left-4 w-3 h-3 border-r border-b border-gray-200 pointer-events-none" />
+              <div className="absolute top-4 right-4 w-3 h-3 border-l border-b border-gray-200 pointer-events-none" />
+              <div className="absolute bottom-4 left-4 w-3 h-3 border-r border-t border-gray-200 pointer-events-none" />
+              <div className="absolute bottom-4 right-4 w-3 h-3 border-l border-t border-gray-200 pointer-events-none" />
 
-                  // Keep 3D transform locked on container or apply individually, applying individually lets them pop properly
-                  return (
-                    <img 
-                      key={model.name}
-                      src={model.image} 
-                      alt={model.name} 
-                      className={`absolute left-0 right-0 m-auto top-[22vh] md:inset-0 z-20 w-[220px] h-[220px] md:w-[420px] md:h-[420px] lg:w-[480px] lg:h-[480px] md:mb-auto object-contain drop-shadow-[0_16px_32px_rgba(0,0,0,0.25)] transition-all duration-[1200ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isActive ? 'opacity-100 translate-x-0 blur-none' : 'opacity-0 blur-sm ' + (isPast ? '-translate-x-12' : 'translate-x-12')}`} 
-                      style={isActive ? { transform: productTransform } : {}} 
-                    />
-                  );
-                })}
-              </div>
-
-            {/* Foreground SVG Connectors */}
-            <div className="absolute inset-0 w-full h-full z-10 transition-transform duration-100 ease-out" style={{ transform: foregroundTransform }}>
-              <svg className="w-full h-full" preserveAspectRatio="none">
-                <polyline points="25%,45% 42%,55%" fill="none" stroke="black" strokeWidth="1" />
-                <rect x="25%" y="45%" width="6" height="6" fill="white" stroke="black" transform="translate(-3, -3)" />
-                <polyline points="75%,35% 65%,45% 58%,45%" fill="none" stroke="black" strokeWidth="1" />
-                <rect x="75%" y="35%" width="6" height="6" fill="white" stroke="black" transform="translate(-3, -3)" />
-                <polyline points="80%,70% 65%,65%" fill="none" stroke="black" strokeWidth="1" />
-                <rect x="80%" y="70%" width="6" height="6" fill="black" stroke="black" transform="translate(-3, -3)" />
-              </svg>
-            </div>
-            {/* Foreground SVG Connectors & Data Boxes */}
-            <div className="absolute inset-0 w-full h-full z-20 transition-transform duration-100 ease-out" style={{ transform: foregroundTransform }}>
-              
-              <svg className="hidden md:block absolute inset-0 w-full h-full pointer-events-none">
-                <polyline points="200,500 200,600 350,600" fill="none" stroke="rgba(0,0,0,0.1)" strokeWidth="1" strokeDasharray="4 4" />
-                <polyline points="800,200 900,200 900,300" fill="none" stroke="rgba(0,0,0,0.1)" strokeWidth="1" strokeDasharray="4 4" />
-                <polyline points="750,700 850,700 850,750" fill="none" stroke="rgba(0,0,0,0.1)" strokeWidth="1" />
-              </svg>
-
-              <div className="hidden md:block absolute top-1/4 left-[20%] w-4 h-4 border-t border-l border-black overflow-hidden pointer-events-none"></div>
-              <div className="hidden md:block absolute top-1/4 right-[25%] w-4 h-4 border-t border-l border-black overflow-hidden pointer-events-none"></div>
-              <div className="hidden md:block absolute bottom-1/4 left-[20%] w-4 h-4 border-t border-l border-black overflow-hidden rotate-180 pointer-events-none"></div>
-              <div className="hidden md:block absolute bottom-1/4 right-[25%] w-4 h-4 border-t border-l border-black overflow-hidden rotate-180 pointer-events-none"></div>
-              <div className="hidden md:block absolute top-[40%] right-[30%] w-1.5 h-1.5 border border-black pointer-events-none"></div>
-              <div className="hidden md:block absolute top-[50%] left-[20%] w-1.5 h-1.5 border border-black pointer-events-none z-[100]"></div>
-              
-              <div className="hidden md:block absolute top-1/2 left-[10%] text-xs text-gray-400 font-sans tracking-widest pointer-events-none z-[100]">+</div>
-              <div className="hidden md:block absolute top-1/2 right-[10%] text-xs text-gray-400 font-sans tracking-widest pointer-events-none z-[100]">+</div>
-              
-              {/* Box 1: Left */}
-              <div className="hidden md:block absolute top-1/2 left-6 md:left-[8%] w-[240px] md:w-[280px] -translate-y-1/2 border border-black p-5 bg-white/50 backdrop-blur-md pointer-events-auto shadow-sm">
-                <div className="text-xs md:text-sm font-black uppercase bg-[#04152B] text-white px-3 py-1.5 inline-block mb-5">
-                  {item.box1.title}
-                </div>
-                <div className="space-y-4">
-                  <div className="text-xs uppercase tracking-widest border-b border-black/20 pb-3">
-                    <div className="font-bold text-black mb-1.5">01. {item.box1.items[0].label}</div>
-                    <div className="text-gray-700 pl-4">{item.box1.items[0].value}</div>
-                  </div>
-                  <div className="text-xs uppercase tracking-widest">
-                    <div className="font-bold text-black mb-1.5">02. {item.box1.items[1].label}</div>
-                    <div className="text-gray-700 pl-4">{item.box1.items[1].value}</div>
-                  </div>
-                </div>
-                <div className="absolute top-1/2 -right-2 w-2 h-2 bg-white border border-black"></div>
-              </div>
-
-              {/* Box 2: Right Top */}
-              <div className="hidden md:block absolute top-[30%] right-6 md:right-[12%] w-[220px] md:w-[260px] -translate-y-1/2 border-2 border-[#04152B] p-4 bg-white/70 backdrop-blur-md shadow-[6px_6px_0_#04152B] pointer-events-auto">
-                <div className="text-xs font-bold uppercase tracking-widest border-b-2 border-[#04152B] pb-2 mb-3 text-[#04152B]">
-                  {item.box2.title}
-                </div>
-                <div className="space-y-3 text-xs uppercase font-semibold text-gray-800">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-500">{item.box2.items[0].label}</span>
-                    <span className="text-right">{item.box2.items[0].value}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-500">{item.box2.items[1].label}</span>
-                    <span className="text-right">{item.box2.items[1].value}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-500">{item.box2.items[2].label}</span>
-                    <span className="text-right">{item.box2.items[2].value}</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Box 3: Right Bottom */}
-              <div className="hidden md:block absolute top-[70%] right-6 md:right-[10%] w-[260px] -translate-y-1/2 pointer-events-auto">
-                <div className="text-xs uppercase space-y-2">
-                  <div className="flex items-center gap-3">
-                    <span className="block w-2.5 h-2.5 bg-[#04152B]"></span>
-                    <span className="font-bold text-[#04152B]">{item.box3.items[0].label}</span>
-                  </div>
-                  <div className="text-gray-600 font-medium pl-5 border-l-2 border-[#04152B] ml-1 mb-3 py-1">{item.box3.items[0].value}</div>
-                  <div className="flex items-center gap-3">
-                    <span className="block w-2.5 h-2.5 border-2 border-[#04152B]"></span>
-                    <span className="font-bold text-[#04152B]">{item.box3.items[1].label}</span>
-                  </div>
-                  <div className="text-gray-600 font-medium pl-5 border-l-2 border-[#04152B] ml-1 py-1">{item.box3.items[1].value}</div>
-                </div>
-                <div className="mt-5 text-xs text-gray-500 font-bold uppercase tracking-wider border-t-2 border-dashed border-gray-300 pt-3">
-                  {item.box3.title}
-                </div>
-              </div>
-
-              {/* Mobile Spec Block (Only visible on small screens) */}
-              <div className="md:hidden absolute top-[65vh] left-0 w-full px-6 flex flex-col gap-3 pointer-events-auto">
-                <div className="bg-white/80 backdrop-blur-md border border-[#04152B]/10 p-4 rounded-xl shadow-2xl shadow-black/10">
-                  <div className="flex items-center justify-between border-b border-gray-200 pb-2.5 mb-2.5">
-                    <span className="text-[10px] font-bold text-gray-500 tracking-widest uppercase">{item.box1.items[0].label}</span>
-                    <span className="text-xs font-black text-[#04152B]">{item.box1.items[0].value}</span>
-                  </div>
-                  <div className="flex items-center justify-between border-b border-gray-200 pb-2.5 mb-2.5">
-                    <span className="text-[10px] font-bold text-gray-500 tracking-widest uppercase">{item.box2.items[0].label}</span>
-                    <span className="text-xs font-black text-[#04152B]">{item.box2.items[0].value}</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold text-gray-500 tracking-widest uppercase">{item.box3.items[0].label}</span>
-                    <span className="text-xs font-black text-[#04152B]">{item.box3.items[0].value}</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            {/* Sub-Model Hover Ribbon Navigator (only visible if there are multiple models for this sub-category) */}
-            {item.models.length > 1 && (
-              <div className="absolute bottom-8 md:bottom-12 left-0 w-full z-[200] pointer-events-auto">
-                <div className="relative w-full max-w-[100vw] overflow-hidden flex items-center h-16 md:h-20 mask-image-[linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
-                  
-                  {/* The shifting continuous ribbon track */}
-                  <div 
-                    id={`ribbon-${index}`}
-                    onScroll={(e) => handleScroll(e, index)}
-                    className="flex items-center h-full transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] w-full overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] snap-x snap-mandatory px-[calc(50vw-90px)] md:absolute md:w-auto md:overflow-visible md:snap-none md:px-0 md:[transform:translateX(var(--x-pos))]" 
-                    style={{ '--x-pos': `calc(50vw - ${activeModelIndex * 180}px - 90px)` } as React.CSSProperties}
-                  >
-                    {item.models.map((model, mIdx) => {
-                      const isActive = activeModelIndex === mIdx;
-                      return (
-                        <div 
-                          key={model.name}
-                          onClick={() => {
-                            setActiveModelIndices(prev => {
-                              const next = [...prev];
-                              next[index] = mIdx;
-                              return next;
-                            });
-                          }}
-                          className={`w-[180px] h-full flex-shrink-0 flex items-center justify-center cursor-pointer transition-all duration-300 group snap-center`}
-                        >
-                          <div className={`relative px-4 py-2 rounded-full transition-all duration-300 ${isActive ? 'bg-[#04152B] text-white shadow-xl scale-110 drop-shadow-[0_8px_16px_rgba(0,37,66,0.4)]' : 'bg-transparent text-gray-400 group-hover:text-[#04152B] group-hover:bg-black/5 group-hover:scale-105'}`}>
-                            {isActive && (
-                              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#00e5ff] rounded-full shadow-[0_0_8px_#00e5ff]" />
-                            )}
-                            <span className="text-xs md:text-sm font-bold tracking-widest uppercase">
-                              {model.name}
-                            </span>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 
-                {/* Center Focal Indicator Graphic */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#04152B] shadow-[0_0_12px_rgba(0,37,66,0.6)] pointer-events-none" />
+                {/* 1. Left Column: Title, Description, and Left Card */}
+                <div className="lg:col-span-4 space-y-6">
+                  <div>
+                    {/* Status indicator badge */}
+                    <div className="inline-flex items-center gap-1.5 bg-white border border-gray-200 px-3 py-1.5 rounded-md text-[9px] font-mono font-bold text-gray-500 mb-4 shadow-sm select-none">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                      ▼ SYSTEM STATUS: ACTIVE
+                    </div>
+                    
+                    {/* Category Title */}
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#04152B] tracking-tight uppercase mb-4">
+                      {item.category}
+                    </h2>
+                    
+                    {/* Product description sentence */}
+                    <p className="text-gray-500 text-sm md:text-[15px] leading-relaxed max-w-md">
+                      {item.tagline}
+                    </p>
+                  </div>
+
+                  {/* Card: Left Bottom [SOFTWARE FEATURES] */}
+                  <div className="relative border border-cyan-200/80 bg-white/70 backdrop-blur-sm p-6 pt-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="absolute -top-3 left-6 bg-[#04152B] text-white text-[9px] font-mono tracking-widest px-3 py-1 font-bold uppercase select-none rounded-sm">
+                      [{item.leftCardTitle}]
+                    </div>
+                    <ul className="space-y-4">
+                      {item.leftCardItems.map((feature, fIdx) => (
+                        <li key={fIdx} className="flex items-start gap-3">
+                          {getLeftCardIcon(item.category, fIdx)}
+                          <span className="text-xs md:text-sm font-semibold text-gray-700">
+                            {feature}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                {/* 2. Center Column: Main Product Image Display & Model ribbon */}
+                <div className="lg:col-span-4 flex flex-col items-center justify-center">
+                  <div
+                    onMouseMove={(e) => handleMouseMove(e, index)}
+                    onMouseLeave={() => handleMouseLeave(index)}
+                    className="relative bg-white border border-gray-200/50 p-8 rounded-2xl shadow-xl shadow-black/5 flex items-center justify-center w-full aspect-square max-w-[340px] md:max-w-[400px] cursor-pointer overflow-hidden group"
+                    style={{ perspective: "1000px" }}
+                  >
+                    {/* Grid background effect */}
+                    <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px] opacity-30 pointer-events-none" />
+                    
+                    {/* Inner frame */}
+                    <div className="absolute inset-4 border border-dashed border-gray-200 rounded-xl pointer-events-none" />
+
+                    {/* Active product photo */}
+                    <img
+                      src={activeModel.image}
+                      alt={activeModel.name}
+                      className="w-4/5 h-4/5 object-contain drop-shadow-[0_16px_32px_rgba(0,0,0,0.15)] transition-all duration-300 pointer-events-none group-hover:scale-105"
+                      style={{
+                        transform: `rotateY(${tilt.x}deg) rotateX(${tilt.y}deg)`,
+                      }}
+                    />
+                  </div>
+
+                  {/* Model Selector Ribbon */}
+                  {item.models.length > 1 && (
+                    <div className="mt-6 flex flex-wrap gap-1.5 justify-center max-w-[340px] md:max-w-[400px] bg-white border border-gray-200/80 p-2 rounded-xl shadow-sm">
+                      {item.models.map((model, mIdx) => {
+                        const isActive = activeModelIndex === mIdx;
+                        return (
+                          <button
+                            key={model.name}
+                            onClick={() => {
+                              setActiveModelIndices((prev) => {
+                                const next = [...prev];
+                                next[index] = mIdx;
+                                return next;
+                              });
+                            }}
+                            className={`px-3 py-1.5 rounded-lg text-[9px] font-mono font-bold tracking-wider uppercase transition-all cursor-pointer ${
+                              isActive
+                                ? "bg-[#04152B] text-white shadow-sm scale-[1.02]"
+                                : "bg-transparent text-gray-500 hover:text-[#04152B] hover:bg-gray-50"
+                            }`}
+                          >
+                            {model.name}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+
+                {/* 3. Right Column: Stacked Cards [SYSTEM COMPATIBILITY] & [LOCAL SUPPORT] */}
+                <div className="lg:col-span-4 space-y-6">
+                  
+                  {/* Card: Right Top [SYSTEM COMPATIBILITY] */}
+                  <div className="relative border border-cyan-200/80 bg-white/70 backdrop-blur-sm p-6 pt-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="absolute -top-3 left-6 bg-[#04152B] text-white text-[9px] font-mono tracking-widest px-3 py-1 font-bold uppercase select-none rounded-sm">
+                      [{item.rightTopCardTitle}]
+                    </div>
+                    <ul className="space-y-3">
+                      {item.rightTopCardItems.map((spec, sIdx) => (
+                        <li key={sIdx} className="flex items-center text-xs md:text-sm font-semibold text-gray-700">
+                          <span className="text-[#3B82F6] font-bold text-sm leading-none mr-2">▪</span>
+                          {spec}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Card: Right Bottom [LOCAL SUPPORT & INSTALLATION] */}
+                  <div className="relative border border-cyan-200/80 bg-white/70 backdrop-blur-sm p-6 pt-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="absolute -top-3 left-6 bg-[#04152B] text-white text-[9px] font-mono tracking-widest px-3 py-1 font-bold uppercase select-none rounded-sm">
+                      [{item.rightBottomCardTitle}]
+                    </div>
+                    <ul className="space-y-4">
+                      {item.rightBottomCardItems.map((supportItem, spIdx) => (
+                        <li key={spIdx} className="flex items-start gap-3">
+                          {getRightBottomCardIcon(spIdx)}
+                          <span className="text-xs md:text-sm font-semibold text-gray-700">
+                            {supportItem}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                </div>
+
               </div>
-            )}
-
-          </div>
-        );
+            </div>
+          );
         })}
-
       </div>
     </section>
   );
