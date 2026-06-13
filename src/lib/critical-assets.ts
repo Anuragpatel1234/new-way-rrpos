@@ -1,7 +1,7 @@
 import { HARDWARE_PRODUCTS, POS_FEATURES } from "@/lib/constants";
 
 /** Hero background — single source for preload + `<video>`. */
-export const HERO_VIDEO_SRC = "/POS_system_components_202604101116 (1).mp4";
+export const HERO_VIDEO_SRC = "/hero-bg-video.mp4";
 
 /** Shared hover video in hardware carousel (one file referenced by all cards). */
 export const HARDWARE_SHOWCASE_VIDEO_SRC =
@@ -9,10 +9,10 @@ export const HARDWARE_SHOWCASE_VIDEO_SRC =
 
 /** Default-open industry card (`IndustryAccordion`) — preload so first paint matches interaction. */
 export const INDUSTRY_DEFAULT_ACTIVE_IMAGE =
-  "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=85&fit=crop";
+  "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=1200&q=85&fit=crop";
 
 const FINAL_CTA_BACKGROUNDS = [
-  "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?q=80&w=1400&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1400&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1400&auto=format&fit=crop",
 ] as const;

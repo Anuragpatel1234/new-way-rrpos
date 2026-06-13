@@ -17,7 +17,7 @@ const CTA_ITEMS = [
     label: "Explore POS hardware",
     href: "/hardware",
     image:
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?q=80&w=1400&auto=format&fit=crop",
   },
   {
     id: "software",

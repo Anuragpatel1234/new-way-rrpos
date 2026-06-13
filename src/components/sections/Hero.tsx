@@ -42,14 +42,30 @@ export default function Hero() {
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
+
     const kick = () => {
       video.muted = true;
-      void video.play().catch(() => { });
+      void video.play().then(() => {
+        if (typeof window !== "undefined") {
+          (window as any).__heroVideoReady = true;
+          window.dispatchEvent(new CustomEvent("hero-video-ready"));
+        }
+      }).catch(() => { });
     };
-    kick();
+
+    // If already loaded/playing
+    if (video.readyState >= 3) {
+      kick();
+    }
+
+    video.addEventListener("canplay", kick);
+    video.addEventListener("canplaythrough", kick);
     video.addEventListener("loadeddata", kick);
     document.addEventListener("visibilitychange", kick);
+
     return () => {
+      video.removeEventListener("canplay", kick);
+      video.removeEventListener("canplaythrough", kick);
       video.removeEventListener("loadeddata", kick);
       document.removeEventListener("visibilitychange", kick);
     };

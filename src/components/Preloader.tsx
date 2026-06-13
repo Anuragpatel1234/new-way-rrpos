@@ -13,9 +13,42 @@ const Preloader = () => {
   useEffect(() => {
     // Show preloader on every initial load/refresh
     setIsLoading(true);
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500); // Consistent load time for every refresh
+
+    let isMinTimeElapsed = false;
+    let isVideoReady = false;
+    let hasFinished = false;
+
+    const checkAndHide = () => {
+      if (hasFinished) return;
+      
+      const globalVideoReady = typeof window !== "undefined" && (window as any).__heroVideoReady;
+      if (isMinTimeElapsed && (isVideoReady || globalVideoReady)) {
+        hasFinished = true;
+        clearTimeout(maxTimer);
+        setIsLoading(false);
+      }
+    };
+
+    // Minimum preloader display time so the logo animation looks smooth
+    const minTimer = setTimeout(() => {
+      isMinTimeElapsed = true;
+      checkAndHide();
+    }, 1200);
+
+    // Failsafe timer: Hide preloader after 3.5s regardless (e.g. slow connection)
+    const maxTimer = setTimeout(() => {
+      if (!hasFinished) {
+        hasFinished = true;
+        setIsLoading(false);
+      }
+    }, 3500);
+
+    const handleVideoReady = () => {
+      isVideoReady = true;
+      checkAndHide();
+    };
+
+    window.addEventListener("hero-video-ready", handleVideoReady);
 
     // Listen for manual triggers (e.g. from logo clicks)
     const handleTrigger = () => {
@@ -24,8 +57,11 @@ const Preloader = () => {
     };
 
     window.addEventListener("trigger-preloader", handleTrigger);
+    
     return () => {
-      clearTimeout(timer);
+      clearTimeout(minTimer);
+      clearTimeout(maxTimer);
+      window.removeEventListener("hero-video-ready", handleVideoReady);
       window.removeEventListener("trigger-preloader", handleTrigger);
     };
   }, []);
