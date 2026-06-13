@@ -23,7 +23,7 @@ const resources = {
       hero: {
         title_line1: "Fast billing that keeps",
         title_line2: "your business running smoothly.",
-        subtitle: "All-in-one POS for retail stores. Billing, inventory, GST reports — all in one place.",
+        subtitle: "All-in-one POS for retail stores. Billing, inventory, GST reports - all in one place.",
         get_started: "Get started",
         contact_sales: "Contact sales"
       },
@@ -62,7 +62,7 @@ const resources = {
       hero: {
         title_line1: "तेज़ बिलिंग जो आपके व्यवसाय को",
         title_line2: "सुचारू रूप से चलाए रखती है।",
-        subtitle: "रिटेल स्टोर के लिए ऑल-इन-वन पीओएस। बिलिंग, इन्वेंट्री, जीएसटी रिपोर्ट — सब कुछ एक ही जगह।",
+        subtitle: "रिटेल स्टोर के लिए ऑल-इन-वन पीओएस। बिलिंग, इन्वेंट्री, जीएसटी रिपोर्ट - सब कुछ एक ही जगह।",
         get_started: "शुरू करें",
         contact_sales: "सेल्स से संपर्क करें"
       },
@@ -101,7 +101,7 @@ const resources = {
       hero: {
         title_line1: "ઝડપી બિલિંગ જે તમારા વ્યવસાયને",
         title_line2: "સરળતાથી ચલાવતું રાખે છે.",
-        subtitle: "રિટેલ સ્ટોર્સ માટે ઓલ-ઇન-વન POS. બિલિંગ, ઇન્વેન્ટરી, GST રિપોર્ટ્સ — બધું એક જ જગ્યાએ.",
+        subtitle: "રિટેલ સ્ટોર્સ માટે ઓલ-ઇન-વન POS. બિલિંગ, ઇન્વેન્ટરી, GST રિપોર્ટ્સ - બધું એક જ જગ્યાએ.",
         get_started: "શરૂ કરો",
         contact_sales: "સેલ્સનો સંપર્ક કરો"
       },
@@ -140,7 +140,7 @@ const resources = {
       hero: {
         title_line1: "वेगवान बिलिंग जे तुमच्या",
         title_line2: "व्यवसायाला सुरळीत चालू ठेवते.",
-        subtitle: "रिटेल स्टोअरसाठी ऑल-इन-वन POS. बिलिंग, इन्व्हेंटरी, जीएसटी रिपोर्ट्स — सर्व एकाच ठिकाणी.",
+        subtitle: "रिटेल स्टोअरसाठी ऑल-इन-वन POS. बिलिंग, इन्व्हेंटरी, जीएसटी रिपोर्ट्स - सर्व एकाच ठिकाणी.",
         get_started: "सुरू करा",
         contact_sales: "सेल्सशी संपर्क साधा"
       },
@@ -179,7 +179,7 @@ const resources = {
       hero: {
         title_line1: "உங்கள் வணிகத்தை சீராக நடத்த",
         title_line2: "உதவும் அதிவேக பில்லிங்.",
-        subtitle: "சில்லறை கடைகளுக்கான ஆல்-இன்-ஒн POS. பில்லிங், இன்வெண்டரி, ஜிஎஸ்டி அறிக்கைகள் — அனைத்தும் ஒரே இடத்தில்.",
+        subtitle: "சில்லறை கடைகளுக்கான ஆல்-இன்-ஒன் POS. பில்லிங், இன்வெண்டரி, ஜிஎஸ்டி அறிக்கைகள் - அனைத்தும் ஒரே இடத்தில்.",
         get_started: "தொடங்குங்கள்",
         contact_sales: "விற்பனை பிரிவை தொடர்பு கொள்ள"
       },
@@ -218,7 +218,7 @@ const resources = {
       hero: {
         title_line1: "మీ వ్యాపారాన్ని సజావుగా",
         title_line2: "నడిపించే వేగవంతమైన బిల్లింగ్.",
-        subtitle: "రిటైల్ స్టోర్స్ కోసం ఆల్-ఇన్-వన్ POS. బిల్లింగ్, ఇన్వెంటరీ, GST నివేదికలు — అన్నీ ఒకే చోట.",
+        subtitle: "రిటైల్ స్టోర్స్ కోసం ఆల్-ఇన్-వన్ POS. బిల్లింగ్, ఇన్వెంటరీ, GST నివేదికలు - అన్నీ ఒకే చోట.",
         get_started: "ప్రారంభించండి",
         contact_sales: "సేల్స్ టీంను సంప్రదించండి"
       },
@@ -257,7 +257,7 @@ const resources = {
       hero: {
         title_line1: "Facturación rápida que mantiene",
         title_line2: "su negocio funcionando sin problemas.",
-        subtitle: "POS todo en uno para tiendas minoristas. Facturación, inventario, informes de GST — todo en un solo lugar.",
+        subtitle: "POS todo en uno para tiendas minoristas. Facturación, inventario, informes de GST - todo en un solo lugar.",
         get_started: "Comenzar",
         contact_sales: "Contactar ventas"
       },
@@ -296,7 +296,7 @@ const resources = {
       hero: {
         title_line1: "فواتير سريعة تحافظ على",
         title_line2: "سير عمل عملك بسلاسة وسهولة.",
-        subtitle: "نظام نقاط بيع متكامل لمحلات التجزئة. فواتير، مخزون، تقارير الضريبة — كل ذلك في مكان واحد.",
+        subtitle: "نظام نقاط بيع متكامل لمحلات التجزئة. فواتير، مخزون، تقارير الضريبة - كل ذلك في مكان واحد.",
         get_started: "ابدأ الآن",
         contact_sales: "اتصل بالمبيعات"
       },
