@@ -87,7 +87,7 @@ export default function Hero() {
             playsInline
             preload="auto"
             className="absolute left-1/2 top-1/2 min-h-full min-w-full object-cover object-center"
-            style={{ maxWidth: "none", transform: "translate(-50%, -50%) scale(0.75)" }}
+            style={{ maxWidth: "none", transform: "translate(-50%, -50%) scale(0.55)" }}
             aria-hidden
           >
             <source src={HERO_VIDEO_SRC} type="video/mp4" />
