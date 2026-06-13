@@ -77,7 +77,7 @@ export default function Hero() {
       className="relative z-[1] h-dvh min-h-dvh w-full overflow-hidden md:min-h-[600px] md:h-screen"
     >
       {/* Background video — contained to this section only (no fixed / scroll-driven motion) */}
-      <div className="absolute inset-0 z-0 bg-[#0a0f1a]">
+      <div className="absolute inset-0 z-0 bg-white">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <video
             ref={videoRef}
@@ -86,7 +86,7 @@ export default function Hero() {
             loop
             playsInline
             preload="auto"
-            className="absolute left-1/2 top-1/2 min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 object-cover object-center"
+            className="absolute inset-0 w-full h-full object-contain object-center"
             style={{ maxWidth: "none" }}
             aria-hidden
           >
