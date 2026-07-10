@@ -156,7 +156,7 @@ export default function Hero() {
           </div>
 
           {/* Features Grid Card */}
-          <div className="w-[100vw] sm:w-full max-w-[650px] bg-white rounded-none sm:rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border-y sm:border border-gray-100 p-4 sm:p-6 -mt-44 relative z-20">
+          <div className="w-[100vw] sm:w-full max-w-[650px] bg-white rounded-none sm:rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border-y sm:border border-gray-100 p-4 sm:p-6 -mt-24 relative z-20">
              <div className="grid grid-cols-4 gap-y-6 gap-x-2">
                {[
                  { icon: Zap, label: "Fast Billing" },
