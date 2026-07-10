@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, Globe } from "lucide-react";
+import { Menu, X, ChevronDown, Globe, Phone } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { BrandLogo, type BrandLogoTone } from "@/components/BrandLogo";
@@ -27,14 +27,19 @@ export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [langOpen, setLangOpen] = useState(false);
+  const [mobileLangOpen, setMobileLangOpen] = useState(false);
   const pathname = usePathname();
   const { t, i18n } = useTranslation();
   const langDropdownRef = useRef<HTMLDivElement>(null);
+  const mobileLangDropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (langDropdownRef.current && !langDropdownRef.current.contains(event.target as Node)) {
         setLangOpen(false);
+      }
+      if (mobileLangDropdownRef.current && !mobileLangDropdownRef.current.contains(event.target as Node)) {
+        setMobileLangOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -53,7 +58,7 @@ export default function Navbar() {
 
   const forceSolid = pathname !== "/";
   const scrolled = isScrolled || forceSolid;
-  const logoTone: BrandLogoTone = mobileOpen ? "onLight" : "onDark";
+  const logoTone: BrandLogoTone = mobileOpen ? "onLight" : "onDark"; // Not used anymore for mobile
 
   useEffect(() => {
     if (mobileOpen) {
@@ -67,11 +72,10 @@ export default function Navbar() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-[1000] transition-[background-color,box-shadow,border-color] duration-300",
-        mobileOpen
-          ? "border-b border-[#E2E8F0] bg-white shadow-sm"
-          : scrolled
-            ? "border-b border-gray-800 bg-background/95 shadow-sm backdrop-blur-md"
-            : "border-b border-transparent bg-transparent"
+        // Desktop styles
+        "max-md:bg-white max-md:border-b max-md:border-[#E2E8F0] max-md:shadow-sm",
+        !mobileOpen && scrolled && "md:border-b md:border-gray-800 md:bg-background/95 md:shadow-sm md:backdrop-blur-md",
+        !mobileOpen && !scrolled && "md:border-b md:border-transparent md:bg-transparent"
       )}
     >
       <nav className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-between px-6 lg:px-8">
@@ -86,7 +90,14 @@ export default function Navbar() {
             }
           }}
         >
-          <BrandLogo tone={logoTone} priority />
+          {/* Mobile Logo */}
+          <div className="md:hidden flex items-center">
+            <BrandLogo tone="onLight" priority />
+          </div>
+          {/* Desktop Logo */}
+          <div className="hidden md:flex items-center">
+            <BrandLogo tone="onDark" priority />
+          </div>
         </Link>
 
         {/* Desktop Nav */}
@@ -226,23 +237,63 @@ export default function Navbar() {
 
 
 
-        {/* Mobile Toggle */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className={cn(
-            "relative z-50 flex h-10 w-10 items-center justify-center rounded-lg lg:hidden transition-colors",
-            mobileOpen
-              ? "text-[#04152B] hover:bg-[#F1F5F9]"
-              : "text-white hover:bg-white/15 drop-shadow-[0_1px_4px_rgba(0,0,0,0.65)]"
-          )}
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? (
-            <X className="h-5 w-5" />
-          ) : (
-            <Menu className="h-5 w-5" />
-          )}
-        </button>
+        {/* Mobile Actions */}
+        <div className="flex items-center gap-3 lg:hidden relative z-50">
+          {/* Mobile Language Selector */}
+          <div ref={mobileLangDropdownRef} className="relative">
+            <button
+              onClick={() => setMobileLangOpen(!mobileLangOpen)}
+              className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#E2E8F0] text-[#04152B] transition-colors hover:bg-[#F1F5F9]"
+              aria-label="Change language"
+            >
+              <Globe className="h-4 w-4" />
+            </button>
+            <AnimatePresence>
+              {mobileLangOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 8 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                  className="absolute right-0 top-full mt-2 z-50"
+                >
+                  <div className="w-[180px] rounded-xl border border-gray-200 bg-white p-1.5 shadow-xl">
+                    {LANGUAGES.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => {
+                          i18n.changeLanguage(lang.code);
+                          setMobileLangOpen(false);
+                        }}
+                        className={cn(
+                          "w-full text-left rounded-lg px-3 py-2 text-sm font-medium transition-colors cursor-pointer flex items-center justify-between",
+                          i18n.language === lang.code ? "text-blue-600 bg-blue-50" : "text-gray-700 hover:bg-gray-50"
+                        )}
+                      >
+                        <span>{lang.label}</span>
+                        {i18n.language === lang.code && (
+                          <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="flex h-9 w-9 items-center justify-center rounded-lg text-[#04152B] transition-colors hover:bg-[#F1F5F9]"
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Menu */}
@@ -257,31 +308,7 @@ export default function Navbar() {
           >
             <div className="flex h-full flex-col overflow-y-auto pt-[72px] px-6 pb-8">
               
-              {/* Mobile Language Selector */}
-              <div className="border-b border-[#E2E8F0] pb-5 pt-3 mb-2">
-                <div className="text-xs font-semibold uppercase tracking-wider text-[#94A3B8] px-4 mb-3 flex items-center gap-1.5">
-                  <Globe className="h-3.5 w-3.5" />
-                  Select Language / भाषा चुनें
-                </div>
-                <div className="grid grid-cols-2 gap-2 px-2">
-                  {LANGUAGES.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => {
-                        i18n.changeLanguage(lang.code);
-                      }}
-                      className={cn(
-                        "rounded-lg px-3 py-2 text-sm font-semibold transition-all text-center border cursor-pointer",
-                        i18n.language === lang.code
-                          ? "bg-primary text-white border-primary shadow-sm shadow-primary/20"
-                          : "text-[#04152B] border-[#E2E8F0] hover:bg-[#F1F5F9]"
-                      )}
-                    >
-                      {lang.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
+
 
               <div className="flex flex-col gap-1 py-4">
                 {NAV_LINKS.map((link) => {

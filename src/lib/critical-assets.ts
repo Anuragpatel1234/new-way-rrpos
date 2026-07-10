@@ -1,7 +1,7 @@
 import { HARDWARE_PRODUCTS, POS_FEATURES } from "@/lib/constants";
 
 /** Hero background — single source for preload + `<video>`. */
-export const HERO_VIDEO_SRC = "/POS_system_components_202604101116 (1).mp4";
+export const HERO_VIDEO_SRC = "/hero-bg-video.mp4";
 
 /** Shared hover video in hardware carousel (one file referenced by all cards). */
 export const HARDWARE_SHOWCASE_VIDEO_SRC =
